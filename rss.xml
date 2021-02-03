@@ -1,4 +1,33 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[SangMin Blog]]></title><description><![CDATA[Blog posted about ...]]></description><link>https://gatsby-starter-bee.netlify.com</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 03 Feb 2021 09:21:23 GMT</lastBuildDate><item><title><![CDATA[Class101 불합격]]></title><description><![CDATA[불합격! 11월 16일 class101 프론트엔드 개발 서류전형 통과.
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[SangMin Blog]]></title><description><![CDATA[Blog posted about ...]]></description><link>https://gatsby-starter-bee.netlify.com</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 03 Feb 2021 09:31:46 GMT</lastBuildDate><item><title><![CDATA[당근마켓 불합격]]></title><description><![CDATA[불합격! 10월 21일 당근마켓 프론트엔드 개발 서류전형 통과.
+
+10월 22일 화상통화로 기술면접.
+
+10월 2…]]></description><link>https://gatsby-starter-bee.netlify.com/Daily/2020-10-26-dangn out/</link><guid isPermaLink="false">https://gatsby-starter-bee.netlify.com/Daily/2020-10-26-dangn out/</guid><content:encoded>&lt;div style=&quot;margin : 0 auto; text-align : center&quot;&gt;
+  &lt;img src=&quot;https://www.daangn.com/images/meta/home/daangn.png&quot; alt=&quot;op.gg&quot;&gt;
+&lt;/div&gt;
+&lt;h2 id=&quot;불합격&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%B6%88%ED%95%A9%EA%B2%A9&quot; aria-label=&quot;불합격 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;불합격!&lt;/h2&gt;
+&lt;p&gt;10월 21일 당근마켓 프론트엔드 개발 서류전형 통과.
+&lt;br&gt;
+10월 22일 화상통화로 기술면접.
+&lt;br&gt;
+10월 26일 불합격 통보.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;이번 채용의 결과는 현재 당근마켓팀이 수행하려는 프로젝트와 맞지 않았을 뿐,
+결코 상민님의 경험이나 역량의 부족이 아니라는 점을 알려드리고 싶어요.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;사실상 역량부족이지.&lt;/p&gt;
+&lt;br&gt;
+대체로 모든 질문에 잘 대답했다 생각했지만, 정말 나의 생각이였나보다.
+마지막 질문으로 함수형 프로그래밍을 사용해본 경험이 있냐 물었을 때, React를 함수형으로 많이 해왔지만 순수한 함수형 프로그래밍이라 하기는 애매한것 같아서 아니라고했는데... 그게 화근이였나..? 
+&lt;br&gt;
+아마 아닐듯 하다. 서류전형 합격한것을 보면, 깃허브 기록들을 통해 다 보았을 터인데..
+&lt;br&gt;
+잡플래닛 면접 후기를 보니, 진입장벽이 높은듯 하다.
+&lt;h3 id=&quot;좋은경험이였다-그런데&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%A2%8B%EC%9D%80%EA%B2%BD%ED%97%98%EC%9D%B4%EC%98%80%EB%8B%A4-%EA%B7%B8%EB%9F%B0%EB%8D%B0&quot; aria-label=&quot;좋은경험이였다 그런데 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;좋은경험이였다. 그런데&lt;/h3&gt;
+&lt;p&gt;솔직히 조금씩 지쳐간다. 기업에서 원하는 신입의 실력은 어느정도일까..? 😂&lt;br&gt;
+차라리 저렇게 위로차원에서 해주는 문구보다 무엇이부족했는지 알려줬으면 좋겠다는생각을 요즘 자주한다.
+&lt;br&gt;
+물론.. 기업입장에서는 그것또한 무의미한 시간낭비 겠지만..&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Class101 불합격]]></title><description><![CDATA[불합격! 11월 16일 class101 프론트엔드 개발 서류전형 통과.
 
 10월 20일 과제제출
 
@@ -50,36 +79,7 @@
 &lt;li&gt;렌더링 최적화측면의 문제&lt;/li&gt;
 &lt;li&gt;인라인으로 함수를 작성하거나, memoizaition이 되지 않아 리렌더를 일으키는 경우가 있음&lt;/li&gt;
 &lt;li&gt;1, 2는 나도 프로그래밍을 하면서, 애매하다고 생각했었는데 3, 4는 예상못했던 부분이라 좀 더 깊이있게 알아봐야겠다.&lt;/li&gt;
-&lt;/ol&gt;</content:encoded></item><item><title><![CDATA[당근마켓 불합격]]></title><description><![CDATA[불합격! 10월 21일 당근마켓 프론트엔드 개발 서류전형 통과.
-
-10월 22일 화상통화로 기술면접.
-
-10월 2…]]></description><link>https://gatsby-starter-bee.netlify.com/Daily/2020-10-26-dangn out/</link><guid isPermaLink="false">https://gatsby-starter-bee.netlify.com/Daily/2020-10-26-dangn out/</guid><content:encoded>&lt;div style=&quot;margin : 0 auto; text-align : center&quot;&gt;
-  &lt;img src=&quot;https://www.daangn.com/images/meta/home/daangn.png&quot; alt=&quot;op.gg&quot;&gt;
-&lt;/div&gt;
-&lt;h2 id=&quot;불합격&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%B6%88%ED%95%A9%EA%B2%A9&quot; aria-label=&quot;불합격 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;불합격!&lt;/h2&gt;
-&lt;p&gt;10월 21일 당근마켓 프론트엔드 개발 서류전형 통과.
-&lt;br&gt;
-10월 22일 화상통화로 기술면접.
-&lt;br&gt;
-10월 26일 불합격 통보.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;이번 채용의 결과는 현재 당근마켓팀이 수행하려는 프로젝트와 맞지 않았을 뿐,
-결코 상민님의 경험이나 역량의 부족이 아니라는 점을 알려드리고 싶어요.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;사실상 역량부족이지.&lt;/p&gt;
-&lt;br&gt;
-대체로 모든 질문에 잘 대답했다 생각했지만, 정말 나의 생각이였나보다.
-마지막 질문으로 함수형 프로그래밍을 사용해본 경험이 있냐 물었을 때, React를 함수형으로 많이 해왔지만 순수한 함수형 프로그래밍이라 하기는 애매한것 같아서 아니라고했는데... 그게 화근이였나..? 
-&lt;br&gt;
-아마 아닐듯 하다. 서류전형 합격한것을 보면, 깃허브 기록들을 통해 다 보았을 터인데..
-&lt;br&gt;
-잡플래닛 면접 후기를 보니, 진입장벽이 높은듯 하다.
-&lt;h3 id=&quot;좋은경험이였다-그런데&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%A2%8B%EC%9D%80%EA%B2%BD%ED%97%98%EC%9D%B4%EC%98%80%EB%8B%A4-%EA%B7%B8%EB%9F%B0%EB%8D%B0&quot; aria-label=&quot;좋은경험이였다 그런데 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;좋은경험이였다. 그런데&lt;/h3&gt;
-&lt;p&gt;솔직히 조금씩 지쳐간다. 기업에서 원하는 신입의 실력은 어느정도일까..? 😂&lt;br&gt;
-차라리 저렇게 위로차원에서 해주는 문구보다 무엇이부족했는지 알려줬으면 좋겠다는생각을 요즘 자주한다.
-&lt;br&gt;
-물론.. 기업입장에서는 그것또한 무의미한 시간낭비 겠지만..&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Next.js Loa-Hands]]></title><description><![CDATA[Next.js - Loa-Hands…]]></description><link>https://gatsby-starter-bee.netlify.com/Study/Think/2021-02-03-next.js loa-hands/</link><guid isPermaLink="false">https://gatsby-starter-bee.netlify.com/Study/Think/2021-02-03-next.js loa-hands/</guid><pubDate>Wed, 03 Feb 2021 00:00:00 GMT</pubDate><content:encoded>&lt;h1 id=&quot;nextjs---loa-hands&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#nextjs---loa-hands&quot; aria-label=&quot;nextjs   loa hands permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Next.js - Loa-Hands&lt;/h1&gt;
+&lt;/ol&gt;</content:encoded></item><item><title><![CDATA[Next.js Loa-Hands]]></title><description><![CDATA[Next.js - Loa-Hands…]]></description><link>https://gatsby-starter-bee.netlify.com/Study/Think/2021-02-03-next.js loa-hands/</link><guid isPermaLink="false">https://gatsby-starter-bee.netlify.com/Study/Think/2021-02-03-next.js loa-hands/</guid><pubDate>Wed, 03 Feb 2021 00:00:00 GMT</pubDate><content:encoded>&lt;h1 id=&quot;nextjs---loa-hands&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#nextjs---loa-hands&quot; aria-label=&quot;nextjs   loa hands permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Next.js - Loa-Hands&lt;/h1&gt;
 &lt;div style=&quot;text-align : center&quot;&gt;
   &lt;img src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2021/02/03/1.PNG?raw=true&quot; alt=&quot;1&quot;&gt;
 &lt;/div&gt;
