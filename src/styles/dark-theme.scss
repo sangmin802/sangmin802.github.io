@@ -20,7 +20,7 @@ body.dark {
     }
   }
 
-  .category-container {
+  .category-container, .tag-container {
     border-top: 1px solid $dark-category-border-color;
     border-bottom: 1px solid $dark-category-border-color;
     border-right: 6px solid $dark-category-border-color;

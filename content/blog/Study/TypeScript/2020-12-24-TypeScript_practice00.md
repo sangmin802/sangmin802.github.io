@@ -20,7 +20,7 @@ sidebar :
 * 인덱싱기능을 사용하면서, 클래스의 모든 속성에 위에서 정의해준 인터페이스도 포함하는지라.. `object`타입도 넣어주긴했다. 맘에 안들긴하지만..
 * `AbilityInfo`클래스를 갖는 속성은 그냥 타입을 그것으로 지정해주었다.
 <div style="text-align : center">
-  <img src="https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2020/2020-12-24/1.PNG?raw=true" alt="1">
+  <img src="/main/img/2020/12/24/1.PNG?raw=true" alt="1">
 </div>
 
 ## AbilityInfo
@@ -30,13 +30,13 @@ sidebar :
 * `IUnknownObj`의 경우, 본래 값으로 `object`를 주었었는데, `IUnknownObj`타입을 갖는 객체의 속성값을 조회하였을 때 `object`에 할당할 수 없다는 에러가 발생하여, 속성값 또한 `IUnknownObj`로 지정하고 타입할당을 `IUnknownObj`로 해주었다.
 > 재귀함수같은느낌.. 왠지 위험해보임
 <div style="text-align : center">
-  <img src="https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2020/2020-12-24/2.PNG?raw=true" alt="1">
+  <img src="/main/img/2020/12/24/2.PNG?raw=true" alt="1">
 </div>
 
 ## EquipInfo
 * 하나하나의 장비 부위를 구성하는 클래스이다. 크게 문제될건 없었다.
 <div style="text-align : center">
-  <img src="https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2020/2020-12-24/3.PNG?raw=true" alt="1">
+  <img src="/main/img/2020/12/24/3.PNG?raw=true" alt="1">
 </div>
 
 ## SkillInfo
@@ -44,7 +44,7 @@ sidebar :
 * 최대한 재활용하기 위해, 유니온 타입을 사용하였다.
 > 타입도 재귀처럼 자기자신을 사용할 수 있는듯 함..
 <div style="text-align : center">
-  <img src="https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2020/2020-12-24/4.PNG?raw=true" alt="1">
+  <img src="/main/img/2020/12/24/4.PNG?raw=true" alt="1">
 </div>
 
 ## HomeData
@@ -52,7 +52,7 @@ sidebar :
 * 크게 어려운것은 없었으나, 캘린더에서 이중배열? 을 사용했다.
 > 지금생각해보니 저기 `events`내부에 있는 객체또한 인터페이스로 해주는것이 나을 듯 하다.
 <div style="text-align : center">
-  <img src="https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2020/2020-12-24/5.PNG?raw=true" alt="1">
+  <img src="/main/img/2020/12/24/5.PNG?raw=true" alt="1">
 </div>
 
 

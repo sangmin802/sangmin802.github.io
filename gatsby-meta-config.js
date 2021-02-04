@@ -1,16 +1,18 @@
 module.exports = {
-  title: `SangMin Blog`,
-  description: `Blog posted about ...`,
+  title: `SangMin.com`,
+  description: `SangMin Directory`,
   author: `SangMin`,
-  introduction: `똑같은 실수를 반복하지 않도록.`,
+  introduction: `믿을수 있는 사람이 되기`,
   siteUrl: `https://gatsby-starter-bee.netlify.com`, // Your blog site url
   social: {
     twitter: ``, // Your Twitter account
-    github: ``, // Your GitHub account
+    github: `https://github.com/sangmin802`, // Your GitHub account
+    portfolio: `https://sangmin802.github.io/portfolio/`,
     medium: ``, // Your Medium account
     facebook: ``, // Your Facebook account
     linkedin: ``, // Your LinkedIn account
   },
+  test: '테스트',
   icon: `content/assets/felog.png`, // Add your favicon
   keywords: [`blog`],
   comment: {

@@ -9,7 +9,6 @@ export const Bio = () => (
     query={bioQuery}
     render={data => {
       const { author, social, introduction } = data.site.siteMetadata
-
       return (
         <div className="bio">
           <div className="author">
@@ -23,14 +22,17 @@ export const Bio = () => (
                 }}
               />
               <div className="author-name">
-                <span className="author-name-prefix">Written by</span>
+                <span className="author-name-prefix"></span>
                 <Link to={'/about'} className="author-name-content">
                   <span>@{author}</span>
                 </Link>
                 <div className="author-introduction">{introduction}</div>
                 <p className="author-socials">
                   {social.github && (
-                    <a href={`https://github.com/${social.github}`}>GitHub</a>
+                    <a href={`${social.github}`} target="_blank">🚀GitHub</a>
+                  )}
+                  {social.portfolio && (
+                    <a href={`${social.portfolio}`} target="_blank">🤿Portfolio</a>
                   )}
                   {social.medium && (
                     <a href={`https://medium.com/${social.medium}`}>Medium</a>
@@ -79,6 +81,7 @@ const bioQuery = graphql`
           medium
           facebook
           linkedin
+          portfolio
         }
       }
     }

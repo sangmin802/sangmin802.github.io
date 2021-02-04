@@ -2,11 +2,12 @@ import { graphql } from 'gatsby'
 import _ from 'lodash'
 import React, { useMemo } from 'react'
 import { Bio } from '../components/bio'
-import { Category } from '../components/category'
+import { ContentNav } from '../components/content-nav'
 import { Contents } from '../components/contents'
 import { Head } from '../components/head'
 import { HOME_TITLE } from '../constants'
 import { useCategory } from '../hooks/useCategory'
+import { useTag } from '../hooks/useTag'
 import { useIntersectionObserver } from '../hooks/useIntersectionObserver'
 import { useRenderedCount } from '../hooks/useRenderedCount'
 import { useScrollEvent } from '../hooks/useScrollEvent'
@@ -27,10 +28,17 @@ export default ({ data, location }) => {
   const categories = useMemo(
     () => _.uniq(posts.map(({ node }) => node.frontmatter.category)),
     []
-  )
+  );
   const [count, countRef, increaseCount] = useRenderedCount()
   const [category, selectCategory] = useCategory()
-
+  const [tag, selectTag] = useTag()
+  let tags = useMemo(
+    () => {
+      if (category === 'All') return [null];
+      return _.uniq(posts.filter(({ node }) => node.frontmatter.category === category).map(({ node }) => node.frontmatter.tag))
+    },
+    [category]
+  );
   useIntersectionObserver()
   useScrollEvent(() => {
     const currentPos = window.scrollY + window.innerHeight
@@ -48,16 +56,25 @@ export default ({ data, location }) => {
     <Layout location={location} title={siteMetadata.title}>
       <Head title={HOME_TITLE} keywords={siteMetadata.keywords} />
       <Bio />
-      <Category
-        categories={categories}
-        category={category}
-        selectCategory={selectCategory}
+      <ContentNav
+        navType="category"
+        navs={categories}
+        nav={category}
+        selectNav={selectCategory}
+        resetSubNav={selectTag}
+      />
+      <ContentNav
+        navType="tag"
+        navs={tags}
+        nav={tag}
+        selectNav={selectTag}
       />
       <Contents
         posts={posts}
         countOfInitialPost={countOfInitialPost}
         count={count}
         category={category}
+        tag={tag}
       />
     </Layout>
   )
@@ -88,6 +105,7 @@ export const pageQuery = graphql`
             title
             category
             draft
+            tag
           }
         }
       }

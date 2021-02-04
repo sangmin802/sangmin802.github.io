@@ -13,11 +13,11 @@ sidebar :
 * 지금까지 올린 포스트와 비슷한 구성으로 만들어져서, 별다른 사진을 찍진 않았다.
 * 디스트럭쳐링과정에서 불편함을 느꼈었지만, 해당 컴포넌트가 사용한는 `props`의 내부 속성까지 모두 인터페이스에 포함시키면 원활히 작동되었다.
   <div style="text-align : center">
-    <img src="https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2021/01/01/1.PNG?raw=true" alt="1">
+    <img src="/img/2021/01/01/1.PNG?raw=true" alt="1">
   </div>
 * 마찬가지로, 외부에서 가져오기 때문에, 정확한 구조를 알 수 없는 데이터이지만 필수적으로 갖고있는 속성이거나, 혹은 그렇지 않더라도 `Nullable`기능으로 데이터 생성단계에서 인터페이스를 만들어 내보내준다면 각 컴포넌트에 전달되는 속성들의 타입을 정의해주는데 편리함을 느꼈다.
   <div style="text-align : center">
-    <img src="https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2021/01/01/2.PNG?raw=true" alt="2">
+    <img src="/img/2021/01/01/2.PNG?raw=true" alt="2">
   </div>
 
 ## 느낀점

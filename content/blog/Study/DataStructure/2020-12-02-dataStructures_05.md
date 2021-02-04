@@ -24,12 +24,12 @@ sidebar :
 ## 구현방식
 * 인접리스트 : 노드를 키로 사용하여 해당 노드의 이웃들을 리스트에 저장한다.
 <div style="margin : 0 auto; text-align : center">
-  <img src="https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2020/2020-12-02/graph2.PNG?raw=true" alt="graph">
+  <img src="/img/2020/12/02/graph2.PNG?raw=true" alt="graph">
 </div>
 
 * 인접행렬 : 행렬의 각 항목이 두 노드간에 연결얼 나타내는 행렬이다.
 <div style="margin : 0 auto; text-align : center">
-  <img src="https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2020/2020-12-02/graph1.PNG?raw=true" alt="graph">
+  <img src="/img/2020/12/02/graph1.PNG?raw=true" alt="graph">
 </div>
 
 ```javascript

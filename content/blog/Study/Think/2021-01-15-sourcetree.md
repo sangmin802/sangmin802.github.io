@@ -6,7 +6,6 @@ draft : false
 tag : "Think"
 --- 
 
-# 소스트리
 * 원래는 깃헙 데스크를 사용했었지만, 얼마전 ssd를 교체하면서 아예 포맷되어 소스트리로 넘어가게 되었다.
 
 ## 과정
@@ -19,7 +18,7 @@ tag : "Think"
 ## 조금 난해했다구..
 * 대체로 과정은 저런 느낌인데, 처음에는 그래프들이 막 그려져있어서 이게 도대체 뭐지.. 하는느낌이였지만 연습을 해보니 어느정도 이해가 되었다.
 <div style="text-align : center">
-  <img src="https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2021/01/15/1.PNG?raw=true" alt="1">
+  <img src="/img/2021/01/15/1.PNG?raw=true" alt="1">
 </div>
 
 ## 장점
