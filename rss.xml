@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[SangMin Blog]]></title><description><![CDATA[Blog posted about ...]]></description><link>https://gatsby-starter-bee.netlify.com</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 03 Feb 2021 09:39:46 GMT</lastBuildDate><item><title><![CDATA[Next.js Loa-Hands]]></title><description><![CDATA[Next.js - Loa-Hands…]]></description><link>https://gatsby-starter-bee.netlify.com/Study/Think/2021-02-03-next.js loa-hands/</link><guid isPermaLink="false">https://gatsby-starter-bee.netlify.com/Study/Think/2021-02-03-next.js loa-hands/</guid><pubDate>Wed, 03 Feb 2021 00:00:00 GMT</pubDate><content:encoded>&lt;h1 id=&quot;nextjs---loa-hands&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#nextjs---loa-hands&quot; aria-label=&quot;nextjs   loa hands permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Next.js - Loa-Hands&lt;/h1&gt;
-&lt;div style=&quot;text-align : center&quot;&gt;
-  &lt;img src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2021/02/03/1.PNG?raw=true&quot; alt=&quot;1&quot;&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[SangMin.com]]></title><description><![CDATA[SangMin Directory]]></description><link>https://gatsby-starter-bee.netlify.com</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 04 Feb 2021 06:39:05 GMT</lastBuildDate><item><title><![CDATA[Next.js Loa-Hands]]></title><description><![CDATA[…]]></description><link>https://gatsby-starter-bee.netlify.com/Study/Think/2021-02-03-next.js loa-hands/</link><guid isPermaLink="false">https://gatsby-starter-bee.netlify.com/Study/Think/2021-02-03-next.js loa-hands/</guid><pubDate>Wed, 03 Feb 2021 00:00:00 GMT</pubDate><content:encoded>&lt;div style=&quot;text-align : center&quot;&gt;
+  &lt;img src=&quot;/img/2021/02/03/1.PNG?raw=true&quot; alt=&quot;1&quot;&gt;
 &lt;/div&gt;
 &lt;p&gt;완료하였다.&lt;/p&gt;
 &lt;p&gt;이전까지는, &lt;code class=&quot;language-text&quot;&gt;gh-pages&lt;/code&gt;를 애용했지만 &lt;code class=&quot;language-text&quot;&gt;Next.js&lt;/code&gt;는 &lt;code class=&quot;language-text&quot;&gt;Vercel&lt;/code&gt;이 더 적합하다고 하여, 처음 사용해보았는데 &lt;code class=&quot;language-text&quot;&gt;package.json&lt;/code&gt;에 &lt;code class=&quot;language-text&quot;&gt;Vercel&lt;/code&gt;전용 명령어를 입력한다면, 해당 깃 리포지토리에 추가될때마다 자동으로 빌드되는것이 참 편한것 같다.&lt;/p&gt;
@@ -53,8 +52,7 @@
 &lt;/blockquote&gt;
 &lt;blockquote&gt;
 &lt;p&gt;아 그리고, &lt;code class=&quot;language-text&quot;&gt;Next.js&lt;/code&gt;를 하면서, 왜 &lt;code class=&quot;language-text&quot;&gt;React.js&lt;/code&gt;는 프레임워크이지만 라이브러리이기도 하다고 하는지 느낀것 같다.&lt;/p&gt;
-&lt;/blockquote&gt;</content:encoded></item><item><title><![CDATA[Next.js Webpack]]></title><description><![CDATA[Next.js - Webpack…]]></description><link>https://gatsby-starter-bee.netlify.com/Study/Think/2021-02-01-next.js webpack/</link><guid isPermaLink="false">https://gatsby-starter-bee.netlify.com/Study/Think/2021-02-01-next.js webpack/</guid><pubDate>Mon, 01 Feb 2021 00:00:00 GMT</pubDate><content:encoded>&lt;h1 id=&quot;nextjs---webpack&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#nextjs---webpack&quot; aria-label=&quot;nextjs   webpack permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Next.js - Webpack&lt;/h1&gt;
-&lt;p&gt;대부분의 프레임워크들은 편리한 배포를 위해, &lt;code class=&quot;language-text&quot;&gt;Webpack&lt;/code&gt;파일을 알아서 만들어준다.&lt;/p&gt;
+&lt;/blockquote&gt;</content:encoded></item><item><title><![CDATA[Next.js Webpack]]></title><description><![CDATA[…]]></description><link>https://gatsby-starter-bee.netlify.com/Study/Think/2021-02-01-next.js webpack/</link><guid isPermaLink="false">https://gatsby-starter-bee.netlify.com/Study/Think/2021-02-01-next.js webpack/</guid><pubDate>Mon, 01 Feb 2021 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;대부분의 프레임워크들은 편리한 배포를 위해, &lt;code class=&quot;language-text&quot;&gt;Webpack&lt;/code&gt;파일을 알아서 만들어준다.&lt;/p&gt;
 &lt;p&gt;따라서, 간단한 커맨드를 통해 빌드파일을 만들 수 있는데&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;이전에 &lt;code class=&quot;language-text&quot;&gt;Vanila JS&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;Node.js&lt;/code&gt;,&lt;code class=&quot;language-text&quot;&gt;Mysql&lt;/code&gt;로 서버, &lt;code class=&quot;language-text&quot;&gt;DB&lt;/code&gt;부터, &lt;code class=&quot;language-text&quot;&gt;Webpack&lt;/code&gt; 빌드환경까지 만들었던 생각을 해보면 참 편하긴 함..&lt;/p&gt;
@@ -68,7 +66,7 @@
 &lt;/blockquote&gt;
 &lt;p&gt;너무나도 고맙게도, &lt;code class=&quot;language-text&quot;&gt;JSDOM&lt;/code&gt;이라는 외부 모듈을 가져와서 서버상에서도 돔을 조작할 수 있도록 하였는데&lt;/p&gt;
 &lt;div style=&quot;text-align : center&quot;&gt;
-  &lt;img src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2021/02/01/1.PNG?raw=true&quot; alt=&quot;1&quot;&gt;
+  &lt;img src=&quot;/img/2021/02/01/1.PNG?raw=true&quot; alt=&quot;1&quot;&gt;
 &lt;/div&gt;
 &lt;p&gt;&lt;strong&gt;뭐야?&lt;/strong&gt;&lt;/p&gt;
 &lt;h2 id=&quot;두번의-번들링&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%91%90%EB%B2%88%EC%9D%98-%EB%B2%88%EB%93%A4%EB%A7%81&quot; aria-label=&quot;두번의 번들링 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;두번의 번들링&lt;/h2&gt;
@@ -76,13 +74,13 @@
 &lt;p&gt;&lt;strong&gt;하지만&lt;/strong&gt; 알고보니 &lt;code class=&quot;language-text&quot;&gt;Next.js&lt;/code&gt;는 클라이언트상에서 한번 서버에서 한번 총 두번의 번들링 과정을 갖는다고 한다. 따라서, &lt;code class=&quot;language-text&quot;&gt;JSDOM&lt;/code&gt;을 통해 서버에서 돔을 조작할 수 있게 되었지만, 클라이언트단 에서는 &lt;code class=&quot;language-text&quot;&gt;JSDOM&lt;/code&gt;모듈이 사용하는 외부 모듈들을 실행시키지 못하는것이였다.&lt;/p&gt;
 &lt;p&gt;너무 고맙게도, &lt;code class=&quot;language-text&quot;&gt;Next.js&lt;/code&gt;는 &lt;code class=&quot;language-text&quot;&gt;webpack&lt;/code&gt;메소드를 통해, &lt;code class=&quot;language-text&quot;&gt;Webpack&lt;/code&gt;파일을 수정할 수 있었는데&lt;/p&gt;
 &lt;div style=&quot;text-align : center&quot;&gt;
-  &lt;img src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2021/02/01/2.PNG?raw=true&quot; alt=&quot;2&quot;&gt;
+  &lt;img src=&quot;/img/2021/02/01/2.PNG?raw=true&quot; alt=&quot;2&quot;&gt;
 &lt;/div&gt;
 &lt;p&gt;해당 메소드를 사용하여 서버환경이 아닐경우, 해당 노드들을 사용하지 않게하였고, 정상적으로 작동되었다.&lt;/p&gt;
 &lt;h2 id=&quot;next-redux-wrapper&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#next-redux-wrapper&quot; aria-label=&quot;next redux wrapper permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;next-redux-wrapper&lt;/h2&gt;
 &lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;Next.js&lt;/code&gt;에서도 &lt;code class=&quot;language-text&quot;&gt;redux&lt;/code&gt;를 사용할 수 있는데, 기존 &lt;code class=&quot;language-text&quot;&gt;React.js&lt;/code&gt;와는 다르게 하나의 모듈이 더 필요하다. &lt;code class=&quot;language-text&quot;&gt;next-redux-wrapper&lt;/code&gt;&lt;/p&gt;
 &lt;div style=&quot;text-align : center&quot;&gt;
-  &lt;img src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2021/02/01/3.PNG?raw=true&quot; alt=&quot;3&quot;&gt;
+  &lt;img src=&quot;/img/2021/02/01/3.PNG?raw=true&quot; alt=&quot;3&quot;&gt;
 &lt;/div&gt;
 &lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;Next.js&lt;/code&gt;는 &lt;code class=&quot;language-text&quot;&gt;SEO&lt;/code&gt;최적화를 위한 &lt;code class=&quot;language-text&quot;&gt;pre-rendering&lt;/code&gt;이 가능한 프레임워크로서 개발자의 필요에 따라 특정 라우트를 서버에서 미리 생성하게 할 수 있다. 그렇게 된다면, 클라이언트단에서 페이지 라우팅을 할 때마다 새로운 페이지를 받아오면서 새로운 &lt;code class=&quot;language-text&quot;&gt;Redux Store&lt;/code&gt;를 생성하게되는데, 이때 필요한 것이 &lt;code class=&quot;language-text&quot;&gt;next-redux-wrapper&lt;/code&gt;이다.&lt;/p&gt;
 &lt;blockquote&gt;
@@ -90,16 +88,16 @@
 &lt;/blockquote&gt;
 &lt;p&gt;이 모듈을 사용해야만 &lt;code class=&quot;language-text&quot;&gt;getStaticProps&lt;/code&gt;와 같이 서버에서 실행되는 메소드 내부에서도 &lt;code class=&quot;language-text&quot;&gt;Redux Hook&lt;/code&gt;을 사용할 수 있다.&lt;/p&gt;
 &lt;div style=&quot;text-align : center&quot;&gt;
-  &lt;img src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2021/02/01/4.PNG?raw=true&quot; alt=&quot;4&quot;&gt;
+  &lt;img src=&quot;/img/2021/02/01/4.PNG?raw=true&quot; alt=&quot;4&quot;&gt;
 &lt;/div&gt;
 &lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;Reducer&lt;/code&gt;에서는 기존 &lt;code class=&quot;language-text&quot;&gt;React.js&lt;/code&gt;와 다르게 &lt;code class=&quot;language-text&quot;&gt;HYDRATE&lt;/code&gt;이라는 타입이 추가되는데, 이 과정에서 서버에서 가지고있는 &lt;code class=&quot;language-text&quot;&gt;store&lt;/code&gt;정보와 클라이언트에서 갖고있는 &lt;code class=&quot;language-text&quot;&gt;store&lt;/code&gt;의 정보를 하나로 합친다.&lt;/p&gt;
 &lt;p&gt;이로인해, 위에서의 상황을 해결하여 완성한 &lt;code class=&quot;language-text&quot;&gt;pre-rendering&lt;/code&gt;을 통해 받은 데이터를 클라이언트에서 그대로 사용할 수 있다.&lt;/p&gt;
 &lt;div style=&quot;text-align : center&quot;&gt;
-  &lt;img src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2021/02/01/5.PNG?raw=true&quot; alt=&quot;5&quot;&gt;
+  &lt;img src=&quot;/img/2021/02/01/5.PNG?raw=true&quot; alt=&quot;5&quot;&gt;
 &lt;/div&gt;
 &lt;p&gt;터미널을 통해 해당 과정을 지켜보면&lt;/p&gt;
 &lt;div style=&quot;text-align : center&quot;&gt;
-  &lt;img src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2021/02/01/6.PNG?raw=true&quot; alt=&quot;6&quot;&gt;
+  &lt;img src=&quot;/img/2021/02/01/6.PNG?raw=true&quot; alt=&quot;6&quot;&gt;
 &lt;/div&gt;
 &lt;ol&gt;
 &lt;li&gt;서버에서 기본값으로 구성된 &lt;code class=&quot;language-text&quot;&gt;store&lt;/code&gt;가 생성되고&lt;/li&gt;
@@ -117,8 +115,7 @@
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;이후, 정적파일로 빌드해보면 &lt;code class=&quot;language-text&quot;&gt;index.html&lt;/code&gt;에 &lt;code class=&quot;language-text&quot;&gt;pre-rendering&lt;/code&gt;이 잘 되어있음을 확인할 수 있다.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;야호!🥳&lt;/strong&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Next.js Route]]></title><description><![CDATA[Next.js - Route Next.js는 기존 React.js…]]></description><link>https://gatsby-starter-bee.netlify.com/Study/Think/2021-01-28-next.js route/</link><guid isPermaLink="false">https://gatsby-starter-bee.netlify.com/Study/Think/2021-01-28-next.js route/</guid><pubDate>Thu, 28 Jan 2021 00:00:00 GMT</pubDate><content:encoded>&lt;h1 id=&quot;nextjs---route&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#nextjs---route&quot; aria-label=&quot;nextjs   route permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Next.js - Route&lt;/h1&gt;
-&lt;p&gt;Next.js는 기존 React.js와 다르게, 라우팅이라는 것을 별도의 모듈을 설치할 필요없이 기본적으로 제공한다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;야호!🥳&lt;/strong&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Next.js Route]]></title><description><![CDATA[Next.js는 기존 React.js…]]></description><link>https://gatsby-starter-bee.netlify.com/Study/Think/2021-01-28-next.js route/</link><guid isPermaLink="false">https://gatsby-starter-bee.netlify.com/Study/Think/2021-01-28-next.js route/</guid><pubDate>Thu, 28 Jan 2021 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Next.js는 기존 React.js와 다르게, 라우팅이라는 것을 별도의 모듈을 설치할 필요없이 기본적으로 제공한다.&lt;/p&gt;
 &lt;p&gt;더욱, 폴더의 구성을 통해 페이지 라우팅을 관리하더라&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;pages/users/[name].tsx&lt;/code&gt; -&gt; &lt;code class=&quot;language-text&quot;&gt;/users/sangmin&lt;/code&gt;
@@ -334,8 +331,7 @@ Router&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;router&lt;sp
 &lt;h2 id=&quot;출처&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%B6%9C%EC%B2%98&quot; aria-label=&quot;출처 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;출처&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://programmers.co.kr/learn/courses/30/lessons/42840&quot;&gt;프로그래머스 모의고사&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Next.js Pre-rendering]]></title><description><![CDATA[Next.js 예전에 CSR과 SSR을 비교해보면서 React도 SSR이 가능하도록 할 수 있는지 알아보는 과정에 hydrate메소드를 발견했었다. 그리고, Next.js를 학습하던 도중, 해당 용어를 다시 만나게 되었다. Before we talk…]]></description><link>https://gatsby-starter-bee.netlify.com/Study/Think/2021-01-26-next.js hydrate/</link><guid isPermaLink="false">https://gatsby-starter-bee.netlify.com/Study/Think/2021-01-26-next.js hydrate/</guid><pubDate>Tue, 26 Jan 2021 00:00:00 GMT</pubDate><content:encoded>&lt;h1 id=&quot;nextjs&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#nextjs&quot; aria-label=&quot;nextjs permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Next.js&lt;/h1&gt;
-&lt;p&gt;예전에 CSR과 SSR을 비교해보면서 React도 SSR이 가능하도록 할 수 있는지 알아보는 과정에 hydrate메소드를 발견했었다.&lt;/p&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Next.js Pre-rendering]]></title><description><![CDATA[예전에 CSR과 SSR을 비교해보면서 React도 SSR이 가능하도록 할 수 있는지 알아보는 과정에 hydrate메소드를 발견했었다. 그리고, Next.js를 학습하던 도중, 해당 용어를 다시 만나게 되었다. Before we talk about…]]></description><link>https://gatsby-starter-bee.netlify.com/Study/Think/2021-01-26-next.js hydrate/</link><guid isPermaLink="false">https://gatsby-starter-bee.netlify.com/Study/Think/2021-01-26-next.js hydrate/</guid><pubDate>Tue, 26 Jan 2021 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;예전에 CSR과 SSR을 비교해보면서 React도 SSR이 가능하도록 할 수 있는지 알아보는 과정에 hydrate메소드를 발견했었다.&lt;/p&gt;
 &lt;p&gt;그리고, Next.js를 학습하던 도중, 해당 용어를 다시 만나게 되었다.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Before we talk about data fetching, let’s talk about one of the most important concepts in Next.js: Pre-rendering.&lt;/p&gt;
@@ -520,8 +516,7 @@ Router&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;router&lt;sp
 &lt;h2 id=&quot;출처&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%B6%9C%EC%B2%98&quot; aria-label=&quot;출처 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;출처&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://programmers.co.kr/learn/courses/30/lessons/42747&quot;&gt;프로그래머스 H-Index&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Next.js]]></title><description><![CDATA[Next.js 이전에도 공부해보고싶었지만, 우선순위에서 밀려있어서 손대보지 못하고있었던 Next.js이다 Next.js의 특징 몇몇가지가 참 매력적이였는데, 검색엔진이 최적화 React.js 기반 React, Vue, Angular…]]></description><link>https://gatsby-starter-bee.netlify.com/Study/Think/2021-01-25-next.js/</link><guid isPermaLink="false">https://gatsby-starter-bee.netlify.com/Study/Think/2021-01-25-next.js/</guid><pubDate>Mon, 25 Jan 2021 00:00:00 GMT</pubDate><content:encoded>&lt;h1 id=&quot;nextjs&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#nextjs&quot; aria-label=&quot;nextjs permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Next.js&lt;/h1&gt;
-&lt;p&gt;이전에도 공부해보고싶었지만, 우선순위에서 밀려있어서 손대보지 못하고있었던 Next.js이다&lt;/p&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Next.js]]></title><description><![CDATA[이전에도 공부해보고싶었지만, 우선순위에서 밀려있어서 손대보지 못하고있었던 Next.js이다 Next.js의 특징 몇몇가지가 참 매력적이였는데, 검색엔진이 최적화 React.js 기반 React, Vue, Angular…]]></description><link>https://gatsby-starter-bee.netlify.com/Study/Think/2021-01-25-next.js/</link><guid isPermaLink="false">https://gatsby-starter-bee.netlify.com/Study/Think/2021-01-25-next.js/</guid><pubDate>Mon, 25 Jan 2021 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;이전에도 공부해보고싶었지만, 우선순위에서 밀려있어서 손대보지 못하고있었던 Next.js이다&lt;/p&gt;
 &lt;p&gt;Next.js의 특징 몇몇가지가 참 매력적이였는데,&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;검색엔진이 최적화&lt;/li&gt;
@@ -743,8 +738,7 @@ Router&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;router&lt;sp
 &lt;h2 id=&quot;출처&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%B6%9C%EC%B2%98&quot; aria-label=&quot;출처 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;출처&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://programmers.co.kr/learn/courses/30/lessons/42576&quot;&gt;프로그래머스 완주하지 못한 선수&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[소스트리와 깃]]></title><description><![CDATA[소스트리 원래는 깃헙 데스크를 사용했었지만, 얼마전 ssd를 교체하면서 아예 포맷되어 소스트리로 넘어가게 되었다. 과정 협업간 브랜치를 나누어 진행 작업이 되면 해당 origin으로 푸시를 함 test…]]></description><link>https://gatsby-starter-bee.netlify.com/Study/Think/2021-01-15-sourcetree/</link><guid isPermaLink="false">https://gatsby-starter-bee.netlify.com/Study/Think/2021-01-15-sourcetree/</guid><pubDate>Fri, 15 Jan 2021 00:00:00 GMT</pubDate><content:encoded>&lt;h1 id=&quot;소스트리&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%86%8C%EC%8A%A4%ED%8A%B8%EB%A6%AC&quot; aria-label=&quot;소스트리 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;소스트리&lt;/h1&gt;
-&lt;ul&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[소스트리와 깃]]></title><description><![CDATA[원래는 깃헙 데스크를 사용했었지만, 얼마전 ssd를 교체하면서 아예 포맷되어 소스트리로 넘어가게 되었다. 과정 협업간 브랜치를 나누어 진행 작업이 되면 해당 origin으로 푸시를 함 test…]]></description><link>https://gatsby-starter-bee.netlify.com/Study/Think/2021-01-15-sourcetree/</link><guid isPermaLink="false">https://gatsby-starter-bee.netlify.com/Study/Think/2021-01-15-sourcetree/</guid><pubDate>Fri, 15 Jan 2021 00:00:00 GMT</pubDate><content:encoded>&lt;ul&gt;
 &lt;li&gt;원래는 깃헙 데스크를 사용했었지만, 얼마전 ssd를 교체하면서 아예 포맷되어 소스트리로 넘어가게 되었다.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&quot;과정&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EA%B3%BC%EC%A0%95&quot; aria-label=&quot;과정 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;과정&lt;/h2&gt;
@@ -760,7 +754,7 @@ Router&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;router&lt;sp
 &lt;li&gt;
 &lt;p&gt;대체로 과정은 저런 느낌인데, 처음에는 그래프들이 막 그려져있어서 이게 도대체 뭐지.. 하는느낌이였지만 연습을 해보니 어느정도 이해가 되었다.&lt;/p&gt;
 &lt;div style=&quot;text-align : center&quot;&gt;
-&lt;img src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2021/01/15/1.PNG?raw=true&quot; alt=&quot;1&quot;&gt;
+&lt;img src=&quot;/img/2021/01/15/1.PNG?raw=true&quot; alt=&quot;1&quot;&gt;
 &lt;/div&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -860,7 +854,7 @@ Router&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;router&lt;sp
 &lt;li&gt;
 &lt;p&gt;실행하게될 경우, 4000포트에 &lt;code class=&quot;language-text&quot;&gt;graphql playground&lt;/code&gt;라는 화면이 보여진다.&lt;/p&gt;
 &lt;div style=&quot;text-align : center&quot;&gt;
-&lt;img src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2021/01/07/1.PNG?raw=true&quot; alt=&quot;1&quot;&gt;
+&lt;img src=&quot;/img/2021/01/07/1.PNG?raw=true&quot; alt=&quot;1&quot;&gt;
 &lt;/div&gt;
 &lt;/li&gt;
 &lt;li&gt;
@@ -914,7 +908,7 @@ schema파일은 클라이언트로부터 오는 Query를 찾는 파일이다.
 &lt;p&gt;
 resolvers파일은 schema에서 찾은 타입의 해결을 맡는다.
 &lt;/p&gt;
-&lt;img src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2021/01/07/2.PNG?raw=true&quot; alt=&quot;2&quot;&gt;
+&lt;img src=&quot;/img/2021/01/07/2.PNG?raw=true&quot; alt=&quot;2&quot;&gt;
 &lt;/div&gt;
 &lt;/li&gt;
 &lt;li&gt;
@@ -923,7 +917,7 @@ resolvers파일은 schema에서 찾은 타입의 해결을 맡는다.
 &lt;p&gt;
 클라이언트에서 user라는 query가 왔을 때, 반환해주는 값의 타입을 지정해준다.
 &lt;/p&gt;
-&lt;img src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2021/01/07/3.PNG?raw=true&quot; alt=&quot;3&quot;&gt;
+&lt;img src=&quot;/img/2021/01/07/3.PNG?raw=true&quot; alt=&quot;3&quot;&gt;
 &lt;/div&gt;
 &lt;/li&gt;
 &lt;li&gt;
@@ -932,13 +926,13 @@ resolvers파일은 schema에서 찾은 타입의 해결을 맡는다.
 &lt;p&gt;
 user Query에서 문자열을 꼭 반환한다고 schema에서 찾았기 떄문에, 그에 맞는 결과물을 리턴해준다.
 &lt;/p&gt;
-&lt;img src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2021/01/07/4.PNG?raw=true&quot; alt=&quot;4&quot;&gt;
+&lt;img src=&quot;/img/2021/01/07/4.PNG?raw=true&quot; alt=&quot;4&quot;&gt;
 &lt;/div&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;4000포트의 &lt;code class=&quot;language-text&quot;&gt;playground&lt;/code&gt;에서 user Query로 요청을 보내면 &lt;code class=&quot;language-text&quot;&gt;resolvers&lt;/code&gt;에서 지정한 값이 반환된다.&lt;/p&gt;
 &lt;div style=&quot;text-align : center&quot;&gt;
-&lt;img src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2021/01/07/5.PNG?raw=true&quot; alt=&quot;5&quot;&gt;
+&lt;img src=&quot;/img/2021/01/07/5.PNG?raw=true&quot; alt=&quot;5&quot;&gt;
 &lt;/div&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -953,7 +947,7 @@ user Query에서 문자열을 꼭 반환한다고 schema에서 찾았기 떄문�
 &lt;p&gt;
 users가 아닌 user입니다. 오타가 있네요
 &lt;/p&gt;
-&lt;img src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2021/01/07/6.PNG?raw=true&quot; alt=&quot;6&quot;&gt;
+&lt;img src=&quot;/img/2021/01/07/6.PNG?raw=true&quot; alt=&quot;6&quot;&gt;
 &lt;/div&gt;
 &lt;/li&gt;
 &lt;li&gt;
@@ -962,7 +956,7 @@ users가 아닌 user입니다. 오타가 있네요
 &lt;p&gt;
 user Query는 User타입을 꼭 반환한다 하였으니, resolvers에서도 그에 맞는 객체를 반환해준다.
 &lt;/p&gt;
-&lt;img src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2021/01/07/7.PNG?raw=true&quot; alt=&quot;7&quot;&gt;
+&lt;img src=&quot;/img/2021/01/07/7.PNG?raw=true&quot; alt=&quot;7&quot;&gt;
 &lt;/div&gt;
 &lt;/li&gt;
 &lt;li&gt;
@@ -974,7 +968,7 @@ user Query로 요청을 보낼 때, 반환되는 값이 객체라면 꼭 원하�
 &lt;p&gt;
 resolvers에서 클라이언트가 요청한 속성들만 보내주는것을 확인할 수 있다.
 &lt;/p&gt;
-&lt;img src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2021/01/07/8.PNG?raw=true&quot; alt=&quot;8&quot;&gt;
+&lt;img src=&quot;/img/2021/01/07/8.PNG?raw=true&quot; alt=&quot;8&quot;&gt;
 &lt;/div&gt;
 &lt;/li&gt;
 &lt;li&gt;
@@ -983,7 +977,7 @@ resolvers에서 클라이언트가 요청한 속성들만 보내주는것을 확
 &lt;p&gt;
 schema에서 어떤 타입이 있고, 각 속성들이 어떠한 타입을 요구하는지 확인할 수 있다.
 &lt;/p&gt;
-&lt;img src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2021/01/07/9.PNG?raw=true&quot; alt=&quot;9&quot;&gt;
+&lt;img src=&quot;/img/2021/01/07/9.PNG?raw=true&quot; alt=&quot;9&quot;&gt;
 &lt;/div&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -995,7 +989,7 @@ schema에서 어떤 타입이 있고, 각 속성들이 어떠한 타입을 요�
 &lt;p&gt;
 실제 DB를 연동한 것과 같이, 다수의 데이터를 관리해보자.
 &lt;/p&gt;
-&lt;img src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2021/01/07/10.PNG?raw=true&quot; alt=&quot;10&quot;&gt;
+&lt;img src=&quot;/img/2021/01/07/10.PNG?raw=true&quot; alt=&quot;10&quot;&gt;
 &lt;/div&gt;
 &lt;/li&gt;
 &lt;li&gt;
@@ -1010,7 +1004,7 @@ users : User타입의 객체가 담긴 배열을 반환하는 Query
 &lt;p&gt;
 user(id : Int) : Query에 보내어진 인자에 맞는 User타입의 객체 반환
 &lt;/p&gt;
-&lt;img src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2021/01/07/11.PNG?raw=true&quot; alt=&quot;11&quot;&gt;
+&lt;img src=&quot;/img/2021/01/07/11.PNG?raw=true&quot; alt=&quot;11&quot;&gt;
 &lt;/div&gt;
 &lt;/li&gt;
 &lt;li&gt;
@@ -1025,7 +1019,7 @@ users : 해당 DB를 그대로 반환하는것
 &lt;p&gt;
 user(id : Int) : Query에 보내어진 id와 동일한 객체만 반환
 &lt;/p&gt;
-&lt;img src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2021/01/07/12.PNG?raw=true&quot; alt=&quot;12&quot;&gt;
+&lt;img src=&quot;/img/2021/01/07/12.PNG?raw=true&quot; alt=&quot;12&quot;&gt;
 &lt;/div&gt;
 &lt;/li&gt;
 &lt;li&gt;
@@ -1037,7 +1031,7 @@ user(id : Int) : Query에 보내어진 id와 동일한 객체만 반환
 &lt;p&gt;
 Query를 보낼 떄, 인자를 같이 보내어서 조건에 맞는 데이터만 찾을 수 있다.
 &lt;/p&gt;
-&lt;img src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2021/01/07/13.PNG?raw=true&quot; alt=&quot;13&quot;&gt;
+&lt;img src=&quot;/img/2021/01/07/13.PNG?raw=true&quot; alt=&quot;13&quot;&gt;
 &lt;/div&gt;
 &lt;/li&gt;
 &lt;li&gt;
@@ -1046,7 +1040,7 @@ Query를 보낼 떄, 인자를 같이 보내어서 조건에 맞는 데이터만
 &lt;p&gt;
 schema에서 어떤 타입이 있고, 각 속성들이 어떠한 타입을 요구하는지 확인할 수 있다.
 &lt;/p&gt;
-&lt;img src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2021/01/07/14.PNG?raw=true&quot; alt=&quot;14&quot;&gt;
+&lt;img src=&quot;/img/2021/01/07/14.PNG?raw=true&quot; alt=&quot;14&quot;&gt;
 &lt;/div&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -1067,7 +1061,7 @@ addMovie(name : String!, score : Int!) : 이름과 점수 인자를 보내 영�
 &lt;p&gt;
 deleteMovie(id : Int!) : 해당 id의 영화를 DB에서 제거하는 Mutation이다.
 &lt;/p&gt;
-&lt;img src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2021/01/07/15.PNG?raw=true&quot; alt=&quot;15&quot;&gt;
+&lt;img src=&quot;/img/2021/01/07/15.PNG?raw=true&quot; alt=&quot;15&quot;&gt;
 &lt;/div&gt;
 &lt;/li&gt;
 &lt;li&gt;
@@ -1076,7 +1070,7 @@ deleteMovie(id : Int!) : 해당 id의 영화를 DB에서 제거하는 Mutation�
 &lt;p&gt;
 Query와 Mutation에 두번째 인자로 Query의 변수들이 넘어가는점을 알아야 한다.
 &lt;/p&gt;
-&lt;img src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2021/01/07/16.PNG?raw=true&quot; alt=&quot;16&quot;&gt;
+&lt;img src=&quot;/img/2021/01/07/16.PNG?raw=true&quot; alt=&quot;16&quot;&gt;
 &lt;/div&gt;
 &lt;/li&gt;
 &lt;li&gt;
@@ -1085,7 +1079,7 @@ Query와 Mutation에 두번째 인자로 Query의 변수들이 넘어가는점�
 &lt;p&gt;
 DB와, 각종 로직들이다.
 &lt;/p&gt;
-&lt;img src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2021/01/07/17.PNG?raw=true&quot; alt=&quot;17&quot;&gt;
+&lt;img src=&quot;/img/2021/01/07/17.PNG?raw=true&quot; alt=&quot;17&quot;&gt;
 &lt;/div&gt;
 &lt;/li&gt;
 &lt;li&gt;
@@ -1094,10 +1088,10 @@ DB와, 각종 로직들이다.
 &lt;p&gt;
 필요한 인자를 Mutation으로 보내서 영화를 추가할 수 있다.
 &lt;/p&gt;
-&lt;img src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2021/01/07/18.PNG?raw=true&quot; alt=&quot;18&quot;&gt;
+&lt;img src=&quot;/img/2021/01/07/18.PNG?raw=true&quot; alt=&quot;18&quot;&gt;
 &lt;/div&gt;
 &lt;div style=&quot;text-align : center&quot;&gt;
-&lt;img src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2021/01/07/19.PNG?raw=true&quot; alt=&quot;19&quot;&gt;
+&lt;img src=&quot;/img/2021/01/07/19.PNG?raw=true&quot; alt=&quot;19&quot;&gt;
 &lt;/div&gt;
 &lt;/li&gt;
 &lt;li&gt;
@@ -1106,10 +1100,10 @@ DB와, 각종 로직들이다.
 &lt;p&gt;
 id를 보내어 영화를 제거할 수 있다.
 &lt;/p&gt;
-&lt;img src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2021/01/07/20.PNG?raw=true&quot; alt=&quot;20&quot;&gt;
+&lt;img src=&quot;/img/2021/01/07/20.PNG?raw=true&quot; alt=&quot;20&quot;&gt;
 &lt;/div&gt;
 &lt;div style=&quot;text-align : center&quot;&gt;
-&lt;img src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2021/01/07/21.PNG?raw=true&quot; alt=&quot;21&quot;&gt;
+&lt;img src=&quot;/img/2021/01/07/21.PNG?raw=true&quot; alt=&quot;21&quot;&gt;
 &lt;/div&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -1124,13 +1118,13 @@ id를 보내어 영화를 제거할 수 있다.
 &lt;p&gt;
 movies Query의 인자들은 API에서 queryString으로 데이터의 필터링을 하는 값들이다.
 &lt;/p&gt;
-&lt;img src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2021/01/07/22.PNG?raw=true&quot; alt=&quot;22&quot;&gt;
+&lt;img src=&quot;/img/2021/01/07/22.PNG?raw=true&quot; alt=&quot;22&quot;&gt;
 &lt;/div&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;resolvers&lt;/code&gt;에서 찾은 &lt;code class=&quot;language-text&quot;&gt;Query&lt;/code&gt;에 대한 해결을 한다.&lt;/p&gt;
 &lt;div style=&quot;text-align : center&quot;&gt;
-&lt;img src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2021/01/07/23.PNG?raw=true&quot; alt=&quot;23&quot;&gt;
+&lt;img src=&quot;/img/2021/01/07/23.PNG?raw=true&quot; alt=&quot;23&quot;&gt;
 &lt;/div&gt;
 &lt;/li&gt;
 &lt;li&gt;
@@ -1145,7 +1139,7 @@ movies Query의 인자들은 API에서 queryString으로 데이터의 필터링�
 &lt;p&gt;
 이를 통해, 클라이언트는 Graphql서버와 query로 소통하고, Graphql서버가 DB서버와 RESTful API로 소통하는것을 알 수 있다. 
 &lt;/p&gt;
-&lt;img src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2021/01/07/24.PNG?raw=true&quot; alt=&quot;24&quot;&gt;
+&lt;img src=&quot;/img/2021/01/07/24.PNG?raw=true&quot; alt=&quot;24&quot;&gt;
 &lt;/div&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -1181,7 +1175,7 @@ movies Query의 인자들은 API에서 queryString으로 데이터의 필터링�
 &lt;li&gt;
 &lt;p&gt;빌드를 할 때, &lt;code class=&quot;language-text&quot;&gt;package.json&lt;/code&gt;에 &lt;code class=&quot;language-text&quot;&gt;hompage&lt;/code&gt;속성이 없다면 아래와 같은 문구가 마지막에 뜨면서 정적서버를 운영하라고 나온다.&lt;/p&gt;
 &lt;div style=&quot;text-align : center&quot;&gt;
-&lt;img src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2021/01/05/1.PNG?raw=true&quot; alt=&quot;1&quot;&gt;
+&lt;img src=&quot;/img/2021/01/05/1.PNG?raw=true&quot; alt=&quot;1&quot;&gt;
 &lt;/div&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -1213,13 +1207,13 @@ movies Query의 인자들은 API에서 queryString으로 데이터의 필터링�
 &lt;li&gt;
 &lt;p&gt;디스트럭쳐링과정에서 불편함을 느꼈었지만, 해당 컴포넌트가 사용한는 &lt;code class=&quot;language-text&quot;&gt;props&lt;/code&gt;의 내부 속성까지 모두 인터페이스에 포함시키면 원활히 작동되었다.&lt;/p&gt;
 &lt;div style=&quot;text-align : center&quot;&gt;
-&lt;img src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2021/01/01/1.PNG?raw=true&quot; alt=&quot;1&quot;&gt;
+&lt;img src=&quot;/img/2021/01/01/1.PNG?raw=true&quot; alt=&quot;1&quot;&gt;
 &lt;/div&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;마찬가지로, 외부에서 가져오기 때문에, 정확한 구조를 알 수 없는 데이터이지만 필수적으로 갖고있는 속성이거나, 혹은 그렇지 않더라도 &lt;code class=&quot;language-text&quot;&gt;Nullable&lt;/code&gt;기능으로 데이터 생성단계에서 인터페이스를 만들어 내보내준다면 각 컴포넌트에 전달되는 속성들의 타입을 정의해주는데 편리함을 느꼈다.&lt;/p&gt;
 &lt;div style=&quot;text-align : center&quot;&gt;
-&lt;img src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2021/01/01/2.PNG?raw=true&quot; alt=&quot;2&quot;&gt;
+&lt;img src=&quot;/img/2021/01/01/2.PNG?raw=true&quot; alt=&quot;2&quot;&gt;
 &lt;/div&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -1269,14 +1263,14 @@ movies Query의 인자들은 API에서 queryString으로 데이터의 필터링�
 &lt;li&gt;
 &lt;p&gt;각종 액션을 호출하는 디스패쳐들이 생성되는 곳인데, &lt;code class=&quot;language-text&quot;&gt;History&lt;/code&gt;변수의 타입을 지정해주기가 애매했다. 따라서, &lt;code class=&quot;language-text&quot;&gt;Parameters&lt;/code&gt;유틸리티를 사용하여, 액션에서 받는 변수의 타입을 가져와서 사용하였다.&lt;/p&gt;
 &lt;div style=&quot;text-align : center&quot;&gt;
-&lt;img src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2020/2020-12-31/1.PNG?raw=true&quot; alt=&quot;1&quot;&gt;
+&lt;img src=&quot;/img/2020/12/31/1.PNG?raw=true&quot; alt=&quot;1&quot;&gt;
 &lt;/div&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;react-router&lt;/code&gt;의 &lt;code class=&quot;language-text&quot;&gt;match&lt;/code&gt;속성을 사용하기때문에, 맞는 타입을 지정해줘야하는데, 해당 모듈에서 타입스크립트를 위해 &lt;code class=&quot;language-text&quot;&gt;RouteComponentProps&lt;/code&gt;를 제공하고있더라.&lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;구조를 살펴보니 내가 필요한 속성값의 타입을 보낸것을 제너릭 변수로 받아서 적용해주는것 같다.&lt;/p&gt;
 &lt;div style=&quot;text-align : center&quot;&gt;
-&lt;img src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2020/2020-12-31/2.PNG?raw=true&quot; alt=&quot;2&quot;&gt;
+&lt;img src=&quot;/img/2020/12/31/2.PNG?raw=true&quot; alt=&quot;2&quot;&gt;
 &lt;/div&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -1285,9 +1279,9 @@ movies Query의 인자들은 API에서 queryString으로 데이터의 필터링�
 &lt;li&gt;
 &lt;p&gt;컨테이너 컴포넌트에서 필요한 인터페이스들을 만들어서 내보내주고 있기때문에, 그대로 가져와서 사용하면 됬다.&lt;/p&gt;
 &lt;div style=&quot;text-align : center&quot;&gt;
-&lt;img src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2020/2020-12-31/3.PNG?raw=true&quot; alt=&quot;3&quot;&gt;
+&lt;img src=&quot;/img/2020/12/31/3.PNG?raw=true&quot; alt=&quot;3&quot;&gt;
 &lt;/div&gt;
-&amp;gt; 혹시, 타입도 `props`로 보낼 수 있나..?
+&gt; 혹시, 타입도 `props`로 보낼 수 있나..?
 &lt;/li&gt;
 &lt;/ul&gt;</content:encoded></item><item><title><![CDATA[TypeScript로 바꿔보자3]]></title><description><![CDATA[Loa-Hands 이전에 만들었던 앱을 타입스크립트로 바꿔보려한다. 부분의 수정과, 부분을 손봐보았다. Reducer 에는 와 가 해당 class…]]></description><link>https://gatsby-starter-bee.netlify.com/Study/TypeScript/2020-12-29-TypeScript_practice02/</link><guid isPermaLink="false">https://gatsby-starter-bee.netlify.com/Study/TypeScript/2020-12-29-TypeScript_practice02/</guid><pubDate>Tue, 29 Dec 2020 00:00:00 GMT</pubDate><content:encoded>&lt;h1 id=&quot;loa-hands&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#loa-hands&quot; aria-label=&quot;loa hands permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Loa-Hands&lt;/h1&gt;
 &lt;ul&gt;
@@ -1300,7 +1294,7 @@ movies Query의 인자들은 API에서 queryString으로 데이터의 필터링�
 &lt;li&gt;
 &lt;p&gt;또한, 이후 하위컴포넌트에 속성으로 homeData를 보내고자 할 때, 유니온타입이 아닌 homeData타입을 갖고 갈 수 있도록, 재지정해주었다.&lt;/p&gt;
 &lt;div style=&quot;text-align : center&quot;&gt;
-&lt;img src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2020/2020-12-25/5.PNG?raw=true&quot; alt=&quot;5&quot;&gt;
+&lt;img src=&quot;/img/2020/12/25/5.PNG?raw=true&quot; alt=&quot;5&quot;&gt;
 &lt;/div&gt;
 &lt;br&gt;
 &lt;div style=&quot;text-align : center&quot;&gt;
@@ -1308,7 +1302,7 @@ movies Query의 인자들은 API에서 queryString으로 데이터의 필터링�
 &lt;/div&gt;
 &lt;br&gt;
 &lt;div style=&quot;text-align : center&quot;&gt;
-&lt;img src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2020/2020-12-29/1.PNG?raw=true&quot; alt=&quot;1&quot;&gt;
+&lt;img src=&quot;/img/2020/12/29/1.PNG?raw=true&quot; alt=&quot;1&quot;&gt;
 &lt;/div&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -1319,7 +1313,7 @@ movies Query의 인자들은 API에서 queryString으로 데이터의 필터링�
 &lt;li&gt;
 &lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;react-redux&lt;/code&gt;공문을 보니, &lt;code class=&quot;language-text&quot;&gt;dispatch&lt;/code&gt;는 &lt;code class=&quot;language-text&quot;&gt;useDispatch&lt;/code&gt;를 통한 결과값이므로 별도의 타입을 지정해줄 필요가 없다하여 모두 지웠다.&lt;/p&gt;
 &lt;div style=&quot;text-align : center&quot;&gt;
-&lt;img src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2020/2020-12-29/2.PNG?raw=true&quot; alt=&quot;2&quot;&gt;
+&lt;img src=&quot;/img/2020/12/29/2.PNG?raw=true&quot; alt=&quot;2&quot;&gt;
 &lt;/div&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -1333,7 +1327,7 @@ movies Query의 인자들은 API에서 queryString으로 데이터의 필터링�
 &lt;p&gt;처음에는 해당 메소드가 실행될 때, 해당 메소드가 생성되는 상위의 &lt;code class=&quot;language-text&quot;&gt;HeaderContainer&lt;/code&gt;에 제너릭으로 작성해야된다 생각했는데, 아니였다.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;div style=&quot;text-align : center&quot;&gt;
-&lt;img src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2020/2020-12-29/3.PNG?raw=true&quot; alt=&quot;3&quot;&gt;
+&lt;img src=&quot;/img/2020/12/29/3.PNG?raw=true&quot; alt=&quot;3&quot;&gt;
 &lt;/div&gt;
 &lt;/li&gt;
 &lt;/ul&gt;</content:encoded></item><item><title><![CDATA[TypeScript로 바꿔보자2]]></title><description><![CDATA[Loa-Hands 이전에 만들었던 앱을 타입스크립트로 바꿔보려한다. 중앙 상태를 관리하는  파트를 손보기로 했다. Actions…]]></description><link>https://gatsby-starter-bee.netlify.com/Study/TypeScript/2020-12-25-TypeScript_practice01/</link><guid isPermaLink="false">https://gatsby-starter-bee.netlify.com/Study/TypeScript/2020-12-25-TypeScript_practice01/</guid><pubDate>Fri, 25 Dec 2020 00:00:00 GMT</pubDate><content:encoded>&lt;h1 id=&quot;loa-hands&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#loa-hands&quot; aria-label=&quot;loa hands permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Loa-Hands&lt;/h1&gt;
@@ -1356,7 +1350,7 @@ movies Query의 인자들은 API에서 queryString으로 데이터의 필터링�
 &lt;p&gt;이론상으로 할 때에는 무슨용도인지 잘 몰랐지만, &lt;code class=&quot;language-text&quot;&gt;const 단언&lt;/code&gt;을 통해 객체 내부에 들어가게 되더라도 대체됨을 막아하는 경우에 있어 꼭 필요함을 느끼게 됬다.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;div style=&quot;text-align : center&quot;&gt;
-&lt;img src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2020/2020-12-25/3.PNG?raw=true&quot; alt=&quot;2&quot;&gt;
+&lt;img src=&quot;/img/2020/12/25/3.PNG?raw=true&quot; alt=&quot;2&quot;&gt;
 &lt;/div&gt;
 &lt;/li&gt;
 &lt;li&gt;
@@ -1365,17 +1359,17 @@ movies Query의 인자들은 API에서 queryString으로 데이터의 필터링�
 &lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;history&lt;/code&gt;의 경우, &lt;code class=&quot;language-text&quot;&gt;@types&lt;/code&gt; 디렉토리에 만들어져있는 인터페이스를 사용해보았다.  &lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;div style=&quot;text-align : center&quot;&gt;
-&lt;img src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2020/2020-12-25/1.PNG?raw=true&quot; alt=&quot;1&quot;&gt;
+&lt;img src=&quot;/img/2020/12/25/1.PNG?raw=true&quot; alt=&quot;1&quot;&gt;
 &lt;/div&gt;
-&amp;gt; `dispatch`의 경우, `useDispatch`의 `ReturnType`을 사용해보았다.
+&gt; `dispatch`의 경우, `useDispatch`의 `ReturnType`을 사용해보았다.
 &lt;div style=&quot;text-align : center&quot;&gt;
-&lt;img src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2020/2020-12-25/3.PNG?raw=true&quot; alt=&quot;3&quot;&gt;
+&lt;img src=&quot;/img/2020/12/25/3.PNG?raw=true&quot; alt=&quot;3&quot;&gt;
 &lt;/div&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;리듀서에서 변수로 받는 &lt;code class=&quot;language-text&quot;&gt;action&lt;/code&gt;의 타입을 유니온으로 하여 관리하였다.&lt;/p&gt;
 &lt;div style=&quot;text-align : center&quot;&gt;
-&lt;img src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2020/2020-12-25/4.PNG?raw=true&quot; alt=&quot;4&quot;&gt;
+&lt;img src=&quot;/img/2020/12/25/4.PNG?raw=true&quot; alt=&quot;4&quot;&gt;
 &lt;/div&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -1385,7 +1379,7 @@ movies Query의 인자들은 API에서 queryString으로 데이터의 필터링�
 &lt;li&gt;
 &lt;p&gt;앞서, 유니온타입으로 각각의 액션들의 리턴 인터페이스들이 묶인것을 &lt;code class=&quot;language-text&quot;&gt;import&lt;/code&gt; 하여, 타입으로 사용하였다.&lt;/p&gt;
 &lt;div style=&quot;text-align : center&quot;&gt;
-&lt;img src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2020/2020-12-25/5.PNG?raw=true&quot; alt=&quot;5&quot;&gt;
+&lt;img src=&quot;/img/2020/12/25/5.PNG?raw=true&quot; alt=&quot;5&quot;&gt;
 &lt;/div&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -1394,7 +1388,7 @@ movies Query의 인자들은 API에서 queryString으로 데이터의 필터링�
 &lt;li&gt;
 &lt;p&gt;크게 다를것은 없지만, 리듀서의 타입을 사용해 앞으로 있을 &lt;code class=&quot;language-text&quot;&gt;useSelector&lt;/code&gt;에서 받아오는 &lt;code class=&quot;language-text&quot;&gt;state&lt;/code&gt;의 타입을 마련했다.&lt;/p&gt;
 &lt;div style=&quot;text-align : center&quot;&gt;
-&lt;img src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2020/2020-12-25/6.PNG?raw=true&quot; alt=&quot;6&quot;&gt;
+&lt;img src=&quot;/img/2020/12/25/6.PNG?raw=true&quot; alt=&quot;6&quot;&gt;
 &lt;/div&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -1420,7 +1414,7 @@ movies Query의 인자들은 API에서 queryString으로 데이터의 필터링�
 &lt;li&gt;
 &lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;AbilityInfo&lt;/code&gt;클래스를 갖는 속성은 그냥 타입을 그것으로 지정해주었다.&lt;/p&gt;
 &lt;div style=&quot;text-align : center&quot;&gt;
-&lt;img src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2020/2020-12-24/1.PNG?raw=true&quot; alt=&quot;1&quot;&gt;
+&lt;img src=&quot;/main/img/2020/12/24/1.PNG?raw=true&quot; alt=&quot;1&quot;&gt;
 &lt;/div&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -1439,7 +1433,7 @@ movies Query의 인자들은 API에서 queryString으로 데이터의 필터링�
 &lt;p&gt;재귀함수같은느낌.. 왠지 위험해보임&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;div style=&quot;text-align : center&quot;&gt;
-&lt;img src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2020/2020-12-24/2.PNG?raw=true&quot; alt=&quot;1&quot;&gt;
+&lt;img src=&quot;/main/img/2020/12/24/2.PNG?raw=true&quot; alt=&quot;1&quot;&gt;
 &lt;/div&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -1448,7 +1442,7 @@ movies Query의 인자들은 API에서 queryString으로 데이터의 필터링�
 &lt;li&gt;
 &lt;p&gt;하나하나의 장비 부위를 구성하는 클래스이다. 크게 문제될건 없었다.&lt;/p&gt;
 &lt;div style=&quot;text-align : center&quot;&gt;
-&lt;img src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2020/2020-12-24/3.PNG?raw=true&quot; alt=&quot;1&quot;&gt;
+&lt;img src=&quot;/main/img/2020/12/24/3.PNG?raw=true&quot; alt=&quot;1&quot;&gt;
 &lt;/div&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -1461,7 +1455,7 @@ movies Query의 인자들은 API에서 queryString으로 데이터의 필터링�
 &lt;p&gt;타입도 재귀처럼 자기자신을 사용할 수 있는듯 함..&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;div style=&quot;text-align : center&quot;&gt;
-&lt;img src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2020/2020-12-24/4.PNG?raw=true&quot; alt=&quot;1&quot;&gt;
+&lt;img src=&quot;/main/img/2020/12/24/4.PNG?raw=true&quot; alt=&quot;1&quot;&gt;
 &lt;/div&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -1474,7 +1468,7 @@ movies Query의 인자들은 API에서 queryString으로 데이터의 필터링�
 &lt;p&gt;지금생각해보니 저기 &lt;code class=&quot;language-text&quot;&gt;events&lt;/code&gt;내부에 있는 객체또한 인터페이스로 해주는것이 나을 듯 하다.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;div style=&quot;text-align : center&quot;&gt;
-&lt;img src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2020/2020-12-24/5.PNG?raw=true&quot; alt=&quot;1&quot;&gt;
+&lt;img src=&quot;/main/img/2020/12/24/5.PNG?raw=true&quot; alt=&quot;1&quot;&gt;
 &lt;/div&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -3590,13 +3584,13 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;li&gt;
 &lt;p&gt;인접리스트 : 노드를 키로 사용하여 해당 노드의 이웃들을 리스트에 저장한다.&lt;/p&gt;
 &lt;div style=&quot;margin : 0 auto; text-align : center&quot;&gt;
-&lt;img src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2020/2020-12-02/graph2.PNG?raw=true&quot; alt=&quot;graph&quot;&gt;
+&lt;img src=&quot;/img/2020/12/02/graph2.PNG?raw=true&quot; alt=&quot;graph&quot;&gt;
 &lt;/div&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;인접행렬 : 행렬의 각 항목이 두 노드간에 연결얼 나타내는 행렬이다.&lt;/p&gt;
 &lt;div style=&quot;margin : 0 auto; text-align : center&quot;&gt;
-&lt;img src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2020/2020-12-02/graph1.PNG?raw=true&quot; alt=&quot;graph&quot;&gt;
+&lt;img src=&quot;/img/2020/12/02/graph1.PNG?raw=true&quot; alt=&quot;graph&quot;&gt;
 &lt;/div&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -3922,7 +3916,7 @@ index &lt;span class=&quot;token number&quot;&gt;12&lt;/span&gt;a8798&lt;span cl
 
 10월 20일 과제제출
 
-10월 24일 불합격 통보. Class10…]]></description><link>https://gatsby-starter-bee.netlify.com/Daily/2020-11-24-class101 out/</link><guid isPermaLink="false">https://gatsby-starter-bee.netlify.com/Daily/2020-11-24-class101 out/</guid><pubDate>Tue, 24 Nov 2020 00:00:00 GMT</pubDate><content:encoded>&lt;div style=&quot;margin : 0 auto; text-align : center&quot;&gt;
+10월 24일 불합격 통보. Class10…]]></description><link>https://gatsby-starter-bee.netlify.com/Diary/2020-11-24-class101 out/</link><guid isPermaLink="false">https://gatsby-starter-bee.netlify.com/Diary/2020-11-24-class101 out/</guid><pubDate>Tue, 24 Nov 2020 00:00:00 GMT</pubDate><content:encoded>&lt;div style=&quot;margin : 0 auto; text-align : center&quot;&gt;
   &lt;img src=&quot;https://t1.daumcdn.net/cfile/tistory/999727385D5220230E&quot; alt=&quot;class101&quot;&gt;
 &lt;/div&gt;
 &lt;h2 id=&quot;불합격&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%B6%88%ED%95%A9%EA%B2%A9&quot; aria-label=&quot;불합격 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;불합격!&lt;/h2&gt;
@@ -3949,7 +3943,7 @@ index &lt;span class=&quot;token number&quot;&gt;12&lt;/span&gt;a8798&lt;span cl
 &lt;br&gt;
 솔직히 기대안했다.. 기업에서 떨어진 사람에게 시간을 쓸 의무는 없으니깐&lt;/p&gt;
 &lt;div style=&quot;margin : 0 auto; text-align : center&quot;&gt;
-  &lt;img src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2020/2020-11-24/class101.PNG?raw=true&quot; alt=&quot;class101_feedback&quot;&gt;
+  &lt;img src=&quot;/img/2020/11/24/class101.PNG?raw=true&quot; alt=&quot;class101_feedback&quot;&gt;
 &lt;/div&gt;
 &lt;p&gt;이렇게 길게 피드백을 보내주셨다.
 &lt;br&gt;
@@ -4551,23 +4545,23 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;/ul&gt;
 &lt;h3 id=&quot;aws에-로그인-후-ec2-서비스를-검색한다&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#aws%EC%97%90-%EB%A1%9C%EA%B7%B8%EC%9D%B8-%ED%9B%84-ec2-%EC%84%9C%EB%B9%84%EC%8A%A4%EB%A5%BC-%EA%B2%80%EC%83%89%ED%95%9C%EB%8B%A4&quot; aria-label=&quot;aws에 로그인 후 ec2 서비스를 검색한다 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;AWS에 로그인 후, EC2 서비스를 검색한다&lt;/h3&gt;
 &lt;div style=&quot;display : flex; justify-content : space-between;&quot;&gt;
-  &lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2020/2020-11-11/1.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
+  &lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;/img/2020/11/11/1.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
 &lt;/div&gt;
 &lt;h3 id=&quot;가상의-컴퓨터를-인스턴스라고-하며-인스턴스-시작을-눌러준다&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EA%B0%80%EC%83%81%EC%9D%98-%EC%BB%B4%ED%93%A8%ED%84%B0%EB%A5%BC-%EC%9D%B8%EC%8A%A4%ED%84%B4%EC%8A%A4%EB%9D%BC%EA%B3%A0-%ED%95%98%EB%A9%B0-%EC%9D%B8%EC%8A%A4%ED%84%B4%EC%8A%A4-%EC%8B%9C%EC%9E%91%EC%9D%84-%EB%88%8C%EB%9F%AC%EC%A4%80%EB%8B%A4&quot; aria-label=&quot;가상의 컴퓨터를 인스턴스라고 하며 인스턴스 시작을 눌러준다 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;가상의 컴퓨터를 인스턴스라고 하며, 인스턴스 시작을 눌러준다.&lt;/h3&gt;
 &lt;div style=&quot;display : flex; justify-content : space-between;&quot;&gt;
-  &lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2020/2020-11-11/2.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
+  &lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;/img/2020/11/11/2.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
 &lt;/div&gt;
 &lt;h3 id=&quot;처음-aws에-가입한-계정이라면-1년간-프리티어로서-무료로-체험을-해볼-수-있다&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%B2%98%EC%9D%8C-aws%EC%97%90-%EA%B0%80%EC%9E%85%ED%95%9C-%EA%B3%84%EC%A0%95%EC%9D%B4%EB%9D%BC%EB%A9%B4-1%EB%85%84%EA%B0%84-%ED%94%84%EB%A6%AC%ED%8B%B0%EC%96%B4%EB%A1%9C%EC%84%9C-%EB%AC%B4%EB%A3%8C%EB%A1%9C-%EC%B2%B4%ED%97%98%EC%9D%84-%ED%95%B4%EB%B3%BC-%EC%88%98-%EC%9E%88%EB%8B%A4&quot; aria-label=&quot;처음 aws에 가입한 계정이라면 1년간 프리티어로서 무료로 체험을 해볼 수 있다 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;처음 AWS에 가입한 계정이라면, 1년간 프리티어로서 무료로 체험을 해볼 수 있다.&lt;/h3&gt;
 &lt;div style=&quot;display : flex; justify-content : space-between;&quot;&gt;
-  &lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2020/2020-11-11/3.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
+  &lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;/img/2020/11/11/3.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
 &lt;/div&gt;
 &lt;h3 id=&quot;가상의-pc인스턴스-성능을-설정하는데-프리티어-전용으로-설정해준다&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EA%B0%80%EC%83%81%EC%9D%98-pc%EC%9D%B8%EC%8A%A4%ED%84%B4%EC%8A%A4-%EC%84%B1%EB%8A%A5%EC%9D%84-%EC%84%A4%EC%A0%95%ED%95%98%EB%8A%94%EB%8D%B0-%ED%94%84%EB%A6%AC%ED%8B%B0%EC%96%B4-%EC%A0%84%EC%9A%A9%EC%9C%BC%EB%A1%9C-%EC%84%A4%EC%A0%95%ED%95%B4%EC%A4%80%EB%8B%A4&quot; aria-label=&quot;가상의 pc인스턴스 성능을 설정하는데 프리티어 전용으로 설정해준다 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;가상의 PC(인스턴스) 성능을 설정하는데, 프리티어 전용으로 설정해준다.&lt;/h3&gt;
 &lt;div style=&quot;display : flex; justify-content : space-between;&quot;&gt;
-  &lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2020/2020-11-11/4.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
+  &lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;/img/2020/11/11/4.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
 &lt;/div&gt;
 &lt;h3 id=&quot;상단의-보안-그룹-구성을-클릭해준다&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%83%81%EB%8B%A8%EC%9D%98-%EB%B3%B4%EC%95%88-%EA%B7%B8%EB%A3%B9-%EA%B5%AC%EC%84%B1%EC%9D%84-%ED%81%B4%EB%A6%AD%ED%95%B4%EC%A4%80%EB%8B%A4&quot; aria-label=&quot;상단의 보안 그룹 구성을 클릭해준다 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;상단의 보안 그룹 구성을 클릭해준다&lt;/h3&gt;
 &lt;div style=&quot;display : flex; justify-content : space-between;&quot;&gt;
-  &lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2020/2020-11-11/5.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
+  &lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;/img/2020/11/11/5.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
 &lt;/div&gt;
 &lt;h3 id=&quot;각각의-포트를-지정해-준다지금생각해보니-https는-해줄-필요-없었던것-같다&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EA%B0%81%EA%B0%81%EC%9D%98-%ED%8F%AC%ED%8A%B8%EB%A5%BC-%EC%A7%80%EC%A0%95%ED%95%B4-%EC%A4%80%EB%8B%A4%EC%A7%80%EA%B8%88%EC%83%9D%EA%B0%81%ED%95%B4%EB%B3%B4%EB%8B%88-https%EB%8A%94-%ED%95%B4%EC%A4%84-%ED%95%84%EC%9A%94-%EC%97%86%EC%97%88%EB%8D%98%EA%B2%83-%EA%B0%99%EB%8B%A4&quot; aria-label=&quot;각각의 포트를 지정해 준다지금생각해보니 https는 해줄 필요 없었던것 같다 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;각각의 포트를 지정해 준다.(지금생각해보니, Https는 해줄 필요 없었던것 같다..)&lt;/h3&gt;
 &lt;ul&gt;
@@ -4576,7 +4570,7 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;li&gt;
 &lt;p&gt;사용자지정포트 - Node.js 실행 테스트를 위한 3000포트&lt;/p&gt;
 &lt;div style=&quot;display : flex; justify-content : space-between;&quot;&gt;
-&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2020/2020-11-11/6.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
+&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;/img/2020/11/11/6.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
 &lt;/div&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -4587,17 +4581,17 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;li&gt;
 &lt;p&gt;&lt;a href=&quot;https://swiftcoding.org/lightsail-from-window10&quot;&gt;.pem파일 권한 에러 해결 Window&lt;/a&gt;&lt;/p&gt;
 &lt;div style=&quot;display : flex; justify-content : space-between;&quot;&gt;
-&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2020/2020-11-11/7.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
+&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;/img/2020/11/11/7.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
 &lt;/div&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&quot;생성된-파일의-모습&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%83%9D%EC%84%B1%EB%90%9C-%ED%8C%8C%EC%9D%BC%EC%9D%98-%EB%AA%A8%EC%8A%B5&quot; aria-label=&quot;생성된 파일의 모습 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;생성된 파일의 모습.&lt;/h3&gt;
 &lt;div style=&quot;display : flex; justify-content : space-between;&quot;&gt;
-  &lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2020/2020-11-11/8.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
+  &lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;/img/2020/11/11/8.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
 &lt;/div&gt;
 &lt;h3 id=&quot;아직-인스턴스가-생성중이라-대기중으로-뜨지만-생성되면-실행중으로-나올것-이다&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%95%84%EC%A7%81-%EC%9D%B8%EC%8A%A4%ED%84%B4%EC%8A%A4%EA%B0%80-%EC%83%9D%EC%84%B1%EC%A4%91%EC%9D%B4%EB%9D%BC-%EB%8C%80%EA%B8%B0%EC%A4%91%EC%9C%BC%EB%A1%9C-%EB%9C%A8%EC%A7%80%EB%A7%8C-%EC%83%9D%EC%84%B1%EB%90%98%EB%A9%B4-%EC%8B%A4%ED%96%89%EC%A4%91%EC%9C%BC%EB%A1%9C-%EB%82%98%EC%98%AC%EA%B2%83-%EC%9D%B4%EB%8B%A4&quot; aria-label=&quot;아직 인스턴스가 생성중이라 대기중으로 뜨지만 생성되면 실행중으로 나올것 이다 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;아직 인스턴스가 생성중이라 대기중으로 뜨지만, 생성되면 실행중으로 나올것 이다.&lt;/h3&gt;
 &lt;div style=&quot;display : flex; justify-content : space-between;&quot;&gt;
-  &lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2020/2020-11-11/9.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
+  &lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;/img/2020/11/11/9.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
 &lt;/div&gt;
 &lt;h3 id=&quot;인스턴스-생성&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%9D%B8%EC%8A%A4%ED%84%B4%EC%8A%A4-%EC%83%9D%EC%84%B1&quot; aria-label=&quot;인스턴스 생성 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;인스턴스 생성.&lt;/h3&gt;
 &lt;ul&gt;
@@ -4605,7 +4599,7 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;li&gt;
 &lt;p&gt;두가지로 인스턴스에 연결된 웹사이트에 접근할 수 있으며, 로컬 PC로 인스턴스에 접속할 때 DNS주소가 필요하다.&lt;/p&gt;
 &lt;div style=&quot;display : flex; justify-content : space-between;&quot;&gt;
-&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2020/2020-11-11/10.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
+&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;/img/2020/11/11/10.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
 &lt;/div&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -4615,7 +4609,7 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;li&gt;
 &lt;p&gt;여기서 위에 pem파일의 권한 문제로 접속이 안될 수 있는데, 위에서 링크해준 주소를 확인해보면 해결방법이 잘 나와있다.&lt;/p&gt;
 &lt;div style=&quot;display : flex; justify-content : space-between;&quot;&gt;
-&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2020/2020-11-11/11.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
+&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;/img/2020/11/11/11.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
 &lt;/div&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -4624,13 +4618,13 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;li&gt;
 &lt;p&gt;주저리주저리 말이 많지만 yes를 입력해 준다&lt;/p&gt;
 &lt;div style=&quot;display : flex; justify-content : space-between;&quot;&gt;
-&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2020/2020-11-11/12.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
+&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;/img/2020/11/11/12.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
 &lt;/div&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&quot;접속-완료&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%A0%91%EC%86%8D-%EC%99%84%EB%A3%8C&quot; aria-label=&quot;접속 완료 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;접속 완료!&lt;/h3&gt;
 &lt;div style=&quot;display : flex; justify-content : space-between;&quot;&gt;
-  &lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2020/2020-11-11/13.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
+  &lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;/img/2020/11/11/13.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
 &lt;/div&gt;
 &lt;h3 id=&quot;ubuntu-업데이트-nginx-설치&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#ubuntu-%EC%97%85%EB%8D%B0%EC%9D%B4%ED%8A%B8-nginx-%EC%84%A4%EC%B9%98&quot; aria-label=&quot;ubuntu 업데이트 nginx 설치 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Ubuntu 업데이트, Nginx 설치&lt;/h3&gt;
 &lt;ul&gt;
@@ -4641,7 +4635,7 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;li&gt;
 &lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;sudo service ngnix start&lt;/code&gt;&lt;/p&gt;
 &lt;div style=&quot;display : flex; justify-content : space-between;&quot;&gt;
-&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2020/2020-11-11/14.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
+&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;/img/2020/11/11/14.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
 &lt;/div&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -4652,7 +4646,7 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;li&gt;
 &lt;p&gt;세팅에서 SFTP로 들어온다.&lt;/p&gt;
 &lt;div style=&quot;display : flex; justify-content : space-between;&quot;&gt;
-&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2020/2020-11-11/15.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
+&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;/img/2020/11/11/15.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
 &lt;/div&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -4661,7 +4655,7 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;li&gt;
 &lt;p&gt;.pem 키 파일을 추가해준다&lt;/p&gt;
 &lt;div style=&quot;display : flex; justify-content : space-between;&quot;&gt;
-&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2020/2020-11-11/16.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
+&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;/img/2020/11/11/16.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
 &lt;/div&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -4671,7 +4665,7 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;li&gt;
 &lt;p&gt;그리고 연결!&lt;/p&gt;
 &lt;div style=&quot;display : flex; justify-content : space-between;&quot;&gt;
-&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2020/2020-11-11/17.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
+&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;/img/2020/11/11/17.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
 &lt;/div&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -4680,13 +4674,13 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;li&gt;
 &lt;p&gt;해당 인스턴스의 상태를 확인해볼 수 있다.&lt;/p&gt;
 &lt;div style=&quot;display : flex; justify-content : space-between;&quot;&gt;
-&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2020/2020-11-11/18.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
+&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;/img/2020/11/11/18.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
 &lt;/div&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&quot;배포할-서버-및-빌드를-하나의-디렉토리로-묶어서-올려준다&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%B0%B0%ED%8F%AC%ED%95%A0-%EC%84%9C%EB%B2%84-%EB%B0%8F-%EB%B9%8C%EB%93%9C%EB%A5%BC-%ED%95%98%EB%82%98%EC%9D%98-%EB%94%94%EB%A0%89%ED%86%A0%EB%A6%AC%EB%A1%9C-%EB%AC%B6%EC%96%B4%EC%84%9C-%EC%98%AC%EB%A0%A4%EC%A4%80%EB%8B%A4&quot; aria-label=&quot;배포할 서버 및 빌드를 하나의 디렉토리로 묶어서 올려준다 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;배포할 서버 및 빌드를 하나의 디렉토리로 묶어서 올려준다.&lt;/h3&gt;
 &lt;div style=&quot;display : flex; justify-content : space-between;&quot;&gt;
-  &lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2020/2020-11-11/19.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
+  &lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;/img/2020/11/11/19.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
 &lt;/div&gt;
 &lt;h3 id=&quot;nodejs-npm-설치&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#nodejs-npm-%EC%84%A4%EC%B9%98&quot; aria-label=&quot;nodejs npm 설치 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Node.js, Npm 설치&lt;/h3&gt;
 &lt;ul&gt;
@@ -4696,7 +4690,7 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;li&gt;
 &lt;p&gt;해당 명령어를 통해 nvm을 설치해준 뒤, 버전을 확인해보면 높은 버전으로 깔린것을 확인할 수 있다.&lt;/p&gt;
 &lt;div style=&quot;display : flex; justify-content : space-between;&quot;&gt;
-&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2020/2020-11-11/20.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
+&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;/img/2020/11/11/20.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
 &lt;/div&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -4706,7 +4700,7 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;li&gt;
 &lt;p&gt;어쨌든, 인스턴스의 ip주소의 3000포트에 잘 실행되고있는것이 보인다.(물론 DNS도 된다.)&lt;/p&gt;
 &lt;div style=&quot;display : flex; justify-content : space-between;&quot;&gt;
-&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2020/2020-11-11/21.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
+&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;/img/2020/11/11/21.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
 &lt;/div&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -4715,24 +4709,24 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;li&gt;
 &lt;p&gt;Aws에서 제공하는 데이터베이스 인스턴스이다. 이 또한, 프리티어로 무료로 사용해 볼 수 있다고한다.(근데 11원 청구와있던데)&lt;/p&gt;
 &lt;div style=&quot;display : flex; justify-content : space-between;&quot;&gt;
-&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2020/2020-11-11/22.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
+&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;/img/2020/11/11/22.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
 &lt;/div&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&quot;데이터-베이스-생성&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%8D%B0%EC%9D%B4%ED%84%B0-%EB%B2%A0%EC%9D%B4%EC%8A%A4-%EC%83%9D%EC%84%B1&quot; aria-label=&quot;데이터 베이스 생성 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;데이터 베이스 생성&lt;/h3&gt;
 &lt;div style=&quot;display : flex; justify-content : space-between;&quot;&gt;
-  &lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2020/2020-11-11/23.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
+  &lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;/img/2020/11/11/23.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
 &lt;/div&gt;
 &lt;h3 id=&quot;mysql&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#mysql&quot; aria-label=&quot;mysql permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;MySQL&lt;/h3&gt;
 &lt;div style=&quot;display : flex; justify-content : space-between;&quot;&gt;
-  &lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2020/2020-11-11/24.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
+  &lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;/img/2020/11/11/24.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
 &lt;/div&gt;
 &lt;h3 id=&quot;프리티어&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%ED%94%84%EB%A6%AC%ED%8B%B0%EC%96%B4&quot; aria-label=&quot;프리티어 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;프리티어&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;이상하게, RDS만 들어오면 좀 렉이 있다. 프리티어 체크 항목 또한 좀 기다리다보면 나온다..&lt;/p&gt;
 &lt;div style=&quot;display : flex; justify-content : space-between;&quot;&gt;
-&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2020/2020-11-11/25.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
+&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;/img/2020/11/11/25.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
 &lt;/div&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -4741,7 +4735,7 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;li&gt;
 &lt;p&gt;마스터 사용자 이름과 마스터 암호는 꼭 기억해주도록 하자.&lt;/p&gt;
 &lt;div style=&quot;display : flex; justify-content : space-between;&quot;&gt;
-&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2020/2020-11-11/26.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
+&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;/img/2020/11/11/26.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
 &lt;/div&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -4750,7 +4744,7 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;li&gt;
 &lt;p&gt;퍼블릭 엑세스 가능을 예 로 바꿔줘야한다.&lt;/p&gt;
 &lt;div style=&quot;display : flex; justify-content : space-between;&quot;&gt;
-&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2020/2020-11-11/27.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
+&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;/img/2020/11/11/27.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
 &lt;/div&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -4759,7 +4753,7 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;li&gt;
 &lt;p&gt;DB 포트는 3306으로 기본적으로 설정되어있다.&lt;/p&gt;
 &lt;div style=&quot;display : flex; justify-content : space-between;&quot;&gt;
-&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2020/2020-11-11/28.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
+&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;/img/2020/11/11/28.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
 &lt;/div&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -4768,7 +4762,7 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;li&gt;
 &lt;p&gt;DB 생성중이며 시간이 좀 걸린다.&lt;/p&gt;
 &lt;div style=&quot;display : flex; justify-content : space-between;&quot;&gt;
-&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2020/2020-11-11/29.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
+&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;/img/2020/11/11/29.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
 &lt;/div&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -4777,7 +4771,7 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;li&gt;
 &lt;p&gt;DB가 생성중인 동안, 연결할 EC2 인스턴스의 보안그룹을 수정해주어야 한다.&lt;/p&gt;
 &lt;div style=&quot;display : flex; justify-content : space-between;&quot;&gt;
-&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2020/2020-11-11/30.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
+&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;/img/2020/11/11/30.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
 &lt;/div&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -4786,7 +4780,7 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;li&gt;
 &lt;p&gt;사용할 인스턴스의 id와 연결 된 보안그룹을 클릭한다.&lt;/p&gt;
 &lt;div style=&quot;display : flex; justify-content : space-between;&quot;&gt;
-&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2020/2020-11-11/31.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
+&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;/img/2020/11/11/31.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
 &lt;/div&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -4795,7 +4789,7 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;li&gt;
 &lt;p&gt;내부에서 접속할 보안포트? 라는것 같다. 외부에서 접속하는것은 아웃바운드라고 한다.&lt;/p&gt;
 &lt;div style=&quot;display : flex; justify-content : space-between;&quot;&gt;
-&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2020/2020-11-11/32.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
+&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;/img/2020/11/11/32.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
 &lt;/div&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -4805,7 +4799,7 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;li&gt;
 &lt;p&gt;개인 pc ip를 어떠한 공식을 통해 산출된 값을 입력하는것이라고한다.&lt;/p&gt;
 &lt;div style=&quot;display : flex; justify-content : space-between;&quot;&gt;
-&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2020/2020-11-11/33.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
+&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;/img/2020/11/11/33.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
 &lt;/div&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -4815,7 +4809,7 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;li&gt;
 &lt;p&gt;우측 보안 그룹을 보면 현재 de로시작하는 보안그룹이 설정되어있다&lt;/p&gt;
 &lt;div style=&quot;display : flex; justify-content : space-between;&quot;&gt;
-&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2020/2020-11-11/34.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
+&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;/img/2020/11/11/34.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
 &lt;/div&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -4824,7 +4818,7 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;li&gt;
 &lt;p&gt;보안 그룹 수정을 통해, 연결할 인스턴스와 같은 보안그룹을 사용하도록 설정해준다.&lt;/p&gt;
 &lt;div style=&quot;display : flex; justify-content : space-between;&quot;&gt;
-&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2020/2020-11-11/35.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
+&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;/img/2020/11/11/35.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
 &lt;/div&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -4833,7 +4827,7 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;li&gt;
 &lt;p&gt;즉시 변경하기를 누르면 일정시간이 지난 후, 변경된것을 확인할 수 있다.&lt;/p&gt;
 &lt;div style=&quot;display : flex; justify-content : space-between;&quot;&gt;
-&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2020/2020-11-11/36.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
+&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;/img/2020/11/11/36.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
 &lt;/div&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -4843,7 +4837,7 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;li&gt;
 &lt;p&gt;Hostname은 엔드포인트를 입력해주며, Username은 RDS 생성시 입력했던 마스터이름을 써준다.&lt;/p&gt;
 &lt;div style=&quot;display : flex; justify-content : space-between;&quot;&gt;
-&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2020/2020-11-11/37.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
+&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;/img/2020/11/11/37.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
 &lt;/div&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -4853,7 +4847,7 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;li&gt;
 &lt;p&gt;만약, 에러가 뜬다면, 오타가 있거나 높은 확률로 보안그룹에서 문제가 있는것이니 잘 확인해보도록 한다.&lt;/p&gt;
 &lt;div style=&quot;display : flex; justify-content : space-between;&quot;&gt;
-&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2020/2020-11-11/38.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
+&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;/img/2020/11/11/38.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
 &lt;/div&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -4864,7 +4858,7 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;li&gt;
 &lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;mysql -h 엔드포인트 -u -마스터이름 -p&lt;/code&gt;를 입력해준다.&lt;/p&gt;
 &lt;div style=&quot;display : flex; justify-content : space-between;&quot;&gt;
-&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2020/2020-11-11/39.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
+&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;/img/2020/11/11/39.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
 &lt;/div&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -4873,7 +4867,7 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;li&gt;
 &lt;p&gt;아마, 비밀번호를 쳐도 출력이 안될텐데, 눈으로만 안보이는것 뿐이니, 다 쳐주고 엔터를 누르면 접속이 된다.&lt;/p&gt;
 &lt;div style=&quot;display : flex; justify-content : space-between;&quot;&gt;
-&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2020/2020-11-11/40.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
+&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;/img/2020/11/11/40.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
 &lt;/div&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -4882,7 +4876,7 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;li&gt;
 &lt;p&gt;DB에서 사용할 테이블을 간단하게 구성해준다.&lt;/p&gt;
 &lt;div style=&quot;display : flex; justify-content : space-between;&quot;&gt;
-&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2020/2020-11-11/41.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
+&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;/img/2020/11/11/41.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
 &lt;/div&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -4891,7 +4885,7 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;li&gt;
 &lt;p&gt;기존 로컬에서 테스트했던 DB 설정값들을 인스턴스에 맞게 수정해준다.&lt;/p&gt;
 &lt;div style=&quot;display : flex; justify-content : space-between;&quot;&gt;
-&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2020/2020-11-11/42.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
+&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;/img/2020/11/11/42.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
 &lt;/div&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -4900,7 +4894,7 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;li&gt;
 &lt;p&gt;이후, 서버를 실행해보면&lt;/p&gt;
 &lt;div style=&quot;display : flex; justify-content : space-between;&quot;&gt;
-&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2020/2020-11-11/43.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
+&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;/img/2020/11/11/43.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
 &lt;/div&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -4909,10 +4903,10 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;li&gt;
 &lt;p&gt;DB연결까지 아주 잘되었다.&lt;/p&gt;
 &lt;div style=&quot;display : flex; justify-content : space-between;&quot;&gt;
-&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2020/2020-11-11/44.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
+&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;/img/2020/11/11/44.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
 &lt;/div&gt;
 &lt;div style=&quot;display : flex; justify-content : space-between;&quot;&gt;
-&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2020/2020-11-11/45.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
+&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;/img/2020/11/11/45.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
 &lt;/div&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -4921,7 +4915,7 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;li&gt;
 &lt;p&gt;해당 위치로 들어간다.&lt;/p&gt;
 &lt;div style=&quot;display : flex; justify-content : space-between;&quot;&gt;
-&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2020/2020-11-11/46.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
+&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;/img/2020/11/11/46.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
 &lt;/div&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -4931,7 +4925,7 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;li&gt;
 &lt;p&gt;기본값의 내용을 보면, 80포트로 받는 내용밖에 안써져있더라..&lt;/p&gt;
 &lt;div style=&quot;display : flex; justify-content : space-between;&quot;&gt;
-&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2020/2020-11-11/47.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
+&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;/img/2020/11/11/47.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
 &lt;/div&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -4940,7 +4934,7 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;li&gt;
 &lt;p&gt;NGINX는 80포트로 접속이 되고, 해당 포트로 들어왔을 때, 3000포트로 바로 연결해주는 뜻인것 같다.&lt;/p&gt;
 &lt;div style=&quot;display : flex; justify-content : space-between;&quot;&gt;
-&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2020/2020-11-11/48.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
+&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;/img/2020/11/11/48.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
 &lt;/div&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -4950,7 +4944,7 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;li&gt;
 &lt;p&gt;만약, 문법상에 아무런 문제가없는데도 에러가 생길 수 있다. 그러면 나도모르게 해당 폴더에 다른 설정파일들이 저장했을 수 있으니, &lt;code class=&quot;language-text&quot;&gt;ls&lt;/code&gt;를 통해 확인해보고 나머지는 지워준다.&lt;/p&gt;
 &lt;div style=&quot;display : flex; justify-content : space-between;&quot;&gt;
-&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2020/2020-11-11/49.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
+&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;/img/2020/11/11/49.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
 &lt;/div&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -4959,7 +4953,7 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;li&gt;
 &lt;p&gt;NGINX를 재실행해준다.&lt;/p&gt;
 &lt;div style=&quot;display : flex; justify-content : space-between;&quot;&gt;
-&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2020/2020-11-11/50.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
+&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;/img/2020/11/11/50.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
 &lt;/div&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -4969,10 +4963,10 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;li&gt;
 &lt;p&gt;ip주소와, DNS 모두 별도의 포트 입력 없이 바로 화면이 보이게 된다.&lt;/p&gt;
 &lt;div style=&quot;display : flex; justify-content : space-between;&quot;&gt;
-&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2020/2020-11-11/51.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
+&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;/img/2020/11/11/51.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
 &lt;/div&gt;
 &lt;div style=&quot;display : flex; justify-content : space-between;&quot;&gt;
-&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2020/2020-11-11/52.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
+&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;/img/2020/11/11/52.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
 &lt;/div&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -4989,7 +4983,7 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;/ul&gt;
 &lt;h2 id=&quot;결과&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EA%B2%B0%EA%B3%BC&quot; aria-label=&quot;결과 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;결과&lt;/h2&gt;
 &lt;div style=&quot;display : flex; justify-content : space-between;&quot;&gt;
-  &lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2020/2020-11-07/ec2.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
+  &lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;/img/2020/11/07/ec2.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
 &lt;/div&gt;
 &lt;h2 id=&quot;후기&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%ED%9B%84%EA%B8%B0&quot; aria-label=&quot;후기 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;후기&lt;/h2&gt;
 &lt;ul&gt;
@@ -5088,7 +5082,7 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;li&gt;
 &lt;p&gt;로그인을 하면, 해당 뷰를 볼 수 있는데, S3를 검색하고 들어가자&lt;/p&gt;
 &lt;div style=&quot;display : flex; justify-content : space-between;&quot;&gt;
-&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2020/2020-11-05/1.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
+&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;/img/2020/11/05/1.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
 &lt;/div&gt;
 &lt;/li&gt;
 &lt;li&gt;
@@ -5097,7 +5091,7 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;li&gt;
 &lt;p&gt;해당 기능을 통해, AWS에 가상의 컴퓨터(AWS에서 제공하는 기본 서버를 운용해주는)를 만들어 주는 듯 하다.&lt;/p&gt;
 &lt;div style=&quot;display : flex; justify-content : space-between;&quot;&gt;
-&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2020/2020-11-05/2.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
+&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;/img/2020/11/05/2.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
 &lt;/div&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -5105,37 +5099,37 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;li&gt;
 &lt;p&gt;버킷의 이름을 지정해주고, 리전을 서울로 해준다.&lt;/p&gt;
 &lt;div style=&quot;display : flex; justify-content : space-between;&quot;&gt;
-&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2020/2020-11-05/3.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
+&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;/img/2020/11/05/3.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
 &lt;/div&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;스크롤을 내려보면 모든 퍼블릭 엑세스가 차단되어있을 텐데, 차단을 풀어주자.(해당 웹앱을 외부에서 접속할 수 있도록) 풀어주면 하단에 저런 경고창이 뜨는데 싱경쓰지말고 체크해준다.(조금 위화감이 들긴 하더라.)&lt;/p&gt;
 &lt;div style=&quot;display : flex; justify-content : space-between;&quot;&gt;
-&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2020/2020-11-05/4.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
+&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;/img/2020/11/05/4.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
 &lt;/div&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;버킷이 생성된 것을 확인!&lt;/p&gt;
 &lt;div style=&quot;display : flex; justify-content : space-between;&quot;&gt;
-&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2020/2020-11-05/5.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
+&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;/img/2020/11/05/5.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
 &lt;/div&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;버킷의 이름을 클릭하면 현재는 객체가 비어있는것을 확인할 수 있는데, 저곳에 빌드했던 파일들을 넣어줄 것이다.&lt;/p&gt;
 &lt;div style=&quot;display : flex; justify-content : space-between;&quot;&gt;
-&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2020/2020-11-05/6.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
+&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;/img/2020/11/05/6.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
 &lt;/div&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;build 폴더가 아닌 build 폴더 내부의 파일, 폴더들을 넣어준다.&lt;/p&gt;
 &lt;div style=&quot;display : flex; justify-content : space-between;&quot;&gt;
-&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2020/2020-11-05/7.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
+&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;/img/2020/11/05/7.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
 &lt;/div&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;다 넣었다면 권한탭으로 이동한다.&lt;/p&gt;
 &lt;div style=&quot;display : flex; justify-content : space-between;&quot;&gt;
-&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2020/2020-11-05/9.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
+&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;/img/2020/11/05/9.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
 &lt;/div&gt;
 &lt;/li&gt;
 &lt;li&gt;
@@ -5144,7 +5138,7 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;li&gt;
 &lt;p&gt;해당 버킷에 대한 접근 허용 및 제한을 JSON형식으로 설정하는 곳 같다.&lt;/p&gt;
 &lt;div style=&quot;display : flex; justify-content : space-between;&quot;&gt;
-&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2020/2020-11-05/10.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
+&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;/img/2020/11/05/10.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
 &lt;/div&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -5152,7 +5146,7 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;li&gt;
 &lt;p&gt;버킷ARN을 복사한 뒤, 정책 생성기를 누른다&lt;/p&gt;
 &lt;div style=&quot;display : flex; justify-content : space-between;&quot;&gt;
-&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2020/2020-11-05/11.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
+&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;/img/2020/11/05/11.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
 &lt;/div&gt;
 &lt;/li&gt;
 &lt;li&gt;
@@ -5162,7 +5156,7 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;li&gt;
 &lt;p&gt;Actions : 단순히 해당 웹앱을 보는형태이기 때문에 GetObject. 여러 기능이 있긴 한데… 너무많아서 잘 모르겠다.&lt;/p&gt;
 &lt;div style=&quot;display : flex; justify-content : space-between;&quot;&gt;
-&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2020/2020-11-05/12.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
+&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;/img/2020/11/05/12.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
 &lt;/div&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -5170,43 +5164,43 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;li&gt;
 &lt;p&gt;Add Statement -&gt; Generate Policy를 누르면 완성된 JSON이 나온다. 복사를 하고 버킷정책에 붙여넣기해준다.&lt;/p&gt;
 &lt;div style=&quot;display : flex; justify-content : space-between;&quot;&gt;
-&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2020/2020-11-05/13.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
+&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;/img/2020/11/05/13.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
 &lt;/div&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;이후 나와서 스크롤을 내려보면 ACL 항목이 나온다.&lt;/p&gt;
 &lt;div style=&quot;display : flex; justify-content : space-between;&quot;&gt;
-&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2020/2020-11-05/14.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
+&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;/img/2020/11/05/14.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
 &lt;/div&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;모든사람 에서 읽기만 체크를 해준다!&lt;/p&gt;
 &lt;div style=&quot;display : flex; justify-content : space-between;&quot;&gt;
-&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2020/2020-11-05/15.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
+&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;/img/2020/11/05/15.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
 &lt;/div&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;속성탭으로 이동해준다.&lt;/p&gt;
 &lt;div style=&quot;display : flex; justify-content : space-between;&quot;&gt;
-&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2020/2020-11-05/16.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
+&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;/img/2020/11/05/16.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
 &lt;/div&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;우리는 웹사이트이기 때문에 정적 웹사이트 호스팅항목을 찾는다.&lt;/p&gt;
 &lt;div style=&quot;display : flex; justify-content : space-between;&quot;&gt;
-&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2020/2020-11-05/17.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
+&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;/img/2020/11/05/17.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
 &lt;/div&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;인덱스문서와 오류문서를 설정해준다.&lt;/p&gt;
 &lt;div style=&quot;display : flex; justify-content : space-between;&quot;&gt;
-&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2020/2020-11-05/18.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
+&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;/img/2020/11/05/18.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
 &lt;/div&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;설정이 완료되면 생성된 http로된 주소가 하나 출력된다.&lt;/p&gt;
 &lt;div style=&quot;display : flex; justify-content : space-between;&quot;&gt;
-&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2020/2020-11-05/19.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
+&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;/img/2020/11/05/19.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
 &lt;/div&gt;
 &lt;/li&gt;
 &lt;li&gt;
@@ -5215,8 +5209,8 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;li&gt;
 &lt;p&gt;만약, 깃허브 페이지를 운용하고 있는 리액트 앱이라면, package.json에서 hompage속성을 지워주고 빌드를 해야 script나 css등의 주소가 정상적으로 설정되니 꼭 확인해봐야한다!&lt;/p&gt;
 &lt;div style=&quot;display : flex; justify-content : space-between;&quot;&gt;
-&lt;img style=&quot;display : inlneblock; width : 49%&quot; src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2020/2020-11-05/20.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
-&lt;img style=&quot;display : inlneblock; width : 49%&quot; src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2020/2020-11-05/21.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
+&lt;img style=&quot;display : inlneblock; width : 49%&quot; src=&quot;/img/2020/11/05/20.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
+&lt;img style=&quot;display : inlneblock; width : 49%&quot; src=&quot;/img/2020/11/05/21.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
 &lt;/div&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -5229,19 +5223,19 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;li&gt;
 &lt;p&gt;aws에서 cloudfront를 검색해준다.&lt;/p&gt;
 &lt;div style=&quot;display : flex; justify-content : space-between;&quot;&gt;
-&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2020/2020-11-05/22.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
+&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;/img/2020/11/05/22.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
 &lt;/div&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;cloudfront 시작하기!&lt;/p&gt;
 &lt;div style=&quot;display : flex; justify-content : space-between;&quot;&gt;
-&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2020/2020-11-05/23.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
+&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;/img/2020/11/05/23.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
 &lt;/div&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;우리는 웹앱이기때문에 Web에서 시작을 해준다.&lt;/p&gt;
 &lt;div style=&quot;display : flex; justify-content : space-between;&quot;&gt;
-&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2020/2020-11-05/24.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
+&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;/img/2020/11/05/24.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
 &lt;/div&gt;
 &lt;/li&gt;
 &lt;li&gt;
@@ -5250,7 +5244,7 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;li&gt;
 &lt;p&gt;하단에서 Http에서 Https로 리다이렉션 해주도록 한다.&lt;/p&gt;
 &lt;div style=&quot;display : flex; justify-content : space-between;&quot;&gt;
-&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2020/2020-11-05/25.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
+&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;/img/2020/11/05/25.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
 &lt;/div&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -5258,44 +5252,44 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;li&gt;
 &lt;p&gt;배포중인 모습이다. 15분정도? 시간이 걸리고 In Progress가 사라지면 배포가 완료된 것이다. 만약 이 불편한 주소가 싫다면 개인 도매인을 구매하여 Domain Name을 변경해 줄 수 있다.&lt;/p&gt;
 &lt;div style=&quot;display : flex; justify-content : space-between;&quot;&gt;
-&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2020/2020-11-05/26.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
+&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;/img/2020/11/05/26.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
 &lt;/div&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;em&gt;6.&lt;/em&gt; 나의 경우, 배포된 웹사이트에 접속을 하였을 때 listbucketresult…만 출력이 되었었는데, 기본 루트를 설정해주지 않아 생기는 오류라고 한다.&lt;/p&gt;
 &lt;div style=&quot;display : flex; justify-content : space-between;&quot;&gt;
-  &lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2020/2020-11-05/27.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
+  &lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;/img/2020/11/05/27.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
 &lt;/div&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;따라서 General 에서 편집기능을 켜, Default Root를 index.html로 설정해준다.&lt;/p&gt;
 &lt;div style=&quot;display : flex; justify-content : space-between;&quot;&gt;
-&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2020/2020-11-05/28.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
+&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;/img/2020/11/05/28.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
 &lt;/div&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;특정 에러 발생시, 이동되는 파일을 지정해 줄 수 있다.&lt;/p&gt;
 &lt;div style=&quot;display : flex; justify-content : space-between;&quot;&gt;
-&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2020/2020-11-05/29.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
+&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;/img/2020/11/05/29.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
 &lt;/div&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;해당 앱의 기준 404.html로 이동해주도록 했다.&lt;/p&gt;
 &lt;div style=&quot;display : flex; justify-content : space-between;&quot;&gt;
-&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2020/2020-11-05/30.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
+&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;/img/2020/11/05/30.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
 &lt;/div&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;모든 설정들이 적용된 웹앱이 배포되었다.&lt;/p&gt;
 &lt;div style=&quot;display : flex; justify-content : space-between;&quot;&gt;
-&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2020/2020-11-05/31.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
+&lt;img style=&quot;display : inlneblock; width : 100%&quot; src=&quot;/img/2020/11/05/31.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
 &lt;/div&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Https로 잘 배포된 모습을 볼 수 있다.&lt;/p&gt;
 &lt;div style=&quot;display : flex; justify-content : space-between;&quot;&gt;
-&lt;img style=&quot;display : inlneblock; width : 49%&quot; src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2020/2020-11-05/32.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
-&lt;img style=&quot;display : inlneblock; width : 49%&quot; src=&quot;https://github.com/sangmin802/sangmin802.github.io/blob/main/img/2020/2020-11-05/33.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
+&lt;img style=&quot;display : inlneblock; width : 49%&quot; src=&quot;/img/2020/11/05/32.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
+&lt;img style=&quot;display : inlneblock; width : 49%&quot; src=&quot;/img/2020/11/05/33.PNG?raw=true&quot; alt=&quot;result1&quot;&gt;
 &lt;/div&gt;
 &lt;/li&gt;
 &lt;/ul&gt;</content:encoded></item><item><title><![CDATA[EC2&S3]]></title><description><![CDATA[AWS 배포 최근 만들어왔던 웹 앱을 AWS를 통해 한번 배포해보자는 생각을 갖게되었다.
@@ -5381,7 +5375,7 @@ App컴포넌트 안에 UserInfo와 Home컴포넌트가 있으며 react-router로
 
 10월 22일 화상통화로 기술면접.
 
-10월 2…]]></description><link>https://gatsby-starter-bee.netlify.com/Daily/2020-10-26-dangn out/</link><guid isPermaLink="false">https://gatsby-starter-bee.netlify.com/Daily/2020-10-26-dangn out/</guid><pubDate>Mon, 26 Oct 2020 00:00:00 GMT</pubDate><content:encoded>&lt;div style=&quot;margin : 0 auto; text-align : center&quot;&gt;
+10월 2…]]></description><link>https://gatsby-starter-bee.netlify.com/Diary/2020-10-26-dangn out/</link><guid isPermaLink="false">https://gatsby-starter-bee.netlify.com/Diary/2020-10-26-dangn out/</guid><pubDate>Mon, 26 Oct 2020 00:00:00 GMT</pubDate><content:encoded>&lt;div style=&quot;margin : 0 auto; text-align : center&quot;&gt;
   &lt;img src=&quot;https://www.daangn.com/images/meta/home/daangn.png&quot; alt=&quot;op.gg&quot;&gt;
 &lt;/div&gt;
 &lt;h2 id=&quot;불합격&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%B6%88%ED%95%A9%EA%B2%A9&quot; aria-label=&quot;불합격 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;불합격!&lt;/h2&gt;
@@ -11304,7 +11298,7 @@ new Vue({
 })
 &lt;/script&gt;
 &lt;h2 id=&quot;참조&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%B0%B8%EC%A1%B0&quot; aria-label=&quot;참조 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;참조&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&quot;https://vuejs.org/v2/guide/&quot;&gt;Vue.js 공식가이드 소개&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[OP.GG 불합격]]></title><description><![CDATA[불합격! 오늘아침 화장실에서 큰 일을 보는데, 저번 7월 2…]]></description><link>https://gatsby-starter-bee.netlify.com/Daily/2020-08-27-opgg out/</link><guid isPermaLink="false">https://gatsby-starter-bee.netlify.com/Daily/2020-08-27-opgg out/</guid><pubDate>Thu, 27 Aug 2020 00:00:00 GMT</pubDate><content:encoded>&lt;div style=&quot;margin : 0 auto; text-align : center&quot;&gt;
+&lt;p&gt;&lt;a href=&quot;https://vuejs.org/v2/guide/&quot;&gt;Vue.js 공식가이드 소개&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[OP.GG 불합격]]></title><description><![CDATA[불합격! 오늘아침 화장실에서 큰 일을 보는데, 저번 7월 2…]]></description><link>https://gatsby-starter-bee.netlify.com/Diary/2020-08-27-opgg out/</link><guid isPermaLink="false">https://gatsby-starter-bee.netlify.com/Diary/2020-08-27-opgg out/</guid><pubDate>Thu, 27 Aug 2020 00:00:00 GMT</pubDate><content:encoded>&lt;div style=&quot;margin : 0 auto; text-align : center&quot;&gt;
   &lt;img src=&quot;https://attach.s.op.gg/logo/20200728145104.1d168565d106679d24e00fcd2affc8f4.png&quot; alt=&quot;op.gg&quot;&gt;
 &lt;/div&gt;
 &lt;h2 id=&quot;불합격&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%B6%88%ED%95%A9%EA%B2%A9&quot; aria-label=&quot;불합격 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;불합격!&lt;/h2&gt;
@@ -12003,7 +11997,7 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;span class=&quot;token comment&quot;&gt;// }&lt;/span&gt;
 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
 user&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;additionalMethod&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// Fuck added&lt;/span&gt;
-user&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;showHealth&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// 추가이름이야&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[OP.GG]]></title><description><![CDATA[…]]></description><link>https://gatsby-starter-bee.netlify.com/Daily/2020-07-29-opgg/</link><guid isPermaLink="false">https://gatsby-starter-bee.netlify.com/Daily/2020-07-29-opgg/</guid><pubDate>Wed, 29 Jul 2020 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;첫-서류통과&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%B2%AB-%EC%84%9C%EB%A5%98%ED%86%B5%EA%B3%BC&quot; aria-label=&quot;첫 서류통과 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;첫 서류통과.&lt;/h2&gt;
+user&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;showHealth&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// 추가이름이야&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[OP.GG]]></title><description><![CDATA[…]]></description><link>https://gatsby-starter-bee.netlify.com/Diary/2020-07-29-opgg/</link><guid isPermaLink="false">https://gatsby-starter-bee.netlify.com/Diary/2020-07-29-opgg/</guid><pubDate>Wed, 29 Jul 2020 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;첫-서류통과&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%B2%AB-%EC%84%9C%EB%A5%98%ED%86%B5%EA%B3%BC&quot; aria-label=&quot;첫 서류통과 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;첫 서류통과.&lt;/h2&gt;
 &lt;p&gt;꾸준히 이력서를 넣어왔는데, 단 한곳도 연락이 오지 않았다.
 물론 같이 &lt;code class=&quot;language-text&quot;&gt;플라이어스&lt;/code&gt; 웹 어플리케이션을 개발한 강사님이 기업을 한곳 추천해주셨었고, 잡플래닛과 크레딧잡을 통해 알아보니 괜찮은 기업이였지만.. 낙하산느낌도나고.. 무엇보다도 지원자격도 좀 애매했다.&lt;/p&gt;
 &lt;blockquote&gt;
@@ -12052,62 +12046,7 @@ user&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class
   &lt;span class=&quot;token comment&quot;&gt;// size = size || 1; // 2번방법&lt;/span&gt;
   &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; value&lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt;size&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// 6&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[ES6_Arrow function(화살표함수)]]></title><description><![CDATA[Arroy function(화살표함수) 콜백함수나, 몇몇의 함수를 입력할 때 function을 다시쓰는것은 너무나도 귀찮다. 따라서, 이런 경우 로 축약할수 있게 되었다. 화살표함수의 this…]]></description><link>https://gatsby-starter-bee.netlify.com/Study/ES6/2020-07-27-ES6_13_arroyfunction/</link><guid isPermaLink="false">https://gatsby-starter-bee.netlify.com/Study/ES6/2020-07-27-ES6_13_arroyfunction/</guid><pubDate>Mon, 27 Jul 2020 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;arroy-function화살표함수&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#arroy-function%ED%99%94%EC%82%B4%ED%91%9C%ED%95%A8%EC%88%98&quot; aria-label=&quot;arroy function화살표함수 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Arroy function(화살표함수)&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;콜백함수나, 몇몇의 함수를 입력할 때 function을 다시쓰는것은 너무나도 귀찮다. 따라서, 이런 경우 &lt;code class=&quot;language-text&quot;&gt;() =&amp;gt;&lt;/code&gt;로 축약할수 있게 되었다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;// 구버전&lt;/span&gt;
-&lt;span class=&quot;token function&quot;&gt;setTimeout&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-  console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;fuckyou&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1000&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;token comment&quot;&gt;// 화살표함수&lt;/span&gt;
-&lt;span class=&quot;token function&quot;&gt;setTimeout&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-  console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;fuckyou&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1000&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;token keyword&quot;&gt;let&lt;/span&gt; newArr &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;res&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; index&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; object&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; res&lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
-console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;newArr&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// [2,4,6,8,10]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2 id=&quot;화살표함수의-this&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%ED%99%94%EC%82%B4%ED%91%9C%ED%95%A8%EC%88%98%EC%9D%98-this&quot; aria-label=&quot;화살표함수의 this permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;화살표함수의 this&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;기본적으로 객체 내에서는 메소드를 정의하게될 경우, 해당 메소드의 &lt;code class=&quot;language-text&quot;&gt;this&lt;/code&gt;는 객체를 지칭한다. &lt;b style=&quot;color : tomato; font-&quot;&gt;하지만&lt;/b&gt;
-메소드를 화살표함수로 정의한다면, &lt;code class=&quot;language-text&quot;&gt;this&lt;/code&gt;는 객체가 아닌 &lt;code class=&quot;language-text&quot;&gt;window&lt;/code&gt;를 지칭하게된다.&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;콜백함수로 일반함수를 사용했을 때, 객체 내부더라도 window를 지칭한다. 이럴경우, 이전까지는 &lt;code class=&quot;language-text&quot;&gt;.bind(this)&lt;/code&gt;를 통해 해결해왔지만, 화살표함수로 해결 가능해졌다.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;실제로, React에서 컴포넌트 내부의 메소드를 호출하려 할 때, &lt;code class=&quot;language-text&quot;&gt;this.method&lt;/code&gt;처럼 직접연결할 경우, 뒤에 &lt;code class=&quot;language-text&quot;&gt;.bind(this)&lt;/code&gt;를 써줬어야 했는데, 직접연결이 아닌 &lt;code class=&quot;language-text&quot;&gt;() =&amp;gt; {this.method}&lt;/code&gt;는 써줄 필요가 없었다.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; myObj &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-  name &lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;apple&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
-  &lt;span class=&quot;token function-variable function&quot;&gt;arrowThis&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// 객체 내 화살표함수&lt;/span&gt;
-    console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// window&lt;/span&gt;
-  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
-  &lt;span class=&quot;token function&quot;&gt;normalThis&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// 객체 내 일반메소드&lt;/span&gt;
-    console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// myObj&lt;/span&gt;
-  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
-  &lt;span class=&quot;token function&quot;&gt;arrowCallback&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// 객체 내 화살표 콜백함수&lt;/span&gt;
-    &lt;span class=&quot;token function&quot;&gt;setTimeout&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-      console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// myObj&lt;/span&gt;
-    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
-  &lt;span class=&quot;token function&quot;&gt;normalCallback&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;token function&quot;&gt;setTimeout&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// 객체 내 일반 콜백함수&lt;/span&gt;
-      console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// window&lt;/span&gt;
-    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-myObj&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;arrowThis&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-myObj&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;normalThis&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-myObj&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;arrowCallback&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-myObj&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;normalCallback&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2 id=&quot;🧐결론&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%F0%9F%A7%90%EA%B2%B0%EB%A1%A0&quot; aria-label=&quot;🧐결론 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;🧐결론&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;화살표함수는 편리하지만, 사용할 때 this가 지칭하는것이 바뀔 수 있다는점을 알고 사용해야겠다.&lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[ES6_template처리]]></title><description><![CDATA[Template Template Literals  로 문자열을 감싸고, 를 통해 값을 바로 가져올 수 있다. 이전에는 나 로 문자열을 감싸고, 스크립트의 값을 로 해줬어야 했는데, 개선되었다. Tagged Template Literals…]]></description><link>https://gatsby-starter-bee.netlify.com/Study/ES6/2020-07-27-ES6_12_template/</link><guid isPermaLink="false">https://gatsby-starter-bee.netlify.com/Study/ES6/2020-07-27-ES6_12_template/</guid><pubDate>Mon, 27 Jul 2020 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;template&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#template&quot; aria-label=&quot;template permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Template&lt;/h2&gt;
+console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// 6&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[ES6_template처리]]></title><description><![CDATA[Template Template Literals  로 문자열을 감싸고, 를 통해 값을 바로 가져올 수 있다. 이전에는 나 로 문자열을 감싸고, 스크립트의 값을 로 해줬어야 했는데, 개선되었다. Tagged Template Literals…]]></description><link>https://gatsby-starter-bee.netlify.com/Study/ES6/2020-07-27-ES6_12_template/</link><guid isPermaLink="false">https://gatsby-starter-bee.netlify.com/Study/ES6/2020-07-27-ES6_12_template/</guid><pubDate>Mon, 27 Jul 2020 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;template&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#template&quot; aria-label=&quot;template permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Template&lt;/h2&gt;
 &lt;h3 id=&quot;template-literals&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#template-literals&quot; aria-label=&quot;template literals permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Template Literals&lt;/h3&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; data &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
   name &lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;박상민&apos;&lt;/span&gt;
@@ -12209,7 +12148,62 @@ data&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class
     const template = fn`&lt;div&gt;welcome ${res.name}!&lt;/div&gt;&lt;h2&gt;주문가능항목&lt;/h2&gt;&lt;div&gt;${res.items}&lt;/div&gt;&lt;br&gt;&lt;br&gt;`;
     document.querySelector(&apos;.templateLiteralsExp&apos;).innerHTML += template;
   })
-&lt;/script&gt;</content:encoded></item><item><title><![CDATA[ES6_Map&WeakMap 추가정보를 담은 객체저장]]></title><description><![CDATA[Map, WeakMap 배열 -> Set, WeakSet (좀 더 세련된 배열?) 객체 -> Map, WeakMap (좀 더 세련된 객체?) 특징 Set, Map : 배열이나 객체에서 기본타입을 저장할 때 사용한다. WeakSet, WeakMap…]]></description><link>https://gatsby-starter-bee.netlify.com/Study/ES6/2020-07-24-ES6_11_map&amp;weakmap/</link><guid isPermaLink="false">https://gatsby-starter-bee.netlify.com/Study/ES6/2020-07-24-ES6_11_map&amp;weakmap/</guid><pubDate>Fri, 24 Jul 2020 00:00:02 GMT</pubDate><content:encoded>&lt;h2 id=&quot;map-weakmap&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#map-weakmap&quot; aria-label=&quot;map weakmap permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Map, WeakMap&lt;/h2&gt;
+&lt;/script&gt;</content:encoded></item><item><title><![CDATA[ES6_Arrow function(화살표함수)]]></title><description><![CDATA[Arroy function(화살표함수) 콜백함수나, 몇몇의 함수를 입력할 때 function을 다시쓰는것은 너무나도 귀찮다. 따라서, 이런 경우 로 축약할수 있게 되었다. 화살표함수의 this…]]></description><link>https://gatsby-starter-bee.netlify.com/Study/ES6/2020-07-27-ES6_13_arroyfunction/</link><guid isPermaLink="false">https://gatsby-starter-bee.netlify.com/Study/ES6/2020-07-27-ES6_13_arroyfunction/</guid><pubDate>Mon, 27 Jul 2020 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;arroy-function화살표함수&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#arroy-function%ED%99%94%EC%82%B4%ED%91%9C%ED%95%A8%EC%88%98&quot; aria-label=&quot;arroy function화살표함수 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Arroy function(화살표함수)&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;콜백함수나, 몇몇의 함수를 입력할 때 function을 다시쓰는것은 너무나도 귀찮다. 따라서, 이런 경우 &lt;code class=&quot;language-text&quot;&gt;() =&amp;gt;&lt;/code&gt;로 축약할수 있게 되었다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;// 구버전&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;setTimeout&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;fuckyou&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1000&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;// 화살표함수&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;setTimeout&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;fuckyou&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1000&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;let&lt;/span&gt; newArr &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;res&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; index&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; object&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; res&lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;newArr&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// [2,4,6,8,10]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2 id=&quot;화살표함수의-this&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%ED%99%94%EC%82%B4%ED%91%9C%ED%95%A8%EC%88%98%EC%9D%98-this&quot; aria-label=&quot;화살표함수의 this permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;화살표함수의 this&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;기본적으로 객체 내에서는 메소드를 정의하게될 경우, 해당 메소드의 &lt;code class=&quot;language-text&quot;&gt;this&lt;/code&gt;는 객체를 지칭한다. &lt;b style=&quot;color : tomato; font-&quot;&gt;하지만&lt;/b&gt;
+메소드를 화살표함수로 정의한다면, &lt;code class=&quot;language-text&quot;&gt;this&lt;/code&gt;는 객체가 아닌 &lt;code class=&quot;language-text&quot;&gt;window&lt;/code&gt;를 지칭하게된다.&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;콜백함수로 일반함수를 사용했을 때, 객체 내부더라도 window를 지칭한다. 이럴경우, 이전까지는 &lt;code class=&quot;language-text&quot;&gt;.bind(this)&lt;/code&gt;를 통해 해결해왔지만, 화살표함수로 해결 가능해졌다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;실제로, React에서 컴포넌트 내부의 메소드를 호출하려 할 때, &lt;code class=&quot;language-text&quot;&gt;this.method&lt;/code&gt;처럼 직접연결할 경우, 뒤에 &lt;code class=&quot;language-text&quot;&gt;.bind(this)&lt;/code&gt;를 써줬어야 했는데, 직접연결이 아닌 &lt;code class=&quot;language-text&quot;&gt;() =&amp;gt; {this.method}&lt;/code&gt;는 써줄 필요가 없었다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; myObj &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  name &lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;apple&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token function-variable function&quot;&gt;arrowThis&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// 객체 내 화살표함수&lt;/span&gt;
+    console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// window&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token function&quot;&gt;normalThis&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// 객체 내 일반메소드&lt;/span&gt;
+    console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// myObj&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token function&quot;&gt;arrowCallback&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// 객체 내 화살표 콜백함수&lt;/span&gt;
+    &lt;span class=&quot;token function&quot;&gt;setTimeout&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+      console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// myObj&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token function&quot;&gt;normalCallback&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token function&quot;&gt;setTimeout&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// 객체 내 일반 콜백함수&lt;/span&gt;
+      console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// window&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+myObj&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;arrowThis&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+myObj&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;normalThis&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+myObj&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;arrowCallback&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+myObj&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;normalCallback&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2 id=&quot;🧐결론&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%F0%9F%A7%90%EA%B2%B0%EB%A1%A0&quot; aria-label=&quot;🧐결론 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;🧐결론&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;화살표함수는 편리하지만, 사용할 때 this가 지칭하는것이 바뀔 수 있다는점을 알고 사용해야겠다.&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[ES6_Map&WeakMap 추가정보를 담은 객체저장]]></title><description><![CDATA[Map, WeakMap 배열 -> Set, WeakSet (좀 더 세련된 배열?) 객체 -> Map, WeakMap (좀 더 세련된 객체?) 특징 Set, Map : 배열이나 객체에서 기본타입을 저장할 때 사용한다. WeakSet, WeakMap…]]></description><link>https://gatsby-starter-bee.netlify.com/Study/ES6/2020-07-24-ES6_11_map&amp;weakmap/</link><guid isPermaLink="false">https://gatsby-starter-bee.netlify.com/Study/ES6/2020-07-24-ES6_11_map&amp;weakmap/</guid><pubDate>Fri, 24 Jul 2020 00:00:02 GMT</pubDate><content:encoded>&lt;h2 id=&quot;map-weakmap&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#map-weakmap&quot; aria-label=&quot;map weakmap permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Map, WeakMap&lt;/h2&gt;
 &lt;h3 id=&quot;배열---set-weakset-좀-더-세련된-배열&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%B0%B0%EC%97%B4---set-weakset-%EC%A2%80-%EB%8D%94-%EC%84%B8%EB%A0%A8%EB%90%9C-%EB%B0%B0%EC%97%B4&quot; aria-label=&quot;배열   set weakset 좀 더 세련된 배열 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;배열 -&gt; Set, WeakSet (좀 더 세련된 배열?)&lt;/h3&gt;
 &lt;h3 id=&quot;객체---map-weakmap-좀-더-세련된-객체&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EA%B0%9D%EC%B2%B4---map-weakmap-%EC%A2%80-%EB%8D%94-%EC%84%B8%EB%A0%A8%EB%90%9C-%EA%B0%9D%EC%B2%B4&quot; aria-label=&quot;객체   map weakmap 좀 더 세련된 객체 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;객체 -&gt; Map, WeakMap (좀 더 세련된 객체?)&lt;/h3&gt;
 &lt;h3 id=&quot;특징&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%ED%8A%B9%EC%A7%95&quot; aria-label=&quot;특징 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;특징&lt;/h3&gt;
