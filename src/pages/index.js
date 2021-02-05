@@ -31,7 +31,8 @@ export default ({ data, location }) => {
   );
   const [count, countRef, increaseCount] = useRenderedCount()
   const [category, selectCategory] = useCategory()
-  const [tag, selectTag] = useTag()
+  const [tag, selectTag, resetTag] = useTag()
+
   let tags = useMemo(
     () => {
       if (category === 'All') return [null];
@@ -61,7 +62,7 @@ export default ({ data, location }) => {
         navs={categories}
         nav={category}
         selectNav={selectCategory}
-        resetSubNav={selectTag}
+        resetSubNav={resetTag}
       />
       <ContentNav
         navType="tag"

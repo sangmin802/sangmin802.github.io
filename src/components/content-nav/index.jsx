@@ -29,7 +29,7 @@ export const ContentNav = ({ navs, nav, selectNav, navType, resetSubNav }) => {
             margin: `0 -${rhythm(3 / 4)}`,
           }}
         >
-          <Item title={'All'} selectedNav={nav} onClick={selectNav} scrollToCenter={scrollToCenter} />
+          <Item title={'All'} selectedNav={nav} onClick={selectNav} scrollToCenter={scrollToCenter} resetSubNav={resetSubNav} />
           {navs.map((title, idx) => (
             <Item
               key={idx}

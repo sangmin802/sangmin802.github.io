@@ -1,5 +1,5 @@
 module.exports = {
-  title: `SangMin.com`,
+  title: `SangMin 개발 이야기`,
   description: `SangMin Directory`,
   author: `SangMin`,
   introduction: `믿을수 있는 사람이 되기`,
@@ -12,7 +12,6 @@ module.exports = {
     facebook: ``, // Your Facebook account
     linkedin: ``, // Your LinkedIn account
   },
-  test: '테스트',
   icon: `content/assets/felog.png`, // Add your favicon
   keywords: [`blog`],
   comment: {

@@ -1,5 +1,5 @@
 import { useEffect, useState, useCallback } from 'react'
-// import qs from 'query-string'
+import qs from 'query-string'
 import { TAG_TYPE } from '../constants'
 import * as ScrollManager from '../utils/scroll'
 
@@ -12,31 +12,39 @@ export function useTag() {
       ScrollManager.go(DEST_POS)
     }
   }
+
   const selectTag = useCallback(tag => {
     setTag(tag)
     adjustScroll()
-    // window.history.pushState(
-    //   { category },
-    //   '',
-    //   `${window.location.pathname}?${qs.stringify({ category })}`
-    // )
+    const { category } = qs.parse(location.search);
+    const tagPath = tag === 'All' ? '' : `&${qs.stringify({ tag })}`
+    window.history.pushState(
+      { tag },
+      '',
+      `${window.location.pathname}?${qs.stringify({ category })}${tagPath}`
+    )
   }, [])
-  const changeTag = useCallback((withScroll = true) => {
-    // const { category } = qs.parse(location.search)
-    // const target = category == null ? CATEGORY_TYPE.ALL : category
 
-    setTag(TAG_TYPE.ALL)
+  const reset = useCallback(() => setTag('All'));
+
+  const changeTag = useCallback((withScroll = true) => {
+    const { tag } = qs.parse(location.search)
+    const target = tag == null ? TAG_TYPE.ALL : tag
+    setTag(target)
+
+    // setTag(TAG_TYPE.ALL)
     if (withScroll) {
       adjustScroll()
     }
   }, [])
 
-  useEffect(() => {
-    ScrollManager.init()
-    return () => {
-      ScrollManager.destroy()
-    }
-  }, [])
+  // useCategory에서 실행됨
+  // useEffect(() => {
+  //   ScrollManager.init()
+  //   return () => {
+  //     ScrollManager.destroy()
+  //   }
+  // }, [])
 
   useEffect(() => {
     window.addEventListener('popstate', changeTag)
@@ -50,5 +58,5 @@ export function useTag() {
     changeTag(false)
   }, [])
 
-  return [tag, selectTag]
+  return [tag, selectTag, reset]
 }

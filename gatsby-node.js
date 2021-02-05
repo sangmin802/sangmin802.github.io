@@ -5,7 +5,6 @@ exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
 
   const blogPostTemplate = path.resolve(`./src/templates/blog-post.js`)
-
   return graphql(
     `
       {
@@ -22,6 +21,7 @@ exports.createPages = ({ graphql, actions }) => {
                 title
                 category
                 draft
+                tag
               }
             }
           }
@@ -32,12 +32,10 @@ exports.createPages = ({ graphql, actions }) => {
     if (result.errors) {
       throw result.errors
     }
-
     // Create blog posts pages.
     const posts = result.data.allMarkdownRemark.edges.filter(
       ({ node }) => !node.frontmatter.draft && !!node.frontmatter.category
     )
-
     posts.forEach((post, index) => {
       const previous = index === posts.length - 1 ? null : posts[index + 1].node
       const next = index === 0 ? null : posts[index - 1].node

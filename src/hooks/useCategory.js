@@ -21,6 +21,7 @@ export function useCategory() {
       `${window.location.pathname}?${qs.stringify({ category })}`
     )
   }, [])
+
   const changeCategory = useCallback((withScroll = true) => {
     const { category } = qs.parse(location.search)
     const target = category == null ? CATEGORY_TYPE.ALL : category

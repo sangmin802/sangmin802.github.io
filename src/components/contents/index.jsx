@@ -1,21 +1,13 @@
 import React, { useMemo } from 'react'
-
 import { ThumbnailContainer } from '../thumbnail-container'
 import { ThumbnailItem } from '../thumbnail-item'
 import { CATEGORY_TYPE, TAG_TYPE } from '../../constants'
 
 export const Contents = ({ posts, countOfInitialPost, count, category, tag }) => {
   const refinedPosts = useMemo(() => {
-    const categoryPosts = posts
-      .filter(
-        ({ node }) =>
-          category === CATEGORY_TYPE.ALL ||
-          node.frontmatter.category === category
-      )
-      .slice(0, count * countOfInitialPost);
-    if (tag === TAG_TYPE.ALL) return categoryPosts;
-    return categoryPosts.filter(({ node }) => node.frontmatter.tag === tag).slice(0, count * countOfInitialPost);
-  })
+    if (tag === TAG_TYPE.ALL) return posts.filter(({ node }) => category === CATEGORY_TYPE.ALL || node.frontmatter.category === category).slice(0, count * countOfInitialPost);
+    return posts.filter(({ node }) => node.frontmatter.tag === tag && node.frontmatter.category === category).slice(0, count * countOfInitialPost);
+  }, [category, tag]);
 
   return (
     <ThumbnailContainer>
