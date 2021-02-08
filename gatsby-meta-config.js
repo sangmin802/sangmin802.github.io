@@ -3,7 +3,7 @@ module.exports = {
   description: `SangMin Directory`,
   author: `SangMin`,
   introduction: `믿을수 있는 사람이 되기`,
-  siteUrl: `https://gatsby-starter-bee.netlify.com`, // Your blog site url
+  siteUrl: `https://sangmin802.github.io/`, // Your blog site url
   social: {
     twitter: ``, // Your Twitter account
     github: `https://github.com/sangmin802`, // Your GitHub account
