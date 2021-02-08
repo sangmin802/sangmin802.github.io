@@ -3,7 +3,7 @@ title : "Next.js"
 date : 2021-01-25 00:00:00
 category : "Study"
 draft : false
-tag : "Think"
+tag : "Next.js"
 --- 
 
 이전에도 공부해보고싶었지만, 우선순위에서 밀려있어서 손대보지 못하고있었던 Next.js이다

@@ -3,7 +3,7 @@ title : "Next.js Webpack"
 date : 2021-02-01 00:00:00
 category : "Study"
 draft : false
-tag : "Think"
+tag : "Next.js"
 --- 
 
 대부분의 프레임워크들은 편리한 배포를 위해, `Webpack`파일을 알아서 만들어준다.

@@ -3,7 +3,7 @@ title : "Next.js Route"
 date : 2021-01-28 00:00:00
 category : "Study"
 draft : false
-tag : "Think"
+tag : "Next.js"
 --- 
 
 Next.js는 기존 React.js와 다르게, 라우팅이라는 것을 별도의 모듈을 설치할 필요없이 기본적으로 제공한다.

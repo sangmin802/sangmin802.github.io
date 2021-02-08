@@ -3,7 +3,7 @@ title : "Next.js Pre-rendering"
 date : 2021-01-26 00:00:00
 category : "Study"
 draft : false
-tag : "Think"
+tag : "Next.js"
 --- 
 
 예전에 CSR과 SSR을 비교해보면서 React도 SSR이 가능하도록 할 수 있는지 알아보는 과정에 hydrate메소드를 발견했었다.

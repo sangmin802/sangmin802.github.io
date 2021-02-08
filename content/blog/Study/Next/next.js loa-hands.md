@@ -3,7 +3,7 @@ title : "Next.js Loa-Hands"
 date : 2021-02-03 00:00:00
 category : "Study"
 draft : false
-tag : "Think"
+tag : "Next.js"
 --- 
 
 <div style="text-align : center">
