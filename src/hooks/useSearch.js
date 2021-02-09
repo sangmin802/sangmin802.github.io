@@ -9,12 +9,13 @@ export function useSearch() {
 
 
   useEffect(() => {
-    setSearch('');
-    window.addEventListener('click', windowEvent)
-
     const windowEvent = function () {
       setSearch('');
     }
+    setSearch('');
+
+    window.addEventListener('click', windowEvent)
+
 
     return () => {
       window.removeEventListener('click', windowEvent)

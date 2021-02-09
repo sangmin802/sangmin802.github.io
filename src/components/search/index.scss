@@ -40,6 +40,9 @@
         overflow: hidden; 
         white-space: nowrap;
       }
+      a div:hover {
+        background-color: $dark-link-color;
+      }
     }
     .searchArea::-webkit-scrollbar {
       display: none;
