@@ -14,17 +14,19 @@ const S_Top = styled.div`
 export const Top = ({ title, location, rootPath }) => {
   const isRoot = location.pathname === rootPath
   return (
-    <S_Top className="top" isRoot={isRoot}>
-      {!isRoot && (
-        <Link to={`/`} className="link">
-          {title}
-        </Link>
-      )}
-      <StaticQuery
-        query={searchQuery}
-        render={({ allMarkdownRemark: { edges } }) => <Search data={edges} />}
-      />
-    </S_Top>
+    <div className="top">
+      <S_Top className="innerTop" isRoot={isRoot} >
+        {!isRoot && (
+          <Link to={`/`} className="link">
+            {title}
+          </Link>
+        )}
+        <StaticQuery
+          query={searchQuery}
+          render={({ allMarkdownRemark: { edges } }) => <Search data={edges} />}
+        />
+      </S_Top>
+    </div>
   )
 }
 
