@@ -19,6 +19,15 @@ body.light {
     }
   }
 
+  .searchWrap {
+    .searchList {
+      background-color : $dark-category-background-color;
+      a {
+        color: $dark-lightest-font-color;
+      }
+    }
+  }
+
   .category-container, .tag-container {
     border-top: 1px solid $light-category-border-color;
     border-bottom: 1px solid $light-category-border-color;

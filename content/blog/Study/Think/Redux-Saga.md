@@ -110,6 +110,12 @@ export const store = createStore(reducer, applyMiddleware(ReduxThunk, sagaMiddel
 sagaMiddelware.run(rootSaga)
 ```
 
+## takeLatest & takeEvery
+`Redus-Saga`를 사용하는 가장 큰 이유라고들 한다.
+
+필요에 따라 새로운 요청 시, 이전의 것을 중지하거나 아니면 누적해서 모두진행시키거나의 차이이다.
+
+
 ### takeLatest
 제너레이터 함수 내부에서 가장 마지막으로 호출되는것만 실행시켜 `yield`한다(`return`처럼 반환한다 생각하면 된다.)
 
@@ -159,5 +165,3 @@ switch(action.type){
 
 ### takeEvery
 예제는 위와 동일하지만, 메소드만 `takeEvery`로 변경을 한다면 콘솔값은 `takeLatest1번째 실행` 이후 `takeLatest2번째 실행` 모두 나오게 된다.
-
-이게 맞았으면 한다..
