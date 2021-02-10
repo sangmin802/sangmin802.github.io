@@ -26,6 +26,7 @@ function _Search({ data }) {
         onClick={(e) => {
           e.stopPropagation();
         }}
+        placeholder="search post..."
       />
       {
         filterdData.length !== 0 &&
