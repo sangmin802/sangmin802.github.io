@@ -11,7 +11,7 @@ function _Search({ data }) {
   const filterdData = data.filter(({
     node: { frontmatter: { title } }, node
   }) => {
-    if (lowerCase(title).replace(/ /g, '').includes(search)) {
+    if (lowerCase(title).replace(/ /g, '').includes(lowerCase(search))) {
       return node;
     }
   });
