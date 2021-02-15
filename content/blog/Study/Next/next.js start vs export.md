@@ -23,6 +23,8 @@ tag : "Next.js"
 `Next export`와 다르게, 완전한 정적인 파일을 만든것이 아니라, `node.js`서버 자체는 유지시켜놓은 상태기이 때문에, 커스텀 서버를 만들어서 이용할 수 있다.
 > 물론 위의 방법은 `Vercel`와 같은 `ServerLess`플랫폼을 통한 배포는 불가능하다
 
+다만, 이와같이 별도로 커스텀 서버를 만들어서 사용하게 될 경우, `ServerLess` 및, `Next.js`의 장점인 `Automatic Static Optimization(정적 생성 기능)`등의 최적화를 제거한다고 함.
+
 
 * [Next.js custom Server - express](https://nextjs.org/docs/advanced-features/custom-server)
 
