@@ -66,7 +66,7 @@ data-styled.g1[id="top__S_Top-zcpr2v-0"]{content:"gRTsqc,"}/*!sc*/
 <li>작은수와 큰수사이를 순회하면서, 소수인숫자들만 배열에 담음</li>
 <li>배열을 순회하면서, 해당 숫자들을 정렬한것과, 주어진 숫자를 정렬한것이 동일하면 카운트 증가</li>
 </ol>
-<p>소수를 찾는것은 크게 어려움이 없었던 것이, 소수인지 알고자 하는 숫자가 변수로 들어오면, 변수를 2 이상 변수 이하의 숫자로 나누었을 때 나머지가 없으며 &#x26;&#x26; 변수 자기 자신과 숫자가 동일하지 않다면 소수가 아님을 정의해주었다.</p>
+<p>소수를 찾는것은 크게 어려움이 없었던 것이, 소수인지 알고자 하는 숫자가 변수로 들어오면, 변수를 2 이상 변수 이하의 숫자로 나누었을 때 나머지가 없으면 소수가 아님을 정의해주었다.</p>
 <p>이런 식으로 하려했는데, 당연히 주어지는 숫자의 길이가 길어질수록 for문의 특성상 O(n)의 시간복잡도를 가지고 있어 어마어마하게 오랜시간이 걸리게 되어 <code class="language-text">시간초과</code>가 발생하더라.</p>
 <p>결국 프로그래머스 카테고리의 <strong>완전탐색</strong> 말 그대로, 주어진 숫자들을 조합하여 만들수 있는 모든 수 만 생각해야했다.</p>
 <h2 id="재귀함수" style="position:relative;"><a href="#%EC%9E%AC%EA%B7%80%ED%95%A8%EC%88%98" aria-label="재귀함수 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>재귀함수</h2>
@@ -106,7 +106,7 @@ data-styled.g1[id="top__S_Top-zcpr2v-0"]{content:"gRTsqc,"}/*!sc*/
         <span class="token keyword">let</span> bool <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
         <span class="token keyword">if</span><span class="token punctuation">(</span>num <span class="token operator">&lt;</span> <span class="token number">2</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
         <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> num<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-            <span class="token keyword">if</span><span class="token punctuation">(</span>num <span class="token operator">%</span> i <span class="token operator">===</span> <span class="token number">0</span> <span class="token operator">&amp;&amp;</span> num <span class="token operator">!==</span> i<span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">if</span><span class="token punctuation">(</span>num <span class="token operator">%</span> i <span class="token operator">===</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
                 bool <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
                 <span class="token keyword">break</span><span class="token punctuation">;</span>
             <span class="token punctuation">}</span>
