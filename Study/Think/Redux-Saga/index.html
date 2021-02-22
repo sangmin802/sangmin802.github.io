@@ -163,6 +163,10 @@ sagaMiddelware<span class="token punctuation">.</span><span class="token functio
 
 <span class="token keyword">const</span> <span class="token function-variable function">delay</span> <span class="token operator">=</span> <span class="token punctuation">(</span>ms<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token keyword">new</span> <span class="token class-name"><span class="token builtin">Promise</span></span><span class="token punctuation">(</span>res <span class="token operator">=></span> <span class="token function">setTimeout</span><span class="token punctuation">(</span>res<span class="token punctuation">,</span> ms<span class="token punctuation">)</span><span class="token punctuation">)</span>
 
+<span class="token keyword">export</span> <span class="token keyword">const</span> <span class="token function-variable function">takeLatestTest_Saga_Async</span> <span class="token operator">=</span> <span class="token punctuation">(</span>
+  num
+<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token keyword">type</span> <span class="token operator">:</span> <span class="token constant">TAKE_LATEST_TEST</span><span class="token punctuation">,</span> num<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
 <span class="token keyword">export</span> <span class="token keyword">function</span><span class="token operator">*</span> <span class="token function">takeLatestTest</span><span class="token punctuation">(</span>action<span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token keyword">const</span> val <span class="token operator">=</span> action<span class="token punctuation">.</span>num<span class="token punctuation">;</span>
   <span class="token keyword">yield</span> <span class="token function">delay</span><span class="token punctuation">(</span><span class="token number">1000</span><span class="token operator">*</span>val<span class="token punctuation">)</span>
