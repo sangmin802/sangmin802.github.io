@@ -137,6 +137,10 @@ const TAKE_LATEST_TEST_CALLER = 'TAKE_LATEST_TEST_CALLER' as const;
 
 const delay = (ms) => new Promise(res => setTimeout(res, ms))
 
+export const takeLatestTest_Saga_Async = (
+  num
+) => ({type : TAKE_LATEST_TEST, num})
+
 export function* takeLatestTest(action) {
   const val = action.num;
   yield delay(1000*val)
