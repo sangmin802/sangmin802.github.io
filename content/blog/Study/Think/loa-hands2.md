@@ -159,7 +159,7 @@ tag : "Think"
 물론 새롭게 데이터를 받아와야 하는 구조라면 적당한 로딩화면을 노출시키고 컨텐츠를 감싸는 부모에게 최소높이를 지정해주면 쉽게 해결되긴 하지만, 이미 갖고있는 데이터에 양이 많은것도아니라 굳이 이렇게 해야할 필요가 있나 생각했다.
 
 <div style="text-align : center">
-  <img src="/img/2021/02/26/10-1.PNG?raw=true" alt="1">
+  <img src="/img/2021/02/26/10-1.gif?raw=true" alt="1">
 </div>
 
 따라서, 미리 생성을 해두고, `display`기능을 통해 컴포넌트 전환을 하게 하였다.
@@ -167,7 +167,7 @@ tag : "Think"
 `Vue`의 `isShow`처럼.
 
 <div style="text-align : center">
-  <img src="/img/2021/02/26/10-2.PNG?raw=true" alt="1">
+  <img src="/img/2021/02/26/10-2.gif?raw=true" alt="1">
 </div>
 
 확실히 훠 얼 씬 자연스러움
