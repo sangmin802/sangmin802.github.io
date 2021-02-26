@@ -1,12 +1,12 @@
 ---
-title : "리팩토링과 클린코드"
+title : "Refactoring과 CleanCode"
 date : 2020-11-30 00:00:01
 category : "Study"
 draft : false
 tag : "Think"
 --- 
 
-# 리팩토링
+# Refactoring
 * Class101 과제 피드백 이후, 제출했던 과제를 피드백에 따라 하나하나 수정해보았다.
 
 ## 코드의 가독성 문제
