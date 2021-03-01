@@ -1,6 +1,6 @@
 ---
 title : "config와 env"
-date : 2021-02-26 13:14:00
+date : 2021-03-01 16:56:00
 category : "Study"
 draft : false
 tag : "Think"
