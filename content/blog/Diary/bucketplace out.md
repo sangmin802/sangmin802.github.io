@@ -1,6 +1,6 @@
 ---
 title: '버킷플레이스 - 오늘의 집 불합격'
-date: 2020-11-24
+date: 2021-03-08
 category: 'Diary'
 draft: false
 ---
