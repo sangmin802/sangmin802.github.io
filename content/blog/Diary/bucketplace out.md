@@ -1,6 +1,6 @@
 ---
 title: '버킷플레이스 - 오늘의 집 불합격'
-date: 2021-03-08 13:17:00
+date: 2021-03-08 13:14:00
 category: 'Diary'
 draft: false
 ---
