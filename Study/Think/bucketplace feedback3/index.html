@@ -103,10 +103,70 @@ data-styled.g1[id="top__S_Top-zcpr2v-0"]{content:"gRTsqc,"}/*!sc*/
 <li><code class="language-text">SET_SCRAPPED_DATA</code> : 몇몇의 데이터를 저장하는 기능.</li>
 </ul>
 <p>위의 세가지 <code class="language-text">action</code>들은 서로 다른 기능을 하는 <code class="language-text">reducer</code>로 분리하여 각각에 요구되는 <code class="language-text">action</code>도 함께 <code class="language-text">ducks</code>패턴으로 관리하는것이 좋을 듯 하다.</p>
+<h2 id="수정-후" style="position:relative;"><a href="#%EC%88%98%EC%A0%95-%ED%9B%84" aria-label="수정 후 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>수정 후</h2>
+<ol>
+<li>이것은 피드백 외의 내용인데, <code class="language-text">useState</code> 훅을 사용하는 것처럼, <code class="language-text">useSelector</code>, <code class="language-text">useDispatch</code> 모두 하나의 폴더에서 관리하는것이 아닌, 기능별로 나눠서 훅으로 관리하도록 했다. 또한, 해당 <code class="language-text">state</code>를 사용하거나 비슷한 기능인 <code class="language-text">useEffect</code> 도 해당 훅 내부에서 실행시키도록 함.</li>
+</ol>
+<div class="gatsby-highlight" data-language="ts"><pre class="language-ts"><code class="language-ts"><span class="token comment">// Home</span>
+  <span class="token keyword">const</span> <span class="token punctuation">{</span> data<span class="token punctuation">,</span> setData <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">DataHooks</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">const</span> <span class="token punctuation">{</span> showScrapped<span class="token punctuation">,</span> setShowScrapped <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">ScrapFilterHooks</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">const</span> <span class="token punctuation">{</span> scrappedData<span class="token punctuation">,</span> selectData <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">ScrappedDataHooks</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">const</span> scrollEvent <span class="token operator">=</span> <span class="token function">useCallback</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token function">ScrollFetching</span><span class="token punctuation">(</span>setData<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token function">InfiniteScroll</span><span class="token punctuation">(</span>scrollEvent<span class="token punctuation">,</span> showScrapped<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token comment">// ...</span>
+  <span class="token punctuation">)</span>
+
+<span class="token comment">// dataHooks</span>
+<span class="token keyword">const</span> <span class="token function-variable function">DataHooks</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> dispatch <span class="token operator">=</span> <span class="token function">useDispatch</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">const</span> data <span class="token operator">=</span> <span class="token function">useSelector</span><span class="token punctuation">(</span>
+    <span class="token punctuation">(</span>state<span class="token operator">:</span> RootState<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> state<span class="token punctuation">.</span>ajaxReducer<span class="token punctuation">.</span>data
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">(</span>left<span class="token punctuation">,</span> right<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>_<span class="token punctuation">.</span><span class="token function">isEqual</span><span class="token punctuation">(</span>left<span class="token punctuation">,</span> right<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token boolean">true</span>
+      <span class="token keyword">return</span> <span class="token boolean">false</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">const</span> setData <span class="token operator">=</span> <span class="token function">useCallback</span><span class="token punctuation">(</span>
+    i <span class="token operator">=></span> <span class="token punctuation">{</span>
+      <span class="token function">dispatch</span><span class="token punctuation">(</span><span class="token function">getData</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">[</span>dispatch<span class="token punctuation">]</span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token function">useEffect</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    <span class="token function">dispatch</span><span class="token punctuation">(</span><span class="token function">getData</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+    <span class="token keyword">return</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+      <span class="token comment">// 필요하다면 컴포넌트 언마운트시 모두 초기화</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">return</span> <span class="token punctuation">{</span> data<span class="token punctuation">,</span> setData <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre></div>
+<blockquote>
+<p>확실히 가독성도 좋고, 기능별로 묶여있는 느낌. 당연히, 비즈니스 로직들이 훅 디렉토리에 모여있어 관리하기도 편함</p>
+</blockquote>
+<ol start="2">
+<li>
+<p>리덕스의 경우도, <code class="language-text">middleware</code>, <code class="language-text">ducks</code> 디렉토리로 나누고, <code class="language-text">saga</code>를 분리, <code class="language-text">action, reducer</code>는 기능별로 <code class="language-text">ducks</code>로 분리하였다. 이후, <code class="language-text">index</code>에서 <code class="language-text">combineReducer</code>로 각각의 <code class="language-text">ducks</code>에서 나오는 <code class="language-text">reducer</code>들을 병합하여 관리하게 하였다.</p>
+<blockquote>
+<p>기능별로 관리하기 때문에, 수정할 때 이리저리 옮겨다닐 필요가 없어서 좋음</p>
+</blockquote>
+</li>
+</ol>
 <h3 id="redux-toolkit" style="position:relative;"><a href="#redux-toolkit" aria-label="redux toolkit permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Redux Toolkit</h3>
 <p><code class="language-text">Redux</code>를 사용하게 된다면 <code class="language-text">reducer</code>, <code class="language-text">action</code>, <code class="language-text">action creator</code> 등등 생성하고 관리해야 할 것들이 많아진다.</p>
 <p>사실상 늘 비슷한 기본셋팅을 수동으로 해야하는데, 그것을 기본적으로 제공해주는 모듈을 <code class="language-text">Redux</code>에서 만들었다고 한다.</p>
-<p>전반적으로 수정하고, 해당 모듈도 써봐야 겠음..</p>
+<p>한번 사용해볼 만 한 듯?</p>
 <h2 id="참고" style="position:relative;"><a href="#%EC%B0%B8%EA%B3%A0" aria-label="참고 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>참고</h2>
 <ul>
 <li><a href="https://ko.redux.js.org/recipes/structuring-reducers/structuring-reducers">Redux reducer</a></li>
