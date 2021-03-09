@@ -28,18 +28,19 @@ export default ({ data, location }) => {
   const categories = useMemo(
     () => _.uniq(posts.map(({ node }) => node.frontmatter.category)),
     []
-  );
+  )
   const [count, countRef, increaseCount] = useRenderedCount()
   const [category, selectCategory] = useCategory()
   const [tag, selectTag, resetTag] = useTag()
 
-  let tags = useMemo(
-    () => {
-      if (category === 'All') return [null];
-      return _.uniq(posts.filter(({ node }) => node.frontmatter.category === category).map(({ node }) => node.frontmatter.tag))
-    },
-    [category]
-  );
+  let tags = useMemo(() => {
+    if (category === 'All') return [null]
+    return _.uniq(
+      posts
+        .filter(({ node }) => node.frontmatter.category === category)
+        .map(({ node }) => node.frontmatter.tag)
+    )
+  }, [category])
   useIntersectionObserver()
   useScrollEvent(() => {
     const currentPos = window.scrollY + window.innerHeight
@@ -64,12 +65,7 @@ export default ({ data, location }) => {
         selectNav={selectCategory}
         resetSubNav={resetTag}
       />
-      <ContentNav
-        navType="tag"
-        navs={tags}
-        nav={tag}
-        selectNav={selectTag}
-      />
+      <ContentNav navType="tag" navs={tags} nav={tag} selectNav={selectTag} />
       <Contents
         posts={posts}
         countOfInitialPost={countOfInitialPost}
