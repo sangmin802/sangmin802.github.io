@@ -1,6 +1,6 @@
 ---
 title: '버킷플레이스 피드백 분석4, 6'
-date: 2021-03-09 15:55:00
+date: 2021-03-09 17:26:00
 category: 'Study'
 draft: false
 tag: 'Think'
@@ -69,13 +69,70 @@ export const reducer = (
 
 위의 세가지 `action`들은 서로 다른 기능을 하는 `reducer`로 분리하여 각각에 요구되는 `action`도 함께 `ducks`패턴으로 관리하는것이 좋을 듯 하다.
 
+## 수정 후
+
+1. 이것은 피드백 외의 내용인데, `useState` 훅을 사용하는 것처럼, `useSelector`, `useDispatch` 모두 하나의 폴더에서 관리하는것이 아닌, 기능별로 나눠서 훅으로 관리하도록 했다. 또한, 해당 `state`를 사용하거나 비슷한 기능인 `useEffect` 도 해당 훅 내부에서 실행시키도록 함.
+
+```ts
+// Home
+  const { data, setData } = DataHooks();
+  const { showScrapped, setShowScrapped } = ScrapFilterHooks();
+  const { scrappedData, selectData } = ScrappedDataHooks();
+
+  const scrollEvent = useCallback(() => {
+    return ScrollFetching(setData);
+  }, []);
+
+  InfiniteScroll(scrollEvent, showScrapped);
+  return (
+    // ...
+  )
+
+// dataHooks
+const DataHooks = () => {
+  const dispatch = useDispatch();
+
+  const data = useSelector(
+    (state: RootState) => {
+      return state.ajaxReducer.data
+    },
+    (left, right) => {
+      if (_.isEqual(left, right)) return true
+      return false
+    }
+  );
+
+  const setData = useCallback(
+    i => {
+      dispatch(getData(i))
+    },
+    [dispatch]
+  );
+
+  useEffect(() => {
+    dispatch(getData(1))
+
+    return () => {
+      // 필요하다면 컴포넌트 언마운트시 모두 초기화
+    }
+  }, []);
+
+  return { data, setData };
+}
+```
+
+> 확실히 가독성도 좋고, 기능별로 묶여있는 느낌. 당연히, 비즈니스 로직들이 훅 디렉토리에 모여있어 관리하기도 편함
+
+2. 리덕스의 경우도, `middleware`, `ducks` 디렉토리로 나누고, `saga`를 분리, `action, reducer`는 기능별로 `ducks`로 분리하였다. 이후, `index`에서 `combineReducer`로 각각의 `ducks`에서 나오는 `reducer`들을 병합하여 관리하게 하였다.
+   > 기능별로 관리하기 때문에, 수정할 때 이리저리 옮겨다닐 필요가 없어서 좋음
+
 ### Redux Toolkit
 
 `Redux`를 사용하게 된다면 `reducer`, `action`, `action creator` 등등 생성하고 관리해야 할 것들이 많아진다.
 
 사실상 늘 비슷한 기본셋팅을 수동으로 해야하는데, 그것을 기본적으로 제공해주는 모듈을 `Redux`에서 만들었다고 한다.
 
-전반적으로 수정하고, 해당 모듈도 써봐야 겠음..
+한번 사용해볼 만 한 듯?
 
 ## 참고
 
