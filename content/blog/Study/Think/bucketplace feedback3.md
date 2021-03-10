@@ -132,7 +132,40 @@ const DataHooks = () => {
 
 사실상 늘 비슷한 기본셋팅을 수동으로 해야하는데, 그것을 기본적으로 제공해주는 모듈을 `Redux`에서 만들었다고 한다.
 
-한번 사용해볼 만 한 듯?
+```ts
+import { createSlice } from '@reduxjs/toolkit'
+
+// Thunk까지만 기본지원 한다고 함..
+// saga
+export const GET_DATA_SAGA = 'GET_DATA_SAGA' as const
+
+// saga creator
+export const getData = i => ({ type: GET_DATA_SAGA, i })
+
+// 리듀셔, 액션, 액션크리에이터 묶음
+const ajaxSlice = createSlice({
+  name: 'ajax',
+  initialState: {
+    data: [],
+  },
+  reducers: {
+    setData: (state, action) => {
+      const data = state.data
+        ? [...state.data, ...action.payload.data]
+        : action.payload.data
+
+      state.data = data
+    },
+  },
+})
+
+// 디스패쳐 호출을 위한 액션
+export const { setData } = ajaxSlice.actions
+// 콤바인을 위한 리듀서 내보내기
+export const ajaxReducer = ajaxSlice.reducer
+```
+
+`switch`, `case` 구문을 사용하지 않아서 확실히 보기도 편하고 액션을 자동으로 생성해주기때문에, 기본작업이 확실히 줄어든 느낌!
 
 ## 참고
 
