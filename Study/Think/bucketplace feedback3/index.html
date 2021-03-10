@@ -166,7 +166,37 @@ data-styled.g1[id="top__S_Top-zcpr2v-0"]{content:"gRTsqc,"}/*!sc*/
 <h3 id="redux-toolkit" style="position:relative;"><a href="#redux-toolkit" aria-label="redux toolkit permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Redux Toolkit</h3>
 <p><code class="language-text">Redux</code>를 사용하게 된다면 <code class="language-text">reducer</code>, <code class="language-text">action</code>, <code class="language-text">action creator</code> 등등 생성하고 관리해야 할 것들이 많아진다.</p>
 <p>사실상 늘 비슷한 기본셋팅을 수동으로 해야하는데, 그것을 기본적으로 제공해주는 모듈을 <code class="language-text">Redux</code>에서 만들었다고 한다.</p>
-<p>한번 사용해볼 만 한 듯?</p>
+<div class="gatsby-highlight" data-language="ts"><pre class="language-ts"><code class="language-ts"><span class="token keyword">import</span> <span class="token punctuation">{</span> createSlice <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@reduxjs/toolkit'</span>
+
+<span class="token comment">// Thunk까지만 기본지원 한다고 함..</span>
+<span class="token comment">// saga</span>
+<span class="token keyword">export</span> <span class="token keyword">const</span> <span class="token constant">GET_DATA_SAGA</span> <span class="token operator">=</span> <span class="token string">'GET_DATA_SAGA'</span> <span class="token keyword">as</span> <span class="token keyword">const</span>
+
+<span class="token comment">// saga creator</span>
+<span class="token keyword">export</span> <span class="token keyword">const</span> <span class="token function-variable function">getData</span> <span class="token operator">=</span> i <span class="token operator">=></span> <span class="token punctuation">(</span><span class="token punctuation">{</span> <span class="token keyword">type</span><span class="token operator">:</span> <span class="token constant">GET_DATA_SAGA</span><span class="token punctuation">,</span> i <span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token comment">// 리듀셔, 액션, 액션크리에이터 묶음</span>
+<span class="token keyword">const</span> ajaxSlice <span class="token operator">=</span> <span class="token function">createSlice</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  name<span class="token operator">:</span> <span class="token string">'ajax'</span><span class="token punctuation">,</span>
+  initialState<span class="token operator">:</span> <span class="token punctuation">{</span>
+    data<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  reducers<span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token function-variable function">setData</span><span class="token operator">:</span> <span class="token punctuation">(</span>state<span class="token punctuation">,</span> action<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> data <span class="token operator">=</span> state<span class="token punctuation">.</span>data
+        <span class="token operator">?</span> <span class="token punctuation">[</span><span class="token operator">...</span>state<span class="token punctuation">.</span>data<span class="token punctuation">,</span> <span class="token operator">...</span>action<span class="token punctuation">.</span>payload<span class="token punctuation">.</span>data<span class="token punctuation">]</span>
+        <span class="token operator">:</span> action<span class="token punctuation">.</span>payload<span class="token punctuation">.</span>data
+
+      state<span class="token punctuation">.</span>data <span class="token operator">=</span> data
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token comment">// 디스패쳐 호출을 위한 액션</span>
+<span class="token keyword">export</span> <span class="token keyword">const</span> <span class="token punctuation">{</span> setData <span class="token punctuation">}</span> <span class="token operator">=</span> ajaxSlice<span class="token punctuation">.</span>actions
+<span class="token comment">// 콤바인을 위한 리듀서 내보내기</span>
+<span class="token keyword">export</span> <span class="token keyword">const</span> ajaxReducer <span class="token operator">=</span> ajaxSlice<span class="token punctuation">.</span>reducer</code></pre></div>
+<p><code class="language-text">switch</code>, <code class="language-text">case</code> 구문을 사용하지 않아서 확실히 보기도 편하고 액션을 자동으로 생성해주기때문에, 기본작업이 확실히 줄어든 느낌!</p>
 <h2 id="참고" style="position:relative;"><a href="#%EC%B0%B8%EA%B3%A0" aria-label="참고 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>참고</h2>
 <ul>
 <li><a href="https://ko.redux.js.org/recipes/structuring-reducers/structuring-reducers">Redux reducer</a></li>
