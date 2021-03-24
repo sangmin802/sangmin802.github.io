@@ -35,7 +35,7 @@ element.addEventListener('click', e => {
 ## Event Flow
 
 <div style="text-align : center">
-  <img src="/img/2021/03/24/2.PNG?raw=true" alt="12">
+  <img src="/img/2021/03/24/1.png?raw=true" alt="12">
 </div>
 
 최상위 엘리먼트인 `window`를 기준으로 그 내부에 세부적인 엘리먼트들이 생성이 되는데, 이것을 기준으로 이벤트 객체들이 이동하는 경로들이 형성된다. 다만, 여러 테스트를 해본 결과 이러한 경로는 부모엘리먼트와 바로 아래의 직계자식 엘리먼트까지만 영향을 끼치는것 같다. 이때 범위의 최 상단엘리먼트가 `e.currentTarget` 인듯 하다.
