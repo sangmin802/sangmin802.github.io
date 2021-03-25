@@ -1,5 +1,5 @@
 ---
-title: 'eventloop에 대한 잘못된 생각'
+title: 'Event Loop 다시잡기'
 date: 2021-03-25 15:23:00
 category: 'Study'
 draft: false
