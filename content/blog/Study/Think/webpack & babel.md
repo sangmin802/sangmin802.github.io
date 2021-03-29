@@ -146,3 +146,7 @@ module.exports = {
   ],
 }
 ```
+
+## 참고
+
+- [webpack 핸드북](https://joshua1988.github.io/webpack-guide/guide.html)
