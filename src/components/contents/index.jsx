@@ -25,7 +25,7 @@ export const Contents = ({
           node.frontmatter.tag === tag && node.frontmatter.category === category
       )
       .slice(0, count * countOfInitialPost)
-  }, [category, tag])
+  }, [category, tag, count])
   return (
     <ThumbnailContainer>
       {refinedPosts.map(({ node }, index) => (

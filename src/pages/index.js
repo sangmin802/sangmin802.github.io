@@ -32,7 +32,6 @@ export default ({ data, location }) => {
   const [count, countRef, increaseCount] = useRenderedCount()
   const [category, selectCategory] = useCategory()
   const [tag, selectTag, resetTag] = useTag()
-
   let tags = useMemo(() => {
     if (category === 'All') return [null]
     return _.uniq(
@@ -53,7 +52,6 @@ export default ({ data, location }) => {
       triggerCondition: () => isTriggerPos() && doesNeedMore(),
     })()
   })
-
   return (
     <Layout location={location} title={siteMetadata.title}>
       <Head title={HOME_TITLE} keywords={siteMetadata.keywords} />
