@@ -1,7 +1,7 @@
 ---
 title: '2021 Dev-Matching: 웹 프론트엔드 개발자(상반기) 후기'
 date: 2021-04-16 15:05:00
-category: 'Study'
+category: 'Diary'
 draft: false
 tag: 'Think'
 ---
