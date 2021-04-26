@@ -2,7 +2,7 @@
 title: 'React와 Atomic 패턴'
 date: 2021-04-21 15:47:00
 category: 'Study'
-draft: false
+draft: true
 tag: 'Think'
 ---
 
