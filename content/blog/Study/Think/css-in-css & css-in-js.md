@@ -56,6 +56,21 @@ tag: 'Think'
 
 두가지 방법 모두 할 줄 알아야 할듯!
 
+## 이후의 질문
+
+특징을 알아보기위해 첫 질문만 예시를 들었지만, 사실 뒤에 꼬리질문이 있었다.
+
+> 만약 `sass`만을 사용하게 된다면, `background-image`와 같은 경우는 어떻게 처리할건가요?
+
+- 서버에 등록된 상대경로(`git`)를 통해 지정한다.
+- 인라인 스타일을 통해 `img` 태그의 `src`와 유사하게 `public` 디렉토리에 접근하여 이미지를 사용한다.
+
+스타일시트에서는 `public` 디렉토리에 접근을 할 수가 없는데, 그 이유로는 `webpack` 자체가 `src`를 기점으로 작동되기 떄문일듯 하다.
+
+실제로, `eject`를 해보았을 때 `src/index.js`가 시작의 기점이되도록 설정이 되어있었고, 스타일시트에서 `background-image` 속성의 경로가 `src` 외부로 넘어가게 되는 순간 기준을 넘어갔다는 에러가 출력되었다.
+
+이런점 떄문에, `styled-components`를 같이 사용했었음..
+
 ## 참고
 
 - [styled-components? SCSS?](https://blog.logrocket.com/moving-from-scss-to-styled-components-advantages-and-caveats/)
