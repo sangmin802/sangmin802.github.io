@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[SangMin 개발 이야기]]></title><description><![CDATA[SangMin Directory]]></description><link>https://sangmin802.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 28 Apr 2021 06:13:27 GMT</lastBuildDate><item><title><![CDATA[CSS-in-CSS, CSS-in-JS]]></title><description><![CDATA[어제 A…]]></description><link>https://sangmin802.github.io/Study/Think/css-in-css &amp; css-in-js/</link><guid isPermaLink="false">https://sangmin802.github.io/Study/Think/css-in-css &amp; css-in-js/</guid><pubDate>Wed, 28 Apr 2021 14:24:00 GMT</pubDate><content:encoded>&lt;p&gt;어제 A 기업의 인터뷰를 진행중 코드리뷰를 하면서 한가지 예상못했던 문제점을 지적받았다.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[SangMin 개발 이야기]]></title><description><![CDATA[SangMin Directory]]></description><link>https://sangmin802.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 29 Apr 2021 08:36:34 GMT</lastBuildDate><item><title><![CDATA[CSS-in-CSS, CSS-in-JS]]></title><description><![CDATA[어제 A…]]></description><link>https://sangmin802.github.io/Study/Think/css-in-css &amp; css-in-js/</link><guid isPermaLink="false">https://sangmin802.github.io/Study/Think/css-in-css &amp; css-in-js/</guid><pubDate>Wed, 28 Apr 2021 14:24:00 GMT</pubDate><content:encoded>&lt;p&gt;어제 A 기업의 인터뷰를 진행중 코드리뷰를 하면서 한가지 예상못했던 문제점을 지적받았다.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;styled-component&lt;/code&gt;와 &lt;code class=&quot;language-text&quot;&gt;sass&lt;/code&gt;를 함께 사용하면 성능 저하를 유발할 수 있습니다.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -39,6 +39,23 @@
 &lt;p&gt;당연히 입사를 하게되면 적용되어있는 스타일 방식대로 해야겠지만,
 컴포넌트의 부피가 커지는것을 좋아하지 않아서 나는 &lt;code class=&quot;language-text&quot;&gt;CSS-in-CSS&lt;/code&gt;방식을 사용할 것 같다..&lt;/p&gt;
 &lt;p&gt;두가지 방법 모두 할 줄 알아야 할듯!&lt;/p&gt;
+&lt;h2 id=&quot;이후의-질문&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%9D%B4%ED%9B%84%EC%9D%98-%EC%A7%88%EB%AC%B8&quot; aria-label=&quot;이후의 질문 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;이후의 질문&lt;/h2&gt;
+&lt;p&gt;특징을 알아보기위해 첫 질문만 예시를 들었지만, 사실 뒤에 꼬리질문이 있었다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;만약 &lt;code class=&quot;language-text&quot;&gt;sass&lt;/code&gt;만을 사용하게 된다면, &lt;code class=&quot;language-text&quot;&gt;background-image&lt;/code&gt;와 같은 경우는 어떻게 처리할건가요?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;서버에 등록된 상대경로(&lt;code class=&quot;language-text&quot;&gt;git&lt;/code&gt;)를 통해 지정한다.&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;인라인 스타일을 통해 &lt;code class=&quot;language-text&quot;&gt;img&lt;/code&gt; 태그의 &lt;code class=&quot;language-text&quot;&gt;src&lt;/code&gt;와 유사하게 &lt;code class=&quot;language-text&quot;&gt;process.env.PUBLIC_URL&lt;/code&gt;+&lt;code class=&quot;language-text&quot;&gt;public&lt;/code&gt; 디렉토리에 접근하여 이미지를 사용한다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;아래 방법이 가장 많이 추천되는 방법인듯 함..&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;스타일시트에서는 &lt;code class=&quot;language-text&quot;&gt;public&lt;/code&gt; 디렉토리에 접근을 할 수가 없는데, 그 이유로는 &lt;code class=&quot;language-text&quot;&gt;webpack&lt;/code&gt; 자체가 &lt;code class=&quot;language-text&quot;&gt;src&lt;/code&gt;를 기점으로 작동되기 떄문일듯 하다.&lt;/p&gt;
+&lt;p&gt;실제로, &lt;code class=&quot;language-text&quot;&gt;eject&lt;/code&gt;를 해보았을 때 &lt;code class=&quot;language-text&quot;&gt;src/index.js&lt;/code&gt;가 시작의 기점이되도록 설정이 되어있었고, 스타일시트에서 &lt;code class=&quot;language-text&quot;&gt;background-image&lt;/code&gt; 속성의 경로가 &lt;code class=&quot;language-text&quot;&gt;src&lt;/code&gt; 외부로 넘어가게 되는 순간 기준을 넘어갔다는 에러가 출력되었다.&lt;/p&gt;
+&lt;p&gt;이런점 때문에, &lt;code class=&quot;language-text&quot;&gt;styled-components&lt;/code&gt;를 같이 사용했었음..&lt;/p&gt;
 &lt;h2 id=&quot;참고&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%B0%B8%EA%B3%A0&quot; aria-label=&quot;참고 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;참고&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://blog.logrocket.com/moving-from-scss-to-styled-components-advantages-and-caveats/&quot;&gt;styled-components? SCSS?&lt;/a&gt;&lt;/li&gt;
