@@ -58,8 +58,6 @@ a = 1;
 
 ## 예외
 
-비교적 최신 `ES`에서 권장하는 상수, 변수 선언 방식인 `const`, `let`은 `var`와 다르게 `hoisting` 되지 않는다.
-
 ```js
 console.log(a) // undefined
 console.log(b) // Cannot access 'b' before initialization
