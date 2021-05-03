@@ -1,21 +1,19 @@
-import { useState, useCallback, useEffect } from 'react';
+import { useState, useCallback, useEffect } from 'react'
 
 export function useSearch() {
-  const [search, setSearch] = useState('');
+  const [search, setSearch] = useState('')
 
-  const changeSearch = useCallback((value) => {
-    setSearch(value);
+  const changeSearch = useCallback(value => {
+    setSearch(value)
   }, [])
 
-
   useEffect(() => {
-    const windowEvent = function () {
-      setSearch('');
+    const windowEvent = function() {
+      setSearch('')
     }
-    setSearch('');
+    setSearch('')
 
     window.addEventListener('click', windowEvent)
-
 
     return () => {
       window.removeEventListener('click', windowEvent)
