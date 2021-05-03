@@ -3,7 +3,7 @@ title: 'CSS-in-CSS, CSS-in-JS'
 date: 2021-04-28 14:24:00
 category: 'Study'
 draft: false
-tag: 'Think'
+tag: 'CS'
 ---
 
 어제 A 기업의 인터뷰를 진행중 코드리뷰를 하면서 한가지 예상못했던 문제점을 지적받았다.

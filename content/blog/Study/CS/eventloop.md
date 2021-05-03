@@ -3,7 +3,7 @@ title: 'EventLoop'
 date: 2020-10-22 00:00:00
 category: 'Study'
 draft: false
-tag: 'Think'
+tag: 'CS'
 ---
 
 ### 🤔 복습이란

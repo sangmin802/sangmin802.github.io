@@ -3,7 +3,7 @@ title: 'Event Phase에 대한 오해 feat. capturing, bubbling'
 date: 2021-03-24 15:30:00
 category: 'Study'
 draft: false
-tag: 'Think'
+tag: 'CS'
 ---
 
 여러 개인 프로젝트를 사용해오면서 겪어왔던 상황들이 있다.

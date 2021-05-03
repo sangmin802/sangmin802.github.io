@@ -3,7 +3,7 @@ title: 'Event Loop 다시잡기'
 date: 2021-03-25 15:23:00
 category: 'Study'
 draft: false
-tag: 'Think'
+tag: 'CS'
 ---
 
 이전에 간단하게 접해봤던 `event loop`에 관련되어서 테스트를 해보던 중, 잘못알고 있었거나 부족했던 점이 있어 추가적으로 정리해보려고 한다.

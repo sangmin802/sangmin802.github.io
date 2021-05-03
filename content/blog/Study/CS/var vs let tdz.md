@@ -3,7 +3,7 @@ title: 'var vs let의 차이와 기준이 되는 TDZ'
 date: 2021-04-30 16:36:00
 category: 'Study'
 draft: false
-tag: 'Think'
+tag: 'CS'
 ---
 
 `var`과 `es2015`에서 추가된 `const`와 `let`의 큰 차이는 이후에 동일한 `key`로 재선언이 가능하냐 불가능하냐 엄격함의 차이였다.
