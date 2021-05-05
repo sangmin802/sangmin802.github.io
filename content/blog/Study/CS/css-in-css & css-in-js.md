@@ -71,3 +71,6 @@ tag: 'CS'
 
 - [styled-components? SCSS?](https://blog.logrocket.com/moving-from-scss-to-styled-components-advantages-and-caveats/)
 - [CSS-in-JS의 장점 및 단점](https://blueshw.github.io/2020/09/14/why-css-in-css/)
+- [sass 사용 가이드](https://sass-lang.com/guide)
+- [sass 공식 doc](https://sass-lang.com/documentation)
+- [sass 기초](https://velog.io/@recordboy/SASS-%EC%84%A4%EC%B9%98-%EB%B0%8F-%EA%B8%B0%EB%B3%B8-%EC%82%AC%EC%9A%A9)
