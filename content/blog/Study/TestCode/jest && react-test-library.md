@@ -3,7 +3,7 @@ title: 'Jest, React-Test-Library'
 date: 2021-05-06 15:47:00
 category: 'Study'
 draft: true
-tag: 'CS'
+tag: 'TestCode'
 ---
 
 ## Jest
