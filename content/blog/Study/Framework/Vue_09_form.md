@@ -1,20 +1,23 @@
 ---
-title : "Vue 양식 입력 바인딩"
-date : 2020-09-08 00:00:00
-category : "Study"
-draft : false
-tag : "Vue.js"
+title: 'Vue 양식 입력 바인딩'
+date: 2020-09-08 00:00:00
+category: 'Study'
+draft: false
+tag: 'Framework'
 toc: true
-toc_label: "Vue 양식 입력 바인딩"
-sidebar : 
-  - title : 'Vue.js'
-  - nav : Vue    
---- 
+toc_label: 'Vue 양식 입력 바인딩'
+sidebar:
+  - title: 'Vue.js'
+  - nav: Vue
+---
+
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 
 # 양식 입력 바인딩
-* v-model 디렉티브를 사용하여 폼 input과 textarea 엘리먼트에 양방향 데이터 바인딩을 생성할 수 있다.
-* v-model은 내부적으로 서로 다른 속성을 사용하고, 서로 다른 입력요소에 대해 다른 이벤트를 전송한다.
+
+- v-model 디렉티브를 사용하여 폼 input과 textarea 엘리먼트에 양방향 데이터 바인딩을 생성할 수 있다.
+- v-model은 내부적으로 서로 다른 속성을 사용하고, 서로 다른 입력요소에 대해 다른 이벤트를 전송한다.
+
 1. text, textarea태그는 value 속성과 input 이벤트를 사용한다.
 2. checkbox, radio는 checked속성과 change이벤트를 사용한다.
 3. select는 value속성과 change이벤트를 사용한다.
@@ -38,7 +41,9 @@ new Vue({
 ```
 
 ### 결과값
+
 {::nomarkdown}
+
 <div style="width : 80%; margin : 0 auto; border : 1px solid #999; border-radius : 1em; padding : 1em;">
   <div id="text">
     <input type="text" v-model="text">
@@ -66,7 +71,9 @@ new Vue({
 ```
 
 ### 결과값
+
 {::nomarkdown}
+
 <div style="width : 80%; margin : 0 auto; border : 1px solid #999; border-radius : 1em; padding : 1em;">
   <div id="textarea">
     <textarea v-model="textarea"></textarea>
@@ -76,8 +83,9 @@ new Vue({
 {:/}
 
 ## 체크박스
-* 하나의 체크박스는 단일 boolean값을 가진다.
-* 여러개의 체크박스는 같은 배열을 바인딩 할 수 있다.
+
+- 하나의 체크박스는 단일 boolean값을 가진다.
+- 여러개의 체크박스는 같은 배열을 바인딩 할 수 있다.
 
 ```javascript
 // HTML
@@ -105,7 +113,9 @@ new Vue({
 ```
 
 ### 결과값
+
 {::nomarkdown}
+
 <div style="width : 80%; margin : 0 auto; border : 1px solid #999; border-radius : 1em; padding : 1em;">
   <div id="checkbox">
     <input type="checkbox" id="check" v-model="checked">
@@ -144,7 +154,9 @@ new Vue({
 ```
 
 ### 결과값
+
 {::nomarkdown}
+
 <div style="width : 80%; margin : 0 auto; border : 1px solid #999; border-radius : 1em; padding : 1em;">
   <div id="radio">
     <input type="radio" id="45fps" value="45" v-model="FPS">
@@ -188,7 +200,9 @@ new Vue({
 ```
 
 ### 결과값
+
 {::nomarkdown}
+
 <div style="width : 80%; margin : 0 auto; border : 1px solid #999; border-radius : 1em; padding : 1em;">
   <div id="select">
     <select v-model="selected">
@@ -209,7 +223,8 @@ new Vue({
 {:/}
 
 ## 값 바인딩
-* 라디오, 체크박스 및 셀렉트 옵션의 경우 v-model 바인딩 값은 보통 문자열 (체크박스는 boolean. 문자열로 해주고싶으면 value값 지정 혹은 true false일때의 값을 별도로 지정할 수 있다) 이다.
+
+- 라디오, 체크박스 및 셀렉트 옵션의 경우 v-model 바인딩 값은 보통 문자열 (체크박스는 boolean. 문자열로 해주고싶으면 value값 지정 혹은 true false일때의 값을 별도로 지정할 수 있다) 이다.
 
 ```javascript
 // HTML
@@ -238,7 +253,9 @@ new Vue({
 ```
 
 ### 결과값
+
 {::nomarkdown}
+
 <div style="width : 80%; margin : 0 auto; border : 1px solid #999; border-radius : 1em; padding : 1em;">
   <div id="binding">
     <input type="radio" v-model="radioValue" :value="A">
@@ -254,12 +271,18 @@ new Vue({
 {:/}
 
 ## 수식어
+
 1. .lazy
-  * 기본적으로 v-model은 각 입력 이벤트 후 데이터를 동기화 합니다. .lazy수식어를 사용하여 change 이벤트 이후(입력이 종료되고, 다른 이벤트 실행시)에 동기화 할 수 있다.
+
+- 기본적으로 v-model은 각 입력 이벤트 후 데이터를 동기화 합니다. .lazy수식어를 사용하여 change 이벤트 이후(입력이 종료되고, 다른 이벤트 실행시)에 동기화 할 수 있다.
+
 2. .number
-  * 문자열로 들어오기전 숫자열로 바꿔준다.
+
+- 문자열로 들어오기전 숫자열로 바꿔준다.
+
 3. .trim
-  * 자동으로 앞 뒤 공백을 지워준다
+
+- 자동으로 앞 뒤 공백을 지워준다
 
 ```javascript
 // HTML
@@ -286,7 +309,9 @@ new Vue({
 ```
 
 ### 결과값
+
 {::nomarkdown}
+
 <div style="width : 80%; margin : 0 auto; border : 1px solid #999; border-radius : 1em; padding : 1em;">
   <div id="sub">
     <input type="text" v-model.lazy.trim="msg" @change="change">
@@ -298,8 +323,8 @@ new Vue({
 {:/}
 
 ## 참조
-[Vue.js 공식가이드 양식 입력 바인딩](https://vuejs.org/v2/guide/forms.html)
 
+[Vue.js 공식가이드 양식 입력 바인딩](https://vuejs.org/v2/guide/forms.html)
 
 <script>
 new Vue({
@@ -365,4 +390,3 @@ new Vue({
   }
 })
 </script>
-

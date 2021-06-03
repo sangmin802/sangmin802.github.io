@@ -3,7 +3,7 @@ title: 'Next.js style error'
 date: 2021-03-19 00:00:00
 category: 'Study'
 draft: false
-tag: 'Next.js'
+tag: 'Framework'
 ---
 
 최근 `Loa-Hands`를 다시 전반적으로 리팩토링하면서, `Next` 버전도 수정해주었다.

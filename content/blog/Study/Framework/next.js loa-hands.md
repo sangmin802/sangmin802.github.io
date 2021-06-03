@@ -1,10 +1,10 @@
 ---
-title : "Next.js Loa-Hands"
-date : 2021-02-03 00:00:00
-category : "Study"
-draft : false
-tag : "Next.js"
---- 
+title: 'Next.js Loa-Hands'
+date: 2021-02-03 00:00:00
+category: 'Study'
+draft: false
+tag: 'Framework'
+---
 
 <div style="text-align : center">
   <img src="/img/2021/02/03/1.PNG?raw=true" alt="1">
@@ -19,36 +19,50 @@ tag : "Next.js"
 ```ts
 // 404.tsx
 const Custom404 = () => {
-  if(typeof window === 'undefined') return null;
-  const l = window.location;
-  let pathSegmentsToKeep = 0;
-  l.replace(l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
-  l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/') + '/?/' +
-  l.pathname.slice(1).split('/').slice(pathSegmentsToKeep).join('/').replace(/&/g, '~and~') +
-  (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
-  l.hash)
+  if (typeof window === 'undefined') return null
+  const l = window.location
+  let pathSegmentsToKeep = 0
+  l.replace(
+    l.protocol +
+      '//' +
+      l.hostname +
+      (l.port ? ':' + l.port : '') +
+      l.pathname
+        .split('/')
+        .slice(0, 1 + pathSegmentsToKeep)
+        .join('/') +
+      '/?/' +
+      l.pathname
+        .slice(1)
+        .split('/')
+        .slice(pathSegmentsToKeep)
+        .join('/')
+        .replace(/&/g, '~and~') +
+      (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
+      l.hash
+  )
 
-
-  return <div>404입니다</div>;
+  return <div>404입니다</div>
 }
 
-export default Custom404;
+export default Custom404
 
 // index.tsx
-if(
-  typeof window !== 'undefined' &&
-  router.asPath !== '/'
-){
-  (function(l) {
-    if (l.search[1] === '/' ) {
-      var decoded = l.search.slice(1).split('&').map(function(s) { 
-        return s.replace(/~and~/g, '&')
-      }).join('?');
+if (typeof window !== 'undefined' && router.asPath !== '/') {
+  ;(function(l) {
+    if (l.search[1] === '/') {
+      var decoded = l.search
+        .slice(1)
+        .split('&')
+        .map(function(s) {
+          return s.replace(/~and~/g, '&')
+        })
+        .join('?')
 
       router.push(decoded + l.hash)
     }
-  }(window.location))
-  return null;
+  })(window.location)
+  return null
 }
 ```
 
@@ -56,10 +70,10 @@ if(
 
 ```ts
 useEffect(() => {
-  if(!userData){
-    dispatch(Actions.getUserData_Thunk(name, router));
-  }else{
-    dispatch(Actions.loadingToggle(false));
+  if (!userData) {
+    dispatch(Actions.getUserData_Thunk(name, router))
+  } else {
+    dispatch(Actions.loadingToggle(false))
   }
 }, [name, userData])
 ```
@@ -67,6 +81,7 @@ useEffect(() => {
 이와 같은 방법으로 해결해주었다. 그냥 렌더링 자체에 순위를 주면 되었던 것..
 
 `Next.js`는 필요에 따라 검색엔진에 노출시키고자 하는 페이지만 `SSR`방식을 사용하고 나머지는 기존 `CSR`방식을 유지시킬 수 있다는점이 참 매력적인것 같다.
+
 > 앞으로 `React.js`만 사용하여 개발하는 일은 줄어들 듯..?
 
 > 아 그리고, `Next.js`를 하면서, 왜 `React.js`는 프레임워크이지만 라이브러리이기도 하다고 하는지 느낀것 같다.

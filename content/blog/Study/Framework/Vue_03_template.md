@@ -1,30 +1,41 @@
 ---
-title : "Vue 템플릿 문법"
-date : 2020-08-31 00:00:02
-category : "Study"
-draft : false
-tag : "Vue.js"
+title: 'Vue 템플릿 문법'
+date: 2020-08-31 00:00:02
+category: 'Study'
+draft: false
+tag: 'Framework'
 toc: true
-toc_label: "Vue Template Syntax"
-sidebar : 
-  - title : 'Vue.js'
-  - nav : Vue    
---- 
-<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> 
+toc_label: 'Vue Template Syntax'
+sidebar:
+  - title: 'Vue.js'
+  - nav: Vue
+---
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 
 # Template Syntax
-* Vue.js는 렌더링 된 DOM을 기본 Vue 인스턴스의 데이터에 선언적으로 바인딩 할 수 있는 HTML 기반 템플릿 구문을 사용한다.
+
+- Vue.js는 렌더링 된 DOM을 기본 Vue 인스턴스의 데이터에 선언적으로 바인딩 할 수 있는 HTML 기반 템플릿 구문을 사용한다.
 
 ## 보간법
+
 ### 보간법 종류
+
 1. 문자열
-* 데이터 바인딩이 가진 기본형태는 이중중괄호`{}`를 사용한 텍스트 보간이다.
+
+- 데이터 바인딩이 가진 기본형태는 이중중괄호`{}`를 사용한 텍스트 보간이다.
+
 2. 원시 HTML `v-html`
-* v-html은 태그를 그대로 읽어오기 때문에, 해커가 data로 직접접촉하여 바꾸게 되면 XSS에 매우 취약하기 때문에 사용하지 말자!
+
+- v-html은 태그를 그대로 읽어오기 때문에, 해커가 data로 직접접촉하여 바꾸게 되면 XSS에 매우 취약하기 때문에 사용하지 말자!
+
 3. 속성
-* `{}`는 HTML 속성에서 사용하는것이 아니다. 속성은 `v-bind` 디렉티브를 사용해야 한다.
+
+- `{}`는 HTML 속성에서 사용하는것이 아니다. 속성은 `v-bind` 디렉티브를 사용해야 한다.
+
 4. JavaScript 표현식 사용
-* 인라인에서 구문이나, 조건문등은 작동하지 않는다.
+
+- 인라인에서 구문이나, 조건문등은 작동하지 않는다.
 
 ```javascript
 // HTML
@@ -53,8 +64,11 @@ new Vue({
   }
 })
 ```
+
 ### 결과값
+
 {::nomarkdown}
+
 <div style="width : 80%; margin : 0 auto; border : 1px solid #999; border-radius : 1em; padding : 1em;">
   <div id="Interpolation">
     <p>문자열 : <%string%></p>
@@ -70,16 +84,23 @@ new Vue({
 {:/}
 
 ## 디렉티브
-* v-접두사가 있는 특수 속성이다. 디렉티브의 속성 값은 단일 JavaScript 표현식이 된다.
+
+- v-접두사가 있는 특수 속성이다. 디렉티브의 속성 값은 단일 JavaScript 표현식이 된다.
 
 ### 디렉티브 특징
+
 1. 전달인자
-* `v-bind`는 HTML의 속성을 갱신하는데 사용되며, DOM 이벤트를 수신하는 `v-on`이 있다.
+
+- `v-bind`는 HTML의 속성을 갱신하는데 사용되며, DOM 이벤트를 수신하는 `v-on`이 있다.
+
 2. 동적 전달인자
-* JavaScript 표현식을 대괄호로 묶어 디렉티브의 인자로 사용하는것도 가능하다.(하단에 사용 예시있음)
+
+- JavaScript 표현식을 대괄호로 묶어 디렉티브의 인자로 사용하는것도 가능하다.(하단에 사용 예시있음)
+
 3. 수식어
-* 수식어는 점으로 표시되는 특수 접미사로, 디렉티브를 특별한 방법으로 바인딩 해야함을 나타낸다.
-> `onSubmit.prevent` = `event.preventDefault()`
+
+- 수식어는 점으로 표시되는 특수 접미사로, 디렉티브를 특별한 방법으로 바인딩 해야함을 나타낸다.
+  > `onSubmit.prevent` = `event.preventDefault()`
 
 ```javascript
 // HTML
@@ -105,7 +126,9 @@ new Vue({
 ```
 
 ### 결과값
+
 {::nomarkdown}
+
 <div style="width : 80%; margin : 0 auto; border : 1px solid #999; border-radius : 1em; padding : 1em;">
   <div id="Directive">
     <p v-on:mouseover="seen = !seen">마우스를 올려보세요</p>
@@ -120,15 +143,19 @@ new Vue({
 {:/}
 
 ## 약어
-* v-접두사는 템플릿의 Vue 특정 속성을 식별하기 위한 시각적인 신호 역할을 한다. 아주 유용하지만, 일부 자주 사용되는 디렉티브는 너무 지저분해진다고 느껴질 수 있다.
+
+- v-접두사는 템플릿의 Vue 특정 속성을 식별하기 위한 시각적인 신호 역할을 한다. 아주 유용하지만, 일부 자주 사용되는 디렉티브는 너무 지저분해진다고 느껴질 수 있다.
+
 1. `v-bind` : `:`
 2. `v-on` : `@`
 
 ## 예제
-* 실제 Vue로 개인적으로 진행했던 프로젝트에서 사용했던 예제가 있다.
+
+- 실제 Vue로 개인적으로 진행했던 프로젝트에서 사용했던 예제가 있다.
 
 ### 동적 속성 바인딩
-* JavaScript를 통해, 특정 값을 받아와서 동적으로 디렉티브의 값을 지정해주는 방법이다.
+
+- JavaScript를 통해, 특정 값을 받아와서 동적으로 디렉티브의 값을 지정해주는 방법이다.
 
 ```javascript
 <span
@@ -142,7 +169,8 @@ new Vue({
 ```
 
 ### 사용자 지정 디렉티브
-* 사용자가 직접 Vue의 디렉티브를 만드는 기능인데, 공문에 따로 기재되어있다. 정확한 사용방법은 공문을 보는걸 추천!
+
+- 사용자가 직접 Vue의 디렉티브를 만드는 기능인데, 공문에 따로 기재되어있다. 정확한 사용방법은 공문을 보는걸 추천!
 
 ```javascript
 // HTML
@@ -153,7 +181,7 @@ new Vue({
 
   :style="dragTarget"
 >
-  <%addfile%> 
+  <%addfile%>
 </label>
 
 // Script
@@ -184,8 +212,8 @@ directives : { // 사용자 설정 디렉티브
 ```
 
 ## 참조
-[Vue.js 공식가이드 템플릿 문법](https://kr.vuejs.org/v2/guide/syntax.html)
 
+[Vue.js 공식가이드 템플릿 문법](https://kr.vuejs.org/v2/guide/syntax.html)
 
 <script>
 new Vue({
@@ -211,4 +239,3 @@ new Vue({
   },
 })
 </script>
-

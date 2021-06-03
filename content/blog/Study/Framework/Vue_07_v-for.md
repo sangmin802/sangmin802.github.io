@@ -1,22 +1,25 @@
 ---
-title : "Vue 리스트 렌더링"
-date : 2020-09-04 00:00:00
-category : "Study"
-draft : false
-tag : "Vue.js"
+title: 'Vue 리스트 렌더링'
+date: 2020-09-04 00:00:00
+category: 'Study'
+draft: false
+tag: 'Framework'
 toc: true
-toc_label: "Vue 리스트 렌더링"
-sidebar : 
-  - title : 'Vue.js'
-  - nav : Vue    
---- 
-<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> 
+toc_label: 'Vue 리스트 렌더링'
+sidebar:
+  - title: 'Vue.js'
+  - nav: Vue
+---
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 
 # 리스트 렌더링
+
 ## v-for
-* v-for 디렉티브를 사용하여 배열을 기반으로 리스트 렌더링을 할 수 있다.
-* item in items(item of items)형태의 특별한 문법이 필요하며, items는 원본 데이터의 배열이고 item은 반복되는 배열 엘리먼트의 별칭이다.
-* 첫번째 인자로 해당 배열의 값을 받고, 두번째로 index값을 받는다.
+
+- v-for 디렉티브를 사용하여 배열을 기반으로 리스트 렌더링을 할 수 있다.
+- item in items(item of items)형태의 특별한 문법이 필요하며, items는 원본 데이터의 배열이고 item은 반복되는 배열 엘리먼트의 별칭이다.
+- 첫번째 인자로 해당 배열의 값을 받고, 두번째로 index값을 받는다.
 
 ```javascript
 // HTML
@@ -39,7 +42,9 @@ new Vue({
 ```
 
 ### 결과값
+
 {::nomarkdown}
+
 <div style="width : 80%; margin : 0 auto; border : 1px solid #999; border-radius : 1em; padding : 1em;">
   <div id="vfor">
     <div v-for="({message}, index) of items">
@@ -50,8 +55,9 @@ new Vue({
 {:/}
 
 ## v-for-object
-* v-for를 활용하여 객체의 속성을 반복할 수 있다.
-* 첫번째 인자로 값, 두번째 인자로 key를 조회할 수 있으며 세번째 인자로 index를 조회할 수 있다.
+
+- v-for를 활용하여 객체의 속성을 반복할 수 있다.
+- 첫번째 인자로 값, 두번째 인자로 key를 조회할 수 있으며 세번째 인자로 index를 조회할 수 있다.
 
 ```javascript
 // HTML
@@ -75,7 +81,9 @@ new Vue({
 ```
 
 ### 결과값
+
 {::nomarkdown}
+
 <div style="width : 80%; margin : 0 auto; border : 1px solid #999; border-radius : 1em; padding : 1em;">
   <div id="vforobject">
     <div v-for="(value, key, index) in object">
@@ -86,12 +94,14 @@ new Vue({
 {:/}
 
 ## Maintaining State
-* Vue에서 개별 DOM 노드들을 추적하고, 기존 엘리먼트를 재사용, 재 정렬 하기 위해서 v-for의 강 항목들에 고유한 key 속성을 제공해야 한다.
-* 쉽게말해서, 사용자 정의 template을 만들 때, item of items의 하위 컴포넌트의 속성으로 전달되어 하위컴포넌트가 반복생성되야 할 할 경우(하위 컴포넌트가 v-for로부터 받은 item에게 의존할 때), key를 지정해줘야한다.
-* 그냥 v-for 할 때 key를 해주는게 정석이다.
+
+- Vue에서 개별 DOM 노드들을 추적하고, 기존 엘리먼트를 재사용, 재 정렬 하기 위해서 v-for의 강 항목들에 고유한 key 속성을 제공해야 한다.
+- 쉽게말해서, 사용자 정의 template을 만들 때, item of items의 하위 컴포넌트의 속성으로 전달되어 하위컴포넌트가 반복생성되야 할 할 경우(하위 컴포넌트가 v-for로부터 받은 item에게 의존할 때), key를 지정해줘야한다.
+- 그냥 v-for 할 때 key를 해주는게 정석이다.
 
 ## 배열 변경 감지
-* Vue는 감시중인 배열의 변이 메소드(push, pop, shift, splice 등등)를 래핑하여 다시 렌더링한다.
+
+- Vue는 감시중인 배열의 변이 메소드(push, pop, shift, splice 등등)를 래핑하여 다시 렌더링한다.
 
 ```javascript
 // HTML
@@ -138,7 +148,9 @@ new Vue({
 ```
 
 ### 결과값
+
 {::nomarkdown}
+
 <div style="width : 80%; margin : 0 auto; border : 1px solid #999; border-radius : 1em; padding : 1em;">
   <div id="maintainingstate">
     <div v-for="({id, name, classValue}) of arr" :user_id="id" :key="id">
@@ -151,10 +163,12 @@ new Vue({
 {:/}
 
 ## 필터링 / 정렬된 결과 표시하기
-* 때로는 원본 데이터를 변경하지 않고, 필터링된 버전이나 정렬된 버전을 표시해야할 필요가 있다. 이경우, computed를 이용할 수 있다.
+
+- 때로는 원본 데이터를 변경하지 않고, 필터링된 버전이나 정렬된 버전을 표시해야할 필요가 있다. 이경우, computed를 이용할 수 있다.
 
 ## Range v-for
-* v-for는 숫자를 사용할 수 있다. 템플릿을 특정 횟수만큼 반복할 때 사용한다.
+
+- v-for는 숫자를 사용할 수 있다. 템플릿을 특정 횟수만큼 반복할 때 사용한다.
 
 ```javascript
 // HTML
@@ -188,7 +202,9 @@ new Vue({
 ```
 
 ### 결과값
+
 {::nomarkdown}
+
 <div style="width : 80%; margin : 0 auto; border : 1px solid #999; border-radius : 1em; padding : 1em;">
   <div id="computedArr">
     <div v-for="{id, name} of onSale" :key="id">
@@ -202,7 +218,8 @@ new Vue({
 {:/}
 
 ## v-for과 v-if
-* v-for는 v-if보다 높은 우선순의를 갖고있다. 즉, v-if는 v-for 루프가 반복될 때마다 실행되며, 일부 템플릿만 렌더링하려는 경우 유용하다.
+
+- v-for는 v-if보다 높은 우선순의를 갖고있다. 즉, v-if는 v-for 루프가 반복될 때마다 실행되며, 일부 템플릿만 렌더링하려는 경우 유용하다.
 
 ```javascript
 // HTML
@@ -225,7 +242,9 @@ new Vue({
 ```
 
 ### 결과값
+
 {::nomarkdown}
+
 <div style="width : 80%; margin : 0 auto; border : 1px solid #999; border-radius : 1em; padding : 1em;">
   <div id="vforvif">
     <div v-for="todo of todos" v-if="!todo.complete"><%todo.id%>. <%todo.text%></div>
@@ -269,7 +288,9 @@ new Vue({
 ```
 
 ### 결과값
+
 {::nomarkdown}
+
 <div style="width : 80%; margin : 0 auto; border : 1px solid #999; border-radius : 1em; padding : 1em;">
   <div id="vforcomponent">
     <my-component v-for="({id, name}, index) of items"
@@ -344,7 +365,9 @@ new Vue({
 ```
 
 ### 결과값
+
 {::nomarkdown}
+
 <div style="width : 80%; margin : 0 auto; border : 1px solid #999; border-radius : 1em; padding : 1em;">
   <p>TodoList</p>
   <div id="todoList">
@@ -367,8 +390,8 @@ new Vue({
 {:/}
 
 ## 참조
-[Vue.js 공식가이드 리스트 렌더링](https://kr.vuejs.org/v2/guide/list.html)
 
+[Vue.js 공식가이드 리스트 렌더링](https://kr.vuejs.org/v2/guide/list.html)
 
 <script>
 new Vue({
@@ -521,4 +544,3 @@ new Vue({
   }
 })
 </script>
-
