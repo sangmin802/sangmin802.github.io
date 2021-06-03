@@ -79,12 +79,24 @@ data-styled.g1[id="top__S_Top-zcpr2v-0"]{content:"gRTsqc,"}/*!sc*/
 <h2 id="-테스트-대상" style="position:relative;"><a href="#-%ED%85%8C%EC%8A%A4%ED%8A%B8-%EB%8C%80%EC%83%81" aria-label=" 테스트 대상 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>🍆 테스트 대상</h2>
 <p>프론트엔드 분야에서 테스트가 필요한 항목들을 생각해보았다.</p>
 <ol>
-<li class="task-list-item"><input type="checkbox" disabled> 시각적 요소인 <code class="language-text">UI</code>가 잘 그려지는지</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> 시각적 요소인 <code class="language-text">UI</code>가 잘 그려지는지</p>
+<ul>
 <li>개발자가 <code class="language-text">HTML</code>, <code class="language-text">CSS</code>등을 통해 생성한 컴포넌트의 구조가 의도한 대로 나타나는지를 테스트하기 위해 <code class="language-text">Jest</code>로 스냅샷테스트로 만들어진 구조를 확인하고, <code class="language-text">StoryBook</code>으로 실제 스타일을 확인한다.</li>
-<li class="task-list-item"><input type="checkbox" disabled> 사용자의 이벤트가 잘 실행되는지</li>
+</ul>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> 사용자의 이벤트가 잘 실행되는지</p>
+<ul>
 <li>해당 컴포넌트에서 사용되는 이벤트들을 임의로 실행시켜보고 반환하는 결과와 원하는 결과를 비교하여 검증해 볼 수 있다.</li>
-<li class="task-list-item"><input type="checkbox" disabled> <code class="language-text">API</code>통신에 있어서 원하는 결과를 반환하는지</li>
+</ul>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> <code class="language-text">API</code>통신에 있어서 원하는 결과를 반환하는지</p>
+<ul>
 <li>실제 <code class="language-text">API</code>서버를 구축하는것 보다는 가짜 메소드·객체를 생성하여 결과를 받아왔을 때 이후의 작업을 제대로 수행하는지 확인해본다.</li>
+</ul>
+</li>
 </ol>
 <h2 id="🥒-react-and-testcode" style="position:relative;"><a href="#%F0%9F%A5%92-react-and-testcode" aria-label="🥒 react and testcode permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>🥒 react and testcode</h2>
 <p><code class="language-text">React</code>에서는 아예 테스트 항목을 따로 구분하여 관리할정도로 중요하게 생각하고있는것 같다.

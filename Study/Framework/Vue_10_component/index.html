@@ -70,18 +70,18 @@ data-styled.g1[id="top__S_Top-zcpr2v-0"]{content:"gRTsqc,"}/*!sc*/
 <li>모든 인스턴스에서 사용 가능하다.</li>
 </ul>
 <div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token comment">// HTML</span>
-<span class="token operator">&lt;</span>div id<span class="token operator">=</span><span class="token string">"component1"</span><span class="token operator">></span>
+<span class="token punctuation">;</span><span class="token operator">&lt;</span>div id<span class="token operator">=</span><span class="token string">"component1"</span><span class="token operator">></span>
   <span class="token operator">&lt;</span>my<span class="token operator">-</span>component<span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>my<span class="token operator">-</span>component<span class="token operator">></span>
 <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
 <span class="token comment">// Script</span>
 Vue<span class="token punctuation">.</span><span class="token function">component</span><span class="token punctuation">(</span><span class="token string">'my-component'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
-  template <span class="token operator">:</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
+  template<span class="token operator">:</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
     &lt;div>사용자 정의 전역 component 입니다&lt;/div>
-  </span><span class="token template-punctuation string">`</span></span>
+  </span><span class="token template-punctuation string">`</span></span><span class="token punctuation">,</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span>
 <span class="token keyword">new</span> <span class="token class-name">Vue</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
-  el <span class="token operator">:</span> <span class="token string">'#component1'</span><span class="token punctuation">,</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span> </code></pre></div>
+  el<span class="token operator">:</span> <span class="token string">'#component1'</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span></code></pre></div>
 <p>{::nomarkdown}</p>
 <div style="width : 80%; margin : 0 auto; border : 1px solid #999; border-radius : 1em; padding : 1em;">
   <div id="component1">
@@ -94,22 +94,22 @@ Vue<span class="token punctuation">.</span><span class="token function">componen
 <li>해당 인스턴스에서만 사용할 수 있다.</li>
 </ul>
 <div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token comment">// HTML</span>
-<span class="token operator">&lt;</span>div id<span class="token operator">=</span><span class="token string">"component2"</span><span class="token operator">></span>
+<span class="token punctuation">;</span><span class="token operator">&lt;</span>div id<span class="token operator">=</span><span class="token string">"component2"</span><span class="token operator">></span>
   <span class="token operator">&lt;</span>my<span class="token operator">-</span>component<span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>my<span class="token operator">-</span>component<span class="token operator">></span>
 <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
 <span class="token comment">// Script</span>
 <span class="token keyword">const</span> component2 <span class="token operator">=</span> <span class="token punctuation">{</span>
-  template <span class="token operator">:</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
+  template<span class="token operator">:</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
     &lt;div>사용자 정의 지역 component 입니다&lt;/div>
-  </span><span class="token template-punctuation string">`</span></span>
+  </span><span class="token template-punctuation string">`</span></span><span class="token punctuation">,</span>
 <span class="token punctuation">}</span>
 <span class="token keyword">new</span> <span class="token class-name">Vue</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
-  el <span class="token operator">:</span> <span class="token string">'#component2'</span><span class="token punctuation">,</span>
-  delimiters <span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'&lt;%'</span><span class="token punctuation">,</span> <span class="token string">'%>'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
-  components <span class="token operator">:</span> <span class="token punctuation">{</span>
-    <span class="token string">'my-component'</span> <span class="token operator">:</span> component2
-  <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span> </code></pre></div>
+  el<span class="token operator">:</span> <span class="token string">'#component2'</span><span class="token punctuation">,</span>
+  delimiters<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'&lt;%'</span><span class="token punctuation">,</span> <span class="token string">'%>'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  components<span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token string">'my-component'</span><span class="token operator">:</span> component2<span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span></code></pre></div>
 <p>{::nomarkdown}</p>
 <div style="width : 80%; margin : 0 auto; border : 1px solid #999; border-radius : 1em; padding : 1em;">
   <div id="component2">
@@ -123,19 +123,19 @@ Vue<span class="token punctuation">.</span><span class="token function">componen
 <li>해당 태그에 기존방식처럼 template으로 지정한 태그를 넣게되면, 렌더링시 에러를 발생시킨다. 이를 해결하기위해 is 특수속성을 사용한다.</li>
 </ul>
 <div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token comment">// HTML</span>
-<span class="token operator">&lt;</span>ul id<span class="token operator">=</span><span class="token string">"component3"</span><span class="token operator">></span>
+<span class="token punctuation">;</span><span class="token operator">&lt;</span>ul id<span class="token operator">=</span><span class="token string">"component3"</span><span class="token operator">></span>
   <span class="token operator">&lt;</span>li is<span class="token operator">=</span><span class="token string">"my-component"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>li<span class="token operator">></span>
 <span class="token operator">&lt;</span><span class="token operator">/</span>ul<span class="token operator">></span>
 <span class="token comment">// Script</span>
 <span class="token keyword">const</span> component3 <span class="token operator">=</span> <span class="token punctuation">{</span>
-  template <span class="token operator">:</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">&lt;li>특수속성 is&lt;/li></span><span class="token template-punctuation string">`</span></span>
+  template<span class="token operator">:</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">&lt;li>특수속성 is&lt;/li></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">,</span>
 <span class="token punctuation">}</span>
 <span class="token keyword">new</span> <span class="token class-name">Vue</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
-  el <span class="token operator">:</span> <span class="token string">'#component3'</span><span class="token punctuation">,</span>
-  components <span class="token operator">:</span> <span class="token punctuation">{</span>
-    <span class="token string">'my-component'</span> <span class="token operator">:</span> component3
-  <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span> </code></pre></div>
+  el<span class="token operator">:</span> <span class="token string">'#component3'</span><span class="token punctuation">,</span>
+  components<span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token string">'my-component'</span><span class="token operator">:</span> component3<span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span></code></pre></div>
 <p>{::nomarkdown}</p>
 <div style="width : 80%; margin : 0 auto; border : 1px solid #999; border-radius : 1em; padding : 1em;">
   <ul id="component3">
@@ -149,28 +149,28 @@ Vue<span class="token punctuation">.</span><span class="token function">componen
 <li>해당 태그에 기존방식처럼 template으로 지정한 태그를 넣게되면, 렌더링시 에러를 발생시킨다. 이를 해결하기위해 is 특수속성을 사용한다.</li>
 </ul>
 <div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token comment">// HTML</span>
-<span class="token operator">&lt;</span>div id<span class="token operator">=</span><span class="token string">"component4"</span><span class="token operator">></span>
+<span class="token punctuation">;</span><span class="token operator">&lt;</span>div id<span class="token operator">=</span><span class="token string">"component4"</span><span class="token operator">></span>
   <span class="token operator">&lt;</span>my<span class="token operator">-</span>component<span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>my<span class="token operator">-</span>component<span class="token operator">></span>
   <span class="token operator">&lt;</span>my<span class="token operator">-</span>component<span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>my<span class="token operator">-</span>component<span class="token operator">></span>
   <span class="token operator">&lt;</span>my<span class="token operator">-</span>component<span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>my<span class="token operator">-</span>component<span class="token operator">></span>
 <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
 <span class="token comment">// Script</span>
 <span class="token keyword">const</span> component4 <span class="token operator">=</span> <span class="token punctuation">{</span>
-  delimiters <span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'&lt;%'</span><span class="token punctuation">,</span> <span class="token string">'%>'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
-  template <span class="token operator">:</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">&lt;button @click="counter++">&lt;%counter%>&lt;/button></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">,</span>
-  <span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  delimiters<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'&lt;%'</span><span class="token punctuation">,</span> <span class="token string">'%>'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  template<span class="token operator">:</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">&lt;button @click="counter++">&lt;%counter%>&lt;/button></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">,</span>
+  <span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">return</span> <span class="token punctuation">{</span>
-      counter <span class="token operator">:</span> <span class="token number">0</span>
+      counter<span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
     <span class="token punctuation">}</span>
-  <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
 <span class="token punctuation">}</span>
 <span class="token keyword">new</span> <span class="token class-name">Vue</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
-  el <span class="token operator">:</span> <span class="token string">'#component4'</span><span class="token punctuation">,</span>
-  delimiters <span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'&lt;%'</span><span class="token punctuation">,</span> <span class="token string">'%>'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
-  components <span class="token operator">:</span> <span class="token punctuation">{</span>
-    <span class="token string">'my-component'</span> <span class="token operator">:</span> component4
+  el<span class="token operator">:</span> <span class="token string">'#component4'</span><span class="token punctuation">,</span>
+  delimiters<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'&lt;%'</span><span class="token punctuation">,</span> <span class="token string">'%>'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  components<span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token string">'my-component'</span><span class="token operator">:</span> component4<span class="token punctuation">,</span>
   <span class="token punctuation">}</span><span class="token punctuation">,</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span> </code></pre></div>
+<span class="token punctuation">}</span><span class="token punctuation">)</span></code></pre></div>
 <p>{::nomarkdown}</p>
 <div style="width : 80%; margin : 0 auto; border : 1px solid #999; border-radius : 1em; padding : 1em;">
   <div id="component4">
@@ -202,7 +202,7 @@ Vue<span class="token punctuation">.</span><span class="token function">componen
 </ul>
 <div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token comment">// HTML</span>
 <span class="token operator">&lt;</span>div id<span class="token operator">=</span><span class="token string">"props1"</span><span class="token operator">></span>
-  <span class="token operator">&lt;</span>props 
+  <span class="token operator">&lt;</span>props
   <span class="token operator">:</span>message<span class="token operator">=</span><span class="token string">"message"</span>
   <span class="token operator">:</span>obj<span class="token operator">=</span><span class="token string">"obj"</span>
   <span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>props<span class="token operator">></span>
@@ -238,7 +238,7 @@ Vue<span class="token punctuation">.</span><span class="token function">componen
 {:/}
 <div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token comment">// HTML</span>
 <span class="token operator">&lt;</span>div id<span class="token operator">=</span><span class="token string">"props2"</span><span class="token operator">></span>
-  <span class="token operator">&lt;</span>props 
+  <span class="token operator">&lt;</span>props
   <span class="token operator">:</span>num<span class="token operator">=</span><span class="token string">"num"</span>
   <span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>props<span class="token operator">></span>
 <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
@@ -283,7 +283,7 @@ Vue<span class="token punctuation">.</span><span class="token function">componen
 </ul>
 <div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token comment">// HTML</span>
 <span class="token operator">&lt;</span>div id<span class="token operator">=</span><span class="token string">"props3"</span><span class="token operator">></span>
-  <span class="token operator">&lt;</span>props 
+  <span class="token operator">&lt;</span>props
     <span class="token operator">:</span>propa<span class="token operator">=</span><span class="token string">"propA"</span>
     <span class="token operator">:</span>propb<span class="token operator">=</span><span class="token string">"propB"</span>
     <span class="token operator">:</span>propc<span class="token operator">=</span><span class="token string">"propC"</span>
@@ -502,7 +502,7 @@ Vue<span class="token punctuation">.</span><span class="token function">componen
   <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
 <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
 <span class="token comment">// Script</span>
-<span class="token comment">// v-model을 갖는 컴포넌트의 인스턴스는 template에 :value로 부모로부터 v-model로 보내진 값을 초기값으로 설정하며, </span>
+<span class="token comment">// v-model을 갖는 컴포넌트의 인스턴스는 template에 :value로 부모로부터 v-model로 보내진 값을 초기값으로 설정하며,</span>
 <span class="token comment">// @input이라는 커스텀이벤트를 생성할 수 있는데, 해당 커스텀이벤트로 input의 value를 조회하여 부모에게 방출해줄 수 있다.</span>
 <span class="token keyword">new</span> <span class="token class-name">Vue</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
   el <span class="token operator">:</span> <span class="token string">'#v-model1'</span><span class="token punctuation">,</span>
@@ -515,7 +515,7 @@ Vue<span class="token punctuation">.</span><span class="token function">componen
       props <span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'value'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
       template <span class="token operator">:</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
         &lt;input type="text"
-          :value="value" 
+          :value="value"
           @input="$emit('input',$event.target.value)"
         >
       </span><span class="token template-punctuation string">`</span></span><span class="token punctuation">,</span>
@@ -572,7 +572,7 @@ Vue<span class="token punctuation">.</span><span class="token function">componen
         checkbool <span class="token operator">:</span> Boolean<span class="token punctuation">,</span>
       <span class="token punctuation">}</span><span class="token punctuation">,</span>
       template <span class="token operator">:</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
-        &lt;input 
+        &lt;input
           type="checkbox"
           :checked="checkbool"
           @change="change($event.target.checked)"
@@ -670,7 +670,7 @@ Vue<span class="token punctuation">.</span><span class="token function">componen
 </li>
 </ul>
 <div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token comment">// HTML</span>
-<span class="token operator">&lt;</span>div id<span class="token operator">=</span><span class="token string">"slot1"</span><span class="token operator">></span>
+<span class="token punctuation">;</span><span class="token operator">&lt;</span>div id<span class="token operator">=</span><span class="token string">"slot1"</span><span class="token operator">></span>
   <span class="token operator">&lt;</span>p<span class="token operator">></span>부모 컴포넌트 제목<span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">></span>
   <span class="token operator">&lt;</span>my<span class="token operator">-</span>component<span class="token operator">></span>
     <span class="token operator">&lt;</span>p v<span class="token operator">-</span><span class="token keyword">if</span><span class="token operator">=</span><span class="token string">"isShow"</span><span class="token operator">></span>원본 컨텐츠<span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">></span>
@@ -679,23 +679,23 @@ Vue<span class="token punctuation">.</span><span class="token function">componen
 <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
 <span class="token comment">// Script</span>
 <span class="token keyword">new</span> <span class="token class-name">Vue</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
-  el <span class="token operator">:</span> <span class="token string">'#slot1'</span><span class="token punctuation">,</span>
-  delimiters <span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'&lt;%'</span><span class="token punctuation">,</span> <span class="token string">'%>'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
-  data <span class="token operator">:</span> <span class="token punctuation">{</span>
-    isShow <span class="token operator">:</span> <span class="token boolean">false</span>
+  el<span class="token operator">:</span> <span class="token string">'#slot1'</span><span class="token punctuation">,</span>
+  delimiters<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'&lt;%'</span><span class="token punctuation">,</span> <span class="token string">'%>'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  data<span class="token operator">:</span> <span class="token punctuation">{</span>
+    isShow<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
   <span class="token punctuation">}</span><span class="token punctuation">,</span>
-  components <span class="token operator">:</span> <span class="token punctuation">{</span>
-    <span class="token string">'my-component'</span> <span class="token operator">:</span> <span class="token punctuation">{</span>
-      template <span class="token operator">:</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
+  components<span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token string">'my-component'</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      template<span class="token operator">:</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
       &lt;div>
         &lt;p>나는 자식 컴포넌트의 제목입니다&lt;/p>
         &lt;slot>
           제공된 컨텐츠가 없는 경우에만 보실 수 있습니다.
         &lt;/slot>
       &lt;/div>
-      </span><span class="token template-punctuation string">`</span></span>
-    <span class="token punctuation">}</span>
-  <span class="token punctuation">}</span>
+      </span><span class="token template-punctuation string">`</span></span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span></code></pre></div>
 <p>{::nomarkdown}</p>
 <div style="width : 80%; margin : 0 auto; border : 1px solid #999; border-radius : 1em; padding : 1em;">
@@ -867,7 +867,7 @@ Vue<span class="token punctuation">.</span><span class="token function">componen
 {:/}
 <h2 id="기타" style="position:relative;"><a href="#%EA%B8%B0%ED%83%80" aria-label="기타 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>기타</h2>
 <ul>
-<li>태그의 ref속성과, $refs 호출을 통해 태그를 직접 조회할 수 있다.(document.querySelector처럼)  단, ref는 컴포넌트가 렌더링 된 이후에만 작동되며, 반응적이지 않는다.</li>
+<li>태그의 ref속성과, $refs 호출을 통해 태그를 직접 조회할 수 있다.(document.querySelector처럼) 단, ref는 컴포넌트가 렌더링 된 이후에만 작동되며, 반응적이지 않는다.</li>
 </ul>
 <h2 id="참조" style="position:relative;"><a href="#%EC%B0%B8%EC%A1%B0" aria-label="참조 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>참조</h2>
 <p><a href="https://kr.vuejs.org/v2/guide/components.html">Vue.js 공식가이드 컴포넌트</a></p>
