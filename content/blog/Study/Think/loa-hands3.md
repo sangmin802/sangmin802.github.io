@@ -1,5 +1,5 @@
 ---
-title: '컴포넌트 구조·디자인 feat loa-hands'
+title: '컴포넌트 구조, 스타일 기법에 대한 고민 feat loa-hands'
 date: 2021-06-09 16:19:00
 category: 'Study'
 draft: false
