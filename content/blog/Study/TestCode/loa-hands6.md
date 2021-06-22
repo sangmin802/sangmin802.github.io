@@ -12,7 +12,7 @@ tag: 'TestCode'
 
 따라서 이에 적합한 `StorBook` 테스트 라이브러리를 사용해보기로 했다.
 
-## 셋팅
+## 🍗 셋팅
 
 `npx -p @storybook/cli sb init` 명령어로 기본적인 셋팅을 할 수 있었는데, 이 명령어로
 
@@ -22,7 +22,7 @@ tag: 'TestCode'
 
 형식의 디렉토리가 생성되었다.
 
-### main.js
+### 🍖 main.js
 
 `storybook`의 실행 환경을 조성하는 `config`파일과 유사한 기능을 하는것 같다.
 
@@ -42,7 +42,7 @@ module.exports = {
 }
 ```
 
-### preivew.js
+### 🥩 preivew.js
 
 본래 `parameters` 상수만 `export`되는 파일이였지만, 이 프로젝트에서는 `Redux`나 `styled-componenta`와 같은 `Provider`들이 사용되고 있어서, `storybook`을 실행하여 테스트할 때 위의 `wrapper`로 감싸주는 역할을 필요했다.
 
@@ -81,11 +81,11 @@ export const decorators = [
 ]
 ```
 
-## 컴포넌트 UI test
+## 🍤 컴포넌트 UI test
 
 컴포넌트에 전달되는 속성에 따라 어떻게 `UI`가 그려지는지 테스트를 할 수 있다.
 
-### styles.tsx
+### 🥚 styles.tsx
 
 해당 스타일에서는 `ThemeProvider`에서 `theme`를 통해 공통 변수에 접근할 수 있는데, 이를 위해서 위의 `decorators`의 설정이 필요한 것이다.
 
@@ -146,7 +146,7 @@ export const Desc = styled.div<{ type: string }>`
 `
 ```
 
-### stories.tsx
+### 🍳 stories.tsx
 
 실행되는 `StoryBook`에서 분류할 `title`과 사용할 컴포넌트를 지정해주고, `args`는 갖고있지 않은 껍데기의 `Template`을 생성해준다.
 
@@ -169,7 +169,7 @@ export const NoGetCollection = Template.bind({})
 
 이후에 상황에 맞는 `args`를 각각 `binding`해주는 방식이다.
 
-#### DetailNormal
+#### 🥓 DetailNormal
 
 ```ts
 DetailNormal.args = {
@@ -189,7 +189,7 @@ DetailNormal.args = {
   <img src="/img/2021/06/22/1.PNG?raw=true" alt="1">
 </div>
 
-#### NoDetailNormal
+#### 🍔 NoDetailNormal
 
 ```ts
 NoDetailNormal.args = {
@@ -203,7 +203,7 @@ NoDetailNormal.args = {
   <img src="/img/2021/06/22/2.PNG?raw=true" alt="2">
 </div>
 
-#### GetCollection
+#### 🍟 GetCollection
 
 ```ts
 GetCollection.args = {
@@ -223,7 +223,7 @@ GetCollection.args = {
   <img src="/img/2021/06/22/3.PNG?raw=true" alt="3">
 </div>
 
-#### NoGetCollection
+#### 🌭 NoGetCollection
 
 ```ts
 NoGetCollection.args = {
@@ -245,7 +245,7 @@ NoGetCollection.args = {
 
 하단 `controls` 속성을 변경하여 `UI`를 확인할 수도 있다.
 
-### 결론
+## 🍕 결론
 
 `jest`나 `StoryBook`과 같이 테스트를 진행해보면서 느낀점은, 별도로 프로젝트를 실행해보고 수정할 필요 없이 더 빠른 속도로 변화를 테스트해볼 수 있다는 점이였다.
 
