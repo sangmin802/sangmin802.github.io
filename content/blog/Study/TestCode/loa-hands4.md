@@ -3,7 +3,7 @@ title: '컴포넌트 테스트코드'
 date: 2021-06-17 16:53:00
 category: 'Study'
 draft: false
-tag: 'Think'
+tag: 'TestCode'
 ---
 
 `loa-hands`앱에 있어서, 컴포넌트들의 단위테스트를 위한 테스트코드들을 모두 작성해보았다.
@@ -387,7 +387,7 @@ describe('UserInfo', () => {
 
    > 실제로 구글링 해보니, 비동기 작업이 이전에 포함될 경우 `render`가 누출되는 상황이 있다는것 같음
 
-2. `react-testing-library`의 `query`는 생성된 `jsdom`에 접근하기 때문에, `display : none`과 같은 시각적으로 영향을 주게 된다면 없다고 나온다. 하지만, `query`로 접근하더라도 `children`과 같이 해당 `Node`에 직접 접근하면, 시각적 영향에 상관없이 만들어져있는 모든 `dom`에 접근할 수 있었다.
+2. `react-testing-library`의 `query`는 `display : none`과 같은 시각적으로 영향을 주게 된다면 없다고 나온다. 하지만, `query`로 접근하더라도 `children`과 같이 해당 `Node`에 직접 접근하면, 시각적 영향에 상관없이 만들어져있는 모든 `dom`에 접근할 수 있었다.
 
 ## 🥞 결론
 
