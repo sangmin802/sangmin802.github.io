@@ -1,5 +1,5 @@
 ---
-title: '프로그래머스-위장'
+title: '알고리즘-Hash'
 date: 2021-05-31 17:10:00
 category: 'Study'
 draft: false
