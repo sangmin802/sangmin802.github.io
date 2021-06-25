@@ -1,5 +1,5 @@
 ---
-title: '프로그래머스-프린터'
+title: '알고리즘-Stack&Que'
 date: 2021-06-24 14:24:00
 category: 'Study'
 draft: false
