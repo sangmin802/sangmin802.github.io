@@ -1,86 +1,84 @@
 ---
-title : "프로그래머스-소수찾기"
-date : 2021-01-27 00:00:01
-category : "Study"
-draft : false
-tag : Programmers Coding Test
---- 
+title: '알고리즘-Exploration'
+date: 2021-01-27 00:00:01
+category: 'Study'
+draft: false
+tag: Programmers Coding Test
+---
 
 # 소수찾기 Lv2
+
 한자리 숫자가 적힌 종이 조각이 흩어져있습니다. 흩어진 종이 조각을 붙여 소수를 몇 개 만들 수 있는지 알아내려 합니다.
 <br>
 각 종이 조각에 적힌 숫자가 적힌 문자열 numbers가 주어졌을 때, 종이 조각으로 만들 수 있는 소수가 몇 개인지 return 하도록 solution 함수를 완성해주세요.
 
 ## 해결과정
-처음에는 주어진 숫자에서 가장 작은수와, 가장 큰수를 구해서 그 사이의 소수중에서 찾으려고했다.
 
+처음에는 주어진 숫자에서 가장 작은수와, 가장 큰수를 구해서 그 사이의 소수중에서 찾으려고했다.
 
 1. 작은수와 큰수사이를 순회하면서, 소수인숫자들만 배열에 담음
 2. 배열을 순회하면서, 해당 숫자들을 정렬한것과, 주어진 숫자를 정렬한것이 동일하면 카운트 증가
 
-
 소수를 찾는것은 크게 어려움이 없었던 것이, 소수인지 알고자 하는 숫자가 변수로 들어오면, 변수를 2 이상 변수 이하의 숫자로 나누었을 때 나머지가 없으면 소수가 아님을 정의해주었다.
-
 
 이런 식으로 하려했는데, 당연히 주어지는 숫자의 길이가 길어질수록 for문의 특성상 O(n)의 시간복잡도를 가지고 있어 어마어마하게 오랜시간이 걸리게 되어 `시간초과`가 발생하더라.
 
-
 결국 프로그래머스 카테고리의 **완전탐색** 말 그대로, 주어진 숫자들을 조합하여 만들수 있는 모든 수 만 생각해야했다.
 
-
 ## 재귀함수
-정말 너무 너무.. 고민했다 고작 Lv2인데.. 역시 아직 나는 많이부족한가보다.
 
+정말 너무 너무.. 고민했다 고작 Lv2인데.. 역시 아직 나는 많이부족한가보다.
 
 재귀함수란것이 늘.. 한번에 떠오르진 않더라.
 
 고민 끝에 키포인트는 하나였다. 만약, `[1,2,3]`이라는 배열(당연히`123` 변수를 푼)을 통해 만들수 있는 숫자를 생각해보았을 때,
 
 1. 첫 숫자가 담김
-    > `1` ,`2`, `3`
+   > `1` ,`2`, `3`
 2. 첫 숫자를 제외한 나머지 숫자들의 배열과 첫 숫자를 조합
-    > `1`과 `[2, 3]`의 조합, `2`와 `[1, 3]`의 조합, `3`과 `[1,2]`의 조합
+   > `1`과 `[2, 3]`의 조합, `2`와 `[1, 3]`의 조합, `3`과 `[1,2]`의 조합
 3. 조합되는 값은 보관하여 계속 다음으로 넘겨주고 그 값에 새롭게 더해지는 방식
-    > `12`, `13`, `21` `23` ...
+   > `12`, `13`, `21` `23` ...
 
 위의 과정을 재귀함수로 하여 더이상 나머지 숫자들의 배열이 존재하지 않을때까지 숫자를 생성하는 방식이다. 그러면서, 소수인지 파악하고 중복값을 제거할 수 있는 `Set`을 사용하였다.
 
 코드를 짜던중, 처음에는 뒤집어지는 값은 생성되지 않을것 같다는 생각을 잠깐 했었는데, 다시생각해보니 처음에 배열 내 모든 숫자를 기준으로 생성하기 때문에, 상관없을것 같다는 확신이 들었다.
-> `13` 의 반대 `31`을 생각할 필요가 없는것이, 처음에 `3`을 기준으로 시작한 재귀함수도 작동되어서 `3`을 제외한 모든 숫자들을 다음에 차곡차곡 쌓음
 
+> `13` 의 반대 `31`을 생각할 필요가 없는것이, 처음에 `3`을 기준으로 시작한 재귀함수도 작동되어서 `3`을 제외한 모든 숫자들을 다음에 차곡차곡 쌓음
 
 ```js
 function solution(numbers) {
-    const arr = numbers.split('');
-    const sosu = new Set();
-    
-    const find = (num) => {
-        let bool = true;
-        if(num < 2) return false;
-        for(let i = 2; i < num; i++){
-            if(num % i === 0){
-                bool = false;
-                break;
-            }
-            bool = true;
-        }
-        return bool;
+  const arr = numbers.split('')
+  const sosu = new Set()
+
+  const find = num => {
+    let bool = true
+    if (num < 2) return false
+    for (let i = 2; i < num; i++) {
+      if (num % i === 0) {
+        bool = false
+        break
+      }
+      bool = true
     }
-    
-    const func = (arr, str) => {
-        for(let i = 0; i < arr.length; i++){
-            const newArr = [...arr];
-            const newStr = str + arr[i];
-            newArr.splice(i, 1)
-            if(find(newStr*1)) sosu.add(newStr*1);
-            func(newArr, newStr)
-        }
+    return bool
+  }
+
+  const func = (arr, str) => {
+    for (let i = 0; i < arr.length; i++) {
+      const newArr = [...arr]
+      const newStr = str + arr[i]
+      newArr.splice(i, 1)
+      if (find(newStr * 1)) sosu.add(newStr * 1)
+      func(newArr, newStr)
     }
-    
-    func(arr, '');
-    return sosu.size
+  }
+
+  func(arr, '')
+  return sosu.size
 }
 ```
 
 ## 출처
-* [프로그래머스 소수찾기](https://programmers.co.kr/learn/courses/30/lessons/42839)
+
+- [프로그래머스 소수찾기](https://programmers.co.kr/learn/courses/30/lessons/42839)
