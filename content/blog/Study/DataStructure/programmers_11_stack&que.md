@@ -82,6 +82,43 @@ function solution(bridge_length, weight, truck_weights) {
 
 > 그런데 쉽지 않네..
 
+## 더 좋은 해결
+
+```ts
+function solution(bridge_length, weight, truck_weights) {
+  const trucks = [...truck_weights]
+  // 트럭의 무게, 다리에서 나가는 시간
+  const bridge = [[trucks[0], bridge_length + 1]]
+  let bridgeWeight = trucks.shift()
+  let time = 1
+
+  while (bridge.length || trucks.length) {
+    // 시간이 흐름
+    time++
+    // 만약 맨 앞의 트럭이 나가는 시간이 현재 시간과 동일하다면 해당 트럭 내보냄
+    if (bridge[0][1] === time) bridgeWeight -= bridge.shift()[0]
+    // 새로운 트럭이 추가될 수 있다면
+    if (bridgeWeight + trucks[0] <= weight) {
+      bridgeWeight += trucks[0]
+      // 해당 트럭이 다리에서 나가는 시간은 현재 시간 + 다리 길이
+      bridge.push([trucks.shift(), bridge_length + time])
+
+      // 새로운 트럭이 추가될 수 없다면
+      //      - 더 이상 트럭이 없을 때
+      //      - 무게때문에 들어갈 수 없을 때
+    } else {
+      // 가고있는 트럭이 있다면 강제로 트럭 내보내고 현재 시간을 그 트럭이 나간시간과 동일하게 변경
+      // 단, 문제의 조건 상 무게에 문제가 없다면 트럭이 나감과 동시에 들어와야 하므로 loop의 시작에서 추가되는 1초가 존재하지 않기 때문에 미리 -1초를 해줌
+      if (bridge[0]) time = bridge[0][1] - 1
+    }
+  }
+
+  return time
+}
+```
+
+이 방법을 통해, 확실히 길이가 긴 상황에 있어서는 몇 배 이상의 시간차가 났다.
+
 ## 출처
 
 - [프로그래머스 다리를 지나는 트럭](https://programmers.co.kr/learn/courses/30/lessons/42583?language=javascript#)
