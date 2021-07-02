@@ -1,5 +1,5 @@
 ---
-title: '알고리즘-Hash'
+title: '완주하지 못한 선수-Hash'
 date: 2021-01-18 00:00:00
 category: 'Study'
 draft: false

@@ -1,5 +1,5 @@
 ---
-title: '알고리즘-Heap'
+title: '이중우선순위큐-Heap'
 date: 2021-06-28 14:16:00
 category: 'Study'
 draft: false

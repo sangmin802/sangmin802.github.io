@@ -1,5 +1,5 @@
 ---
-title: '알고리즘-Heap'
+title: '디스크 컨트롤러-Heap'
 date: 2021-06-26 15:00:00
 category: 'Study'
 draft: false

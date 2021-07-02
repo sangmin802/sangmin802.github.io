@@ -1,5 +1,5 @@
 ---
-title: '알고리즘-Exploration'
+title: '모의고사-Exploration'
 date: 2021-01-27 00:00:00
 category: 'Study'
 draft: false

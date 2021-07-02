@@ -1,5 +1,5 @@
 ---
-title: '알고리즘-Exploration'
+title: '소수찾기-Exploration'
 date: 2021-01-27 00:00:01
 category: 'Study'
 draft: false

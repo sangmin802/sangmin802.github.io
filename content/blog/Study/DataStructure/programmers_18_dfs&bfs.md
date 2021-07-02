@@ -1,5 +1,5 @@
 ---
-title: '알고리즘-DFS/BFS'
+title: '여행경로-DFS/BFS'
 date: 2021-07-01 16:12:00
 category: 'Study'
 draft: false

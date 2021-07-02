@@ -1,5 +1,5 @@
 ---
-title: '알고리즘-Hash'
+title: '베스트앨범-Hash'
 date: 2021-06-23 15:40:00
 category: 'Study'
 draft: false

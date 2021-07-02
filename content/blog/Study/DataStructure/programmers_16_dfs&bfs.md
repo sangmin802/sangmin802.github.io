@@ -1,5 +1,5 @@
 ---
-title: '알고리즘-DFS/BFS'
+title: '네트워크-DFS/BFS'
 date: 2021-06-29 15:23:00
 category: 'Study'
 draft: false

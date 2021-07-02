@@ -1,5 +1,5 @@
 ---
-title: '알고리즘-Stack&Que'
+title: '기능개발-Stack&Que'
 date: 2021-01-18 00:00:01
 category: 'Study'
 draft: false

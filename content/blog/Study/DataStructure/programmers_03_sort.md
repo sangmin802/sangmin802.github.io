@@ -1,5 +1,5 @@
 ---
-title: '알고리즘-Sort'
+title: 'K번째수-Sort'
 date: 2021-01-22 00:00:00
 category: 'Study'
 draft: false

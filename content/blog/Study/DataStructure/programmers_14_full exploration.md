@@ -1,5 +1,5 @@
 ---
-title: '알고리즘-Exploration'
+title: '카펫-Exploration'
 date: 2021-06-28 16:19:00
 category: 'Study'
 draft: false

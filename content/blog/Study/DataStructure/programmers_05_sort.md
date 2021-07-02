@@ -1,5 +1,5 @@
 ---
-title: '알고리즘-Sort'
+title: 'H-Index-Sort'
 date: 2021-01-25 00:00:00
 category: 'Study'
 draft: false

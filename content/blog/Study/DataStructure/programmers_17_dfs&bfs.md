@@ -1,5 +1,5 @@
 ---
-title: '알고리즘-DFS/BFS'
+title: '단어변환-DFS/BFS'
 date: 2021-06-30 16:32:00
 category: 'Study'
 draft: false

@@ -1,5 +1,5 @@
 ---
-title: '알고리즘-Sort'
+title: '가장 큰 수-Sort'
 date: 2021-01-22 00:00:01
 category: 'Study'
 draft: false

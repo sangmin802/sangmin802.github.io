@@ -1,5 +1,5 @@
 ---
-title: '알고리즘-Stack&Que'
+title: '다리를 지나는 트럭-Stack&Que'
 date: 2021-06-25 15:15:00
 category: 'Study'
 draft: false
