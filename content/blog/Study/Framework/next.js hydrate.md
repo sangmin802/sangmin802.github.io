@@ -124,7 +124,7 @@ export async function getSortedPostsData() {
 }
 ```
 
-이와같이 사용할 수 있는 이유는, `getStaticProps`가 서버측에서 실행되기 떄문이라고 한다.
+이와같이 사용할 수 있는 이유는, `getStaticProps`가 서버측에서 실행되기 때문이라고 한다.
 
 배포할 때에는 빌드될 때만 실행되기 때문에, 사용자의 요청일 경우(즉, 쿼리변수나 헤더가 있는 http요청)에는 사용하지 않는것이 좋다
 
