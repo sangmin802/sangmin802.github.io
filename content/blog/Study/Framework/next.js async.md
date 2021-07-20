@@ -190,7 +190,7 @@ export default function CustomSuspense(props: ComponentProps<typeof Suspense>) {
 
 조금 있다가 확인해 볼 `ErrorBoundary`에서도 서버사이드에서는 `getDerivedStateFromError` 생명주기가 작동되지 않는것을 알 수 있었다.
 
-생각해보면 간단한데, `useEffect (componentDidMount etc...)`등의 생명주기들은 렌더링 이후에 실행되기 때문이다. 서버사이드에서도 먼저 렌더링을 하지 않나 라는 생각을 할 수 있지만, 여기서의 렌더링 이후는
+생각해보면 간단한데, `useEffect (componentDidMount etc...)`등의 클라이언트 사이드의 생명주기들은 렌더링 이후에 실행되기 때문이다. 서버사이드에서도 먼저 렌더링을 하지 않나 라는 생각을 할 수 있지만, 여기서의 렌더링 이후는
 
 > “after we’re done converting the React app into a HTML string”
 
@@ -274,3 +274,5 @@ export function useEvent(initialData) {
 이 방법이 정답이라고 생각하진 않는다. 다만, 현재 나의 생각으로 최대한 원리들을 파악하며 해결해본 방법이다.
 
 이번에 `Next.js`로 해당 프로젝트를 업데이트 하면서 여러가지 새로운 시도를 해보았고, 몰랐던 점들도 많이 알게되어 좋은 경험이였던것 같다.
+
+참고로, 위의 예제에서 `Event`와 `Calendar` 데이터들은 매일매일 혹은 매주 수요일마다 최신화되어야 하는 데이터라 `getServerSideProps`가 더 적합한 생명주기이지만, 성능상 좋지않은 편이기 때문에, 배포에는 해당 생명주기는 제거하였다.
