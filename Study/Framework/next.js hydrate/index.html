@@ -152,7 +152,7 @@ data-styled.g1[id="top__S_Top-zcpr2v-0"]{content:"gRTsqc,"}/*!sc*/
   <span class="token comment">// fetch post data from a database</span>
   <span class="token keyword">return</span> databaseClient<span class="token punctuation">.</span><span class="token function">query</span><span class="token punctuation">(</span><span class="token string">'SELECT posts...'</span><span class="token punctuation">)</span>
 <span class="token punctuation">}</span></code></pre></div>
-<p>이와같이 사용할 수 있는 이유는, <code class="language-text">getStaticProps</code>가 서버측에서 실행되기 떄문이라고 한다.</p>
+<p>이와같이 사용할 수 있는 이유는, <code class="language-text">getStaticProps</code>가 서버측에서 실행되기 때문이라고 한다.</p>
 <p>배포할 때에는 빌드될 때만 실행되기 때문에, 사용자의 요청일 경우(즉, 쿼리변수나 헤더가 있는 http요청)에는 사용하지 않는것이 좋다</p>
 <blockquote>
 <p>위의 경우에는 정적생성이 아닌 서버측 렌더링을 사용하는것</p>
