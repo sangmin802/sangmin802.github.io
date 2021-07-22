@@ -73,7 +73,7 @@ start()
 console.log('main done')
 
 // 결과
-Stack Done
+Start Done
 main done
 MicroTask done
 Task done
@@ -154,7 +154,7 @@ MicroTask done
    > `fetch`라는 비동기 `Web API`는 내부적으로 바로 실행되는것이 아닌, 어느정도 시간이 필요하기 때문에, 바로 콜백함수를 넘겨주진 못하는것 같음
 9. `Task done` 작업을 완료하고 해당 스택은 사라짐.
 10. `Web API`에서 진행중이던 `fetch`가 완료되고, `.then`의 콜백함수가 `MicroTasks`에 저장됨.
-11. `Task done` 작업이 사라지고, `Event Loop`는 다시 반복함.
+11. `Event Loop`는 다시 반복함.
 
 ### 참고
 
