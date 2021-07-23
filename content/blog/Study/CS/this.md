@@ -222,5 +222,5 @@ console.log(newObj.test()) // 5
 
 ## 참조
 
-[arrow functions this](https://github.com/anirudh-modi/JS-essentials/blob/master/ES2015/Functions/Arrow%20functions.md#how-this-is-different-for-arrow-functions)
-[mdn this](https://developer.mozilla.org/ko/docs/orphaned/Web/JavaScript/Reference/Operators/this)
+- [arrow functions this](https://github.com/anirudh-modi/JS-essentials/blob/master/ES2015/Functions/Arrow%20functions.md#how-this-is-different-for-arrow-functions)
+- [mdn this](https://developer.mozilla.org/ko/docs/orphaned/Web/JavaScript/Reference/Operators/this)
