@@ -151,6 +151,36 @@ foo.call(foo)
 
 아마, `window.콜백함수` 이런 방식이 아닐까 생각이 든다.
 
+### setTimeout에서의 this
+
+`setTimeout`에서의 `this` 바인딩은 기존과는 조금 다른 방식으로 진행된다고 한다.
+
+```js
+const obj = {
+  func() {
+    console.log(this) // window
+  },
+}
+setTimeout(obj.func, 0)
+```
+
+함수에서의 `this`는 호출이 될 때 `binding`이 되니, `func`에서의 `this`는 `obj`라 생각할 수 있지만, 결과값은 `window`가 나온다.
+
+`setTimeout`의 조금 특별한 동작방식때문이라고 한다.
+
+전달받은 인수인 콜백함수를 실행시킬 때, `this`에 `window`를 할당한다고 한다.
+
+```js
+const f = obj.func
+setTimeout(f, 0)
+```
+
+위와 같은 방식으로 실행되는 느낌이라고 한다.
+
+따라서, `setTimeout`의 콜백함수의 `this`를 `window`가 아닌 본연의 객체로 `binding`되게 하기 위해 하나의 껍데기 `function`을 감싸서 사용하는것이다.
+
+그렇게 된다면, 껍데기인 `fucntion`의 `this`는 `setTimeout`의 특징으로 `this`가 바인딩 되지만, 내부 함수는 일반 함수의 `binding` 방식에 따라 호출될 때 `this`가 결정된다.
+
 ### 정규함수 + bind
 
 위의 정규함수에서 콜백함수에 다른 객체를 전달해줄 수 있는 방법을 이전에 알았다.
