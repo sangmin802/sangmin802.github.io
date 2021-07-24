@@ -220,6 +220,10 @@ console.log(newObj.test()) // 5
 
 `class`이전 자바스크립트에서 상속개념을 사용할 수 있었던 `prototype`또한 `this`에 있어서는 일반 정규 함수와 비슷하게 호출될 때 할당이 된다.
 
+또한, `class`와 생성자함수 `new Fucntion`내부에서의 `this`또한 자기 자신 객체를 참조로 하여 `binding`된다.
+
+`React`의 `class`기반에서 사용해오던 `this.state`, `this.props`들이 이와 같은 방식때문이다.
+
 ## 참조
 
 - [arrow functions this](https://github.com/anirudh-modi/JS-essentials/blob/master/ES2015/Functions/Arrow%20functions.md#how-this-is-different-for-arrow-functions)
