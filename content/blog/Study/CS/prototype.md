@@ -115,7 +115,7 @@ console.dir(me)
 ## 함수(객체)를 선언했을 때의 반응
 
 <div style="margin : 0 auto; text-align : center">
-  <img src="/img/2021/07/25/4.PNG" alt="4">
+  <img src="/img/2021/07/25/4.png" alt="4">
 </div>
 
 생성자 함수를 정의하였을 때 두가지 반응이 일어난다.
