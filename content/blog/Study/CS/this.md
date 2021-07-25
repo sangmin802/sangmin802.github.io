@@ -151,7 +151,7 @@ foo.call(foo)
 
 아마, `window.콜백함수` 이런 방식이 아닐까 생각이 든다.
 
-### setTimeout에서의 this
+### setTimeout, setInterval에서의 this
 
 `setTimeout`에서의 `this` 바인딩은 기존과는 조금 다른 방식으로 진행된다고 한다.
 
