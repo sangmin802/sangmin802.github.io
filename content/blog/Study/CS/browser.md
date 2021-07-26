@@ -33,7 +33,7 @@ tag: 'CS'
 자원들이 전달된다면, 브라우저의 렌더링 엔진이 해당 자원들을 화면에 표시하기위한 작업들을 시작하게된다.
 
 <div style="margin : 0 auto; text-align : center">
-  <img src="/img/2021/07/26/1.PNG" alt="1">
+  <img src="/img/2021/07/26/1.png" alt="1">
 </div>
 
 ### HTML parsing
@@ -54,7 +54,7 @@ tag: 'CS'
 위와 같은 마크업을
 
 <div style="margin : 0 auto; text-align : center">
-  <img src="/img/2021/07/26/2.PNG" alt="2">
+  <img src="/img/2021/07/26/2.png" alt="2">
 </div>
 
 `DOM Tree`로 파싱을 해주어야 한다.
@@ -119,7 +119,7 @@ tag: 'CS'
 ## 최신 브라우저에서 추가된 단계 - Composition
 
 <div style="margin : 0 auto; text-align : center">
-  <img src="/img/2021/07/26/4.PNG" alt="4">
+  <img src="/img/2021/07/26/4.png" alt="4">
 </div>
 
 최신 브라우저에서의 렌더링 단계에 한가지가 추가되었는데, `Composition` 조합 이다.
@@ -139,7 +139,7 @@ tag: 'CS'
 사용자가 요청을하고 최종 렌더링이 될 때 까지의 시간을 가능한 단축시켜서 빠르게 화면을 접할 수 있도록 하는것이 중요하다.
 
 <div style="margin : 0 auto; text-align : center">
-  <img src="/img/2021/07/26/5.PNG" alt="5">
+  <img src="/img/2021/07/26/5.png" alt="5">
 </div>
 
 이미지를 보면, `Render Tree`를 형성하기까지의 구간을 `Construction`, `layout`단계부터 `composition`까지 `Operation`이라고 구분지어있고 서로 다른 방식으로 최적화를 진행할 수 있다고 한다.
