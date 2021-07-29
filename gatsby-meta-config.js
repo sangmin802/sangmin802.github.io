@@ -7,7 +7,7 @@ module.exports = {
   social: {
     twitter: ``, // Your Twitter account
     github: `https://github.com/sangmin802`, // Your GitHub account
-    portfolio: `https://sangmin802.github.io/portfolio/`,
+    portfolio: ``,
     medium: ``, // Your Medium account
     facebook: ``, // Your Facebook account
     linkedin: ``, // Your LinkedIn account
