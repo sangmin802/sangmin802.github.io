@@ -147,3 +147,16 @@ pre[class*='language-'] {
 .token.inserted {
   color: green;
 }
+
+.about {
+  .motto {
+    border: 1px solid #5c0fc2;
+    border-radius: 3px;
+    color: #5c0fc2;
+    padding: 0 0.5rem;
+  }
+  h1 {
+    border-left: 10px solid #5c0fc2;
+    padding: 0.3rem 0 0.3rem 0.5rem;
+  }
+}
