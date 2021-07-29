@@ -2,7 +2,7 @@ module.exports = {
   title: `SangMin 개발 이야기`,
   description: `SangMin Directory`,
   author: `SangMin`,
-  introduction: `믿을수 있는 사람이 되기`,
+  introduction: `👆 ___가 되고싶은 FrontEnd 개발자`,
   siteUrl: `https://sangmin802.github.io/`, // Your blog site url
   social: {
     twitter: ``, // Your Twitter account
