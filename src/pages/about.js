@@ -22,7 +22,10 @@ export default ({ data }) => {
         )}`,
       }}
     >
-      <div dangerouslySetInnerHTML={{ __html: resume.html }} />
+      <div
+        className="about"
+        dangerouslySetInnerHTML={{ __html: resume.html }}
+      />
     </div>
   )
 }
