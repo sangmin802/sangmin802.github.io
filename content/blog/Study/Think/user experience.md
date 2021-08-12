@@ -200,7 +200,7 @@ return (
 ## 비동기 작업 분리를 통한 사용자 경험 향상
 
 <div style="margin : 0 auto; text-align : center">
-  <img src="/img/2021/08/06/4.PNG?raw=true" alt="abortcontroller">
+  <img src="/img/2021/08/06/4.png?raw=true" alt="abortcontroller">
 </div>
 
 기존, 유저를 검색하고 `suspense`기간을 지나 화면을 보게되는데 까지의 걸리는 시간이다.
@@ -210,7 +210,7 @@ return (
 > 진짜 시간 미쳤다.
 
 <div style="margin : 0 auto; text-align : center">
-  <img src="/img/2021/08/06/5.PNG?raw=true" alt="abortcontroller">
+  <img src="/img/2021/08/06/5.png?raw=true" alt="abortcontroller">
 </div>
 
 `수집형포인트`에 대한 비동기 작업을 첫 `유저정보`화면이 렌더링 된 이후에 진행되도록 한 결과물이다.
