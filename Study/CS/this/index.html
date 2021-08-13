@@ -93,7 +93,7 @@ data-styled.g1[id="top__S_Top-zcpr2v-0"]{content:"gRTsqc,"}/*!sc*/
 <p><code class="language-text">ECMAScript5</code>에서 도입된 <code class="language-text">bind</code>메소드를 사용하게 될 경우, <code class="language-text">call</code>과 유사하게 객체를 넘겨줄수 있게 되지만, 일회성이 아닌 영구적으로 참조하게되는 새로운 함수를 생성하게된다.</p>
 <h2 id="화살표함수에서의-this" style="position:relative;"><a href="#%ED%99%94%EC%82%B4%ED%91%9C%ED%95%A8%EC%88%98%EC%97%90%EC%84%9C%EC%9D%98-this" aria-label="화살표함수에서의 this permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>화살표함수에서의 this</h2>
 <p>아마 가장 많이 헷갈리는 부분이 아닐까 싶다.</p>
-<p>콜백함수 등 자주 접하게되는 화살표함수 또한 <strong>함수</strong> 이지만, 호출되는 방식에 따라 <code class="language-text">this</code>가 할당되는것이 아닌, 렉시컬 스코프를 참조하여 <code class="language-text">this</code>를 사용한다.</p>
+<p>콜백함수 등 자주 접하게되는 화살표함수 또한 <strong>함수</strong> 이지만, 호출되는 방식에 따라 <code class="language-text">this</code>가 할당되는것이 아닌, 선언될 당시의 외부 렉시컬 환경를 참조하여 <code class="language-text">this</code>를 사용한다.</p>
 <p>또한, 이 화살표함수에는 <code class="language-text">bind</code>와 같은 넘겨주는 메소드가 적용되지 않는다.</p>
 <div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">const</span> obj1 <span class="token operator">=</span> <span class="token punctuation">{</span>
   <span class="token function">introduce</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -115,7 +115,7 @@ obj2<span class="token punctuation">.</span><span class="token function">introdu
 <li>전역 스코프의 <code class="language-text">this</code></li>
 <li>일반 정규 함수에서 호출 및 메소드로 바인딩되는 <code class="language-text">this</code></li>
 </ol>
-<p>화살표함수의 경우 위의 두가지에 해당되지 않는 상태이며, 렉시컬 스코프의 방식으로 <code class="language-text">this</code>가 할당이 되기 때문에, <code class="language-text">this</code>를 찾기 위해 선언되었을 때 상위인 <code class="language-text">obj2</code>에서 탐색을 한다.</p>
+<p>화살표함수의 경우 위의 두가지에 해당되지 않는 상태이며, 선언될 당시 외부 렉시컬 스코프에서 <code class="language-text">this</code>를 탐색하여 가 할당이 되기 때문에, <code class="language-text">this</code>를 찾기 위해 선언되었을 때 상위인 <code class="language-text">obj2</code>에서 탐색을 한다.</p>
 <p>마찬가지로, <code class="language-text">this</code>를 찾지 못해서, 최상위 <code class="language-text">window</code>까지 나오게 되고, <code class="language-text">window</code>를 <code class="language-text">this</code>로 참조하게 되는 것이다.</p>
 <h2 id="화살표함수와-정규함수의-this-차이" style="position:relative;"><a href="#%ED%99%94%EC%82%B4%ED%91%9C%ED%95%A8%EC%88%98%EC%99%80-%EC%A0%95%EA%B7%9C%ED%95%A8%EC%88%98%EC%9D%98-this-%EC%B0%A8%EC%9D%B4" aria-label="화살표함수와 정규함수의 this 차이 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>화살표함수와 정규함수의 this 차이</h2>
 <p>외부 깃에서 좋은 예제와 설명글을 찾을 수 있었다.</p>
@@ -186,7 +186,7 @@ foo<span class="token punctuation">.</span>a <span class="token operator">=</spa
 <p>단순하게 화살표함수로 구현을 했더니, 자연스럽게 <code class="language-text">this</code>가 처음 전달된 <code class="language-text">foo</code>객체를 참조하고 있다.</p>
 <p>순서를 생각해보면 간단하다.</p>
 <ol>
-<li>화살표함수 내부의 <code class="language-text">this</code>는 렉시컬 스코프를 참조하여 형성되기 때문에, 콜백함수 내부에서 바인딩된 <code class="language-text">this</code>를 찾는다.</li>
+<li>화살표함수 내부의 <code class="language-text">this</code>는 외부 렉시컬 스코프를 참조하여 형성되기 때문에, 콜백함수 내부에서 바인딩된 <code class="language-text">this</code>를 찾는다.</li>
 <li>콜백함수 내부에는 <code class="language-text">this</code>가 존재하지 않아, <code class="language-text">function foo</code>까지 탐색하여 올라간다.</li>
 <li><code class="language-text">fucntion foo</code>에는 <code class="language-text">call</code>로 전달된 <code class="language-text">foo</code> <code class="language-text">this</code>객체가 존재했고, 해당 객체를 참조하게 된다.</li>
 </ol>
