@@ -53,7 +53,7 @@ lang: 'en'
 
 <hr>
 
-<b>GitHub directoru</b> : https://github.com/sangmin802/loa-hands
+<b>GitHub directory</b> : https://github.com/sangmin802/loa-hands
 
 <hr>
 
@@ -61,7 +61,7 @@ lang: 'en'
 
 <hr>
 
-<b>GitHub directoru `Next.js` </b> : https://github.com/sangmin802/loa-hands-next
+<b>GitHub directory `Next.js` </b> : https://github.com/sangmin802/loa-hands-next
 
 <hr>
 
@@ -117,11 +117,11 @@ lang: 'en'
 
 <hr>
 
-<b>GitHub directoru</b> : https://github.com/sangmin802/web-chat
+<b>GitHub directory</b> : https://github.com/sangmin802/web-chat
 
 <hr>
 
-<b>GitHub directoru `Server` </b> : https://github.com/sangmin802/web-chat-server
+<b>GitHub directory `Server` </b> : https://github.com/sangmin802/web-chat-server
 
 <hr>
 
@@ -167,7 +167,7 @@ lang: 'en'
 
 <hr>
 
-<b>GitHub directoru</b> : https://github.com/sangmin802/dnfrank
+<b>GitHub directory</b> : https://github.com/sangmin802/dnfrank
 
 <hr>
 
