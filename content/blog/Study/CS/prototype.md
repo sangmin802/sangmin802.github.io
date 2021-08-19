@@ -108,7 +108,7 @@ console.dir(me)
 
 > 생성자함수의 `.prototype`으로 접근하는 객체는 이름만 `prototype`인 일반 속성이다.
 
-`생성자함수.prototype`는, 해당 생성자 함수를 통해 만들어지는 객체의 `[[Prototype]]`으로 연결되는 `prototype`객체를 값으로 사용하라는 뜻이다.
+`생성자함수.prototype`는, 해당 생성자 함수를 통해 만들어지는 객체의 `[[Prototype]]`으로 연결되는 `prototype`객체의 값으로 사용하라는 뜻이다.
 
 <div style="margin : 0 auto; text-align : center">
   <img src="/img/2021/07/25/5.PNG" alt="5">
