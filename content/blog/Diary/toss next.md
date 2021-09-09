@@ -1,6 +1,6 @@
 ---
 title: '2021 Toss Next 후기'
-date: 2021-09-01 15:05:00
+date: 2021-09-09 15:05:00
 category: 'Diary'
 draft: false
 tag: 'Think'
@@ -19,7 +19,7 @@ tag: 'Think'
 알고리즘 문제가 아니였기 때문에, 비교적 자신있게 풀 수 있었다.
 
 <div style="margin : 0 auto; text-align : center">
-  <img src="/img/2021/04/01/1.png?raw=true" alt="toss next">
+  <img src="/img/2021/09/09/1.png?raw=true" alt="toss next">
 </div>
 
 몇일이 지나고 코딩테스트에서는 합격을 했다는 메일을 받았다.
