@@ -51,7 +51,7 @@ document.body.style.background = 'yellow';
 
 <br>
 
-위처럼 사용자에 의해 변경사항이 있다면 `DOM`에 직접수정하는것이 아니라 중간단계로 `Virtual DOM`을 수정하고, `Virtual DOM`에서 기존의 값과 변경된 값을 감지하여 `DOM`을 한번만 렌더링 시킨다.
+위처럼 사용자에 의해 변경사항이 있다면 `DOM`에 직접수정하는것이 아니라 중간단계로 `Virtual DOM`을 수정하고, `Virtual DOM`에서 기존의 값과 변경된 값을 감지하여 필요한 부분만 변경을 시킨다.
 
 ### 영상
 
