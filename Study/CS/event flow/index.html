@@ -67,17 +67,18 @@ data-styled.g1[id="top__S_Top-zcpr2v-0"]{content:"gRTsqc,"}/*!sc*/
 <div style="text-align : center">
   <img src="/img/2021/03/24/1.png?raw=true" alt="12">
 </div>
-<p>최상위 엘리먼트인 <code class="language-text">window</code>를 기준으로 그 내부에 세부적인 엘리먼트들이 생성이 되는데, 이것을 기준으로 이벤트 객체들이 이동하는 경로들이 형성된다. 다만, 여러 테스트를 해본 결과 이러한 경로는 부모엘리먼트와 바로 아래의 직계자식 엘리먼트까지만 영향을 끼치는것 같다. 이때 범위의 최 상단엘리먼트가 <code class="language-text">e.currentTarget</code> 인듯 하다.</p>
+<p>최상위 엘리먼트인 <code class="language-text">window</code>를 기준으로 그 내부에 세부적인 엘리먼트들이 생성이 되는데, 이것을 기준으로 이벤트 객체들이 이동하는 경로들이 형성된다. 클릭을 했을 때 실제로 이벤트 핸들러가 할당되어있는 노드는 <code class="language-text">e.currentTarget</code>로 조회 가능하다.</p>
 <p>이처럼 경로 범위? 가 정해진다면 특정한 방식을 통해 이벤트가 전달이 된다. 그리고, 이벤트에 해당되는 타겟이라면 이벤트가 실행되는 방식이다.</p>
-<blockquote>
-<p>솔직히 이벤트가 전달된다는 느낌보다는 이벤트 실행 순서를 결정하는느낌이다.</p>
-</blockquote>
 <p>이벤트 전달 방식을 <code class="language-text">Event Phase</code>라고 한다.</p>
 <ol>
 <li>Bubble phase : 하위 엘리먼트에서 상위 엘리먼트로 전달되는 방식</li>
 <li>Capture phase : 상위 엘리먼트에서 하위 엘리먼트로 전달되는 방식</li>
 <li>Target phase : 이벤트가 할당된 엘리먼트에 도달한 경우로, 필요에 따라 이후의 이벤트들의 전달 여부를 결정할 수 있다.</li>
 </ol>
+<p>기본적으로 상위에서 하위로 내려가면서 <code class="language-text">capture</code>방식으로 설정된 이벤트 핸들러들을 먼저 작동시키고, 클릭한 최 하위 엘리먼트에 도달했을 때, <code class="language-text">bubble</code>방식으로 올라가면서 나머지 이벤트 핸들러들을 작동시킨다.</p>
+<blockquote>
+<p>위 그림 그대로임</p>
+</blockquote>
 <h2 id="예제" style="position:relative;"><a href="#%EC%98%88%EC%A0%9C" aria-label="예제 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>예제</h2>
 <p><code class="language-text">child</code>클래스의 엘리먼트만 클릭할 경우를 따져보려고한다.</p>
 <div class="gatsby-highlight" data-language="html"><pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>grandParent<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
