@@ -198,7 +198,7 @@ function WrappedComponent(props) {
 ```js
 <ConditionalRender
   render={dialog ? true : false}
-  Component={<Dialog />}
+  Component={Dialog}
   dialog={dialog}
   setDialog={setDialog}
 />
@@ -216,17 +216,7 @@ const ConditionalRender = ({ render, Component, ...props }) => {
 export default React.memo(ConditionalRender)
 ```
 
-조합을 사용하여 해결할 수도 있긴했다.
-
-다만, 조금 아쉬운 점이 있었는데,
-
-```js
-const Dialog = ({ ...props }: Partial<IDialog>) => {}
-```
-
-처음 속성으로 컴포넌트를 전달하거나, `children`속성으로 전달하고자 할 때에 속성들을 전달하지 못하기 떄문에, 타입들에 `Partial` 유틸리티를 사용해줘야 한다.
-
-안되는것은 아니지만.. 조금 아쉬웠다.
+`Custom Hook`을 사용하여 해결할 수 있었다.
 
 ### HOC
 
@@ -243,15 +233,11 @@ const ConditionalRender = Component => ({ render, ...props }) =>
 export default ConditionalRender
 ```
 
-완전히 해결되었다.
-
-`Dialog`컴포넌트가 렌더링 될 때에는 `dialog`라는 값이 항상 존재하는 상황이도록 할 수 있게 되었다.
-
-또, 이와 같이 조건부로 렌더링되는 컴포넌트들은 같은 방식으로 처리해줄 수 있었다.
+`HOC`방식으로도 해결은 가능했다.
 
 ## 느낌
 
-`HOC`또한 단점이 있는데, 여러개가 중첩되어 사용될 때 간혹 속성이 겹치는 경우가 있다고 한다.
+`HOC`는 단점이 있는데, 여러개가 중첩되어 사용될 때 간혹 속성이 겹치는 경우가 있다고 한다.
 
 > 또한, 그것이 어느곳에서 일어났는지 빠르게 파악하기 어렵다고 한다..
 
