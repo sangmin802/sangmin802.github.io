@@ -1,5 +1,5 @@
 ---
-title: ⚛ HOC과 Custom Hook
+title: ⚛ HOC와 Custom Hook
 date: 2021-10-07 16:31:00
 category: 'Study'
 draft: false
