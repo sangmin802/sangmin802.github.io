@@ -173,30 +173,30 @@ data-styled.g1[id="top__S_Top-zcpr2v-0"]{content:"gRTsqc,"}/*!sc*/
 <ol>
 <li>
 <p>저장소 - 원격저장소에 경로 추가</p>
-<blockquote>
-<p>대부분 이름을 <code class="language-text">upstream</code>이라고 한다 함</p>
-</blockquote>
+<ul>
+<li>대부분 이름을 <code class="language-text">upstream</code>이라고 한다 함</li>
+</ul>
 </li>
 <li>
 <p>좌측 원격탭의 <code class="language-text">upstream</code>에서 가져오기 진행</p>
-<blockquote>
-<p><code class="language-text">upstream repository</code>에 생성되어있는 브랜치들도 하위에 모두 표시되니, 현재 브랜치에 맞는 <code class="language-text">upstream</code> 브랜치에서 <code class="language-text">pull</code> 해야함
-개인 프로젝트라면 프로젝트에서 최신 개발환경을 갖고있는 브랜치</p>
-</blockquote>
+<ul>
+<li><code class="language-text">upstream repository</code>에 생성되어있는 브랜치들도 하위에 모두 표시되니, 현재 브랜치에 맞는 <code class="language-text">upstream</code> 브랜치에서 <code class="language-text">pull</code> 해야함</li>
+<li>개인 프로젝트라면 프로젝트에서 최신 개발환경을 갖고있는 브랜치</li>
+</ul>
 </li>
 <li>
 <p>만약, <code class="language-text">upstream</code>에서 가져오려는 중, 작업해놓은 코드들이 커밋 대기중인 상태라면 작업해놓은 코드들을 <code class="language-text">stash</code>에 저장해놓은 다음 <code class="language-text">upstream</code>에서 <code class="language-text">pull</code>한다.</p>
-<blockquote>
-<p>커밋을 해도 무방한것 같음. 단 <code class="language-text">push</code>는 절대 ㄴㄴ
-이전 커밋과, <code class="language-text">pull</code>하여 추가될 커밋중 충돌되는 부분이 있다면 해결이 필요한 부분이라고 보여줌</p>
-</blockquote>
+<ul>
+<li>커밋을 해도 무방한것 같음. 단 <code class="language-text">push</code>는 절대 ㄴㄴ</li>
+<li>이전 커밋과, <code class="language-text">pull</code>하여 추가될 커밋중 충돌되는 부분이 있다면 해결이 필요한 부분이라고 보여줌</li>
+</ul>
 </li>
 <li>
 <p>이후 <code class="language-text">stash</code>에 저장해놓은 코드를 다시 현재 브랜치로 가져오고, 충돌 파일은 직접 합치기</p>
-<blockquote>
-<p><code class="language-text">stash</code>에 저장을 하고 최신 개발 환경을 <code class="language-text">pull</code>하던, 커밋을 먼저 하고 <code class="language-text">pull</code>하던 상관없지만, <code class="language-text">origin</code>에 <code class="language-text">push</code>하기 전에 최신 개발 환경을 <code class="language-text">pull</code>하는것이 정말 중요한듯.
-동일 파일 내 변경사항이 있거나, <code class="language-text">pull</code>한 브랜치에서 업데이트된 내용이 있다면 충돌이 발생할 텐데(대부분 생기는 듯), 잘 병합해주면 큰 문제 없음</p>
-</blockquote>
+<ul>
+<li><code class="language-text">stash</code>에 저장을 하고 최신 개발 환경을 <code class="language-text">pull</code>하던, 커밋을 먼저 하고 <code class="language-text">pull</code>하던 상관없지만, <code class="language-text">origin</code>에 <code class="language-text">push</code>하기 전에 최신 개발 환경을 <code class="language-text">pull</code>하는것이 정말 중요한듯.</li>
+<li>동일 파일 내 변경사항이 있거나, <code class="language-text">pull</code>한 브랜치에서 업데이트된 내용이 있다면 충돌이 발생할 텐데(대부분 생기는 듯), 잘 병합해주면 큰 문제 없음</li>
+</ul>
 </li>
 </ol>
 <h2 id="아쉬웠던-점" style="position:relative;"><a href="#%EC%95%84%EC%89%AC%EC%9B%A0%EB%8D%98-%EC%A0%90" aria-label="아쉬웠던 점 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>아쉬웠던 점</h2>
