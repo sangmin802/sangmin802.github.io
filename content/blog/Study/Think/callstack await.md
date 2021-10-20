@@ -216,7 +216,7 @@ useEffect(() => {
 3. `const data = await fetchSomething()`에서 `fetchSomething()`의 비동기작업이 호출되고 `await`으로 감싸져있기 때문에, `resolve`된 값을 `await`이 수신할 때까지 이후의 로직은 중단됨.
 4. `async()`가 콜스택에서 사라지고, `console.log('useEffect done')`이 실행되고 사라짐
 5. 모든 작업이 완료되고 콜스택이 비어있기 때문에, 비동기로 전달된 `setLoading`의 상태값 업데이트 요청이 실행되고 `loading : true` 가 됨.
-6. 시간이 지나고, `fetchSomething`이 `resolve`된 값을 반환하여 `await`이 감지를하고, 이후의 로직들이 마이크로태스크에 저장이 됨.
+6. `fetch`를 통해 데이터를 받아오는 등 진행하는데 필요한시간이 지나고, `fetchSomething`이 `Promise.resolve`된 값을 반환하여 `await 또는 .then`이 감지를하고, 이후의 로직들이 마이크로태스크에 저장이 됨.
    > `await`이 `.then`을 대체하니 마이크로태스크 일 것이라고 생각됨
 7. `setLoading` 요청을 마지막으로 콜스택이 비어있기 때문에, `await`이후의 로직들이 작동됨
 
