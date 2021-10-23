@@ -211,12 +211,15 @@ data-styled.g1[id="top__S_Top-zcpr2v-0"]{content:"gRTsqc,"}/*!sc*/
 
 <span class="token keyword">export</span> <span class="token keyword">default</span> ConditionalRender</code></pre></div>
 <p><code class="language-text">HOC</code>방식으로도 해결은 가능했다.</p>
+<blockquote>
+<p>하지만, 두가지 모두 <code class="language-text">typescript</code> 환경에서는 커스텀한 속성을 받는 다면 <code class="language-text">Attribute</code>확장을 하더라도 별도로 지정해줘야 하기 때문에, 시간이 흐를수록 결속력이 짖어질것 같긴 하다..</p>
+</blockquote>
 <h2 id="느낌" style="position:relative;"><a href="#%EB%8A%90%EB%82%8C" aria-label="느낌 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>느낌</h2>
 <p><code class="language-text">HOC</code>는 단점이 있는데, 여러개가 중첩되어 사용될 때 간혹 속성이 겹치는 경우가 있다고 한다.</p>
 <blockquote>
-<p>또한, 그것이 어느곳에서 일어났는지 빠르게 파악하기 어렵다고 한다..</p>
+<p>또한, 그것이 어느곳에서 일어났는지 빠르게 파악하기 어렵다고 한다.</p>
 </blockquote>
-<p>따라서 대부분의 상황에서는 <code class="language-text">Custom Hook</code>을 권장한다고 한다..</p>
+<p>따라서 대부분의 상황에서는 <code class="language-text">Custom Hook</code>을 권장한다고 한다.</p>
 <p>이번 고민에서는 <code class="language-text">HOC</code>가 여러번 중첩될 필요가 없었기 떄문에 강력하고 깔끔하게 해결할 수 있었다.</p>
 <p>당연한 말이겠지만, 상황에 따라 사용하는것이 좋아보인다.</p>
 <h2 id="참조" style="position:relative;"><a href="#%EC%B0%B8%EC%A1%B0" aria-label="참조 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>참조</h2>
