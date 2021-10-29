@@ -67,7 +67,7 @@ const func = useCallback(
 
 > 위 글의 복잡도는 `render`를 하기 전, 반복문의 횟수를 기준으로 측정한것으로 보이며, 각각의 횟수에 따라 `useMemo`를 사용했을 때, 사용하지 않았을 때의 `render`완료 시간을 비교한것 같다.
 
-`useCallback`의 경우에도, 외부 스코프의 변수, 상수등을 사용하지않고 오로지 받은 인자를 통해서 같은 결과값만을 반환하는 함수와 같은 `utility`함수들처럼, 하위에 속성으로 전달되어 `rerender`에 영향을 미치지 않는 함수들은 오히러 역효과만 난다.
+`useCallback`의 경우에도, `render`가 되어 계속해서 생성되는 메소드가 하위 컴포넌트의 `rerender`에 영향을 주는것이 아니라면, 사용할 필요가 없다.
 
 ```js
 const addOne = (num: number) => num + 1
@@ -78,7 +78,7 @@ const callbackSomething = useCallback(() => {
 }, [])
 ```
 
-변화가 있는 상태값과 관련이 없는 부수적인 역할을 하는 함수들은 절대 변할일이 없기 때문에, 의존성배열에 추가해줄 필요가 없다.
+변화가 있는 상태값과 관련이 없는 부수적인 역할을 하는 함수들은 절대 변할일이 없기 때문에, 처음 생성될 때 참조하는것을 그대로 사용할 수 있어서, 의존성배열에 추가해줄 필요가 없다.
 
 위에 설명된 상황들의 변수, 상수, 함수들은 `useMemo`, `useCallback`을 사용하기보다는 별도의 `constants` 디렉토리나, 외부에서 선언하여 참조하는것처럼 다른 방법을 찾는것이 좋아보인다.
 
@@ -132,11 +132,10 @@ a === b // false
 
 ```js
 function Parent() {
-  const arr = [1, 2, 3]
   const method = () => {
     // doSomething
   }
-  return <Children arr={arr} method={method} />
+  return <Children method={method} />
 }
 
 React.memo(function Children({ arr, method }) {
@@ -144,21 +143,20 @@ React.memo(function Children({ arr, method }) {
 })
 ```
 
-`Parent`컴포넌트에서는 `Children`컴포넌트에게 `arr`이라는 배열을 속성으로 전달한다.
+`Parent`컴포넌트에서는 `Children`컴포넌트에게 `method`이라는 메소드을 속성으로 전달한다.
 
-`Children`컴포넌트에서는 무분별하게 렌더링되는것을 막기 위해 `memo`를 사용하여 `arr`이 변경될 때만 렌더링이 되도록 설정을 해주었다.
+`Children`컴포넌트에서는 무분별하게 렌더링되는것을 막기 위해 `memo`를 사용하여 `method`이 변경될 때만 렌더링이 되도록 설정을 해주었다.
 
-만약, `Parent`컴포넌트 또한 `rerender`가 일어났을 때 동일한 값의 배열을 전달하게 되는데, 이러면 `Children`은 `rerender`가 일어나지 않을까?
+만약, `Parent`컴포넌트 또한 `rerender`가 일어났을 때 동일한 구조의 메소드 전달하게 되는데, 이러면 `Children`은 `rerender`가 일어나지 않을까?
 
 그렇지 않다. 값은 동일하지만 서로 참조하는 배열이 다르기 때문에 `rerender`가 발생한다.
 
 ```js
 function Parent() {
-  const arr = uesMemo(() => [1, 2, 3], [])
   const method = useCallback(() => {
     // doSomething
   }, [])
-  return <Children arr={arr} method={method} />
+  return <Children method={method} />
 }
 
 React.memo(function Children({ arr, method }) {
