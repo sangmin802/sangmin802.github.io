@@ -169,12 +169,6 @@ data-styled.g1[id="top__S_Top-zcpr2v-0"]{content:"gRTsqc,"}/*!sc*/
 <li>상태값이 변경되는데 서로 관련이 있는 복수의 <code class="language-text">useState</code>의 경우 다수의 <code class="language-text">setter</code>들이 하위의 컴포넌트에 여러개의 속성으로 전달되거나(흩뿌려지는 상황) 관련된 여러개의 <code class="language-text">setter</code>함수들을 묶은 하나의 함수(<code class="language-text">rerender</code>에 영향을 주지않는 <code class="language-text">dispatch</code> 함수가 아니기 때문에, 메모이제이션작업을 하고 하위로 전달될 필요가 있다)를 전달해야 하지만, <code class="language-text">useReducer</code>의 <code class="language-text">dispatch</code>함수는 <code class="language-text">rerender</code>에 영향을 주지 않는 채로 하위에 전달되어 단순 사용자의 행동을 구분짓는 <code class="language-text">action</code>을 전달하여 상위에서 상태값을 업데이트하는 로직이 수행되기 때문에, 모든 요청들을 한곳에서 수행 관리할 수 있게된다.</li>
 </ul>
 </li>
-<li>
-<p>원시형의 상태값이라면 <code class="language-text">useState</code>로 충분하지만, 참조형의 상태값이라면 <code class="language-text">useReducer</code>사용을 고려해볼 필요가 있다.</p>
-<ul>
-<li><code class="language-text">React Hook</code>에서의 <code class="language-text">setState</code>는 상태값을 <strong>대체</strong> 하기 때문에, 변화가 없는 속성들을 포함한 새로운 참조형 상태값을 매번 반환해야 함.</li>
-</ul>
-</li>
 </ol>
 <p>공식문서에서 설명된 특징들과 경험해본 느낌을 간추려본 장점들이다.</p>
 <p>대부분의 상황에서는 <code class="language-text">useState</code>와 <code class="language-text">custom hook</code>이 좋아보이지만, 위와같은 상황일 경우에는 <code class="language-text">useReducer</code>가 더 적합할 수 있을것 같다.</p>
