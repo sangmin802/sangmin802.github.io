@@ -172,9 +172,13 @@ function Counter() {
 1. `dispatch`메소드는 `rerender`에 아무런 영향을 주지 않기 때문에, 의존성 목록에 추가해줄 필요가 없다.
 2. 이전의 상태값에 대한 정보를 사용하고 반영할 수 있다.
 3. 다른 상태값에 대한 참조가 필요한 경우, 공통된 `state`에서 찾아 사용할 수 있다.
-   > 특히나, 기존에 `useEffect`, `useCallback`등이 의존하고 있는 상태값의 변화가 잦을 수록 좋다.
+   - 특히나, 기존에 `useEffect`, `useCallback`등이 의존하고 있는 상태값의 변화가 잦을 수록 좋다.
 4. 상태값을 업데이트하는 로직의 규모가 커질수록 구분하여 관리하기 좋다.
 5. `setState`가 아닌 별도의 `action`으로 구분하여 호출하기 때문에, 여러개의 상태값에 대한 업데이트가 용이하다.
+   - 로그인과 같은 경우, `errorState`, `loadingState`, `dataSate`등을 별도로 생성하여 필요할 때 각각의 `setter`함수들을 호출해줘야 하지만, `reducer`를 사용하면 `setter`함수를 호출하는것이 중심이 아닌, 사용자의 `action`을 기준으로 하여 복수의 상태값을 업데이트 함.
+   - 상태값이 변경되는데 서로 관련이 있는 복수의 `useState`의 경우 다수의 `setter`들이 하위의 컴포넌트에 여러개의 속성으로 전달되거나(흩뿌려지는 상황) 관련된 여러개의 `setter`함수들을 묶은 하나의 함수(`rerender`에 영향을 주지않는 `dispatch` 함수가 아니기 때문에, 메모이제이션작업을 하고 하위로 전달될 필요가 있다)를 전달해야 하지만, `useReducer`의 `dispatch`함수는 `rerender`에 영향을 주지 않는 채로 하위에 전달되어 단순 사용자의 행동을 구분짓는 `action`을 전달하여 상위에서 상태값을 업데이트하는 로직이 수행되기 때문에, 모든 요청들을 한곳에서 수행 관리할 수 있게된다.
+6. 원시형의 상태값이라면 `useState`로 충분하지만, 참조형의 상태값이라면 `useReducer`사용을 고려해볼 필요가 있다.
+   - `React Hook`에서의 `setState`는 상태값을 **대체** 하기 때문에, 변화가 없는 속성들을 포함한 새로운 참조형 상태값을 매번 반환해야 함.
 
 공식문서에서 설명된 특징들과 경험해본 느낌을 간추려본 장점들이다.
 
@@ -189,3 +193,4 @@ function Counter() {
 - [React 종속성이 자주 변경되는 상황](https://ko.reactjs.org/docs/hooks-faq.html#what-can-i-do-if-my-effect-dependencies-change-too-often)
 - [React additional hook](https://ko.reactjs.org/docs/hooks-reference.html#additional-hooks)
 - [hook, state, reducer](https://adamrackis.dev/state-and-use-reducer/)
+- [when to use useReducer](https://blog.logrocket.com/guide-to-react-usereducer-hook/)
