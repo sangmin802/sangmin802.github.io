@@ -27,6 +27,8 @@ tag: 'Think'
 const fruits = useMemo(() => ['apple', 'banana', 'peach'], [])
 ```
 
+> 사실 위의 사용은 매우 부적절한 사용이다.
+
 첫번째 인자로 콜백함수를 사용하여 반환되는 값, 두번째 인자로는 의존하는 배열을 설정한다.
 
 ### useCallback
@@ -58,6 +60,42 @@ const func = useCallback(
 `useMemo`, `useCallback`을 사용하는것 자체도 어찌보면 하나의 비용이소모되는것이다.
 
 위처럼 단순한 변수나 상수를 선언하는데 이러한 `hook`을 사용하는것은 오히려 역효과만 발생하는 오용이라고 볼 수 있을것 같다.
+
+- [Should You Really Use useMemo in React? Let’s Find Out.](https://medium.com/swlh/should-you-use-usememo-in-react-a-benchmarked-analysis-159faf6609b7)
+
+실제로 위의 글을 따르면, `useMemo`로 성능개선을 경험할 수 있는 경우는, 계산되는 로직의 복잡성이 100 미만이면, 오히려 초기 `useMemo`를 사용하는 비용이 더 크게 작용되어 역효과만 난다고 한다.
+
+> 위 글의 복잡도는 `render`를 하기 전, 반복문의 횟수를 기준으로 측정한것으로 보이며, 각각의 횟수에 따라 `useMemo`를 사용했을 때, 사용하지 않았을 때의 `render`완료 시간을 비교한것 같다.
+
+`useCallback`의 경우에도, 외부 스코프의 변수, 상수등을 사용하지않고 오로지 받은 인자를 통해서 같은 결과값만을 반환하는 함수와 같은 `utility`함수들처럼, 하위에 속성으로 전달되어 `rerender`에 영향을 미치지 않는 함수들은 오히러 역효과만 난다.
+
+```js
+const addOne = (num: number) => num + 1
+
+const callbackSomething = useCallback(() => {
+  // do Something...
+  addOne(1)
+}, [])
+```
+
+변화가 있는 상태값과 관련이 없는 부수적인 역할을 하는 함수들은 절대 변할일이 없기 때문에, 의존성배열에 추가해줄 필요가 없다.
+
+위에 설명된 상황들의 변수, 상수, 함수들은 `useMemo`, `useCallback`을 사용하기보다는 별도의 `constants` 디렉토리나, 외부에서 선언하여 참조하는것처럼 다른 방법을 찾는것이 좋아보인다.
+
+```js
+const arr = [1,2,3]
+const addOne = (num : number) => num+1;
+
+function Component(){
+  const callback = useCallback(() => {
+    const res  = addOne(arr[0]);
+    // do something...
+  }, [])
+  return (
+    <Child callback={callback}>
+  )
+}
+```
 
 ## 적합한 사용
 
@@ -132,8 +170,9 @@ React.memo(function Children({ arr, method }) {
 
 > 만약 재생산될 필요가 있다면, 의존성 배열을 수정해주도록 하자
 
-`useMemo`의 경우 많은 비용이 소모되는 계산을 통해 생성되는 변수나 상수일 때 특히! 참조 자료형인 경우, `useCallback`의 경우, 자신이 의존하고있는 상태값 외의 변경이 잦은 컴포넌트에서 하위로 메소드를 전달할 때 좋다.
+`useMemo`의 경우 많은 비용이 소모되는 계산을 통해 생성되는 변수나 상수일 때, `useCallback`의 경우, 자신이 의존하고있는 상태값 외의 변경이 잦은 컴포넌트에서 하위로 메소드를 전달할 때 좋다.
 
 ## 참조
 
 - [useCallback, useMemo 사용](https://ideveloper2.dev/blog/2019-06-14--when-to-use-memo-and-use-callback/)
+- [Should You Really Use useMemo in React? Let’s Find Out.](https://medium.com/swlh/should-you-use-usememo-in-react-a-benchmarked-analysis-159faf6609b7)
