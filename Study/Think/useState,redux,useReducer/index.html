@@ -157,12 +157,24 @@ data-styled.g1[id="top__S_Top-zcpr2v-0"]{content:"gRTsqc,"}/*!sc*/
 <li>이전의 상태값에 대한 정보를 사용하고 반영할 수 있다.</li>
 <li>
 <p>다른 상태값에 대한 참조가 필요한 경우, 공통된 <code class="language-text">state</code>에서 찾아 사용할 수 있다.</p>
-<blockquote>
-<p>특히나, 기존에 <code class="language-text">useEffect</code>, <code class="language-text">useCallback</code>등이 의존하고 있는 상태값의 변화가 잦을 수록 좋다.</p>
-</blockquote>
+<ul>
+<li>특히나, 기존에 <code class="language-text">useEffect</code>, <code class="language-text">useCallback</code>등이 의존하고 있는 상태값의 변화가 잦을 수록 좋다.</li>
+</ul>
 </li>
 <li>상태값을 업데이트하는 로직의 규모가 커질수록 구분하여 관리하기 좋다.</li>
-<li><code class="language-text">setState</code>가 아닌 별도의 <code class="language-text">action</code>으로 구분하여 호출하기 때문에, 여러개의 상태값에 대한 업데이트가 용이하다.</li>
+<li>
+<p><code class="language-text">setState</code>가 아닌 별도의 <code class="language-text">action</code>으로 구분하여 호출하기 때문에, 여러개의 상태값에 대한 업데이트가 용이하다.</p>
+<ul>
+<li>로그인과 같은 경우, <code class="language-text">errorState</code>, <code class="language-text">loadingState</code>, <code class="language-text">dataSate</code>등을 별도로 생성하여 필요할 때 각각의 <code class="language-text">setter</code>함수들을 호출해줘야 하지만, <code class="language-text">reducer</code>를 사용하면 <code class="language-text">setter</code>함수를 호출하는것이 중심이 아닌, 사용자의 <code class="language-text">action</code>을 기준으로 하여 복수의 상태값을 업데이트 함.</li>
+<li>상태값이 변경되는데 서로 관련이 있는 복수의 <code class="language-text">useState</code>의 경우 다수의 <code class="language-text">setter</code>들이 하위의 컴포넌트에 여러개의 속성으로 전달되거나(흩뿌려지는 상황) 관련된 여러개의 <code class="language-text">setter</code>함수들을 묶은 하나의 함수(<code class="language-text">rerender</code>에 영향을 주지않는 <code class="language-text">dispatch</code> 함수가 아니기 때문에, 메모이제이션작업을 하고 하위로 전달될 필요가 있다)를 전달해야 하지만, <code class="language-text">useReducer</code>의 <code class="language-text">dispatch</code>함수는 <code class="language-text">rerender</code>에 영향을 주지 않는 채로 하위에 전달되어 단순 사용자의 행동을 구분짓는 <code class="language-text">action</code>을 전달하여 상위에서 상태값을 업데이트하는 로직이 수행되기 때문에, 모든 요청들을 한곳에서 수행 관리할 수 있게된다.</li>
+</ul>
+</li>
+<li>
+<p>원시형의 상태값이라면 <code class="language-text">useState</code>로 충분하지만, 참조형의 상태값이라면 <code class="language-text">useReducer</code>사용을 고려해볼 필요가 있다.</p>
+<ul>
+<li><code class="language-text">React Hook</code>에서의 <code class="language-text">setState</code>는 상태값을 <strong>대체</strong> 하기 때문에, 변화가 없는 속성들을 포함한 새로운 참조형 상태값을 매번 반환해야 함.</li>
+</ul>
+</li>
 </ol>
 <p>공식문서에서 설명된 특징들과 경험해본 느낌을 간추려본 장점들이다.</p>
 <p>대부분의 상황에서는 <code class="language-text">useState</code>와 <code class="language-text">custom hook</code>이 좋아보이지만, 위와같은 상황일 경우에는 <code class="language-text">useReducer</code>가 더 적합할 수 있을것 같다.</p>
@@ -174,6 +186,7 @@ data-styled.g1[id="top__S_Top-zcpr2v-0"]{content:"gRTsqc,"}/*!sc*/
 <li><a href="https://ko.reactjs.org/docs/hooks-faq.html#what-can-i-do-if-my-effect-dependencies-change-too-often">React 종속성이 자주 변경되는 상황</a></li>
 <li><a href="https://ko.reactjs.org/docs/hooks-reference.html#additional-hooks">React additional hook</a></li>
 <li><a href="https://adamrackis.dev/state-and-use-reducer/">hook, state, reducer</a></li>
+<li><a href="https://blog.logrocket.com/guide-to-react-usereducer-hook/">when to use useReducer</a></li>
 </ul></div><div class="social-share"><a class="resp-sharing-button__link" href="#" target="_blank" rel="noopener" aria-label="Share on Facebook"><div class="resp-sharing-button resp-sharing-button--facebook resp-sharing-button--large"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.77 7.46H14.5v-1.9c0-.9.6-1.1 1-1.1h3V.5h-4.33C10.24.5 9.5 3.44 9.5 5.32v2.15h-3v4h3v12h5v-12h3.85l.42-4z"></path></svg></div><span class="service-label">Share on Facebook</span></div></a><a class="resp-sharing-button__link" href="#" rel="noopener" aria-label="Share on Twitter"><div class="resp-sharing-button resp-sharing-button--twitter resp-sharing-button--large"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23.44 4.83c-.8.37-1.5.38-2.22.02.93-.56.98-.96 1.32-2.02-.88.52-1.86.9-2.9 1.1-.82-.88-2-1.43-3.3-1.43-2.5 0-4.55 2.04-4.55 4.54 0 .36.03.7.1 1.04-3.77-.2-7.12-2-9.36-4.75-.4.67-.6 1.45-.6 2.3 0 1.56.8 2.95 2 3.77-.74-.03-1.44-.23-2.05-.57v.06c0 2.2 1.56 4.03 3.64 4.44-.67.2-1.37.2-2.06.08.58 1.8 2.26 3.12 4.25 3.16C5.78 18.1 3.37 18.74 1 18.46c2 1.3 4.4 2.04 6.97 2.04 8.35 0 12.92-6.92 12.92-12.93 0-.2 0-.4-.02-.6.9-.63 1.96-1.22 2.56-2.14z"></path></svg></div><span class="service-label">Share on Twitter</span></div></a></div><div class="sponsor-button"><a class="bmc-button" target="_blank" rel="noopener noreferrer" href="https://www.buymeacoffee.com/jbee"><img src="https://www.buymeacoffee.com/assets/img/BMC-btn-logo.svg" alt="Buy me a coffee"/><span>Buy me a coffee</span></a></div><hr class="custom-hr"/><div class="bio"><div class="author"><div class="author-description"><div class="author-image gatsby-image-wrapper" style="position:relative;overflow:hidden;display:inline-block;width:72px;height:72px;border-radius:100%"><img aria-hidden="true" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAIAAAAC64paAAAACXBIWXMAAC4jAAAuIwF4pT92AAADbElEQVQ4y2P4jwr+gQGQ8evnj5vXLh3at+Pp4/vI4siAAU0nkPz44d2CWZNCfJ2NdJTUFMRMDdVrKvOfPAIZ8ffvX1yaoWZXFKXLiPJIiPLLSgkrKUhKS4kI8rPHRfl/+/oJbgG6ZoipTx/d1VOVEuRikRXlkRHmFhfgEhXgkpIU4eVmyU6Px6MZJNpUU2KiJrG0Ne3w0pa9sytXtqY0xTkqS/ILCfIoyok+uHcb2fEMyNY+eXhXS1mqryz2950d7y9uen1iwcuj898cntma6iYuxCstyrN+zQqgsj9//mDRfOvGVQ05kTXdGU+PLbl3aMnDPdMe7pt9a+e0YzPyfA1kxQQ5jxzai0UzxCdfv36JC3DeMyl3fU/+wpr4KytbLi5rnl4SMbMoeFGRv6ed8efPH5G9zQAPaZCRb5/NK4k4u7xpd3vq/Dy/2xu7ry6vn5nusbYkaPeE7KnZwX8/voErRtf898OrQ+1p17dNfrBz5pVV3S9PLL23te/M/NqLi2qOzSnd21fw/8cXbJphQg/3Lbq3bfKHizuf759zY2XLpXlV97dMeLJ/3vkFlbf3LAKr+ostkYA1f//w8t6eOU8PLHi4a8apOVWHJ+ReW9V6a13XpdVdX9+/RLYWM3mC08mVQzc3dV9Z1XxuUumRlvTj0/PPL6q8c3wT/uQJlAPFwed3z08trrmzY9LDnTNvres+v7jq0PTCDy8fgSPpNxbNQCMhEfD5y5djRw6cW9G0e2Lu4Tk1B6aVbutMPjK75NrF0+AUiFAJ0gyMcbhj5i+Yr29kVFFZ8/7G/oNTMpdXhC0pCTowKfP5uc25ebkubi67d++CqPwDBgwQ1v4DhyJi4/mFhKTlleOSUn99/Xjn8KrjMwuPTcu7snPup7cvIqKi2bm5Obk54xITr12/DkkqDBu3bI1LTlfRNhCXkVNU1dDSNzGxsH304C5Q+vyOxYdWTPr97dODezcNjE2l5ZUkZWR4BQQU1TRyC4t27t7DoKihL6+iraKhLy2nLCWnrKyuK6WgfvDA/rOnTtq5h+maOK5evuTQwX3C4tISMvKCImJiwAwupyAMNEZJlUFd21hNy1BGXlVcSkFBRUdJXU9IXL6vf+Lc6ZOFpA3kNaw2rF7a2dHBIyAmIaMgJCIhLCopKaOooKopr6IOAErYSU0rZVbsAAAAAElFTkSuQmCC" alt="SangMin" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:1;transition-delay:500ms"/><noscript><picture><source srcset="/static/c23fcc69c048669ae60bbbd81ce18c06/e5b88/profile.png 1x,
 /static/c23fcc69c048669ae60bbbd81ce18c06/e7bd6/profile.png 1.5x,
 /static/c23fcc69c048669ae60bbbd81ce18c06/a12fc/profile.png 2x" /><img loading="lazy" width="72" height="72" srcset="/static/c23fcc69c048669ae60bbbd81ce18c06/e5b88/profile.png 1x,
