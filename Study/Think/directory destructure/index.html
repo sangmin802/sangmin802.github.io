@@ -156,7 +156,10 @@ data-styled.g1[id="top__S_Top-zcpr2v-0"]{content:"gRTsqc,"}/*!sc*/
 <span class="token keyword">export</span> <span class="token keyword">default</span> FetchUserInfo</code></pre></div>
 <p><code class="language-text">UserInfo</code>는 <code class="language-text">React Router</code>의 <code class="language-text">pages</code>로서 하나의 도메인으로 판단되어 <code class="language-text">pages/userInfo</code> 디렉토리에 위치하고 있다.</p>
 <p>외부 데이터를 받아오는 비동기 로직을 <code class="language-text">React-Query</code>를 통해 구현하였는데, <code class="language-text">React-Query</code>와 관련된 에러핸들리이나, 캔슬링 등은 <code class="language-text">UserInfo</code>내부에서 <code class="language-text">userData</code>를 <code class="language-text">UI</code>로 표현하는것과는 전혀 관계가 없기 때문에, 별도의 컴포넌트로 분리를 해주었다.</p>
-<p>그 외, <code class="language-text">Dialog</code>같이 <code class="language-text">viewPort</code> 고정이나, <code class="language-text">dialog</code>상태값, <code class="language-text">UI</code>등을 관리하는 컴포넌트를 하나로 응집, 추상화하여 감싸주고 있다.</p>
+<blockquote>
+<p><code class="language-text">React-Query</code>의 에러 핸들링을 위해 외부에서 <code class="language-text">ErrorBoundary</code>를 사용해줘야 하기도 함.</p>
+</blockquote>
+<p>그 외, <code class="language-text">Dialog</code>같이 <code class="language-text">viewPort</code> 고정이나, <code class="language-text">dialog</code>상태값, <code class="language-text">UI</code>등을 관리하는 컴포넌트의 영향권 내부에 위치하도록 되어있다.</p>
 <h2 id="잡동사니가된-components-디렉토리" style="position:relative;"><a href="#%EC%9E%A1%EB%8F%99%EC%82%AC%EB%8B%88%EA%B0%80%EB%90%9C-components-%EB%94%94%EB%A0%89%ED%86%A0%EB%A6%AC" aria-label="잡동사니가된 components 디렉토리 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>잡동사니가된 components 디렉토리</h2>
 <p>위와 같이 생성된 컴포넌트들이 <code class="language-text">components</code>디렉토리에 저장되면서 점점 이상해지기 시작했다.</p>
 <p>재사용가능하고 유연한 컴포넌트들만 있을것이라고 생각했던 디렉토리에 특정 <code class="language-text">pages</code>만을 위한 컴포넌트들이 자리잡기 시작했고, 빠르게 혼잡해지기 시작했다.</p>
