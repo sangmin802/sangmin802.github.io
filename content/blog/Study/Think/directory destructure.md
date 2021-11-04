@@ -129,7 +129,9 @@ export default FetchUserInfo
 
 외부 데이터를 받아오는 비동기 로직을 `React-Query`를 통해 구현하였는데, `React-Query`와 관련된 에러핸들리이나, 캔슬링 등은 `UserInfo`내부에서 `userData`를 `UI`로 표현하는것과는 전혀 관계가 없기 때문에, 별도의 컴포넌트로 분리를 해주었다.
 
-그 외, `Dialog`같이 `viewPort` 고정이나, `dialog`상태값, `UI`등을 관리하는 컴포넌트를 하나로 응집, 추상화하여 감싸주고 있다.
+> `React-Query`의 에러 핸들링을 위해 외부에서 `ErrorBoundary`를 사용해줘야 하기도 함.
+
+그 외, `Dialog`같이 `viewPort` 고정이나, `dialog`상태값, `UI`등을 관리하는 컴포넌트의 영향권 내부에 위치하도록 되어있다.
 
 ## 잡동사니가된 components 디렉토리
 
