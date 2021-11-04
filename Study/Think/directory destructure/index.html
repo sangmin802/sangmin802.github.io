@@ -94,7 +94,14 @@ data-styled.g1[id="top__S_Top-zcpr2v-0"]{content:"gRTsqc,"}/*!sc*/
 <p><code class="language-text">title</code>과, <code class="language-text">children</code>을 받아와 하나의 <code class="language-text">section</code>을 구성해주는 컴포넌트이다.</p>
 <p>생성되는 컴포넌트의 위치값, 크기 등은 유연하게 설정될 수 있도록 상위에서 생성된 스타일을 <code class="language-text">...props</code>로 받아와 사용한다.</p>
 <p><code class="language-text">title</code> 또한, 상황에 따라 다른 스타일을 가질 수 있기 때문에, 외부에서 받아오도록 하였다.</p>
-<p>해당 컴포넌트가 결정하는 것은, 정렬여부와 같이 여러곳에서 중복되어 사용되는 스타일만을 결정해준다.</p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">const</span> BasicInfoLabel <span class="token operator">=</span> <span class="token function">styled</span><span class="token punctuation">(</span>SectionContainer<span class="token punctuation">)</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
+  align-items: center;
+  height: 30px;
+  overflow: hidden;
+  margin-top: 0.5rem;
+</span><span class="token template-punctuation string">`</span></span></code></pre></div>
+<p>위와 같이, 해당 컴포넌트를 사용하는 외부 컴포넌트에 결정권을 넘겨주었다.</p>
+<p>따라서, 실제로 유연한 컴포넌트가 결정하는 것은, 정렬여부와 같이 여러곳에서 중복되어 사용되는 스타일만을 결정해준다.</p>
 <div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">export</span> <span class="token keyword">interface</span> <span class="token class-name">ListProps</span> <span class="token punctuation">{</span>
   data<span class="token operator">:</span> any<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
   item<span class="token operator">:</span>
@@ -182,7 +189,13 @@ data-styled.g1[id="top__S_Top-zcpr2v-0"]{content:"gRTsqc,"}/*!sc*/
 <h2 id="컴포넌트를-분리하는-약속" style="position:relative;"><a href="#%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8%EB%A5%BC-%EB%B6%84%EB%A6%AC%ED%95%98%EB%8A%94-%EC%95%BD%EC%86%8D" aria-label="컴포넌트를 분리하는 약속 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>컴포넌트를 분리하는 약속</h2>
 <p>컴포넌트를 관리하는 디렉토리를 확실하게 구분하게 되면서, 컴포넌트의 용도, 목적에 대해 확실히 할 필요가 있어졌다.</p>
 <ol>
-<li>재사용 가능하도록 설계할 컴포넌트의 경우에는, 최소한의 고유한 코드를 제외하고 변동될 가능성이 높은 요소들은 외부에서 정해주어서 유연한 상태를 유지하도록 한다.</li>
+<li>
+<p>재사용 가능하도록 설계할 컴포넌트의 경우에는, 최소한의 고유한 코드를 제외하고 변동될 가능성이 높은 요소들은 외부에서 정해주어서 유연한 상태를 유지하도록 한다.</p>
+<ul>
+<li>재사용 가능한 컴포넌트에서는 <code class="language-text">globalStyle</code>에 접근조차 할 수 없도록 하였다.</li>
+<li>비즈니스로직과는 전혀 관계가 없도록 하였고, 해당 파일 내부에서 특별한 모듈을 사용하는 경우도 제거하였다.</li>
+</ul>
+</li>
 <li>
 <p>단순하게 <code class="language-text">UI</code>가 길어진다는 이유로 컴포넌트를 분리하여 불필요한 속성 전달, 파일 이동등을 강요하는 상황을 만들지 말자.</p>
 <blockquote>
