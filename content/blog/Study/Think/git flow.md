@@ -3,7 +3,7 @@ title: '🌿git flow 브랜치 전략을 사용하여 안전하게 프로젝트 
 date: 2021-08-30 12:53:00
 category: 'Study'
 draft: false
-tag: 'CS'
+tag: 'Think'
 ---
 
 프로젝트는 첫 제작이 완료되었을 때 종료되는것이 아니라, 새로운 시작이라고 보는것이 맞는것 같다.

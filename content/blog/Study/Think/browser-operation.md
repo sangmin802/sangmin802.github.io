@@ -3,7 +3,7 @@ title: '💻 브라우저 렌더링 - 시각화 단계 operation'
 date: 2021-07-27 14:46:00
 category: 'Study'
 draft: false
-tag: 'CS'
+tag: 'Think'
 ---
 
 ## Operation

@@ -3,7 +3,7 @@ title: '실행컨텍스트1(Executed Context)'
 date: 2020-07-10 00:00:00
 category: 'Study'
 draft: false
-tag: 'CS'
+tag: 'Think'
 ---
 
 > 참조 : <https://poiemaweb.com/js-execution-context>

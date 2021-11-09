@@ -3,7 +3,7 @@ title: 'Web Socket, Socket.io'
 date: 2021-05-07 16:44:00
 category: 'Study'
 draft: false
-tag: 'CS'
+tag: 'Think'
 ---
 
 ### 📡 응답을 해주는 서버

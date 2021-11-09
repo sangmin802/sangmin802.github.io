@@ -3,7 +3,7 @@ title: 'SSR? CSR?'
 date: 2020-07-06 00:00:01
 category: 'Study'
 draft: false
-tag: 'CS'
+tag: 'Think'
 ---
 
 ## SSR(서버 사이드 렌더링) 대표예시 MPA(멀티 페이지 어플리케이션)

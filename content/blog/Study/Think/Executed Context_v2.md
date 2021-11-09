@@ -3,7 +3,7 @@ title: '실행컨텍스트(Executed Context) 더 쉽게!'
 date: 2020-07-08 00:00:02
 category: 'Study'
 draft: false
-tag: 'CS'
+tag: 'Think'
 ---
 
 > 참조 : <https://www.zerocho.com/category/Javascript/post/5740531574288ebc5f2ba97e>

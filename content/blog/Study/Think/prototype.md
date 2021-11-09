@@ -3,7 +3,7 @@ title: '🌳 자바스크립트 class의 뿌리 prototype'
 date: 2021-07-23 15:58:00
 category: 'Study'
 draft: false
-tag: 'CS'
+tag: 'Think'
 ---
 
 `ECMAScript 2015`에서 `class`라는 문법이 도입되고, 상속을 통해 사용하고있는 객체를 확장하는등의 작업을 할 수 있다.

@@ -3,7 +3,7 @@ title: 'Atomic Design'
 date: 2021-05-06 15:47:00
 category: 'Study'
 draft: false
-tag: 'CS'
+tag: 'Think'
 ---
 
 ## 🙌 Container, Presentational 안녕.. Hook 안녕!

@@ -3,7 +3,7 @@ title: 'DNS'
 date: 2021-03-23 15:29:00
 category: 'Study'
 draft: false
-tag: 'CS'
+tag: 'Think'
 ---
 
 `AWS`를 사용하면서, 혹은 여러가지 상황을 접해오면서 도메인 네임, ip를 자주 봐오곤 했다.

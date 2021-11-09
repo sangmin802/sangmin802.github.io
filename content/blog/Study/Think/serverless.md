@@ -3,7 +3,7 @@ title: 'Serverless'
 date: 2021-03-02 14:24:00
 category: 'Study'
 draft: false
-tag: 'CS'
+tag: 'Think'
 ---
 
 # Serverless

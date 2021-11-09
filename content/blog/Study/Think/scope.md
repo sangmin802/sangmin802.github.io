@@ -3,7 +3,7 @@ title: 'Scope, 영역'
 date: 2020-07-13 00:00:00
 category: 'Study'
 draft: false
-tag: 'CS'
+tag: 'Think'
 ---
 
 😂 이전 실행컨텍스트를 공부하면서, `Scope`라는 용어를 접하게 되었다. 그렇게 어려운 용어는 아니였지만, 지금생각해보니`Scope`를 먼저 알고 실행컨텍스트를 공부했다면 더 수월했을 듯 하다.

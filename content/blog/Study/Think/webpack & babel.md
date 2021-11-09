@@ -3,7 +3,7 @@ title: 'Webpack & Babel'
 date: 2020-07-06 00:00:02
 category: 'Study'
 draft: false
-tag: 'CS'
+tag: 'Think'
 ---
 
 # Bundle(r)

@@ -3,7 +3,7 @@ title: 'DOM 과 Virtual Dom'
 date: 2020-10-21 00:00:00
 category: 'Study'
 draft: false
-tag: 'CS'
+tag: 'Think'
 ---
 
 ### 🤔 의문

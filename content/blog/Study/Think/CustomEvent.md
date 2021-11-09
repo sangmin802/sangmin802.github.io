@@ -3,7 +3,7 @@ title: 'CustomEvent'
 date: 2020-07-08 00:00:00
 category: 'Study'
 draft: false
-tag: 'CS'
+tag: 'Think'
 ---
 
 ### 🙄 경험

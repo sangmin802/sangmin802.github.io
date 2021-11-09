@@ -3,7 +3,7 @@ title: 'Http(s)? REST?'
 date: 2020-07-07 00:00:00
 category: 'Study'
 draft: false
-tag: 'CS'
+tag: 'Think'
 ---
 
 ## HTTP(Hypertext Transfer Protocol)

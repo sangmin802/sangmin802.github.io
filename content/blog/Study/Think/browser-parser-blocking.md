@@ -3,7 +3,7 @@ title: '💻 브라우저 렌더링 - CRP 멈춰!'
 date: 2021-07-27 14:45:00
 category: 'Study'
 draft: false
-tag: 'CS'
+tag: 'Think'
 ---
 
 ## Parsing Blocking

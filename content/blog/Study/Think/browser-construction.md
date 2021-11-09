@@ -3,7 +3,7 @@ title: '💻 브라우저 렌더링 - 파싱단계 construction'
 date: 2021-07-27 14:44:00
 category: 'Study'
 draft: false
-tag: 'CS'
+tag: 'Think'
 ---
 
 ## Construction
