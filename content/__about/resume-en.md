@@ -47,7 +47,7 @@ lang: 'en'
 
 <b>FrontEnd</b>
 
-`React` `Next.js` `TypeScript` `React-Query` `React-Router` `Redux` `Redux-Saga` `Suspense` `ErrorBoundary` `gh-page` `vercel` `heroku` `Node.js` `Express` `Styled-Components` `Jest` `react-testing-library` `Storybook`
+`React` `Next.js` `TypeScript`
 
 <hr>
 
@@ -90,7 +90,7 @@ lang: 'en'
 - 배포된 서버로 `RESTful API` 형식의 요청
 - 수신된 `text/html` 형식의 데이터를 가공
 - 비동기 로직을 처리하기 위한 방식으로 `react-query`를 사용
-  > 기존 `Redux`, `Redux-Saga` 에서 변경. 코드자체는 남겨둠
+  > 기존 `Redux`, `Redux-Saga` 에서 변경.
 - `Suspense` `ErrorBoundary`를 사용하여 로딩처리나 에러 핸들링
 - 데이터 캐싱을 통해 동일한 값에 대해 서버로 전달되지 않도록 방지
   > 캐싱시간이 지난경우에만 다시 요청
@@ -98,10 +98,8 @@ lang: 'en'
 - `Storybook`을 통한 `UI` 테스트
 - `Jest` `react-testing-library`를 통한 단위테스트
 - `style`의 경우 `CSS-in-JS`방식 사용
-- `atomic` 디자인 패턴의 `pages` `atom` 성격의 컴포넌트를 사용하여 재활용성 향상
 - 컴포넌트에 있어 최대한 조합의 방식 사용
 - 불필요한 리렌더링을 막기 위한 메모이제이션
-- `useCallback` `useMemo`를 사용하여 메모이제이션
 
 <h3>🥉 Web-Chat</h3>
 
@@ -111,7 +109,7 @@ lang: 'en'
 
 <b>FrontEnd</b>
 
-`React` `gh-page` `Socket.io` `heroku` `Node.js` `Express`
+`React` `Socket.io` `heroku` `Node.js` `Express`
 
 <hr>
 
@@ -206,11 +204,6 @@ lang: 'en'
 
 - 백엔드 전공인 학교 친구와 협업
 
-📌 Tool
-
-- `GitHub`를 사용하여 프로젝트 공유
-- `Source Tree`를 사용하여 `pull` `push`
-
 📌 Front
 
 - 영상 편집에 대한 옵션 제공
@@ -238,11 +231,6 @@ lang: 'en'
 📌 Server
 
 - 학원 강사였던 백엔드 개발자와 협업
-
-📌 Tool
-
-- `GitHub`를 사용하여 프로젝트 공유
-- `Source Tree`를 사용하여 `pull` `push`
 
 📌 Front
 
