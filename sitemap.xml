@@ -9,16 +9,16 @@
 <url> <loc>https://sangmin802.github.io/Diary/toss next/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://sangmin802.github.io/Study/Think/useState,redux,useReducer/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://sangmin802.github.io/Study/Think/memohooks/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://sangmin802.github.io/Study/CS/git flow/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://sangmin802.github.io/Study/Think/git flow/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://sangmin802.github.io/Study/Think/user experience/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://sangmin802.github.io/Study/Think/abort fetch/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://sangmin802.github.io/Study/Think/abstract painting/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://sangmin802.github.io/Study/CS/browser-operation/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://sangmin802.github.io/Study/CS/browser-parser-blocking/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://sangmin802.github.io/Study/CS/browser-construction/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://sangmin802.github.io/Study/CS/browser/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://sangmin802.github.io/Study/CS/prototype/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://sangmin802.github.io/Study/CS/this/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://sangmin802.github.io/Study/Think/browser-operation/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://sangmin802.github.io/Study/Think/browser-parser-blocking/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://sangmin802.github.io/Study/Think/browser-construction/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://sangmin802.github.io/Study/Think/browser/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://sangmin802.github.io/Study/Think/prototype/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://sangmin802.github.io/Study/Think/this/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://sangmin802.github.io/Study/Think/delegation/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://sangmin802.github.io/Study/Framework/next.js async/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://sangmin802.github.io/Study/TestCode/asnycBoundary test/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -42,27 +42,27 @@
 <url> <loc>https://sangmin802.github.io/Study/TestCode/jest &amp;&amp; react-test-library/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://sangmin802.github.io/Study/TestCode/frontend test/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://sangmin802.github.io/Study/DataStructure/programmers_08_hash/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://sangmin802.github.io/Study/CS/socket/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://sangmin802.github.io/Study/Think/socket/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://sangmin802.github.io/Study/Think/setTimout/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://sangmin802.github.io/Study/CS/atomic design/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://sangmin802.github.io/Study/CS/var vs let tdz/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://sangmin802.github.io/Study/CS/css-in-css &amp; css-in-js/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://sangmin802.github.io/Study/Think/atomic design/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://sangmin802.github.io/Study/Think/var vs let tdz/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://sangmin802.github.io/Study/Think/css-in-css &amp; css-in-js/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://sangmin802.github.io/Study/Think/component composition/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://sangmin802.github.io/Study/Think/abortController/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://sangmin802.github.io/Diary/2021-dev-matching/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://sangmin802.github.io/Study/Think/function pg &amp; react hook/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://sangmin802.github.io/Study/CS/eventloop/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://sangmin802.github.io/Study/CS/event flow/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://sangmin802.github.io/Study/CS/ip&amp;&amp;dns/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://sangmin802.github.io/Study/Think/eventloop/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://sangmin802.github.io/Study/Think/event flow/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://sangmin802.github.io/Study/Think/ip&amp;&amp;dns/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://sangmin802.github.io/Study/Framework/next.js style error/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://sangmin802.github.io/Study/Think/intersectionObserver/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://sangmin802.github.io/Study/Think/coding convention/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://sangmin802.github.io/Study/CS/serverless/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://sangmin802.github.io/Study/CS/config&amp;&amp;env/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://sangmin802.github.io/Study/Think/serverless/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://sangmin802.github.io/Study/Think/config&amp;&amp;env/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://sangmin802.github.io/Study/Think/loa-hands2/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://sangmin802.github.io/Study/Framework/next.js start vs export/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://sangmin802.github.io/Study/CS/mvc&amp;&amp;flux/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://sangmin802.github.io/Study/CS/ssr vs csr/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://sangmin802.github.io/Study/Think/mvc&amp;&amp;flux/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://sangmin802.github.io/Study/Think/ssr vs csr/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://sangmin802.github.io/Study/Think/Redux-Saga/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://sangmin802.github.io/Diary/gatsby/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://sangmin802.github.io/Study/Framework/next.js loa-hands/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -111,7 +111,7 @@
 <url> <loc>https://sangmin802.github.io/Study/Aws/s3&amp;cloudfront/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://sangmin802.github.io/Study/Aws/ec2&amp;s3/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://sangmin802.github.io/Study/Think/loa-hands/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://sangmin802.github.io/Study/CS/Dom&amp;VirtualDom/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://sangmin802.github.io/Study/Think/Dom&amp;VirtualDom/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://sangmin802.github.io/Study/Android/lostarkHands/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://sangmin802.github.io/Study/Android/kotlinCoroutine_04_suspending/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://sangmin802.github.io/Study/Android/kotlinCoroutine_03_cancellation&amp;timeouts/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -165,17 +165,17 @@
 <url> <loc>https://sangmin802.github.io/Study/ES6/ES6_03_new_String_methods/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://sangmin802.github.io/Study/ES6/ES6_02_const/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://sangmin802.github.io/Study/ES6/ES6_01_let/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://sangmin802.github.io/Study/CS/Closure/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://sangmin802.github.io/Study/CS/hoisting/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://sangmin802.github.io/Study/CS/scope/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://sangmin802.github.io/Study/CS/Executed Context_v1_1/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://sangmin802.github.io/Study/CS/Executed Context_v2/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://sangmin802.github.io/Study/CS/Executed Context_v1_2/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://sangmin802.github.io/Study/CS/CustomEvent/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://sangmin802.github.io/Study/CS/Http(s)&amp;REST/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://sangmin802.github.io/Study/CS/webpack &amp; babel/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://sangmin802.github.io/Study/CS/SSR&amp;CSR/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://sangmin802.github.io/Study/CS/Promise/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://sangmin802.github.io/Study/Think/Closure/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://sangmin802.github.io/Study/Think/hoisting/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://sangmin802.github.io/Study/Think/scope/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://sangmin802.github.io/Study/Think/Executed Context_v1_1/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://sangmin802.github.io/Study/Think/Executed Context_v2/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://sangmin802.github.io/Study/Think/Executed Context_v1_2/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://sangmin802.github.io/Study/Think/CustomEvent/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://sangmin802.github.io/Study/Think/Http(s)&amp;REST/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://sangmin802.github.io/Study/Think/webpack &amp; babel/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://sangmin802.github.io/Study/Think/SSR&amp;CSR/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://sangmin802.github.io/Study/Think/Promise/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://sangmin802.github.io/about/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://sangmin802.github.io/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 </urlset>
