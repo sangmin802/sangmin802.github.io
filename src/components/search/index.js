@@ -11,7 +11,7 @@ const Search = () => {
     <StaticQuery
       query={query}
       render={data => {
-        const [search, changeSearch] = useSearch()
+        const [search, setSearch] = useSearch()
         const filterdData = data.allMarkdownRemark.edges.filter(
           ({
             node: {
@@ -31,17 +31,13 @@ const Search = () => {
 
         // search debouncing
         const debounceAct = useMemo(() => debounce(), [])
-        const onChange = useCallback(
-          e => {
-            e.persist()
-            const callback = () => {
-              changeSearch(e.target.value)
-            }
+        const onChange = useCallback(e => {
+          const text = e.target.value
 
-            debounceAct(callback, 300)
-          },
-          [changeSearch, debounceAct]
-        )
+          debounceAct(() => {
+            setSearch(text)
+          }, 300)
+        }, [])
 
         // prevent click event flow
         const onClick = useCallback(e => {

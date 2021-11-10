@@ -1,11 +1,7 @@
-import { useState, useCallback, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 
 export function useSearch() {
   const [search, setSearch] = useState('')
-
-  const changeSearch = useCallback(value => {
-    setSearch(value)
-  }, [])
 
   useEffect(() => {
     const windowEvent = function() {
@@ -20,5 +16,5 @@ export function useSearch() {
     }
   }, [])
 
-  return [search, changeSearch]
+  return [search, setSearch]
 }

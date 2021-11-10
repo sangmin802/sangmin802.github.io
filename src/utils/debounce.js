@@ -1,7 +1,7 @@
 export function debounce() {
-  let timer = null;
+  let timer = null
   return function debounceAct(callback, time) {
-    if (timer) clearTimeout(timer);
-    setTimeout(callback, time);
-  };
+    if (timer) clearTimeout(timer)
+    timer = setTimeout(callback, time)
+  }
 }
