@@ -69,16 +69,22 @@ tag: 'Think'
 
 위에서 화면의 각 요소들을 `Layer`로 관리하고, 메인 스레드에서의 작업을 컴포지션 스레드에 위임하여 렌더링 비용을 절약할 수 있다고 했다.
 
-하지만, 모든 상황에서 위와 같은 최상의 렌더링 효율을 낼 수 있는 `CSS`속성들은 한정되어 있는것 같다.
-
 <div style="margin : 0 auto; text-align : center">
   <img src="/img/2021/07/27/operation3.jpg" alt="3">
 </div>
 
+위의 속성들이 할당된 요소들은 레이어 트리에 별도의 레이어로 만들라는 일종의 약속인것 같다.
 요소의 우선순위나 색상, 보여지는 여부등을 변경하지 않는 속성들이 대부분이다.
 
 - opacity : `Render Tree` 형성 단계에서, `display : none`은 `0px 0px`로 제외되지만, `Opacity`속성은 공간은 차지하는 상태라고 했었음
 - transform(translate, scale, rotate) : 요소의 위치 혹은 고유 크기, 디자인을 해치지 않고 고유의 모양만 변경되는 `CSS` 속성
+
+혹은, 이러한 속성을 사용하지 않는 요소를 레이어로 만들고 싶다면
+`will-change` 속성을 사용하라고 한다.
+
+하지만, 위와같이 무분별하게 레이어 트리에 포함시키고 관리한다는것도 하나의 비용이소모되기 때문에 지나치게 된다면 되려 역효과만 난다고 한다.
+
+크롬에서는 레이어가 과도하게 많아지는것을 막기 위해 레이어를 생성하지 않거나, 하나로 합치기도 한다고 한다.
 
 ## 렌더링 성능 개선
 
@@ -131,3 +137,5 @@ tag: 'Think'
 - [high performance animations](https://www.html5rocks.com/en/tutorials/speed/high-performance-animations/)
 - [LogRocket - repaint](https://blog.logrocket.com/eliminate-content-repaints-with-the-new-layers-panel-in-chrome-e2c306d4d752/)
 - [composite](https://devsdk.github.io/ko/development/2021/03/29/blink-render-composition.html)
+- [최신 브라우저 내부](https://d2.naver.com/helloworld/5237120)
+- [Stick to Compositor-Only Properties and Manage Layer Count](https://developers.google.com/web/fundamentals/performance/rendering/stick-to-compositor-only-properties-and-manage-layer-count)
