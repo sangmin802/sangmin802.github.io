@@ -81,12 +81,12 @@ data-styled.g1[id="top__S_Top-zcpr2v-0"]{content:"gRTsqc,"}/*!sc*/
 <p>하지만, 생성된 레스터화 하려는 <code class="language-text">Layer</code>의 크기가 어마어마하게 클 수 있기 때문에 컴포지터 스레드는 <code class="language-text">Layer</code>을 여러개의 조각으로 쪼개서 다수의 <strong>레스터 스레드</strong>에게 레스터화 작업을 위임한다.</p>
 <p>이때, 컴포지터 스레드는 레스터 스레드들에게 작업을 위임하면서 우선순위를 정해줄 수 있어, 화면에서 보여야 하는 것들을 먼저 레스터화 하도록 시킬 수 있다.</p>
 <p>여러개의 조각들이 레스터 스레드에서 레스터화가 완료되면, 컴포지트 스레드는 화면에 포여질 조각들만 모아서 렌더링 하도록 전달을 해준다.</p>
-<p>만약 스크롤이 발생하여 보여질 화면이 변경된다거나, 각각의 요소들의 위치와 같은 속성들이 변경되는 상황에는 <code class="language-text">Layout Tree</code>를 재구성할 필요 없이, <code class="language-text">composition</code> 단계에서 <code class="language-text">Layer</code>들을 재조합해주기만 하면 된다.</p>
+<p>만약 스크롤이 발생하여 보여질 화면이 변경된다거나, 각각의 요소들의 위치와 같은 속성들이 변경되는 상황에는 <code class="language-text">Render Tree</code>를 재구성할 필요 없이, <code class="language-text">composition</code> 단계에서 <code class="language-text">Layer</code>들을 재조합해주기만 하면 된다.</p>
 <p>이 뜻은, 메인 스레드가 작동될 필요 없이, 컴포지터 스레드에서만의 작업으로 렌더링을 할 수 있다는 점이다.</p>
 <ul>
 <li>실제로, 애니메이션 속성을 부여할 때, <code class="language-text">width</code>을 변경하면 <code class="language-text">alert</code>를 사용하여 중단시켰을 때, 애니메이션도 중지되지만, <code class="language-text">transform</code> 속성을 사용하면 <code class="language-text">alert</code>이 활성화 되어도 중지되지 않고 끝까지 진행된다.(비동기같음)</li>
 </ul>
-<p>위에서 화면의 각 요소들을 <code class="language-text">Layer</code>로 관리하고, 메인 스레드에서의 작업을 컴포지션 스레드에 위임하여 렌더링 비용을 절약할 수 있다고 했다.</p>
+<p>생성된 <code class="language-text">Render Tree</code>에서 레이어트리에 포함시킬 레이어들을 골라내는 기준이 있을까?</p>
 <div style="margin : 0 auto; text-align : center">
   <img src="/img/2021/07/27/operation3.jpg" alt="3">
 </div>
