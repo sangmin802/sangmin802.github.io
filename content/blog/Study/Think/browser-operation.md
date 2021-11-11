@@ -39,13 +39,19 @@ tag: 'Think'
 
 ## Composition
 
+위와같이 스크롤을 하여 뷰포트가 변경되는등 자연스럽게 발생하는 `reflow`등에 대한 렌더링 최적화를 위해 추가된 방법이다.
+
+이전에는 스크롤을 하여서 페이지 내부에서 뷰포트가 하단으로 이동하였을 때, 새롭게 화면을 그려냈다. 심지어, 요소에 변경이 있다면 그 위치값을 다시계산하기 위해 `reflow`가 발생했다.
+
 <div style="margin : 0 auto; text-align : center">
   <img src="/img/2021/07/27/parser-blocking1.png" alt="1">
 </div>
 
-렌더링을 해야하는 페이지에서 각각의 요소들을 모두 `Layer`로 나누어서 관리한다.
+렌더링을 해야하는 페이지에서 각각의 요소들을 모두 분리하고 미리 `Layer`로 나누어서 관리한다.
 
-이렇게 `Layer Tree`가 생성되고 페인트 순서는 이전단계에서 알고 있기 때문에 메인스레드는 해당 정보들을 **컴포지터 스레드**에게 전달해준다
+각각의 요소들이 모두 분리되어서 관리되기 때문에, 위치가 변경된다고 해서 다른 레이어에 영향을 주지 않는다.
+
+`Layer Tree`가 생성되고 페인트 순서는 이전단계에서 알고 있기 때문에 메인스레드는 해당 정보들을 **컴포지터 스레드**에게 전달해준다
 
 그럼 컴포지터 스레드는 각 레이어들을 레스터라이즈(레스터화)를 시도 한다.
 
@@ -53,15 +59,26 @@ tag: 'Think'
 
 이때, 컴포지터 스레드는 레스터 스레드들에게 작업을 위임하면서 우선순위를 정해줄 수 있어, 화면에서 보여야 하는 것들을 먼저 레스터화 하도록 시킬 수 있다.
 
-> `opacity : 1`로 보여지는 `layer` 이런것들 일까?
-
 여러개의 조각들이 레스터 스레드에서 레스터화가 완료되면, 컴포지트 스레드는 화면에 포여질 조각들만 모아서 렌더링 하도록 전달을 해준다.
 
 만약 스크롤이 발생하여 보여질 화면이 변경된다거나, 각각의 요소들의 위치와 같은 속성들이 변경되는 상황에는 `Layout Tree`를 재구성할 필요 없이, `composition` 단계에서 `Layer`들을 재조합해주기만 하면 된다.
 
 이 뜻은, 메인 스레드가 작동될 필요 없이, 컴포지터 스레드에서만의 작업으로 렌더링을 할 수 있다는 점이다.
 
-> Layout -> Paint 과정의 비용 절약
+- 실제로, 애니메이션 속성을 부여할 때, `width`을 변경하면 `alert`를 사용하여 중단시켰을 때, 애니메이션도 중지되지만, `transform` 속성을 사용하면 `alert`이 활성화 되어도 중지되지 않고 끝까지 진행된다.(비동기같음)
+
+위에서 화면의 각 요소들을 `Layer`로 관리하고, 메인 스레드에서의 작업을 컴포지션 스레드에 위임하여 렌더링 비용을 절약할 수 있다고 했다.
+
+하지만, 모든 상황에서 위와 같은 최상의 렌더링 효율을 낼 수 있는 `CSS`속성들은 한정되어 있는것 같다.
+
+<div style="margin : 0 auto; text-align : center">
+  <img src="/img/2021/07/27/operation3.jpg" alt="3">
+</div>
+
+요소의 우선순위나 색상, 보여지는 여부등을 변경하지 않는 속성들이 대부분이다.
+
+- opacity : `Render Tree` 형성 단계에서, `display : none`은 `0px 0px`로 제외되지만, `Opacity`속성은 공간은 차지하는 상태라고 했었음
+- transform(translate, scale, rotate) : 요소의 위치 혹은 고유 크기, 디자인을 해치지 않고 고유의 모양만 변경되는 `CSS` 속성
 
 ## 렌더링 성능 개선
 
@@ -76,23 +93,6 @@ tag: 'Think'
 날것의 파일을 브라우저가 이해할 수 있고 사용할수 있는 언어로 바꾸는 작업을 한다.
 
 사실 이 구간에서는 **불필요한 태그 사용**을 하지 않는것이 최선이라 볼 수 있을것 같다.
-
-## Operation
-
-위에서 화면의 각 요소들을 `Layer`로 관리하고, 메인 스레드에서의 작업을 컴포지션 스레드에 위임하여 렌더링 비용을 절약할 수 있다고 했다.
-
-하지만, 모든 상황에서 위와 같은 최상의 렌더링 효율을 낼 수 있는 `CSS`속성들은 한정되어있다.
-
-<div style="margin : 0 auto; text-align : center">
-  <img src="/img/2021/07/27/operation3.jpg" alt="3">
-</div>
-
-요소의 우선순위나 색상, 보여지는 여부등을 변경하지 않는 속성들이 대부분이다.
-
-- opacity : `Render Tree` 형성 단계에서, `display : none`은 `0px 0px`로 제외되지만, `Opacity`속성은 공간은 차지하는 상태라고 했었음
-- transform(translate, scale, rotate) : 요소의 위치 혹은 고유 크기, 디자인을 해치지 않고 고유의 모양만 변경되는 `CSS` 속성
-
-그 외의 `CSS` 속성들은 아래의 상황이 발생한다.
 
 ### Reflow
 
@@ -130,3 +130,4 @@ tag: 'Think'
 - [modern web browser](https://developers.google.com/web/updates/2018/09/inside-browser-part3)
 - [high performance animations](https://www.html5rocks.com/en/tutorials/speed/high-performance-animations/)
 - [LogRocket - repaint](https://blog.logrocket.com/eliminate-content-repaints-with-the-new-layers-panel-in-chrome-e2c306d4d752/)
+- [composite](https://devsdk.github.io/ko/development/2021/03/29/blink-render-composition.html)
