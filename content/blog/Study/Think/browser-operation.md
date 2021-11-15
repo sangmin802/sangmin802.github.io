@@ -137,5 +137,5 @@ tag: 'Think'
 - [high performance animations](https://www.html5rocks.com/en/tutorials/speed/high-performance-animations/)
 - [LogRocket - repaint](https://blog.logrocket.com/eliminate-content-repaints-with-the-new-layers-panel-in-chrome-e2c306d4d752/)
 - [composite](https://devsdk.github.io/ko/development/2021/03/29/blink-render-composition.html)
-- [최신 브라우저 내부](https://d2.naver.com/helloworld/5237120)
+- [최신 브라우저 내부](https://d2.naver.com/helloworld/2922312)
 - [Stick to Compositor-Only Properties and Manage Layer Count](https://developers.google.com/web/fundamentals/performance/rendering/stick-to-compositor-only-properties-and-manage-layer-count)
