@@ -85,6 +85,7 @@ data-styled.g1[id="top__S_Top-zcpr2v-0"]{content:"gRTsqc,"}/*!sc*/
 <p>이 뜻은, 메인 스레드가 작동될 필요 없이, 컴포지터 스레드에서만의 작업으로 렌더링을 할 수 있다는 점이다.</p>
 <ul>
 <li>실제로, 애니메이션 속성을 부여할 때, <code class="language-text">width</code>을 변경하면 <code class="language-text">alert</code>를 사용하여 중단시켰을 때, 애니메이션도 중지되지만, <code class="language-text">transform</code> 속성을 사용하면 <code class="language-text">alert</code>이 활성화 되어도 중지되지 않고 끝까지 진행된다.(비동기같음)</li>
+<li>렌더링 프로세스의 메인스레드에서 자바스크립트 코드를 만나 자바스크립트 해석기에 역할을 위임하고, 콜스택에서 <code class="language-text">window.alert</code>라는 중단 <code class="language-text">api</code>가 호출되면서 메인스레드는 중단되지만, 위와같이 컴포지터 스레드에서 실행되는 작업들은 렌더링 프로세스의 메인스레드와는 별도의 스레드이기 때문에 중단되지 않는것 같다.</li>
 </ul>
 <p>생성된 <code class="language-text">Render Tree</code>에서 레이어트리에 포함시킬 레이어들을 골라내는 기준이 있을까?</p>
 <div style="margin : 0 auto; text-align : center">
