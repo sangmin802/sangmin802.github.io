@@ -156,6 +156,8 @@ MicroTask done
 10. `Web API`에서 진행중이던 `fetch`가 완료되고, `.then`의 콜백함수가 `MicroTasks`에 저장됨.
 11. `Event Loop`는 다시 반복함.
 
+자주 사용하는 `fetch`와 같이 서버에 통신을 요청하는것은 브라우저 구조에서의 통신에서 작업을 수행하고, 자바스크립트 실행기의 큐에 넘기는것이 아닐까?
+
 ### 참고
 
 [Line Engineering](https://engineering.linecorp.com/ko/blog/dont-block-the-event-loop/)
