@@ -148,6 +148,12 @@ data-styled.g1[id="top__S_Top-zcpr2v-0"]{content:"gRTsqc,"}/*!sc*/
 <h3 id="결론" style="position:relative;"><a href="#%EA%B2%B0%EB%A1%A0" aria-label="결론 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>결론</h3>
 <ul>
 <li>.then 메소드를 통해 순차적으로(동기) 실행하고자 하는 함수들은 모두 Promise객체를 반환해야 한다!</li>
+<li>
+<p><code class="language-text">Promise</code> 자체가 비동기함수가 아닌, <code class="language-text">setTimeout</code>과 같은 비동기 <code class="language-text">API</code>들의 성공, 실패 이후처리 등을 포착하고, 효율적으로 관리하기 위한 객체이다.</p>
+<blockquote>
+<p>물론, 비동기 <code class="language-text">API</code>를 사용하지 않더라도 <code class="language-text">resolve</code> 혹은 <code class="language-text">reject</code>를 즉시 실행시키거나 다른 환경에서 실행시켜 현재 구문을 일시 중단시키고 원하는 시기에 이어서 호출시킬 수 있다.</p>
+</blockquote>
+</li>
 </ul>
 <h2 id="참조사이트" style="position:relative;"><a href="#%EC%B0%B8%EC%A1%B0%EC%82%AC%EC%9D%B4%ED%8A%B8" aria-label="참조사이트 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>참조사이트</h2>
 <ol>

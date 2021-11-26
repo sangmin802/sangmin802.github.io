@@ -71,19 +71,19 @@ data-styled.g1[id="top__S_Top-zcpr2v-0"]{content:"gRTsqc,"}/*!sc*/
 <li>
 <p><code class="language-text">MicroTasks</code> : <code class="language-text">Promise</code>객체를 통한 콜백함수들이 담기는 곳</p>
 <blockquote>
-<p><code class="language-text">.then/catch/finally</code>와 같은 비동기 메소드들의 내부는 <code class="language-text">Promise</code>가 즉시실행함수로 실행되었다 하더라도, <code class="language-text">MicroTasks</code>로 넘어감</p>
+<p><code class="language-text">.then/catch/finally</code> 메소드들의 콜백함수는 <code class="language-text">Promise</code>가 즉시실행함수로 실행되었다 하더라도, <code class="language-text">MicroTasks</code>로 넘어감</p>
 </blockquote>
 </li>
 <li><code class="language-text">Tasks</code> : <code class="language-text">UI</code>이벤트 혹은 <code class="language-text">setTimeout</code>의 콜백함수들이 담기는 곳.</li>
 </ol>
-<p><code class="language-text">Promise</code>와 같은 비동기 <code class="language-text">API</code>들은, 현재 <code class="language-text">stack</code>에서 진행중인 작업이 완료되자마자 실행되어야 하기 때문에 <code class="language-text">Microtasks</code>가 <code class="language-text">Tasks</code>보다 높은 우선순위에 있다고 한다.</p>
+<p><code class="language-text">Promise</code>가 관리하는 비동기작업들은, 현재 <code class="language-text">stack</code>에서 진행중인 작업이 완료되자마자 실행되어야 하기 때문에 <code class="language-text">Microtasks</code>가 <code class="language-text">Tasks</code>보다 높은 우선순위에 있다고 한다.</p>
 <p>현재의 <code class="language-text">stack</code>이 마지막 작업을 수행 완료 하였을 때 를 가정해본다면,</p>
 <ol>
 <li><code class="language-text">Event Loop</code>는 <code class="language-text">MicroTasks</code>의 상황을 확인함</li>
 <li><code class="language-text">MicroTasks</code>에 쌓여있는 작업이 있다면, 선입선출의 방식으로 가져감</li>
 <li><code class="language-text">MicroTasks</code>에 쌓여있는 작업이 없다면, <code class="language-text">Tasks</code>에서 선입선출의 방식으로 가져감</li>
 </ol>
-<h3 id="예제1" style="position:relative;"><a href="#%EC%98%88%EC%A0%9C1" aria-label="예제1 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>예제1</h3>
+<h3 id="예제" style="position:relative;"><a href="#%EC%98%88%EC%A0%9C" aria-label="예제 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>예제</h3>
 <div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">microTaskDone</span><span class="token punctuation">(</span><span class="token parameter">num</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">MicroTask done</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span>
 <span class="token punctuation">}</span>
@@ -116,7 +116,7 @@ MicroTask done
 Task done</code></pre></div>
 <ol>
 <li><code class="language-text">start</code> 스택이 쌓임</li>
-<li><code class="language-text">Promise.resolce().then()</code>은 <code class="language-text">Web API</code> 비동기 영역으로, 콜백함수는 <code class="language-text">MicroTasks</code>에 저장된 다음, 해당 스택은 사라짐</li>
+<li><code class="language-text">Promise.resolve().then()</code>에서 <code class="language-text">resolve</code>가 바로실행되는것 처럼 보여도, <code class="language-text">resolve</code>되었을 때 이후의 <code class="language-text">.then</code>의 콜백함수는 바로실행되는것이 아닌 마이크로태스크에 저장됨</li>
 <li><code class="language-text">setTimeout</code>은 <code class="language-text">Web API</code> 비동기 영역으로, 이후의 콜백함수는 <code class="language-text">Tasks</code>에 저장된 다음, 해당 스택은 사라짐</li>
 <li><code class="language-text">done</code> 스택이 쌓이고, <code class="language-text">Start Done</code> 작업을 완료하고 해당 스택은 사라짐</li>
 <li><code class="language-text">start</code> 스택이 사라지고, <code class="language-text">main done</code> 작업을 완료함</li>
@@ -124,77 +124,6 @@ Task done</code></pre></div>
 <li><code class="language-text">MicroTask done</code>작업을 완료하고, 해당 스택은 사라짐.</li>
 <li><code class="language-text">Event Loop</code>는 다시한번 <code class="language-text">Stack</code>이 마지막 작업이 완료됨을 감지하고 <code class="language-text">MicroTasks</code>를 확인하지만, 아무런 작업도 존재하지 않아 <code class="language-text">Tasks</code>의 첫번째 작업을 <code class="language-text">Stack</code>으로 올림</li>
 <li><code class="language-text">Task done</code> 작업을 완료하고 해당 스택은 사라짐.</li>
-</ol>
-<h3 id="예제2" style="position:relative;"><a href="#%EC%98%88%EC%A0%9C2" aria-label="예제2 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>예제2</h3>
-<p>예제2의 경우 조금 다른 결과라 맞는 해석일지는 잘 모르겠지만, <code class="language-text">Stack</code>의 작업이 종료될때마다 새로운 작업을 찾아서 올리는 <code class="language-text">Event Loop</code>의 특성과, 즉시실행이아닌 어느정도 시간이 걸리는 비동기 <code class="language-text">Web API</code>들을 고려해보면 맞을것 같음.</p>
-<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">promise</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">res<span class="token punctuation">,</span> rej</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
-    <span class="token function">fetch</span><span class="token punctuation">(</span><span class="token string">'./json/json1.json'</span><span class="token punctuation">)</span>
-      <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">json</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
-        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"fetch의 비동기 then1"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token keyword">return</span> json<span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-      <span class="token punctuation">}</span><span class="token punctuation">)</span>
-      <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
-        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"fetch의 비동기 then2"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token keyword">return</span> <span class="token function">res</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token punctuation">}</span><span class="token punctuation">)</span>
-<span class="token punctuation">}</span>
-
-<span class="token keyword">function</span> <span class="token function">microTaskDone</span><span class="token punctuation">(</span><span class="token parameter">num</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">MicroTask done</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span>
-<span class="token punctuation">}</span>
-
-<span class="token keyword">function</span> <span class="token function">task</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
-    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Task done'</span><span class="token punctuation">)</span>
-  <span class="token punctuation">}</span><span class="token punctuation">)</span>
-<span class="token punctuation">}</span>
-
-<span class="token keyword">function</span> <span class="token function">done</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Stack Done'</span><span class="token punctuation">)</span>
-<span class="token punctuation">}</span>
-
-<span class="token keyword">function</span> <span class="token function">start</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  <span class="token function">promise</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>microTaskDone<span class="token punctuation">)</span>
-
-  <span class="token function">task</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-
-  <span class="token function">done</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-<span class="token punctuation">}</span>
-
-<span class="token function">start</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'main done'</span><span class="token punctuation">)</span>
-
-<span class="token comment">// 결과</span>
-Stack Done
-main done
-Task done
-fetch의 비동기 then1
-fetch의 비동기 then2
-MicroTask done</code></pre></div>
-<ol>
-<li><code class="language-text">start</code> 스택이 쌓임</li>
-<li>
-<p><code class="language-text">Promise.resolce().then()</code>은 <code class="language-text">Web API</code> 비동기 영역으로, 콜백함수는 <code class="language-text">MicroTasks</code>에 저장된 다음, 해당 스택은 사라짐</p>
-<blockquote>
-<p>단 여기서 콜백함수는 <code class="language-text">fetch</code> 메소드를 의미함</p>
-</blockquote>
-</li>
-<li><code class="language-text">setTimeout</code>은 <code class="language-text">Web API</code> 비동기 영역으로, 이후의 콜백함수는 <code class="language-text">Tasks</code>에 저장된 다음, 해당 스택은 사라짐</li>
-<li><code class="language-text">done</code> 스택이 쌓이고, <code class="language-text">Start Done</code> 작업을 완료하고 해당 스택은 사라짐</li>
-<li><code class="language-text">start</code> 스택이 사라지고, <code class="language-text">main done</code> 작업을 완료함</li>
-<li><code class="language-text">Stack</code>이 마지막 작업을 완료함을 감지한 <code class="language-text">Event Loop</code>는 <code class="language-text">MicroTasks</code>를 확인하고, <code class="language-text">fetch</code> 작업이 존재하여 <code class="language-text">Stack</code>으로 작업을 올림.</li>
-<li><code class="language-text">Stack</code>에 올라간 <code class="language-text">fetch</code> 또한, <code class="language-text">Promise</code> 객체를 반환하는 비동기 <code class="language-text">Web API</code>로, <code class="language-text">MicroTasks</code>에 넘겨주면서 <code class="language-text">Stack</code>의 <code class="language-text">fetch</code>는 사라짐.</li>
-<li>
-<p><code class="language-text">Event Loop</code>는 다시한번 <code class="language-text">Stack</code>이 마지막 작업이 완료됨을 감지하고 <code class="language-text">MicroTasks</code>를 확인하지만, 아직은 아무런 작업도 존재하지 않아 <code class="language-text">Tasks</code>의 첫번째 작업을 <code class="language-text">Stack</code>으로 올림</p>
-<blockquote>
-<p><code class="language-text">fetch</code>라는 비동기 <code class="language-text">Web API</code>는 내부적으로 바로 실행되는것이 아닌, 어느정도 시간이 필요하기 때문에, 바로 콜백함수를 넘겨주진 못하는것 같음</p>
-</blockquote>
-</li>
-<li><code class="language-text">Task done</code> 작업을 완료하고 해당 스택은 사라짐.</li>
-<li><code class="language-text">Web API</code>에서 진행중이던 <code class="language-text">fetch</code>가 완료되고, <code class="language-text">.then</code>의 콜백함수가 <code class="language-text">MicroTasks</code>에 저장됨.</li>
-<li><code class="language-text">Event Loop</code>는 다시 반복함.</li>
 </ol>
 <p>자주 사용하는 <code class="language-text">fetch</code>와 같이 서버에 통신을 요청하는것은 브라우저 구조에서의 통신에서 작업을 수행하고, 자바스크립트 실행기의 큐에 넘기는것이 아닐까?</p>
 <h3 id="참고" style="position:relative;"><a href="#%EC%B0%B8%EA%B3%A0" aria-label="참고 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>참고</h3>
