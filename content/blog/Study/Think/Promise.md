@@ -126,6 +126,9 @@ promise(1)
 
 - .then 메소드를 통해 순차적으로(동기) 실행하고자 하는 함수들은 모두 Promise객체를 반환해야 한다!
 
+- `Promise` 자체가 비동기함수가 아닌, `setTimeout`과 같은 비동기 `API`들의 성공, 실패 이후처리 등을 포착하고, 효율적으로 관리하기 위한 객체이다.
+  > 물론, 비동기 `API`를 사용하지 않더라도 `resolve` 혹은 `reject`를 즉시 실행시키거나 다른 환경에서 실행시켜 현재 구문을 일시 중단시키고 원하는 시기에 이어서 호출시킬 수 있다.
+
 ## 참조사이트
 
 1. <https://velog.io/@rohkorea86/Promiseis-%EB%B9%84%EB%8F%99%EA%B8%B0%EB%8F%99%EA%B8%B0%EC%97%90%EC%84%9C-Promise%EA%B9%8C%EC%A7%80>
