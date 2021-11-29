@@ -1,0 +1,8 @@
+@import '../../styles/variables.scss';
+
+.sticky-box {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  z-index: 1;
+}

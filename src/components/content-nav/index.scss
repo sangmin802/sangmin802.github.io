@@ -1,15 +1,12 @@
 @import '../../styles/variables.scss';
 
-.category-container, .tag-container {
-  position: sticky;
-  position: -webkit-sticky;
-  top: 0;
+.category-container,
+.tag-container {
   line-height: 0;
   white-space: nowrap;
   overflow-x: scroll;
   -ms-overflow-style: none; // IE 10+
   overflow: -moz-scrollbars-none; // Firefox
-  z-index: 1;
   padding: 6px 20px;
 
   .item {
@@ -38,16 +35,18 @@
     border-radius: 12px;
     div {
       padding: 10px 13px 13px 13px;
-      font-size : 12px;
+      font-size: 12px;
     }
-  } 
+  }
 }
 
-.category-container::-webkit-scrollbar, .tag-container::-webkit-scrollbar {
+.category-container::-webkit-scrollbar,
+.tag-container::-webkit-scrollbar {
   display: none; // Safari and Chrome
 }
 
-.category-container, .tag-container {
+.category-container,
+.tag-container {
   scroll-behavior: smooth;
 }
 @media (prefers-reduced-motion: reduce) {

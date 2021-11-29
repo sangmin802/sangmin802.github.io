@@ -4,6 +4,7 @@ import React, { useMemo } from 'react'
 import { Bio } from '../components/bio'
 import { ContentNav } from '../components/content-nav'
 import { Contents } from '../components/contents'
+import { Sticky } from '../components/sticky'
 import { Head } from '../components/head'
 import { HOME_TITLE } from '../constants'
 import { useCategory } from '../hooks/useCategory'
@@ -56,14 +57,16 @@ export default ({ data, location }) => {
     <Layout location={location} title={siteMetadata.title}>
       <Head title={HOME_TITLE} keywords={siteMetadata.keywords} />
       <Bio />
-      <ContentNav
-        navType="category"
-        navs={categories}
-        nav={category}
-        selectNav={selectCategory}
-        resetSubNav={resetTag}
-      />
-      <ContentNav navType="tag" navs={tags} nav={tag} selectNav={selectTag} />
+      <Sticky>
+        <ContentNav
+          navType="category"
+          navs={categories}
+          nav={category}
+          selectNav={selectCategory}
+          resetSubNav={resetTag}
+        />
+        <ContentNav navType="tag" navs={tags} nav={tag} selectNav={selectTag} />
+      </Sticky>
       <Contents
         posts={posts}
         countOfInitialPost={countOfInitialPost}
