@@ -291,43 +291,6 @@ data-styled.g1[id="top__S_Top-zcpr2v-0"]{content:"gRTsqc,"}/*!sc*/
 <div style="text-align : center">
   <img src="/img/2021/07/07/3.gif?raw=true" alt="3">
 </div>
-<h2 id="reactsuspense와-react-query---suspense모드의-에러" style="position:relative;"><a href="#reactsuspense%EC%99%80-react-query---suspense%EB%AA%A8%EB%93%9C%EC%9D%98-%EC%97%90%EB%9F%AC" aria-label="reactsuspense와 react query   suspense모드의 에러 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>React.Suspense와 React-Query - suspense모드의 에러</h2>
-<p>위처럼 잘 사용되는 경우도 물론 많다.</p>
-<p>하지만, 예상하지 못한 에러가 발생하는 상황도 있었다.</p>
-<p>성공적인 유저검색을 마치고, 이후의 검색에서 비동기 작업상 에러가 발생하면, 에러를 캐치하지 못하고 계속해서 <code class="language-text">useQuery</code>가 <code class="language-text">refetching</code>이 되었다.</p>
-<div style="text-align : center">
-  <img src="/img/2021/07/07/4.gif?raw=true" alt="4">
-</div>
-<p>여기서 <code class="language-text">suspense</code>옵션을 비활성화를 하게될경우에는 정상적으로 에러를 포착하였다.</p>
-<p>오랜 구글링 끝에 해결하게 되었는데, <code class="language-text">prefetchQuery</code>를 사용하여 실제 비동기작업을 <code class="language-text">return</code> 하기 전에 미리 한번 실행하는 것이다.</p>
-<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">const</span> <span class="token punctuation">{</span> data<span class="token operator">:</span> userData <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">useQuery</span><span class="token punctuation">(</span>
-  key<span class="token punctuation">,</span>
-  <span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
-    queryClient<span class="token punctuation">.</span><span class="token function">prefetchQuery</span><span class="token punctuation">(</span>key<span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
-      <span class="token constant">API</span><span class="token punctuation">.</span><span class="token function">getUserData</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span>
-    <span class="token punctuation">}</span><span class="token punctuation">)</span>
-
-    <span class="token keyword">return</span> <span class="token constant">API</span><span class="token punctuation">.</span><span class="token function">getUserData</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span>
-  <span class="token punctuation">}</span><span class="token punctuation">,</span>
-  <span class="token punctuation">{</span>
-    refetchOnWindowFocus<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
-  <span class="token punctuation">}</span>
-<span class="token punctuation">)</span></code></pre></div>
-<p>해당 방법을 사용하여 위의 문제는 해결하였지만, 마치 돌려막기를 한 듯 한 느낌이라 좀 찝찝했다.</p>
-<div style="text-align : center">
-  <img src="/img/2021/07/07/5.gif?raw=true" alt="5">
-</div>
-<p>그래서 <code class="language-text">React-Query</code> 깃의 이슈들에 질문을 해보려고 들어갔는데</p>
-<div style="text-align : center">
-  <img src="/img/2021/07/07/1.PNG?raw=true" alt="1">
-</div>
-<p>비슷한 에러를 겪고있는 사람들이 꽤나 많았다. 가장 최근의 이슈들의 사진이지만, 이 이후에도 비슷한 <code class="language-text">suspense+infiniteFetch</code>와 관련된 이슈들이 더 있었다.</p>
-<p>그리고, 모든 이슈들이 <code class="language-text">React-Query</code>의 <code class="language-text">contributer</code> 한 분의 멘트로 링크가 되어있었는데,</p>
-<div style="text-align : center">
-  <img src="/img/2021/07/07/2.PNG?raw=true" alt="2">
-</div>
-<p>아아..</p>
-<p><code class="language-text">React.Suspense</code>, <code class="language-text">React-Query suspense</code> 모두 공문에 나와있던 말처럼 아직 테스트 버전이기 때문에 예외적인 상황들이 발생할수 있음을 알 수 있었다.</p>
 <h2 id="테스트중인-부분도-있지만-충분히-좋은걸" style="position:relative;"><a href="#%ED%85%8C%EC%8A%A4%ED%8A%B8%EC%A4%91%EC%9D%B8-%EB%B6%80%EB%B6%84%EB%8F%84-%EC%9E%88%EC%A7%80%EB%A7%8C-%EC%B6%A9%EB%B6%84%ED%9E%88-%EC%A2%8B%EC%9D%80%EA%B1%B8" aria-label="테스트중인 부분도 있지만 충분히 좋은걸 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>테스트중인 부분도 있지만 충분히 좋은걸</h2>
 <p>캐싱, 에러핸들링, 로딩프로세스등 잘 사용한다면 비동기 작업이 개발자에게는 많은 양의 코드를 줄일 수 있고, 에러핸들링을 하는등의 장점과 사용자에게는 좋은 경험을 줄 수 있다는 점에서 큰 매력이 있는것 같다.</p>
 <p>아직, <code class="language-text">suspense</code>와 같이 불완전한 상태의 기능들도 존재하지만, 충분히 사용할 가치가 있는것 같다.</p>

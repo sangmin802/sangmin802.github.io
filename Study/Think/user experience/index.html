@@ -91,14 +91,6 @@ data-styled.g1[id="top__S_Top-zcpr2v-0"]{content:"gRTsqc,"}/*!sc*/
 <blockquote>
 <p>이전, <code class="language-text">Event</code>, <code class="language-text">Calendar</code>에 대한 <code class="language-text">abort</code> 작업에 이어서</p>
 </blockquote>
-<h2 id="터져버린-suspense-돌려막기" style="position:relative;"><a href="#%ED%84%B0%EC%A0%B8%EB%B2%84%EB%A6%B0-suspense-%EB%8F%8C%EB%A0%A4%EB%A7%89%EA%B8%B0" aria-label="터져버린 suspense 돌려막기 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>터져버린 Suspense 돌려막기</h2>
-<p>이전에 <code class="language-text">React-Query</code>의 <code class="language-text">suspense</code>모드와 <code class="language-text">React</code>의 <code class="language-text">Suspense</code>를 사용하여 비동기작업에 있어 <code class="language-text">loading</code> 구간을 외부에서 처리하도록 하였다.</p>
-<p>하지만, 두가지 모두 아직 실험단계라서 실제로 배포를 하는데에는 사용하지 말라는 경고가 있었다.</p>
-<p>실제로 적용을 하면서 모든 상황에는 괜찮지만, <code class="language-text">성공 -&gt; 사용자의 요청 -&gt; 실패</code>와 같은 상황에서는 <code class="language-text">query</code>가 무한히 작동되고 에러를 포착하지 못하는 버그가 있었는데, <code class="language-text">React-Query</code>의 내부적인 문제라는 이슈를 확인할 수 있었다.</p>
-<p>이에 대한 돌려막기로 <code class="language-text">queryClient</code>의 <code class="language-text">prefetch</code>를 사용하여 <code class="language-text">useQuery</code>가 작동되기 전 <code class="language-text">key</code>를 캐싱하도록 하고, 이후에 데이터를 받아오도록 하였다.</p>
-<blockquote>
-<p>돌려막기</p>
-</blockquote>
 <h3 id="suspense로-인한-cancel-방식-변경" style="position:relative;"><a href="#suspense%EB%A1%9C-%EC%9D%B8%ED%95%9C-cancel-%EB%B0%A9%EC%8B%9D-%EB%B3%80%EA%B2%BD" aria-label="suspense로 인한 cancel 방식 변경 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Suspense로 인한 cancel 방식 변경</h3>
 <p>사실, <code class="language-text">Suspense</code>를 사용하게 되면서 이전에 진행중인 <code class="language-text">fetch</code>를 <code class="language-text">cancel</code>하는 방식또한 개조해서 사용하였다.</p>
 <p>원래대로라면, <code class="language-text">useQuery</code>가 <code class="language-text">loading</code>, <code class="language-text">error</code>등의 상태를 포함한 인스턴스에 <code class="language-text">cancel</code> 메소드를 포함하여 <code class="language-text">return</code> 할 때 <code class="language-text">queryClient.cancelQueries</code>를 통해 <code class="language-text">cancel</code>을 호출하여 <code class="language-text">abort</code>시키는 것이 공식문서에서 제안된 방법이였다.</p>
@@ -129,55 +121,6 @@ data-styled.g1[id="top__S_Top-zcpr2v-0"]{content:"gRTsqc,"}/*!sc*/
 <blockquote>
 <p><code class="language-text">axios</code> 사용으로 <code class="language-text">cancelToken</code>을 이용함</p>
 </blockquote>
-<h2 id="알-수없는-버그" style="position:relative;"><a href="#%EC%95%8C-%EC%88%98%EC%97%86%EB%8A%94-%EB%B2%84%EA%B7%B8" aria-label="알 수없는 버그 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>알 수없는 버그</h2>
-<p>진행을 하던 중, 알 수 없는 버그가 발생했다.</p>
-<p>모든 상황에서는 괜찮지만, <code class="language-text">수집형포인트</code> 데이터를 받아오기 위한 비동기작업이 취소되고 새로운 유저검색을 할 때, <code class="language-text">useQuery</code>의 비동기작업이 완료되기 전 <code class="language-text">prefetch</code>로 저장된 값이 렌더링되는것이다.</p>
-<p>정말 많은시간 고민을 하였다. 여러가지 상황을 적용해보고 결과를 확인해보았는다, 예상하는대로 진행되는 방법은 두가지였다.</p>
-<ol>
-<li><code class="language-text">prefetch</code> 제거</li>
-<li>비동기 작업 취소 로직 제거</li>
-</ol>
-<p>아이러니한것인지, 딩연한것인지 <code class="language-text">suspense</code>모드를 사용하기 위해 임시방편으로 추가한 것들이 모두 문제였다.</p>
-<p><code class="language-text">prefetch</code>야 제공하는 기능 자체를 추가한것이라 어쩔 방법이 없지만, 비동기 작업 취소 로직같은 경우는 내가 만든것이기 때문에 집중적으로 파혜쳐보았다.</p>
-<h3 id="code-classlanguage-textcancelqueriescode-code-classlanguage-textresetqueriescode때문일까" style="position:relative;"><a href="#code-classlanguage-textcancelqueriescode-code-classlanguage-textresetqueriescode%EB%95%8C%EB%AC%B8%EC%9D%BC%EA%B9%8C" aria-label="code classlanguage textcancelqueriescode code classlanguage textresetqueriescode때문일까 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code class="language-text">cancelQueries</code>, <code class="language-text">resetQueries</code>때문일까?</h3>
-<p>이전에 사용되었던 <code class="language-text">key</code>만을 대상으로 진행되는것이기 때문에, 새로운 요청에 대해서는 영향을 미치지 않을것 같았다.</p>
-<p>혹여나 잘못전달되는것이 아닌가 확인해보기도 했지만 아니였다.</p>
-<h3 id="code-classlanguage-textcancelcode-과정에서-문제가-있나" style="position:relative;"><a href="#code-classlanguage-textcancelcode-%EA%B3%BC%EC%A0%95%EC%97%90%EC%84%9C-%EB%AC%B8%EC%A0%9C%EA%B0%80-%EC%9E%88%EB%82%98" aria-label="code classlanguage textcancelcode 과정에서 문제가 있나 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code class="language-text">cancel</code> 과정에서 문제가 있나?</h3>
-<p><code class="language-text">cancel token</code>또한, 이전에 실행된 비동기작업에서 바로 생성되는 방식으로 사용하였다.</p>
-<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">const</span> <span class="token punctuation">{</span> data <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">axios</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
-  url<span class="token operator">:</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">...</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">,</span>
-  method<span class="token operator">:</span> <span class="token string">'post'</span><span class="token punctuation">,</span>
-  data<span class="token operator">:</span> <span class="token punctuation">{</span> member <span class="token punctuation">}</span><span class="token punctuation">,</span>
-  cancelToken<span class="token operator">:</span> <span class="token keyword">new</span> <span class="token class-name">CancelToken</span><span class="token punctuation">(</span><span class="token parameter">c</span> <span class="token operator">=></span> <span class="token punctuation">(</span>cancel <span class="token operator">=</span> c<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span></code></pre></div>
-<p>따라서 해당 비동기작업만 취소가 된다.</p>
-<p>사실 이 로직 자체에는 문제가 없음이 확신시되는점이, 비동기작업이 중단되는것이 아니다. 다만, <code class="language-text">prefetch</code>로 캐싱된 값을 가져오는것이 비동기작업 완료보다 먼저 <code class="language-text">query</code>가 진행했기 때문이다.</p>
-<h2 id="경고를-받아들이는-순간" style="position:relative;"><a href="#%EA%B2%BD%EA%B3%A0%EB%A5%BC-%EB%B0%9B%EC%95%84%EB%93%A4%EC%9D%B4%EB%8A%94-%EC%88%9C%EA%B0%84" aria-label="경고를 받아들이는 순간 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>경고를 받아들이는 순간</h2>
-<p>해결방법을 찾지 못하고 결국 <code class="language-text">prefetch</code>를 빼기로 하였다.</p>
-<blockquote>
-<p>사실, 비동기작업이 두번 호출되는것도 좀 불편하긴 했음</p>
-</blockquote>
-<p><code class="language-text">prefetch</code>를 뺀다는것은 <code class="language-text">suspense</code>모드를 사용하지 않겠다는 결론과도 같다.</p>
-<p>아 물론, 모든 상황에서 빼지는 않을것이다.</p>
-<p>현제 버그가 발생하는 <code class="language-text">성공 -&gt; 실패</code>와 같은 상황이 발생할 수 있는 부분이 아니라면 <code class="language-text">suspense</code>는 유지하기로 하였다.</p>
-<blockquote>
-<p>즉, 유저 검색에 있어서만 <code class="language-text">suspense</code> 제거</p>
-</blockquote>
-<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">return</span> <span class="token punctuation">(</span>
-  <span class="token operator">&lt;</span>ErrorBoundary errorFallback<span class="token operator">=</span><span class="token punctuation">{</span><span class="token operator">&lt;</span>ErrorFallback <span class="token operator">/</span><span class="token operator">></span><span class="token punctuation">}</span> keys<span class="token operator">=</span><span class="token punctuation">{</span>name<span class="token punctuation">}</span><span class="token operator">></span>
-    <span class="token operator">&lt;</span>FetchUserInfo userKey<span class="token operator">=</span><span class="token punctuation">{</span>userKey<span class="token punctuation">}</span> userCollectionKey<span class="token operator">=</span><span class="token punctuation">{</span>userCollectionKey<span class="token punctuation">}</span> <span class="token operator">/</span><span class="token operator">></span>
-  <span class="token operator">&lt;</span><span class="token operator">/</span>ErrorBoundary<span class="token operator">></span>
-<span class="token punctuation">)</span></code></pre></div>
-<p><code class="language-text">Errorboundary</code>자체에는 문제가 없기 때문에 사용을 유지하였다.</p>
-<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">const</span> <span class="token punctuation">{</span> status<span class="token punctuation">,</span> data<span class="token operator">:</span> userData <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">useUser</span><span class="token punctuation">(</span>userKey<span class="token punctuation">)</span>
-<span class="token comment">// ...</span>
-<span class="token keyword">if</span> <span class="token punctuation">(</span>status <span class="token operator">===</span> <span class="token string">'loading'</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token operator">&lt;</span>SearchLoading <span class="token operator">/</span><span class="token operator">></span>
-
-<span class="token keyword">return</span> <span class="token punctuation">(</span>
-  <span class="token comment">// ...</span>
-<span class="token punctuation">)</span></code></pre></div>
-<p><code class="language-text">suspense</code>모드 사용을 제거한 부분에서는 위와 같이 <code class="language-text">loading</code>상태일 때의 렌더링을 정의해줄 필요가 있었다.</p>
-<p>이것이 내부에서 이뤄지는것아 참 아쉽긴하지만..</p>
 <h2 id="비동기-작업-분리를-통한-사용자-경험-향상" style="position:relative;"><a href="#%EB%B9%84%EB%8F%99%EA%B8%B0-%EC%9E%91%EC%97%85-%EB%B6%84%EB%A6%AC%EB%A5%BC-%ED%86%B5%ED%95%9C-%EC%82%AC%EC%9A%A9%EC%9E%90-%EA%B2%BD%ED%97%98-%ED%96%A5%EC%83%81" aria-label="비동기 작업 분리를 통한 사용자 경험 향상 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>비동기 작업 분리를 통한 사용자 경험 향상</h2>
 <div style="margin : 0 auto; text-align : center">
   <img src="/img/2021/08/06/4.png?raw=true" alt="abortcontroller">
