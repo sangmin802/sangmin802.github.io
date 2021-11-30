@@ -56,6 +56,7 @@ data-styled.g1[id="top__S_Top-zcpr2v-0"]{content:"gRTsqc,"}/*!sc*/
 <p>이전에 <code class="language-text">React-Query</code>의 <code class="language-text">suspense</code> 속성을 통해 데이터가 받아지지 않았다면 이후 렌더링을 중지시켜주기 까지는 성공하였다. 하지만, 그 중지상태일 때의 렌더링에 대해서는 해결하지 못했었다.</p>
 <p><code class="language-text">React</code>에서는 <code class="language-text">Suspense</code>라는 기능을 제공하는데, 해당 기능을 사용하여 <code class="language-text">기다리기</code> 라는 키워드를 갖고있는 상황에 사용을 할 수 있다.</p>
 <p>대표적으로, 비동기작업을 진행하면서 발생하는 로딩시간을 <strong>기다리면서</strong> 처리할 작업들을 대체하는 것이다.</p>
+<p>엄밀히 따지면, 특정 데이터를 사용하는 컴포넌트에 데이터가 준비되지 않았음을 알리는 역할을 수행한다.</p>
 <h3 id="🥘-usestate를-통한-loading" style="position:relative;"><a href="#%F0%9F%A5%98-usestate%EB%A5%BC-%ED%86%B5%ED%95%9C-loading" aria-label="🥘 usestate를 통한 loading permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>🥘 useState를 통한 loading</h3>
 <p>이전까지는 늘 이렇게 비동기 작업을 수행하기 이전에 <code class="language-text">loading</code>이라는 상태값을 변경하여 <code class="language-text">UI</code>를 띄워왔었다</p>
 <div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">const</span> fetchData <span class="token operator">=</span> <span class="token function">useCallback</span><span class="token punctuation">(</span><span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
@@ -74,6 +75,71 @@ data-styled.g1[id="top__S_Top-zcpr2v-0"]{content:"gRTsqc,"}/*!sc*/
 <div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token operator">&lt;</span>Suspense fallback<span class="token operator">=</span><span class="token punctuation">{</span><span class="token operator">&lt;</span>LoadingSpinner <span class="token operator">/</span><span class="token operator">></span><span class="token punctuation">}</span><span class="token operator">></span>
   <span class="token operator">&lt;</span>Event <span class="token operator">/</span><span class="token operator">></span>
 <span class="token operator">&lt;</span><span class="token operator">/</span>Suspense<span class="token operator">></span></code></pre></div>
+<blockquote>
+<p>21-11-30 업데이트</p>
+</blockquote>
+<p>어떻게 가능한것일까?</p>
+<p><code class="language-text">React</code>의 <code class="language-text">repository</code>에 <code class="language-text">Suspense</code>에 대한 세세한 로직을 찾을 수는 없었다.</p>
+<p>하지만, <code class="language-text">Suspense</code>를 소개하는 항목에서 한가지 특징을 확인할 수 있는것이 <code class="language-text">getDerivedStateFromError</code> 라는 생명주기이다.</p>
+<p>해당 생명주기를 갖고있는 컴포넌트 하위에서 발생한 에러를 포착하고, 다시 <code class="language-text">render</code>를 호출할 수 있다.</p>
+<p>그리고 여러 테스트를 해본 결과 단 한가지의 값에는 다른 결과를 보였다.</p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span>
+
+<span class="token keyword">let</span> data <span class="token operator">=</span> <span class="token keyword">null</span>
+<span class="token keyword">let</span> resolve <span class="token operator">=</span> <span class="token keyword">null</span>
+
+<span class="token keyword">const</span> promise <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token parameter">res</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  resolve <span class="token operator">=</span> res
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  data <span class="token operator">=</span> <span class="token string">'success data'</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token keyword">function</span> <span class="token keyword">async</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>data<span class="token punctuation">)</span> <span class="token keyword">throw</span> promise
+  <span class="token keyword">return</span> data
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">function</span> <span class="token function">App</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token operator">&lt;</span>div className<span class="token operator">=</span><span class="token string">"App"</span><span class="token operator">></span>
+      <span class="token operator">&lt;</span>React<span class="token punctuation">.</span>Suspense
+        fallback<span class="token operator">=</span><span class="token punctuation">{</span>
+          <span class="token operator">&lt;</span>button
+            onClick<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+              resolve<span class="token operator">?.</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+            <span class="token punctuation">}</span><span class="token punctuation">}</span>
+          <span class="token operator">></span>
+            resolve<span class="token operator">!</span>
+          <span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">></span>
+        <span class="token punctuation">}</span>
+      <span class="token operator">></span>
+        <span class="token operator">&lt;</span>InnerApp <span class="token operator">/</span><span class="token operator">></span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>React<span class="token punctuation">.</span>Suspense<span class="token operator">></span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+  <span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">InnerApp</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> data <span class="token operator">=</span> <span class="token keyword">async</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+  <span class="token keyword">return</span> <span class="token operator">&lt;</span><span class="token operator">></span><span class="token punctuation">{</span>data<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span><span class="token operator">></span>
+<span class="token punctuation">}</span></code></pre></div>
+<blockquote>
+<p><code class="language-text">CodeSandbox</code>에서 실행 가능</p>
+</blockquote>
+<p>임시로 작성해본 코드이긴 하지만 위처럼 하위 컴포넌트에서 <code class="language-text">throw</code>와 같이 이후가 <strong>중단</strong>될 때, 값으로 <code class="language-text">Promise</code>객체가 전달된다면 <code class="language-text">fallback</code> 컴포넌트를 렌더링 하였다.</p>
+<p>핵심은 <code class="language-text">throw</code>라는 <strong>중단</strong>과, 완료되지 않은 <code class="language-text">Promise</code> 객체인것 같다.</p>
+<p>중단이 되었기 때문에 해당 컴포넌트를 렌더링하는것이 완료되지 않는 상태를 유지한다.</p>
+<p>마치, <code class="language-text">resolve</code>가 아직 호출되지 않은 <code class="language-text">await</code> 이후의 로직 혹은 <code class="language-text">.then</code>의 콜백함수를 보는것 같다.</p>
+<p>중단이라는 의미를 더 쉽게 이해할수 있도록 보여지는것이, 위와 같이 <code class="language-text">throw</code>된 컴포넌트는 <code class="language-text">useEffect</code>와 같이 <code class="language-text">render</code>가 완료된 이후에 호출되는 생명주기가 호출되지 않는다.</p>
+<blockquote>
+<p><code class="language-text">mount</code> 되지 않는상황</p>
+</blockquote>
+<p>위와 같이 실행될 수 있는 조건은, 외부에서 데이터를 받아오는 비동기로직이 즉각적으로 <code class="language-text">Promise</code> 객체를 반환하는것이 아닌 클로저를 통해 상태 변수를 갖고있는 함수가 반환되어야 하는것 같다.</p>
+<blockquote>
+<p>공식문서에도 그렇게 설명되어있음!!</p>
+</blockquote>
+<p>그리고, 그러한 일을 대신해주는것이 아래에 소개될 <code class="language-text">React-Query</code>이다.</p>
 <h2 id="-react-query--suspense" style="position:relative;"><a href="#-react-query--suspense" aria-label=" react query  suspense permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>🍣 React-Query + Suspense</h2>
 <div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">export</span> <span class="token keyword">const</span> queryClient <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">QueryClient</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
   defaultOptions<span class="token operator">:</span> <span class="token punctuation">{</span>
