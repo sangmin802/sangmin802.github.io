@@ -66,18 +66,6 @@ const data2 = await fetchSomething2(data.id)
 
 > 이전, `Event`, `Calendar`에 대한 `abort` 작업에 이어서
 
-## 터져버린 Suspense 돌려막기
-
-이전에 `React-Query`의 `suspense`모드와 `React`의 `Suspense`를 사용하여 비동기작업에 있어 `loading` 구간을 외부에서 처리하도록 하였다.
-
-하지만, 두가지 모두 아직 실험단계라서 실제로 배포를 하는데에는 사용하지 말라는 경고가 있었다.
-
-실제로 적용을 하면서 모든 상황에는 괜찮지만, `성공 -> 사용자의 요청 -> 실패`와 같은 상황에서는 `query`가 무한히 작동되고 에러를 포착하지 못하는 버그가 있었는데, `React-Query`의 내부적인 문제라는 이슈를 확인할 수 있었다.
-
-이에 대한 돌려막기로 `queryClient`의 `prefetch`를 사용하여 `useQuery`가 작동되기 전 `key`를 캐싱하도록 하고, 이후에 데이터를 받아오도록 하였다.
-
-> 돌려막기
-
 ### Suspense로 인한 cancel 방식 변경
 
 사실, `Suspense`를 사용하게 되면서 이전에 진행중인 `fetch`를 `cancel`하는 방식또한 개조해서 사용하였다.
@@ -120,82 +108,6 @@ export const getUserData = async (name): Promise<UserInfo> => {
 위와 같은 방식으로 중단을 시켜주었었다.
 
 > `axios` 사용으로 `cancelToken`을 이용함
-
-## 알 수없는 버그
-
-진행을 하던 중, 알 수 없는 버그가 발생했다.
-
-모든 상황에서는 괜찮지만, `수집형포인트` 데이터를 받아오기 위한 비동기작업이 취소되고 새로운 유저검색을 할 때, `useQuery`의 비동기작업이 완료되기 전 `prefetch`로 저장된 값이 렌더링되는것이다.
-
-정말 많은시간 고민을 하였다. 여러가지 상황을 적용해보고 결과를 확인해보았는다, 예상하는대로 진행되는 방법은 두가지였다.
-
-1. `prefetch` 제거
-2. 비동기 작업 취소 로직 제거
-
-아이러니한것인지, 딩연한것인지 `suspense`모드를 사용하기 위해 임시방편으로 추가한 것들이 모두 문제였다.
-
-`prefetch`야 제공하는 기능 자체를 추가한것이라 어쩔 방법이 없지만, 비동기 작업 취소 로직같은 경우는 내가 만든것이기 때문에 집중적으로 파혜쳐보았다.
-
-### `cancelQueries`, `resetQueries`때문일까?
-
-이전에 사용되었던 `key`만을 대상으로 진행되는것이기 때문에, 새로운 요청에 대해서는 영향을 미치지 않을것 같았다.
-
-혹여나 잘못전달되는것이 아닌가 확인해보기도 했지만 아니였다.
-
-### `cancel` 과정에서 문제가 있나?
-
-`cancel token`또한, 이전에 실행된 비동기작업에서 바로 생성되는 방식으로 사용하였다.
-
-```js
-const { data } = await axios({
-  url: `...`,
-  method: 'post',
-  data: { member },
-  cancelToken: new CancelToken(c => (cancel = c)),
-})
-```
-
-따라서 해당 비동기작업만 취소가 된다.
-
-사실 이 로직 자체에는 문제가 없음이 확신시되는점이, 비동기작업이 중단되는것이 아니다. 다만, `prefetch`로 캐싱된 값을 가져오는것이 비동기작업 완료보다 먼저 `query`가 진행했기 때문이다.
-
-## 경고를 받아들이는 순간
-
-해결방법을 찾지 못하고 결국 `prefetch`를 빼기로 하였다.
-
-> 사실, 비동기작업이 두번 호출되는것도 좀 불편하긴 했음
-
-`prefetch`를 뺀다는것은 `suspense`모드를 사용하지 않겠다는 결론과도 같다.
-
-아 물론, 모든 상황에서 빼지는 않을것이다.
-
-현제 버그가 발생하는 `성공 -> 실패`와 같은 상황이 발생할 수 있는 부분이 아니라면 `suspense`는 유지하기로 하였다.
-
-> 즉, 유저 검색에 있어서만 `suspense` 제거
-
-```js
-return (
-  <ErrorBoundary errorFallback={<ErrorFallback />} keys={name}>
-    <FetchUserInfo userKey={userKey} userCollectionKey={userCollectionKey} />
-  </ErrorBoundary>
-)
-```
-
-`Errorboundary`자체에는 문제가 없기 때문에 사용을 유지하였다.
-
-```js
-const { status, data: userData } = useUser(userKey)
-// ...
-if (status === 'loading') return <SearchLoading />
-
-return (
-  // ...
-)
-```
-
-`suspense`모드 사용을 제거한 부분에서는 위와 같이 `loading`상태일 때의 렌더링을 정의해줄 필요가 있었다.
-
-이것이 내부에서 이뤄지는것아 참 아쉽긴하지만..
 
 ## 비동기 작업 분리를 통한 사용자 경험 향상
 

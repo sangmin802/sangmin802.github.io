@@ -311,62 +311,6 @@ const API = {
   <img src="/img/2021/07/07/3.gif?raw=true" alt="3">
 </div>
 
-## React.Suspense와 React-Query - suspense모드의 에러
-
-위처럼 잘 사용되는 경우도 물론 많다.
-
-하지만, 예상하지 못한 에러가 발생하는 상황도 있었다.
-
-성공적인 유저검색을 마치고, 이후의 검색에서 비동기 작업상 에러가 발생하면, 에러를 캐치하지 못하고 계속해서 `useQuery`가 `refetching`이 되었다.
-
-<div style="text-align : center">
-  <img src="/img/2021/07/07/4.gif?raw=true" alt="4">
-</div>
-
-여기서 `suspense`옵션을 비활성화를 하게될경우에는 정상적으로 에러를 포착하였다.
-
-오랜 구글링 끝에 해결하게 되었는데, `prefetchQuery`를 사용하여 실제 비동기작업을 `return` 하기 전에 미리 한번 실행하는 것이다.
-
-```js
-const { data: userData } = useQuery(
-  key,
-  async () => {
-    queryClient.prefetchQuery(key, () => {
-      API.getUserData(name)
-    })
-
-    return API.getUserData(name)
-  },
-  {
-    refetchOnWindowFocus: false,
-  }
-)
-```
-
-해당 방법을 사용하여 위의 문제는 해결하였지만, 마치 돌려막기를 한 듯 한 느낌이라 좀 찝찝했다.
-
-<div style="text-align : center">
-  <img src="/img/2021/07/07/5.gif?raw=true" alt="5">
-</div>
-
-그래서 `React-Query` 깃의 이슈들에 질문을 해보려고 들어갔는데
-
-<div style="text-align : center">
-  <img src="/img/2021/07/07/1.PNG?raw=true" alt="1">
-</div>
-
-비슷한 에러를 겪고있는 사람들이 꽤나 많았다. 가장 최근의 이슈들의 사진이지만, 이 이후에도 비슷한 `suspense+infiniteFetch`와 관련된 이슈들이 더 있었다.
-
-그리고, 모든 이슈들이 `React-Query`의 `contributer` 한 분의 멘트로 링크가 되어있었는데,
-
-<div style="text-align : center">
-  <img src="/img/2021/07/07/2.PNG?raw=true" alt="2">
-</div>
-
-아아..
-
-`React.Suspense`, `React-Query suspense` 모두 공문에 나와있던 말처럼 아직 테스트 버전이기 때문에 예외적인 상황들이 발생할수 있음을 알 수 있었다.
-
 ## 테스트중인 부분도 있지만 충분히 좋은걸
 
 캐싱, 에러핸들링, 로딩프로세스등 잘 사용한다면 비동기 작업이 개발자에게는 많은 양의 코드를 줄일 수 있고, 에러핸들링을 하는등의 장점과 사용자에게는 좋은 경험을 줄 수 있다는 점에서 큰 매력이 있는것 같다.
