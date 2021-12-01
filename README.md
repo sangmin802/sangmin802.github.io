@@ -8,22 +8,23 @@
 
 - React의 UI를 구성하는 요소를 js 내부에 포함시켜 하나의 컴포넌트라고 불리는 jsx를 사용함. babel을 통해 React.createElement로 컴파일 한다고 함
 - ReactDOM.render는 단 한번만 호출이 되며, ReactDOM은 해당 엘리먼트와 자식 엘리먼트들에서 변경이 되는 부분만을 업데이트 한다.
-- 여기서 엘리먼트는 컴포넌트와 다르고, 컴포넌트의 구성요소이다.
 
-  ```js
-  function tick() {
-    const element = (
-      <div>
-        <h1>Hello, world!</h1>
-        <h2>It is {new Date().toLocaleTimeString()}.</h2>
-      </div>
-    )
-    ReactDOM.render(element, document.getElementById('root'))
-  }
-  setInterval(tick, 1000)
-  ```
+  - 여기서 엘리먼트는 컴포넌트와 다르고, 컴포넌트의 구성요소이다.
 
-위의 메소드를 setInterval로 반복하여 실행하여 전체의 UI를 render 시켜도 오로지 h2의 텍스트만 변경된다.
+    ```js
+    function tick() {
+      const element = (
+        <div>
+          <h1>Hello, world!</h1>
+          <h2>It is {new Date().toLocaleTimeString()}.</h2>
+        </div>
+      )
+      ReactDOM.render(element, document.getElementById('root'))
+    }
+    setInterval(tick, 1000)
+    ```
+
+    > 위의 메소드를 setInterval로 반복하여 실행하여 전체의 UI를 render 시켜도 오로지 h2의 텍스트만 변경된다.
 
 - ReactDOM.render에 사용되는 엘리먼트는 `<Welcome />`과 같은 사용자 정의 컴포넌트로도 가능함
 
@@ -79,54 +80,56 @@ React-query와 같이 비동기과정에서 loading과같은 상태를 잡을수
 
 > unmount가 아닌 중지임 mount 조차도 되지 않음
 
-- 해당 컴포넌트가 사용하는 데이터가 존재하지 않을 경우 정지하고 다음 컴포넌트의 렌더링을 시도함 - 일종의 비동기 작업처럼 중지하고 이후로 미루는것 같음
+- 해당 컴포넌트가 사용하는 데이터가 존재하지 않을 경우 정지하고 다음 컴포넌트의 렌더링을 시도함
+  > 일종의 비동기 작업처럼 중지하고 이후로 미루는것 같음
 - 모든 컴포넌트의 렌더링이 종료되면 중지되어있던 컴포넌트의 상위에 있던 Suspense에 전달된 fallback을 찾고 그것을 렌더링함
+
   > 흔히 ...loading 같은것들
 
-```js
-import React from 'react'
+  ```js
+  import React from 'react'
 
-let resolve = null
+  let resolve = null
 
-const promise = new Promise(res => {
-  resolve = res
-}).then(() => {
-  data = 'success data'
-})
+  const promise = new Promise(res => {
+    resolve = res
+  }).then(() => {
+    data = 'success data'
+  })
 
-function async() {
-  if (!data) throw promise
-  return data
-}
+  function async() {
+    if (!data) throw promise
+    return data
+  }
 
-export default function App() {
-  return (
-    <div className="App">
-      <React.Suspense
-        fallback={
-          <button
-            onClick={() => {
-              resolve?.()
-            }}
-          >
-            resolve!
-          </button>
-        }
-      >
-        <InnerApp />
-      </React.Suspense>
-    </div>
-  )
-}
+  export default function App() {
+    return (
+      <div className="App">
+        <React.Suspense
+          fallback={
+            <button
+              onClick={() => {
+                resolve?.()
+              }}
+            >
+              resolve!
+            </button>
+          }
+        >
+          <InnerApp />
+        </React.Suspense>
+      </div>
+    )
+  }
 
-function InnerApp() {
-  const data = async()
+  function InnerApp() {
+    const data = async()
 
-  return <>{data}</>
-}
-```
+    return <>{data}</>
+  }
+  ```
 
-> codeSandbox에서 구현해봄
+  > codeSandbox에서 구현해봄
 
 - getBoundingClientRect는 reflow 발생
 
