@@ -69,12 +69,15 @@ class가 아닌 함수형 컴포넌트에 React의 state와 생명주기 기능�
 
 ### Suspense
 
+- [관련포스트 - React.Suspense를 사용하여 비동기 Pending 관리하기](https://sangmin802.github.io/Study/Think/suspense/)
 - [예제](https://codesandbox.io/s/frosty-hermann-bztrp?file=/src/fakeApi.js:701-710)
 
 Suspense는 React에서 사용되고있는 컴포넌트가 사용하고있는 데이터가 아직 준비되지 않았다는것을 React에 알려줄 수 있는 방법.
 
 React에서는 getDerivedStateFromError는 컴포넌트가 마운트되기 이전에 호출되는 생명주기로, 렌더 과정에서 하위에서 발생한 에러를 포착할 수 있음
-React-query와 같이 비동기과정에서 loading과같은 상태를 잡을수 있는데, 이 때의 비동기작업들은 일반 Promise를 반환하는것이 아니라 상태, 결과, 실제 promise를 클로저로 기억하여 값을 반환하는 함수를 반환하는것 같음
+React-query와 같이 비동기과정에서 loading과같은 상태를 잡을수 있는데, 이 때의 비동기작업들은 일반 Promise를 반환하는것이 아니라 상태, 결과, 실제 promise나 해당 promise의 상태를 변수로서 클로저로 기억하여 값을 반환하는 함수를 반환하는것 같음
+
+> promise의 resolve, reject 상태에 따라 클로저로서 참조중인 상태변수도 업데이트시킴
 
 이 때, 만약 상태가 처음의 pending이라면 throw로 해당 promise를 에러의 값으로 전달하여 Suspense가 getDerivedStateFromError를 통해 감지 중단, 지연을 시키고 fallback 컴포넌트를 반환하는것 같음
 
@@ -138,6 +141,8 @@ React-query와 같이 비동기과정에서 loading과같은 상태를 잡을수
 이처럼 필요한 데이터가 존재하지 않을 때, 해당 컴포넌트 자체의 렌더링을 일시 중단시킬 수 있음
 
 ### ErrorBoundary
+
+- [관련포스트 - ErrorBoundary와 비동기 에러 핸들링](https://sangmin802.github.io/Study/Think/error%20boundary/)
 
 React의 컴포넌트 기반 선언형 프로그래밍에서 **render** 과정 중 발생한 에러를 핸들링할 수 있는 컴포넌트
 
