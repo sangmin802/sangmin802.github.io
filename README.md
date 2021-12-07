@@ -67,6 +67,35 @@ class가 아닌 함수형 컴포넌트에 React의 state와 생명주기 기능�
 - React 어플리케이션에서는 상태값을 하나의 key와 value 한 쌍으로 기억을 한다고 함
 - react hook 작동원리의 예제에서 작성된 순서로의 index로 기억하는 것처럼. 아마 예제에서는 상당히 일부분만 구현된것이기 때문에, 추적하는 key-value도 상위에 있을것 같음
 
+### 배포된 모듈들의 선언형 프로그래밍을 위한 useContext 응용
+
+`React`에서 전역상태를 관리할 수 있는 `hook`인데, 모듈을 배포할 때 사용된 방식이 인상깊어서 기록에 남김.
+
+> `K?????F????`
+
+생성된 `context`의 범위를 결정하는 `Provider`내부에 위치하는 자식 컴포넌트들이 오로지 `null`만을 반환하도록 설정되어있음
+이 컴포넌트들은 `ReactElement`를 반환하는것이 아니라 하나의 함수로서 호출이되었을 때, 전역상태에 어떠한 상태값을 할당하는 역할로만 수행됨.
+
+생각해보니 그러한 방법이 `React-Router`와 같이 자주 사용하는 모듈에서도 갖고있는 특징 같음.
+
+```js
+return (
+  <Router>
+    <Route path="/" component={Home} />
+    <Route path="/something" component={Something} />
+  </Router>
+)
+```
+
+실제로 `ReactElement`를 생성하는 아니라 `Router Provider`가 관리하는 전역 상태의 상태값을 업데이트 하는 로직들이 내부에 포함되어있는 사용자정의 컴포넌트
+
+전역상태의 최신상태를 알 기 위해, 해당 상태값을 사용하는 컴포넌트들은 모두 `Provider`내부에 위치해야 하는 특성을 고려하였을 때,
+만약, 이를 컴포넌트 형식이 아니라 `hook`형식으로 모듈을 제공했더라면, 사용하는 사람은 `Provider`역할을 하는 `Router`내부에, 전역상태를 업데이트시켜주는 로직을 스스로 만들고 그것들을 갖고있는 컴포넌트들을 별도로 생성해야 했을 것이다.
+
+> 여러곳에 해당 모듈의 `hook`들이 뿌려질수도 있고, 그 역할을 수행하기 위한 컴포넌트들이 더 생성될 수 도 있는 상황
+
+그러한것을 대신해주기 위해 이러한 로직을 내재하고있지만, `ReactElement`는 반환하지 않는 사용자정의 컴포넌트를 모듈로 만들어서 위의 문제를 대신해주도록 한것 같다. 또한, `path`나 `render 될 컴포넌트`와 같이 핵심적인 요소만을 사용자가 지정하도록 하여, 부가적인 로직을 작성할 필요 없이 선언형의 컴포넌트만을 작성하여도 되도록 해준게 아닐까?
+
 ### Suspense
 
 - [관련포스트 - React.Suspense를 사용하여 비동기 Pending 관리하기](https://sangmin802.github.io/Study/Think/suspense/)
@@ -232,6 +261,10 @@ export default App
 따라서, 데이터의 요청, 에러, 성공을 하나의 값으로 기억하고 업데이트될 때마다 일반 함수 내부에서 `throw`를 시키기 때문에 `ErrorBoundary`가 에러를 잡을수 있는것 아닐까?
 
 > `Suspense`가 `getDerivedStateFromError`를 통해 `Promise`객체를 감지하면 `fallback`을 렌더링하고 중단하는것처럼
+
+`throw`될 때 전달하는 값을 객체로 하면 `ErrorBoundary`의 유연함을 향상시킬 수 있음
+
+> 각각의 에러에 따라 다른 컴포넌트를 렌더링 하고자 할 때, 그에 맞는 `Fallback`컴포넌트를 전달하여 `getDerivedStateFromError` 에서 렌더 이전 상태값에 할당시킬 수 있음
 
 ### Promise와 callback 차이
 
