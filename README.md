@@ -400,8 +400,94 @@ A라는 기능을 개발한다고 하였을 때, 실제 코드에 즉시 개발�
 
 아무래도 1번과 같이 리팩토링을 하였을 때, 테스트코드가 깨진다는점은 치명적이였고 이는 어떤 기능을 담당하는 컴포넌트 자체를 테스트하는것이 아닌 내부의 작은 기능들 자체를 테스트하였기 때문이였던것 같다.
 
-테스트를 작성하는 목표를 다시 생각하고 다시작성해봐야할것 같다.
+테스트를 작성하는 목표를 생각하고 다시작성해봐야할것 같다.
 **사용자의 입장에서 어떠한 행위(이벤트)를 하였을 때 개발자가 의도한 대로 작동되는지를 확인하자**
+
+사용자의 입장에서 동적인 요소만(사용자의 이벤트 혹은 반복적인 변화 등등)을 테스트하고, 요소요소에 집중하기보다는 결과가 참인지를 확인하기
+
+```js
+import React from "react";
+import { render } from "utils/test";
+import TimerContainer from "./timerList";
+import List from "components/list/list";
+
+const initialData = [
+  {
+    name: "무릉도원",
+    src: "/img/island/island_04.png",
+    time: ["00:00", "06:00", "12:00", "18:00"],
+    endTime: "18:00",
+    lv: 400,
+    position: "대항해",
+    contType: "ISLAND",
+  },
+  {
+    name: "기에나",
+    contType: "CO_OCEAN",
+    lv: "-",
+    src: "/img/ocean/ocean_01.png",
+    position: ["아르데타인", "베른", "애니츠"],
+    endPosition: "애니츠",
+    time: ["00:00", "12:00", "18:00"],
+    endTime: "18:00",
+  },
+];
+
+const expectData = [
+  {
+    name: "무릉도원",
+    src: "/img/island/island_04.png",
+    time: ["18:00"],
+    endTime: "18:00",
+    lv: 400,
+    position: "대항해",
+    contType: "ISLAND",
+  },
+  {
+    name: "기에나",
+    contType: "CO_OCEAN",
+    lv: "-",
+    src: "/img/ocean/ocean_01.png",
+    position: ["애니츠"],
+    endPosition: "애니츠",
+    time: ["18:00"],
+    endTime: "18:00",
+  },
+];
+
+// 호이스팅됨
+jest.mock("components/list/list.tsx", () => (props: any) => (
+  <div data-testid={JSON.stringify(props.data)} />
+));
+
+describe("TimerContainer", () => {
+  afterEach(() => {
+    jest.clearAllMocks();
+    jest.restoreAllMocks();
+  });
+
+  it("컨텐츠에서 종료되지 않은 시간대만 유지 및 빠른순으로 정렬", () => {
+    const notification = jest.fn();
+    const mockDateObject = new Date(2021, 1, 1, 17);
+    jest
+      .spyOn(global, "Date")
+      .mockImplementation(() => (mockDateObject as unknown) as string);
+
+    const { getByTestId } = render(
+      <TimerContainer data={initialData} notification={notification} />
+    );
+
+    expect(getByTestId(JSON.stringify(expectData))).toBeTruthy();
+  });
+
+  it("clear", () => {});
+});
+
+```
+
+늘 동일한 결과를 확인하기 위해 테스트 대상 내부에서 사용되는 컴포넌트, 혹은 변화가 잦은 값을 반환하는 메소드들은 `mocking`하였다.
+
+테스트를 진행하고, 사용자의 시선에서 결과물이 원하는 값과 동일한지 `true` 참인지만을 확인하였다.
 
 ### 잡동사니
 
