@@ -468,6 +468,7 @@ describe("TimerContainer", () => {
 
   it("컨텐츠에서 종료되지 않은 시간대만 유지 및 빠른순으로 정렬", () => {
     const notification = jest.fn();
+    // mock 함수가 되기 전에 date 캐싱
     const mockDateObject = new Date(2021, 1, 1, 17);
     jest
       .spyOn(global, "Date")
@@ -489,8 +490,71 @@ describe("TimerContainer", () => {
 
 테스트를 진행하고, 사용자의 시선에서 결과물이 원하는 값과 동일한지 `true` 참인지만을 확인하였다.
 
+### 위치값 조회 reflow 발생
+
+`getBoundingClientRect`, `offsetWidth`와 같이 요소의 기하학적인 요소를 조회할 경우 최신의 위치값을 알 기 위해, 다른 요소의 기하학적 변화가 있는지 판단, `reflow`를 발생시키고 값을 반환한다.
+
+```js
+function logBoxHeight() {
+  box.classList.add('super-big')
+
+  console.log(box.offsetHeight)
+
+  box.classList.add('super-super-big')
+
+  console.log(box.offsetHeight)
+}
+```
+
+위와같은 함수가 호출되었을 때, 최신의 `box.offsetHeight`을 얻기 위해 이전에 추가된 `class`의 기하학적인 변화를 `reflow`한다.
+
+`box.offsetHeight`의 최신의 값을 알기 위해 2번의 `class`가 추가되어 2번의 `reflow`가 불필요하게 발생한다.
+
+```js
+function logBoxHeight() {
+  box.classList.add('super-big')
+  box.classList.add('super-super-big')
+
+  console.log(box.offsetHeight)
+}
+```
+
+위치값의 변화를 발생시킬수 있는 로직들은 하나로 뭉치고, 그러한 위치값을 조회하는 로직은 되도록 최소한의 `reflow`만 발생하도록 한다.
+
+```js
+function resizeAllParagraphsToMatchBlockWidth() {
+  for (var i = 0; i < paragraphs.length; i++) {
+    paragraphs[i].style.width = box.offsetWidth + 'px'
+  }
+}
+```
+
+`i` 번째 요소의 너비를 `box.offsetWidth`와 동일하게 변경시키는 로직이다.
+
+중요한 점은, `A`라는 요소의 기하학적인 값이 변경되었을 때 `B`또한 기하학적인 값이 변경될 수 있기 때문에 `B`의 최신의 위치값을 조회하려한다면 다시 계산하는 `reflow`가 발생한다.
+
+> 주변 환경에 위치한 요소가 변경되었을 때에도 기하학적인 값을 다시 계산함. 당연한것이, 서로 붙어있는 `A`, `B`요소중 `A`의 너비가 달라진다면 `B`또한 위치가 달라질 수있기때문
+
+즉, 저 로직에있어서 `box.offsetWidth`를 계속 호출할 때마다 이전에 `i`번째 요소의 너비가 변경되었기 때문에 최신의 `offsetWidth`를 알기 위해 `reflow`가 발생한다.
+
+```js
+var width = box.offsetWidth
+
+function resizeAllParagraphsToMatchBlockWidth() {
+  for (var i = 0; i < paragraphs.length; i++) {
+    paragraphs[i].style.width = width + 'px'
+  }
+}
+```
+
+`i`번째 요소가 변경될 때 마다 `offsetWidth`의 최신값을 계산하도록 하지 말고, 한번만 계산된 `offsetWidth`를 기억하고 사용하도록 한다.
+
+다른 요소의 위치값 변경으로 달라질 여부가 있는 위치값을 다시 계산하기 위한 `reflow`가 과도하게 발생할 수 있는 레이아웃 스레싱 문제
+
+> `i`번쨰 요소가 업데이트될 때마다 새롭게 계산된 `offsetWidth`를 필요하도록 요청하는것이 아닌, 이전에 한번만 계산된 `offsetWidth`를 기억하여 사용
+
+핵심은 위치값을 요청하는 로직들은 이전에 발생한 자신 혹은 다른 요소들의 기하학적 변화로 인해 달라진 혹은 달라질 수 있다는 가능성에 의해 최신의 위치값을 계산하기 위해서 `reflow`가 발생한다.
+
+- [레이아웃 스레싱 피하기](https://developers.google.com/web/fundamentals/performance/rendering/avoid-large-complex-layouts-and-layout-thrashing#%EA%B0%80%EA%B8%89%EC%A0%81_%EB%A0%88%EC%9D%B4%EC%95%84%EC%9B%83_%ED%94%BC%ED%95%98%EA%B8%B0)
+
 ### 잡동사니
-
-- getBoundingClientRect는 reflow 발생
-
-  > 직접적인 발생 보다는, 최신의 위치값을 알 기 위해, 렌더링 que에 쌓여있는 reflow 유발 작업들을 모두 처리한다고 함.
