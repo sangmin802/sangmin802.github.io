@@ -105,7 +105,15 @@ tag: 'Think'
 
 브라우저가 `layout`, `paint`, `composition` 즉, `Operation`의 모든 단계를 다시 실행하여 우선순위, 고유 크기 등이 변경되는 상황이다.
 
-> `display`, `position`, `width` 등등
+> `display`, `width` 등등
+
+`position : absolute`나 `position : fixed`와 같이 다른 요소들보과 다른 영역에 생성된 요소의 경우 너비와 같은 속성의 변경으로 `reflow`가 발생할 때, 다른 요소에는 영향을 주지 않아서 `position : absolute`와 같은 속성을 사용하지 않았을 때 보다 비교적 적은 `reflow` 비용이 소모된다.
+
+> 성능탭을 확인해보면 발생이 안하는것은 아닌듯
+
+따라서, 복잡한 애니메이션을 갖고 있는 요소라면 `position : absolute`와 같은 속성을 사용하여 다른 요소들은 재계산 되지 않도록 하자.
+
+- [reflow 비용 줄이기](https://developers.google.com/speed/docs/insights/browser-reflow)
 
 ### Repaint
 
@@ -116,6 +124,106 @@ tag: 'Think'
 브라우저별로 `css` 속성과 관련되어 어느 수준의 단계부터 다시계산되어야 하는지 보여주는 사이트가 있다.
 
 - [css triggers](https://csstriggers.com/)
+
+### 위치값 조회 reflow 발생, 레이아웃 스레싱
+
+`getBoundingClientRect`, `offsetWidth`와 같이 요소의 기하학적인 요소를 조회할 경우 최신의 위치값을 알 기 위해, 이전까지 누적된 계산 요청을 일괄처리하여 `reflow`를 발생시키고 값을 반환한다.
+
+```js
+function logBoxHeight() {
+  box.classList.add('super-big')
+
+  console.log(box.offsetHeight)
+
+  box.classList.add('super-super-big')
+
+  console.log(box.offsetHeight)
+}
+```
+
+위와같은 함수가 호출되었을 때, 최신의 `box.offsetHeight`을 얻기 위해 이전에 추가된 `class`의 기하학적인 변화를 `reflow`한다.
+
+`box.offsetHeight`의 최신의 값을 알기 위해 2번의 `class`가 추가되어 2번의 `reflow`가 불필요하게 발생한다.
+
+```js
+function logBoxHeight() {
+  box.classList.add('super-big')
+  box.classList.add('super-super-big')
+
+  console.log(box.offsetHeight)
+}
+```
+
+위치값의 변화를 발생시킬수 있는 로직들은 하나로 뭉치고, 그러한 위치값을 조회하는 로직은 되도록 최소한의 `reflow`만 발생하도록 한다.
+
+```js
+function resizeAllParagraphsToMatchBlockWidth() {
+  for (var i = 0; i < paragraphs.length; i++) {
+    paragraphs[i].style.width = box.offsetWidth + 'px'
+  }
+}
+```
+
+`i` 번째 요소의 너비를 `box.offsetWidth`와 동일하게 변경시키는 로직이다.
+
+중요한 점은, `A`라는 요소의 기하학적인 값이 변경되었을 때 `B`또한 기하학적인 값이 변경될 수 있기 때문에 `B`의 최신의 위치값을 조회하려한다면 다시 계산하는 `reflow`가 발생한다.
+
+> 주변 환경에 위치한 요소가 변경되었을 때에도 기하학적인 값을 다시 계산함. 당연한것이, 서로 붙어있는 `A`, `B`요소중 `A`의 너비가 달라진다면 `B`또한 위치가 달라질 수있기때문
+
+즉, 저 로직에있어서 `box.offsetWidth`를 계속 호출할 때마다 이전에 `i`번째 요소의 너비가 변경되었기 때문에 최신의 `offsetWidth`를 알기 위해 `reflow`가 발생한다.
+
+```js
+var width = box.offsetWidth
+
+function resizeAllParagraphsToMatchBlockWidth() {
+  for (var i = 0; i < paragraphs.length; i++) {
+    paragraphs[i].style.width = width + 'px'
+  }
+}
+```
+
+`i`번째 요소가 변경될 때 마다 `offsetWidth`의 최신값을 계산하도록 하지 말고, 한번만 계산된 `offsetWidth`를 기억하고 사용하도록 한다.
+
+다른 요소의 위치값 변경으로 달라질 여부가 있는 위치값을 다시 계산하기 위한 `reflow`가 과도하게 발생할 수 있는 레이아웃 스레싱 문제
+
+> `i`번쨰 요소가 업데이트될 때마다 새롭게 계산된 `offsetWidth`를 필요하도록 요청하는것이 아닌, 이전에 한번만 계산된 `offsetWidth`를 기억하여 사용
+
+핵심은 위치값을 요청하는 로직들은 이전에 발생한 자신 혹은 다른 요소들의 기하학적 변화로 인해 최신의 위치값을 계산하기 위해서 `reflow`가 발생한다.
+
+```js
+setTimeout(() => {
+  changedBox.style.height = '200px'
+  changedBox.style.height = '400px'
+})
+
+setTimeout(() => {
+  changedBox.style.height = '200px'
+  console.log(box.getBoundingClientRect())
+  changedBox.style.height = '400px'
+})
+```
+
+성능탭에서 확인하였을 때, 위의 두가지에서 첫번째에는 한번의 레이아웃(`reflow`)이 발생하고 아래는 두번의 레이아웃이 발생한다.
+
+활동에 `스타일 다시 계산 예약`이라는 명칭이 있는데, 기하학적인 수치가 변경되었을 때 다시 계산하는것을 즉시실행하는것이 아니라 예약을 넣었다가 일괄처리하는것 같다. 하지만, 중간에 `getBoundingClientRect`와 같이 값을 조회하려고 한다면 최신의 상태를 계산하기 위해 이전의 예약된 모든 계산을 처리하게 되어 한번의 `reflow`가 더 발생하는게 아닐까 예상해본다.
+
+- [레이아웃 스레싱 피하기](https://developers.google.com/web/fundamentals/performance/rendering/avoid-large-complex-layouts-and-layout-thrashing#%EA%B0%80%EA%B8%89%EC%A0%81_%EB%A0%88%EC%9D%B4%EC%95%84%EC%9B%83_%ED%94%BC%ED%95%98%EA%B8%B0)
+
+## 이벤트가 발생할 때
+
+클릭과 같은 사용자의 이벤트가 발생하면, 브라우저 프로세스에서 이벤트를 감지한다.
+
+다만, 이벤트핸들러는 자바스크립트로서 렌더링프로세스의 메인스레드에서 작업을 수행하므로 이벤트가 발생한 좌표를 렌더링프로세스에 전달한다.
+
+스크롤을 할 때, 추가되는 뷰포트를 추가로 그리는 대신 컴포지터스레드에서 각각을 레이어화 하여 합성만을 하도록 하는것이 최근 브라우저의 작동방식이였다.
+
+따라서 이벤트핸들러가 연결된 요소가 컴포지터스레드에서 관리되는 상태라면 컴포지터스레드는 해당 영역을 기억하고, 해당 영역에서 이벤트가 발생하였을 때 렌더링프로세스의 메인스레드에 전달한다.
+
+만약, 이벤트핸들러가 연결된 요소가 없다면 그냥 메인스레드를 기다리지 않고 별도로 합성 작업을 계속한다.
+
+이벤트 위임을 통해 이벤트를 효율적으로 부여하는 기법을 사용하게 되는데, 그럴 경우 컴포지터스레드에서 구분짓는 영역이 늘어나게 되면서 이벤트가 할당되어있지 않는 영역이여도 컴포지터스레드가 이벤트의 입력을 기다리는 상황이 발생한다고 한다.
+
+- [컴포지터스레드와 이벤트](https://developers.google.com/web/updates/2018/09/inside-browser-part4)
 
 ## 결론
 
