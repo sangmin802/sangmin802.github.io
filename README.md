@@ -103,12 +103,13 @@ return (
 
 Suspense는 React에서 사용되고있는 컴포넌트가 사용하고있는 데이터가 아직 준비되지 않았다는것을 React에 알려줄 수 있는 방법.
 
-React에서는 getDerivedStateFromError는 컴포넌트가 마운트되기 이전에 호출되는 생명주기로, 렌더 과정에서 하위에서 발생한 에러를 포착할 수 있음
+React에서는 getDerivedStateFromError는 렌더 단계에서 호출되는 생명주기로, 렌더 과정에서 하위에서 발생한 에러를 포착할 수 있음 또한, 상태를 업데이트할 수 있음
+
 React-query와 같이 비동기과정에서 loading과같은 상태를 잡을수 있는데, 이 때의 비동기작업들은 일반 Promise를 반환하는것이 아니라 상태, 결과, 실제 promise나 해당 promise의 상태를 변수로서 클로저로 기억하여 값을 반환하는 함수를 반환하는것 같음
 
 > promise의 resolve, reject 상태에 따라 클로저로서 참조중인 상태변수도 업데이트시킴
 
-이 때, 만약 상태가 처음의 pending이라면 throw로 해당 promise를 에러의 값으로 전달하여 Suspense가 getDerivedStateFromError를 통해 감지 중단, 지연을 시키고 fallback 컴포넌트를 반환하는것 같음
+이 때, 만약 상태가 처음의 pending이라면 throw를 통해 중단시키고 해당 promise를 에러의 값으로 전달하여 Suspense가 getDerivedStateFromError를 호출하여 fallback 컴포넌트를 반환하는것 같음
 
 > 실제로, Suspense로 감싼 컴포넌트 내부에서 Promise자체를 throw를 통해 에러의 값으로 전달하면 error가 발생하는것이 아닌, Suspense에 지정한 fallback이 반환되는것을 확인할 수 있음
 
