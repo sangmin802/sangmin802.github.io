@@ -291,6 +291,13 @@ data-styled.g1[id="top__S_Top-zcpr2v-0"]{content:"gRTsqc,"}/*!sc*/
 <div style="text-align : center">
   <img src="/img/2021/07/07/3.gif?raw=true" alt="3">
 </div>
+<h2 id="개선된-사항" style="position:relative;"><a href="#%EA%B0%9C%EC%84%A0%EB%90%9C-%EC%82%AC%ED%95%AD" aria-label="개선된 사항 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>개선된 사항</h2>
+<p>외부에서 데이터를 받아오는 비동기작업을 작성하다보면 로딩, 에러, 성공과 같은 3개의 상태를 구분하여 <code class="language-text">UI</code>를 렌더링하게 된다.</p>
+<p>만약, 하나의 컴포넌트에서 두개의 데이터를 받아오는 비동기작업이 수행되어야 한다면 각각의 상태에 따라 다른 렌더링을 위해 9개의 조건문이 필요해질 수 있다.</p>
+<p>필요한 데이터를 가져오는데 성공하여 그 결과를 렌더링하는 함수(컴포넌트)에 그 목적과는 조금 다른 구문들이 무한히 늘어날 수 있다.</p>
+<p>단순히 함수로서 비동기작업을 수행할 때에는 <code class="language-text">try catch</code>를 사용하여 <code class="language-text">await</code>간 발생한 <code class="language-text">reject</code>, <code class="language-text">throw</code>를 거절된 상태로 받아 <code class="language-text">catch</code>에서 에러만을 분리하여 구현할 수 있어 성공과 실패를 나누어서 개발할 수 있었지만</p>
+<p>컴포넌트에서는 이처럼 성공과 실패를 분리할 수 없고 하나의 컴포넌트 내부에서 조건문으로 분리하는수 밖에 없었다.</p>
+<p>이를 <code class="language-text">Suspense</code>와 <code class="language-text">ErrorBoundary</code>의 중단기능을 통해 외부로 위임하여 조금더 뚜렷한 컴포넌트를 작성할 수 있게 되었다.</p>
 <h2 id="테스트중인-부분도-있지만-충분히-좋은걸" style="position:relative;"><a href="#%ED%85%8C%EC%8A%A4%ED%8A%B8%EC%A4%91%EC%9D%B8-%EB%B6%80%EB%B6%84%EB%8F%84-%EC%9E%88%EC%A7%80%EB%A7%8C-%EC%B6%A9%EB%B6%84%ED%9E%88-%EC%A2%8B%EC%9D%80%EA%B1%B8" aria-label="테스트중인 부분도 있지만 충분히 좋은걸 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>테스트중인 부분도 있지만 충분히 좋은걸</h2>
 <p>캐싱, 에러핸들링, 로딩프로세스등 잘 사용한다면 비동기 작업이 개발자에게는 많은 양의 코드를 줄일 수 있고, 에러핸들링을 하는등의 장점과 사용자에게는 좋은 경험을 줄 수 있다는 점에서 큰 매력이 있는것 같다.</p>
 <p>아직, <code class="language-text">suspense</code>와 같이 불완전한 상태의 기능들도 존재하지만, 충분히 사용할 가치가 있는것 같다.</p>
