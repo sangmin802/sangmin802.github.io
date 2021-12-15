@@ -191,8 +191,6 @@ React의 컴포넌트 기반 선언형 프로그래밍에서 **render** 과정 �
 
 `ErrorBoundary`는 사용자의 이벤트(사실 이벤트도 비동기니깐), 비동기작업 등 현재 환경에서 벗어나게 된다면 에러를 핸들링할 수 없다고 함.
 
-> 선언형으로 프로그래밍 된 렌더링 과정에서 발생한 에러를 핸들링하는 목표로 보는게 맞는것 같음.
-
 ```js
 function App() {
   const [handleContinue, handleMount, handleFetch, handleCancel] = useAsync()
@@ -502,6 +500,40 @@ describe("TimerContainer", () => {
 4. 내부의 상태를 가질 수 없다.
    - 하나의 목적을 수행하기 위한 여러개의 상태(속성), 메소드들을 하나로 캡슐화 하여 상태를 변화시킬 수 있는 객체지향과 다르게 함수형은 함수 내부에 상태를 가질수 없고, 외부의 상태에 변화를 주어서도 안된다. 내부의 상태를 가질 수 없다는것이 결과를 반환한기 위한 함수가 호출될 때 마다 상태가 초기화되는 때문이 아닐까 싶다.
    - 이 또한 의문인 점이, `useState`를 통해 고유한 상태를 가질 수 있게 되었다. `hook`의 동작 원리를 고려해보았을 때, 함수 외부의 컨텍스트에서 공문에서 소개된 객체 자료구조에서 순서대로 저장되어있는 상태값을 업데이트하는점이 순수함수의 사이드이펙트나, 상태값을 가질 수 없다는 특징과는 다른 모습을 보여줌.
+
+### requestAnimationFrame
+
+대부분의 디스플레이는 초당 60번 (이를 60fps) 화면을 새로고친다고 한다.
+
+<div style="margin : 0 auto; text-align : center">
+  <img src="https://developers.google.com/web/updates/images/inside-browser/part3/pagejank1.png">
+</div>
+
+브라우저또한 다르지 않다고 하는데 이 횟수가 사용자에게 있어 자연스러운 화면을 보여주는 방법이라고 한다.
+
+하지만, 만약 요소에 할당한 애니메이션이 그 1/60초 내에 모두 해결되지 않으면 페이지가 혹은 애니메이션이 버벅거리는것처럼 보여진다.
+
+렌더링작업과 자바스크립트의 실행은 모두 렌더링프로세스의 메인스레드에서 작동되기 때문에, 긴 시간이 걸리는 자바스크립트 애니메이션이 실행된다면 위의 초당 60번의 게산이 중단될 수 있다고 한다.
+
+<div style="margin : 0 auto; text-align : center">
+  <img src="https://developers.google.com/web/updates/images/inside-browser/part3/pagejank2.png">
+</div>
+
+`requestAnimationFrame`은 이런 자바스크립트 작업을 작은 덩어리로 나누어서 모든 프레임에 실행되도록 도와준다고 한다.
+
+> 60fps를 유지하는 화면의 새로고침 작업이 1/60초 이상의 자바스크립트 작업에 중단되어 대기하지 않도록 나누는것 같음
+
+<div style="margin : 0 auto; text-align : center">
+  <img src="https://developers.google.com/web/updates/images/inside-browser/part3/raf.png">
+</div>
+
+`setInterval`이나 `setTimeout`과 같은 반복적인 애니메이션을 사용하고자 할 때 진행되는 콜백함수가 프레임의 종료시에 시작될 수 있어서 누락될 수 도 있다고 한다.
+
+`requesetAnimationFrame`을 사용하면 프레임 시작 시에 실행되도록 보장해준다고 함.
+
+- [page jank](https://developers.google.com/web/updates/2018/09/inside-browser-part3#%EB%A0%8C%EB%8D%94%EB%A7%81_%ED%8C%8C%EC%9D%B4%ED%94%84%EB%9D%BC%EC%9D%B8_%EC%97%85%EB%8D%B0%EC%9D%B4%ED%8A%B8%EB%8A%94_%EB%B9%84%EC%9A%A9%EC%9D%B4_%EB%A7%8E%EC%9D%B4_%EB%93%AC)
+- [자바스크립트 최적화](https://developers.google.com/web/fundamentals/performance/rendering/optimize-javascript-execution)
+- [애니메이션](https://www.html5rocks.com/en/tutorials/speed/high-performance-animations/)
 
 ### 잡동사니
 
