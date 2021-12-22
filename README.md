@@ -538,11 +538,11 @@ describe("TimerContainer", () => {
 
 ### 잡동사니
 
-- 표현식(expression)은 변수할당, `*` `+`와 같은 수식들을 의미한다.
-- 구문(statement)은 프로그래밍에서 실행 가능한 최소의 독립적인 조각을 의미한다.
+- 표현식(`expression`)은 변수할당, `*` `+`와 같은 수식들을 의미한다.
+- 구문(`statement`)은 프로그래밍에서 실행 가능한 최소의 독립적인 조각을 의미한다.
 - 컴퓨터가 실행을 하는것은 구문 단순 할당과같은것은 표현식인듯 함.
   따라서 모든 표현식들은 구문에 포함됨
-- es6 -> es5와 같이 하나의 언어를 다른 수준으로 변환하는것을 트랜스파일
+- `es6` -> `es5`와 같이 하나의 언어를 다른 수준으로 변환하는것을 트랜스파일
 - 아예 다른 언어로 변환하는것을 컴파일
 - [`100`~`500` 상태코드](https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=kjoony35&logNo=110079596591)
 - [type alias vs interface](https://medium.com/@martin_hotell/interface-vs-type-alias-in-typescript-2-7-2a8f1777af4c)
