@@ -548,3 +548,4 @@ describe("TimerContainer", () => {
 - [type alias vs interface](https://medium.com/@martin_hotell/interface-vs-type-alias-in-typescript-2-7-2a8f1777af4c)
   > 큰 차이로 `interface`는 동일한 키워드로 두번 선언되었을 때, 병합을 하지만 `type alias`는 그렇지 않음. 되도록 `interface`사용을 권장하고 배열과 같은 구조의 갯수와 위치에 맞는 타입을 고정하는 튜플과 같은 경우에 `type alias`를 사용
 - [http header](https://jeong-pro.tistory.com/181)
+- [git merge 종류](https://meetup.toast.com/posts/122)
