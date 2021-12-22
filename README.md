@@ -544,3 +544,7 @@ describe("TimerContainer", () => {
   따라서 모든 표현식들은 구문에 포함됨
 - es6 -> es5와 같이 하나의 언어를 다른 수준으로 변환하는것을 트랜스파일
 - 아예 다른 언어로 변환하는것을 컴파일
+- [`100`~`500` 상태코드](https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=kjoony35&logNo=110079596591)
+- [type alias vs interface](https://medium.com/@martin_hotell/interface-vs-type-alias-in-typescript-2-7-2a8f1777af4c)
+  > 큰 차이로 `interface`는 동일한 키워드로 두번 선언되었을 때, 병합을 하지만 `type alias`는 그렇지 않음. 되도록 `interface`사용을 권장하고 배열과 같은 구조의 갯수와 위치에 맞는 타입을 고정하는 튜플과 같은 경우에 `type alias`를 사용
+- [http header](https://jeong-pro.tistory.com/181)
