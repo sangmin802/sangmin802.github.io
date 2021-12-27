@@ -125,6 +125,15 @@ data-styled.g1[id="top__S_Top-zcpr2v-0"]{content:"gRTsqc,"}/*!sc*/
 <li><code class="language-text">output</code>의 경로를 통해 <code class="language-text">build</code>된 파일을 저장함.</li>
 <li><code class="language-text">html</code>파일의 <code class="language-text">script</code>경로는 <code class="language-text">build</code>된 파일로 하면 됨.</li>
 </ol>
+<h2 id="tree-shaking" style="position:relative;"><a href="#tree-shaking" aria-label="tree shaking permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Tree shaking</h2>
+<p>여러 모듈을 하나의 <code class="language-text">entry</code>로 연결하여 서버로의 요청이 전달되는 횟수를 획기적으로 줄일 수 있었지만, 그 용량이 거대해지는상황은 필수적으로 오게된다.</p>
+<p>이 때, 모듈에서 불필요한 코드들을 정리하는 등을 통해 용량을 줄이는것을 <code class="language-text">Tree shaking</code>이라고 한다.</p>
+<blockquote>
+<p>사용되지 않는 <code class="language-text">export</code>를 <code class="language-text">import</code>하는 코드들을 제외시키는 등..</p>
+</blockquote>
+<ul>
+<li><a href="https://webpack.kr/guides/tree-shaking/">webpack Tree shaking</a></li>
+</ul>
 <h1 id="babel" style="position:relative;"><a href="#babel" aria-label="babel permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Babel</h1>
 <ul>
 <li>
@@ -133,6 +142,10 @@ data-styled.g1[id="top__S_Top-zcpr2v-0"]{content:"gRTsqc,"}/*!sc*/
 <p><code class="language-text">IE</code>에 대한 지원이 하나 둘 끝나가고 있다. 하나도 안불쌍하고 잘가라. <code class="language-text">Chrome</code>만세</p>
 </blockquote>
 </li>
+</ul>
+<p><code class="language-text">ES5</code>와 같이 호환되는 스크립트로 트랜스파일을 해주는 과정에서 <code class="language-text">Map</code>, <code class="language-text">Set</code>과 같이 새로 생긴 기능들이 존재하지 않는 환경에서 유사하게 작동될 수 있는 코드로 바꿔주는 것을 <strong>폴리필</strong>이라고 한다.</p>
+<ul>
+<li><a href="https://ko.javascript.info/polyfills">바벨과 폴리필</a></li>
 </ul>
 <h2 id="babel-설치" style="position:relative;"><a href="#babel-%EC%84%A4%EC%B9%98" aria-label="babel 설치 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Babel 설치</h2>
 <ul>
