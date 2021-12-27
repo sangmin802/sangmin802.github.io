@@ -549,3 +549,6 @@ describe("TimerContainer", () => {
   > 큰 차이로 `interface`는 동일한 키워드로 두번 선언되었을 때, 병합을 하지만 `type alias`는 그렇지 않음. 되도록 `interface`사용을 권장하고 배열과 같은 구조의 갯수와 위치에 맞는 타입을 고정하는 튜플과 같은 경우에 `type alias`를 사용
 - [http header](https://jeong-pro.tistory.com/181)
 - [git merge 종류](https://meetup.toast.com/posts/122)
+  - merge : 브랜치에 기록된 모든 커밋을 유지한 채로 병합함
+  - squash : 브랜치에서 작업한 커밋들을 단 하나의 커밋으로 묶어서 병합함.
+    > 브랜치에 기록된 지저분한? 누적된 커밋들을 정리하여 병합하는 느낌
