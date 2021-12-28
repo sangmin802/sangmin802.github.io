@@ -536,6 +536,44 @@ describe("TimerContainer", () => {
 - [자바스크립트 최적화](https://developers.google.com/web/fundamentals/performance/rendering/optimize-javascript-execution)
 - [애니메이션](https://www.html5rocks.com/en/tutorials/speed/high-performance-animations/)
 
+### Vue, React
+
+`Vue`의 특징을 비교적 잘 알고있는 `React`와 비교하여 생각해봄
+
+`Vue`는 `MVVM`디자인 패턴을 갖고있고, `Model`, `View`, `ViewModel`의 약어라고 함. `Model`과 `View`는 다른 디자인패턴과 동일하고, `ViewModel`의 경우 `Vue Instance`로 구성되는 `View`에서 사용되는 `Model`의 데이터들을 `View`에 넘겨주는 역할을 하고, `View`와 관련된 로직들을 관리하기도 함.
+
+> `Controller`같은건가?
+
+`Vue`에서 `template`이 `view` `Vue instance`에서 `data`가 `model`, `View instance`의 나머지가 `ViewModel`인듯 함.
+
+- [MVVM, Vue](https://goodteacher.tistory.com/195)
+- [캡틴판교 Vue](https://joshua1988.github.io/web-development/vuejs/vuejs-tutorial-for-beginner/)
+
+`React`의 `hook`중 `useEffect`와 같이 특정 상태의 변화를 감지하고 이후의 사이드이펙트 작업을 처리하는것은 `watch`가 대신할 수 있을것 같음. 다만 배열형식이 아닌 단일 상태값을 `key`로 하여 작동되는듯 함.
+
+`React`에서는 `HTML`과 `JS`가 함께 작성되어 하나의 `createElement`의 역할을 수행하는 `JSX`를 사용하지만, `Vue`는 하나의 파일에 `HTML`, `CSS`, `JS`가 모두 사용됨.
+
+> `template`, `css`, `script`
+
+`Vue Cli`를 사용하게될 경우, `new Vue`로 하나의 인스턴스가 생성되고 그 내부를 구성하는 형식인듯 함. 이후의 컴포넌트단위는 `export`되는 단일 객체로 진행
+
+> 단 하나의 인스턴스
+
+```js
+new Vue({
+  render: h => h(App),
+}).$mount('#app')
+```
+
+```js
+ReactDOM.render(
+  <App />
+  document.getElementById('root')
+)
+```
+
+`React`의 `ReactDOM.render`과 유사하게 작동되는듯 함.
+
 ### 잡동사니
 
 - 표현식(`expression`)은 변수할당, `*` `+`와 같은 수식들을 의미한다.
