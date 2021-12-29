@@ -177,6 +177,18 @@ tag: 'Think'
 
 최종적으로 승인이 된 `request`를 확인할 수 있다.
 
+### merge 종류
+
+- [git merge 종류](https://meetup.toast.com/posts/122)
+  - merge : 브랜치에 기록된 모든 커밋을 유지한 채로 병합함
+  - squash : 브랜치에서 작업한 커밋들을 단 하나의 커밋으로 묶어서 병합함.
+    > 브랜치에 기록된 지저분한? 누적된 커밋들을 정리하여 병합하는 느낌
+
+`dev` -> `master`는 일반머지나 rebase머지가 좋다고 함.
+장기 유지중인 브랜치 간 squash는 conflict가 발생한다는것 같음.
+
+- [squash and merge conflicts](https://stackoverflow.com/questions/55113672/git-conflicts-after-squash-merge/55113815)
+
 ### 로컬 최신화
 
 만약 `fork`를 통해 루트 프로젝트를 가져와서 개발을 하는 상황일 경우, 내 로컬의 개발 환경을 최신상태로 유지할 필요가 있다.
