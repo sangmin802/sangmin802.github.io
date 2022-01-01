@@ -540,6 +540,8 @@ describe("TimerContainer", () => {
 
 `Vue`의 특징을 비교적 잘 알고있는 `React`와 비교하여 생각해봄
 
+#### MVVM
+
 `Vue`는 `MVVM`디자인 패턴을 갖고있고, `Model`, `View`, `ViewModel`의 약어라고 함. `Model`과 `View`는 다른 디자인패턴과 동일하고, `ViewModel`의 경우 `Vue Instance`로 구성되는 `View`에서 사용되는 `Model`의 데이터들을 `View`에 넘겨주는 역할을 하고, `View`와 관련된 로직들을 관리하기도 함.
 
 > `Controller`같은건가?
@@ -549,11 +551,17 @@ describe("TimerContainer", () => {
 - [MVVM, Vue](https://goodteacher.tistory.com/195)
 - [캡틴판교 Vue](https://joshua1988.github.io/web-development/vuejs/vuejs-tutorial-for-beginner/)
 
+#### useEffect, watch
+
 `React`의 `hook`중 `useEffect`와 같이 특정 상태의 변화를 감지하고 이후의 사이드이펙트 작업을 처리하는것은 `watch`가 대신할 수 있을것 같음. 다만 배열형식이 아닌 단일 상태값을 `key`로 하여 작동되는듯 함.
+
+#### JSX
 
 `React`에서는 `HTML`과 `JS`가 함께 작성되어 하나의 `createElement`의 역할을 수행하는 `JSX`를 사용하지만, `Vue`는 하나의 파일에 `HTML`, `CSS`, `JS`가 모두 사용됨.
 
 > `template`, `css`, `script`
+
+#### ReactDOM.render, vue mount
 
 `Vue Cli`를 사용하게될 경우, `new Vue`로 하나의 인스턴스가 생성되고 그 내부를 구성하는 형식인듯 함. 이후의 컴포넌트단위는 `export`되는 단일 객체로 진행
 
@@ -573,6 +581,76 @@ ReactDOM.render(
 ```
 
 `React`의 `ReactDOM.render`과 유사하게 작동되는듯 함.
+
+#### slot, children
+
+`React`의 경우 자식 요소들을 그대로 작성해, 자식요소들을 갖는 컴포넌트의 `children`속성을 사용하여 유연한 컴포넌트를 만들 수 있음
+`Vue`의 경우, `slot`이라는 태그를 사용하여 특정 `slot`에 `name`속성을 부여하여 1대1 매칭을 해줘서 유연한 컴포넌트로 만드는것 같음.
+
+```html
+<template #main>
+  <p>메인 컨텐츠</p>
+  <p>메인 컨텐츠</p>
+  <p>메인 컨텐츠</p>
+</template>
+```
+
+```js
+  components: {
+    "my-component": {
+      template: `
+        <slot name="main">메인컨텐츠1이 없습니다</slot>
+      `,
+    },
+  },
+```
+
+괜찮은 점은, `slot`에 매칭되는 요소가 없다면 대체되는 내용을 지정해줄 수 있었음.
+
+> 먄약, p태그의 메인컨텐츠 3개가 없다면 메인컨텐츠1이 없습니다가 렌더됨
+
+```html
+<div id="slot3">
+  <my-list :items="arr">
+    <template #item="{item : {id, text}}">
+      <li>{{id}}, {{text}}</li>
+    </template>
+  </my-list>
+</div>
+```
+
+```js
+new Vue({
+  el: '#slot3',
+  data: {
+    arr: [
+      { id: 1, text: 'banana' },
+      { id: 2, text: 'apple' },
+      { id: 3, text: 'grapes' },
+    ],
+  },
+  components: {
+    'my-list': {
+      props: ['items'],
+      template: `
+        <ul>
+          <slot
+            name="item"
+            v-for="item in items"
+            :item="item"
+          >
+          </slot>
+        </ul>
+      `,
+    },
+  },
+})
+```
+
+`vue`는 `v-for`디렉티브를 통해 `React`에서의 `.map`처럼 여러개의 자식요소를 생성할 수 있는데, 이 떄의 상황에서도 `v-slot`을 사용하여 유연하게 설계하도록 도움을 주었음.
+특이했던점은, 배열을 속성으로 전달한것까지는 당연한데, 반복하여 조회하는 배열 내 단일 요소를 마치 상위컴포넌트의 `slot`에 매칭된 요소로 전달해주는 느낌처럼 작동됨.
+
+> 아마 template 태그의 내용이 매칭된 slot과 대체되면서 속성을 공유한다는게 아닐까 라는 생각?
 
 ### 잡동사니
 
