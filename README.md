@@ -532,6 +532,8 @@ describe("TimerContainer", () => {
 
 `requesetAnimationFrame`을 사용하면 프레임 시작 시에 실행되도록 보장해준다고 함.
 
+`requesetAnimationFrame` 또한 비동기로 작업이 처리되지만, 매크로태스크 큐가 아닌 별도의 애니메이션 큐에 저장되어 스크립트의 진행상황에 영향을 받지않는것이 핵심인것 같다.
+
 - [page jank](https://developers.google.com/web/updates/2018/09/inside-browser-part3#%EB%A0%8C%EB%8D%94%EB%A7%81_%ED%8C%8C%EC%9D%B4%ED%94%84%EB%9D%BC%EC%9D%B8_%EC%97%85%EB%8D%B0%EC%9D%B4%ED%8A%B8%EB%8A%94_%EB%B9%84%EC%9A%A9%EC%9D%B4_%EB%A7%8E%EC%9D%B4_%EB%93%AC)
 - [자바스크립트 최적화](https://developers.google.com/web/fundamentals/performance/rendering/optimize-javascript-execution)
 - [애니메이션](https://www.html5rocks.com/en/tutorials/speed/high-performance-animations/)
