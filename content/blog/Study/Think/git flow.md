@@ -212,6 +212,54 @@ tag: 'Think'
    - `pull request`를 생성할 때, `upstream`의 브랜치, 자신의 브랜치 등 모든 브랜치를 선택할 수 있음
    - 당연히, 동일 `branch`로는 전달 x, 대상 브랜치랑 차이가 없을 경우에도 변화가 `pull request`가 작성되지 않는다.
 
+### merge
+
+`git merge branchname` 현재 브랜치에 이후에 기재된 브랜치의 변경된 커밋내용들을 하나로 묶어서 병합한다.
+
+이 때, 이후의 브랜치와 `fast-forward`의 관계라면 그냥 따라가는 형식으로 동등한 위치에 서게되어 병합되었다는 커밋메시지를 남길 수 없기 때문에(새로운 커밋추가가 아니라 그냥 따라가는 느낌) 대부분 의도적으로 `git merge --no-ff branchname`를 통해 한단계 추가된 커밋을 남기는 편 이라고 한다.
+
+#### fast-forward
+
+별다른 커밋이 추가될 필요 없이 이후 커밋의 위치에 동등하게 이동할 수 있는 상태를 의미하는것 같다.
+
+대체로 병합과 같은 작업을 수행하였을 때 있는 일인데, 병합을 하였다는 커밋 메시지를 남기기 위해 `--no-ff`를 통해 `fast-forward`작업이 아닌 커밋을 남길 수 있도록 한다는것 같다.
+
+### rebase
+
+`git rebase branchname` 현재 브랜치에 있었던 변경된 커밋내용들을 이후에 기재된 브랜치의 커밋 변경사항들 뒤에 이어붙인다.
+
+마치 이후에 기재된 브랜치에서만 작업을 한 것 처럼 보여진다.
+
+> 솔직히 아직까지 필요를 잘 모르겠다.
+
+## release
+
+변경된 모든 작업이 반영된 `develop`브랜치를 기준으로 `release`브랜치를 `checkout`한다.
+
+이때 발생하는 버그들은 `release` 브랜치에 바로 반영하고, 마찬가지로 `develop`브랜치에도 `merge` 해준다.
+
+```js
+;`git checkout devlop` || ;`git checkout release`
+;`git merge --no-ff release/fixes`
+```
+
+`release`브랜치의 작업이 완료되면 `master`브랜치에서 `merge`해간다.
+
+```js
+;`git checkout master`
+;`git merge --no-ff release`
+```
+
+배포용 `release`가 병합된 `master`브랜치에 해당 `release`의 번호인 `tag`를 달아주도록 한다.
+
+## hotFix
+
+만약, 배포된 상태에 긴급한 버그가 발생했다면, `master` 브랜치에서 바로 `hotfixes`라는 브랜치를 따서 작업을 하고, `master`브랜치에 직접 병합하고 소수를 추가하여 태그명을 업데이트한다
+
+> 1.1, 1.2 ...
+
+당연히 `hotfixes` 브랜치는 개발중인 `develop`브랜치에도 병합된다.
+
 ## 아쉬웠던 점
 
 개인 프로젝트를 가지고 진행하였기 때문에 중간중간 정확하지 않은 부분이 있을 수 있다.
@@ -228,3 +276,4 @@ tag: 'Think'
 
 - [git flow 적응기](https://jeong-pro.tistory.com/196)
 - [우아한 형제들 git flow](https://techblog.woowahan.com/2553/)
+- [git flow 생활코딩](https://www.youtube.com/watch?v=EzcF6RX8RrQ)
