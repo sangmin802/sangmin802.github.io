@@ -81,22 +81,27 @@ data-styled.g1[id="top__S_Top-zcpr2v-0"]{content:"gRTsqc,"}/*!sc*/
 <p><code class="language-text">setTransition</code>으로 감싼 ★상태 업데이트★는 비교적 긴급하지 않은 이벤트로 전환시켜준다.</p>
 <p>만약 사용자의 <code class="language-text">input</code> 이벤트가 호출이 되고 그 값을 저장하는 <code class="language-text">setState</code>가 있다고 가정 <code class="language-text">setState</code>를 위의 <code class="language-text">hook</code>으로 전환시켜주면 사용자의 <code class="language-text">input</code> 이벤트가 계속 진행중일 때에는 <code class="language-text">setState</code>가 중단된다는것 같음.</p>
 <p>다른 페이지로 이동하거나, 특정 컴포넌트를 렌더링하는데 데이터가 준비되자 않았을 경우 로딩스피너를 통해 사용자에게 준비중을 알림.</p>
-<p>이것이 최선의 방법이라고 생각하여 사용해왔지만 때로는 이전의 데이터를 보여주는것이 더 바람직한 경우가 있음</p>
+<p>이것이 최선의 방법이라고 생각하여 사용해왔지만 때로는 이전의 데이터를 보여주는것이 더 바람직한 경우가 있음. 즉 다른 화면으로의 전환이 로딩보다는 이전의 화면을 유지하는것이 더 적합할 경우(그래서 해당 <code class="language-text">hook</code>에 전환이라는 이름을 지어줬나봄..!?)</p>
 <blockquote>
 <p>테이블 리스트를 보여주고 페이지네이션으로 이동하는 등</p>
 </blockquote>
-<p>이 때 <code class="language-text">useTransition</code>을 사용하여 새로운 데이터를 불러오는 로직 자체를 긴급하지 않음으로 설정하여 이전의 <code class="language-text">ui</code>를 유지시킬 수 있음.
-한가지 궁금한점은, 비동기를 효율적으로 관리하기 위해 사용되는 <code class="language-text">React-Query</code>에는 이전의 데이터를 유지할 수 있는 기능과 <code class="language-text">isFetching</code>으로 기존의 <code class="language-text">ui</code>는 유지하고 최신의 데이터를 받아오는 중임을 상태를 알려주는데, 이와 <code class="language-text">useTransition</code>이 어떤 차이가 있을지 궁금</p>
+<p>이 때 <code class="language-text">useTransition</code>을 사용하여 새로운 데이터를 불러오는 로직 자체를 긴급하지 않음으로 설정하여 이전의 <code class="language-text">ui</code>를 유지시킬 수 있음.</p>
+<p>한가지 궁금한점은, 비동기를 효율적으로 관리하기 위해 사용되는 <code class="language-text">React-Query</code>에는 이전의 데이터를 유지할 수 있는 기능과 <code class="language-text">isFetching</code>으로 기존의 <code class="language-text">ui</code>는 유지하고 최신의 데이터를 받아오는 중임을 상태를 알려주는데, 이와 <code class="language-text">useTransition</code>이 어떤 차이가 있을지 궁금</p>
 <blockquote>
-<p>아예 데이터가 존재하지 않아서 보여줄 <code class="language-text">ui</code>가 없을 때에는 <code class="language-text">Suspense.fallback</code>으로 로딩스피너를, 이전의 <code class="language-text">ui</code>가 존재한다면 그것을 유지하는</p>
+<p>아예 데이터가 존재하지 않아서 보여줄 <code class="language-text">ui</code>가 없을 때에는 <code class="language-text">Suspense.fallback</code>으로 로딩스피너를, 이전의 <code class="language-text">ui</code>가 존재한다면 그것을 유지하는 방식으로</p>
 </blockquote>
 <ul>
+<li><a href="https://ko.reactjs.org/docs/concurrent-mode-reference.html#usetransition">공식문서-ko 전환에 대한 설명</a></li>
 <li><a href="https://www.youtube.com/watch?v=Kd0d-9RQHSw">전환을 사용하여 ui 작업을 동시에</a></li>
 </ul>
-<h3 id="usedeferredvalue---외부에서-관리하는-상태에-대한-전환" style="position:relative;"><a href="#usedeferredvalue---%EC%99%B8%EB%B6%80%EC%97%90%EC%84%9C-%EA%B4%80%EB%A6%AC%ED%95%98%EB%8A%94-%EC%83%81%ED%83%9C%EC%97%90-%EB%8C%80%ED%95%9C-%EC%A0%84%ED%99%98" aria-label="usedeferredvalue   외부에서 관리하는 상태에 대한 전환 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>useDeferredValue - 외부에서 관리하는 상태에 대한 전환</h3>
-<p><code class="language-text">redux</code>같은 다른 라이브러리나 <code class="language-text">props</code>로 전달받은 상태에 전환을 부여하고자 할 때는</p>
+<h3 id="usedeferredvalue--" style="position:relative;"><a href="#usedeferredvalue--" aria-label="usedeferredvalue   permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>useDeferredValue -</h3>
+<p><code class="language-text">redux</code>같은 다른 라이브러리나 <code class="language-text">props</code>로 전달받은 상태, 혹은 단일 값에 대해 전환(지연)을 부여하고자 할 때는</p>
 <div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">const</span> 전환상태 <span class="token operator">=</span> <span class="token function">useDeferredValue</span><span class="token punctuation">(</span>상태<span class="token punctuation">)</span></code></pre></div>
 <p>위처럼 사용할 수 있음. 이 또한 <code class="language-text">isDelay</code>가 제공되는것 같지는 않음</p>
+<p>해당 <code class="language-text">hook</code>을 사용하여 디바운싱 기능을 더 간단하게 표현할 수 있다고함.</p>
+<ul>
+<li><a href="https://ko.reactjs.org/docs/concurrent-mode-reference.html#usedeferredvalue">공식문서-ko useDefferedValue</a></li>
+</ul>
 <h3 id="usetransition-전환-훅-느낌" style="position:relative;"><a href="#usetransition-%EC%A0%84%ED%99%98-%ED%9B%85-%EB%8A%90%EB%82%8C" aria-label="usetransition 전환 훅 느낌 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>useTransition 전환 훅 느낌</h3>
 <p>10000개의 리스트를 검색값에 대한 filter를 통해 렌더링을 진행할 때 123을 쳤다가 블락잡아서 한번에 지웠을 경우를 생각</p>
 <p>그러면 10000개의 리스트를 다시 계산하느라 렌더링이 중단되고 사용자가 지웠다는 행위도 반영되지 않았다가 리스트 계산이 종료되면 지웠다는 행위가 ui에 반영되고, 리스트도 같이 반영됨</p>
@@ -118,6 +123,13 @@ data-styled.g1[id="top__S_Top-zcpr2v-0"]{content:"gRTsqc,"}/*!sc*/
 <p>컴포넌트 중단을 통해 준비되지 않은 컴포넌트가 마운트되고 언마운트 되는 렌더링 비용을 줄일 수 있음</p>
 <ul>
 <li><a href="https://github.com/reactjs/rfcs/blob/main/text/0213-suspense-in-react-18.md#behavior-change-committed-trees-are-always-consistent">깃 suspense를 사용한 로딩처리에 대한 변경점</a></li>
+</ul>
+<h2 id="automatic-batching" style="position:relative;"><a href="#automatic-batching" aria-label="automatic batching permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>automatic batching</h2>
+<p><code class="language-text">React</code> 호출된 <code class="language-text">setState</code>들을 하나로 묶어 일괄처리하도록 <code class="language-text">batching</code>이 적용되고 있었는데, 비동기로 수행되는 이벤트 내에서는 이것이 잘 작동되지 않았던 문제가 있었다.</p>
+<p>이번에 18버전으로 업데이트되면서 더 완전한 <code class="language-text">batching</code>이 되었다.
+이 기능에 대한 자세한 내용은 아래의 링크에서</p>
+<ul>
+<li><a href="https://sangmin802.github.io/Study/Think/state%20batch%20update/">React batching</a></li>
 </ul>
 <h2 id="별도" style="position:relative;"><a href="#%EB%B3%84%EB%8F%84" aria-label="별도 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>별도</h2>
 <h3 id="reac18-typescript" style="position:relative;"><a href="#reac18-typescript" aria-label="reac18 typescript permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Reac18-TypeScript</h3>
