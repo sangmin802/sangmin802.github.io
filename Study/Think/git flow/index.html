@@ -185,11 +185,9 @@ data-styled.g1[id="top__S_Top-zcpr2v-0"]{content:"gRTsqc,"}/*!sc*/
 <li><a href="https://stackoverflow.com/questions/55113672/git-conflicts-after-squash-merge/55113815">squash and merge conflicts</a></li>
 </ul>
 <h3 id="로컬-최신화" style="position:relative;"><a href="#%EB%A1%9C%EC%BB%AC-%EC%B5%9C%EC%8B%A0%ED%99%94" aria-label="로컬 최신화 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>로컬 최신화</h3>
-<p>만약 <code class="language-text">fork</code>를 통해 루트 프로젝트를 가져와서 개발을 하는 상황일 경우, 내 로컬의 개발 환경을 최신상태로 유지할 필요가 있다.</p>
-<blockquote>
-<p>작업을 완료 하고, 나의 <code class="language-text">origin</code>으로 <code class="language-text">push</code>하기 전</p>
-</blockquote>
-<p>이런 상황의 루트 프로젝트를 <code class="language-text">upstream</code>이라고 부르며 해당 저장소를 원격 저장소에 추가를 해줄 필요가 있다.</p>
+<p>만약 <code class="language-text">fork</code>를 통해 루트 프로젝트를 가져와서 개발을 하는 상황일 경우, 내 로컬의 개발 환경을 최신상태로 유지할 필요가 있다.
+이런 상황의 루트 프로젝트를 <code class="language-text">upstream</code>이라고 부르며 해당 저장소를 원격 저장소에 추가를 해줄 필요가 있다.</p>
+<p>또한, 진행중인 <code class="language-text">feature</code>브랜치에서 <code class="language-text">upstream</code> <code class="language-text">develop</code>에 추가된 기능이 필요하다면 <code class="language-text">pull</code> 해서 사용하자</p>
 <ol>
 <li>
 <p>저장소 - 원격저장소에 경로 추가</p>
@@ -214,7 +212,6 @@ data-styled.g1[id="top__S_Top-zcpr2v-0"]{content:"gRTsqc,"}/*!sc*/
 <li>
 <p>이후 <code class="language-text">stash</code>에 저장해놓은 코드를 다시 현재 브랜치로 가져오고, 충돌 파일은 직접 합치기</p>
 <ul>
-<li><code class="language-text">stash</code>에 저장을 하고 최신 개발 환경을 <code class="language-text">pull</code>하던, 커밋을 먼저 하고 <code class="language-text">pull</code>하던 상관없지만, <code class="language-text">origin</code>에 <code class="language-text">push</code>하기 전에 최신 개발 환경을 <code class="language-text">pull</code>하는것이 정말 중요한듯.</li>
 <li>동일 파일 내 변경사항이 있거나, <code class="language-text">pull</code>한 브랜치에서 업데이트된 내용이 있다면 충돌이 발생할 텐데(대부분 생기는 듯), 잘 병합해주면 큰 문제 없음</li>
 </ul>
 </li>
