@@ -49,26 +49,32 @@ startTransition(...)
 
 다른 페이지로 이동하거나, 특정 컴포넌트를 렌더링하는데 데이터가 준비되자 않았을 경우 로딩스피너를 통해 사용자에게 준비중을 알림.
 
-이것이 최선의 방법이라고 생각하여 사용해왔지만 때로는 이전의 데이터를 보여주는것이 더 바람직한 경우가 있음
+이것이 최선의 방법이라고 생각하여 사용해왔지만 때로는 이전의 데이터를 보여주는것이 더 바람직한 경우가 있음. 즉 다른 화면으로의 전환이 로딩보다는 이전의 화면을 유지하는것이 더 적합할 경우(그래서 해당 `hook`에 전환이라는 이름을 지어줬나봄..!?)
 
 > 테이블 리스트를 보여주고 페이지네이션으로 이동하는 등
 
 이 때 `useTransition`을 사용하여 새로운 데이터를 불러오는 로직 자체를 긴급하지 않음으로 설정하여 이전의 `ui`를 유지시킬 수 있음.
+
 한가지 궁금한점은, 비동기를 효율적으로 관리하기 위해 사용되는 `React-Query`에는 이전의 데이터를 유지할 수 있는 기능과 `isFetching`으로 기존의 `ui`는 유지하고 최신의 데이터를 받아오는 중임을 상태를 알려주는데, 이와 `useTransition`이 어떤 차이가 있을지 궁금
 
-> 아예 데이터가 존재하지 않아서 보여줄 `ui`가 없을 때에는 `Suspense.fallback`으로 로딩스피너를, 이전의 `ui`가 존재한다면 그것을 유지하는
+> 아예 데이터가 존재하지 않아서 보여줄 `ui`가 없을 때에는 `Suspense.fallback`으로 로딩스피너를, 이전의 `ui`가 존재한다면 그것을 유지하는 방식으로
 
+- [공식문서-ko 전환에 대한 설명](https://ko.reactjs.org/docs/concurrent-mode-reference.html#usetransition)
 - [전환을 사용하여 ui 작업을 동시에](https://www.youtube.com/watch?v=Kd0d-9RQHSw)
 
-### useDeferredValue - 외부에서 관리하는 상태에 대한 전환
+### useDeferredValue -
 
-`redux`같은 다른 라이브러리나 `props`로 전달받은 상태에 전환을 부여하고자 할 때는
+`redux`같은 다른 라이브러리나 `props`로 전달받은 상태, 혹은 단일 값에 대해 전환(지연)을 부여하고자 할 때는
 
 ```js
 const 전환상태 = useDeferredValue(상태)
 ```
 
 위처럼 사용할 수 있음. 이 또한 `isDelay`가 제공되는것 같지는 않음
+
+해당 `hook`을 사용하여 디바운싱 기능을 더 간단하게 표현할 수 있다고함.
+
+- [공식문서-ko useDefferedValue](https://ko.reactjs.org/docs/concurrent-mode-reference.html#usedeferredvalue)
 
 ### useTransition 전환 훅 느낌
 
@@ -97,6 +103,15 @@ const 전환상태 = useDeferredValue(상태)
 컴포넌트 중단을 통해 준비되지 않은 컴포넌트가 마운트되고 언마운트 되는 렌더링 비용을 줄일 수 있음
 
 - [깃 suspense를 사용한 로딩처리에 대한 변경점](https://github.com/reactjs/rfcs/blob/main/text/0213-suspense-in-react-18.md#behavior-change-committed-trees-are-always-consistent)
+
+## automatic batching
+
+`React` 호출된 `setState`들을 하나로 묶어 일괄처리하도록 `batching`이 적용되고 있었는데, 비동기로 수행되는 이벤트 내에서는 이것이 잘 작동되지 않았던 문제가 있었다.
+
+이번에 18버전으로 업데이트되면서 더 완전한 `batching`이 되었다.
+이 기능에 대한 자세한 내용은 아래의 링크에서
+
+- [React batching](https://sangmin802.github.io/Study/Think/state%20batch%20update/)
 
 ## 별도
 
