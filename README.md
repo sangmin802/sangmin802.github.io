@@ -36,7 +36,7 @@
 - ReactDOM.render에 엘리먼트가 전달되면, React 엘리먼트 트리(virtual dom)가생성되고, 실제 DOM을 생성한다(느낌이 기본적으로 되어있는 document.getElementById('root')의 내부 DOM을 생성하는것 같음). 이후에는 비교, 업데이트를 함
 - 엘리먼트는 `<Welcome/>`과 같은 사용자 정의 컴포넌트로 대체될 수 있으며, 이러한 컴포넌트들은 하나 혹은 여러개의 엘리먼트 또는 또 다른 사용자 정의 컴포넌트를 return 한다.
 - 처음 ReactDOM.render 로 생성된 이후로는 전체가 아닌 부분적으로 업데이트를 진행함. 이때 Lane : number이라는 값을 통해 대상 컴포넌트를 찾는것같음
-- 첫 생성 이후 setState를 통해 상태값에 변화가 생긴다면 전체를 생성하는것이 아닌 React는 변경된 요소를 효율적으로 반영하기 위해 diff 알고리즘의 규칙에 따라 새로운 virtual dom과 이전의 virtual dom을 비교를 하고 변경된 부분만 모아서 하나로 묶어서 실제 DOM 트리를 업데이트 함
+- 첫 생성 이후 setState를 통해 상태값에 변화가 생긴다면 전체를 생성하는것이 아닌 React는 변경된 요소를 효율적으로 반영하기 위해 diff 알고리즘의 규칙에 따라 새로운 virtual dom과 이전의 dom을 비교를 하고 변경된 부분만 모아서 하나로 묶어서 실제 DOM 트리를 업데이트 함
   1. 엘리먼트의 타입이 완전 다를 때, `<div> -> <span>`에는 해당 엘리먼트와 자식들을 모두 버리고 새롭게 생성함. 이 때문에, unmount, mount가 다시 호출되는 것
   2. 엘리먼트의 타입이 같을 때, 변경되는 prop만 바뀜
   3. 컴포넌트가 동일할 때, 변경이 있는 prop만 업데이드 됨. 이때 componentDidUpdate 호출됨 (이거는 hook에서 조금 바뀐것같음)
@@ -322,7 +322,7 @@ export default App
 
 ### virtual dom, 메모이제이션과 diff
 
-- React는 변경된 요소를 효율적으로 반영하기 위해 diff 알고리즘의 규칙에 따라 새로운 virtual dom과 이전의 virtual dom을 비교를 하고 변경된 부분만을 통해 실제 DOM에 최소한의 수정을 가함
+- React는 변경된 요소를 효율적으로 반영하기 위해 diff 알고리즘의 규칙에 따라 새로운 virtual dom과 이전의 dom을 비교를 하고 변경된 부분만을 통해 실제 DOM에 최소한의 수정을 가함
   1. 엘리먼트의 타입이 완전 다를 때, `<div> -> <span>`에는 해당 엘리먼트와 자식들을 모두 버리고 새롭게 생성함. 이 때문에, unmount, mount가 다시 호출되는 것
   2. 엘리먼트의 타입이 같을 때, 변경되는 prop만 바뀜
   3. 컴포넌트가 동일할 때, 변경이 있는 prop만 업데이드 됨. 이때 componentDidUpdate 호출됨 (이거는 hook에서 조금 바뀐것같음)
