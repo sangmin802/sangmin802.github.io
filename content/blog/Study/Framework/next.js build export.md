@@ -1,5 +1,5 @@
 ---
-title: 'Next.js start vs export'
+title: 'Next.js build, export'
 date: 2021-02-15 00:00:00
 category: 'Study'
 draft: false
@@ -12,9 +12,7 @@ tag: 'Framework'
 
 `next start`나 `next export`라는 명령어를 실행시키기 위한 사전작업이기도 하며, 해당 명령어는 `.next`폴더를 생성한다.
 
-## Next start
-
-`Next.js`의 기본적인 `SSR` 페이지 생성 방식이다.
+또한 `Next.js`의 기본적인 `SSR` 페이지 생성 방식이다.
 
 - [Automatic Static Optimization](https://nextjs.org/docs/advanced-features/automatic-static-optimization)
 
@@ -28,7 +26,7 @@ tag: 'Framework'
 
 > 물론 위의 방법은 `Vercel`와 같은 `ServerLess`플랫폼을 통한 배포는 불가능하다
 
-만약, 특정 라우트를 서버에 연결되는 API? 작업을 수행하고자 할 때, 이와같은 방법을 추천하며 해당 라우트는 `Next.js`의 기본 라우팅 방식에서 제외된다.
+만약, 특정 라우트를 서버에 연결되는 API? 작업을 수행하고자 할 때에도 배포시 별도의 서버도 함께 띄워져있는 상태라서 이와같은 방법을 추천하며 해당 라우트는 `Next.js`의 기본 라우팅 방식에서 제외된다.
 
 > 로그인 환경 구성이나, 서버에서 API를 불러오고자 할 때 사용할 듯 하다.
 
