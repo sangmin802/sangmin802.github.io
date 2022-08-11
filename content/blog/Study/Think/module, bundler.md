@@ -204,6 +204,16 @@ module.exports = {
 }
 ```
 
+## 싱글스레드가 아닌 멀티스레드 기반 Rust를 통한 빌드시간 단축
+
+차세대 병렬스레드 언어인 Rust 기반 컴파일(트랜스파일) + 빌드 툴 swc
+`transform` 을 통해, `babel` 트랜스파일링 대체(멀티스레드), `minify`를 통해 `terser` 대체
+`next12`부터는 기본적으로 `swc` 기반 빌드를 진행함(트랜스파일 포함). 물론, `babel`로 변경하는것도 가능
+
+- [swc](https://fe-developers.kakaoent.com/2022/220217-learn-babel-terser-swc/)
+- [2022 개발 관심사](https://jbee.io/web/from-2021-to-2022/)
+- [feconf swc](https://www.youtube.com/watch?v=4RJxyGJQe4o)
+
 ## 참고
 
 - [webpack 핸드북](https://joshua1988.github.io/webpack-guide/guide.html)
