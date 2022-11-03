@@ -99,3 +99,67 @@ test()
 > `Cannot access 'let 변수 or const 상수' before initialization`
 
 라는 에러가 발생하는 것이다.
+
+### 간혹 들었던 의문
+
+웬만한 상황에서는 `ide`에서 초기화되지 않았다 등의 에러를 미리 알려준다. 그런데 그렇지 않은 경우가 있는데,
+
+```ts
+const func = () => setState(2)
+
+const [state, setState] = useState(1)
+```
+
+위의 경우 `func` 내부의 `setState`는 초기화 이전에 작성된것으로 보이지만 문제되지 않는다.(`state`를 조회하는것도 동일)
+하지만
+
+```ts
+const param = setState
+
+const [state, setState] = useState(1)
+```
+
+위의 경우는 초기화되지 않았다고 잡힌다.
+
+왜일까??
+
+추측컨데 저 `func`의 호출시기를 예상할 수 없어서가 아닐까 싶다.
+
+두번째의 경우의 순서를 먼저 따져보자
+
+1. `param` 호이스팅 - 선언
+2. `state` 호이스팅 - 선언
+3. `setState` 호이스팅 - 선언
+4. `param` 초기화 및 값 할당 시작
+5. `param`의 값 할당 중 사용되는 `setState`는 선언되었지만 아직 초기화는 되지 않은상태(`TDZ`)
+
+예상할 수 있는 순서라서 에러를 잡는것 같다.
+
+하지만 첫번째의 경우
+
+```ts
+const func = () => setState(2)
+
+func() // 초기화 에러 발생
+
+const [state, setState] = useState(1)
+
+func() // 정상 진행
+```
+
+함수 호출시기에 따라 가능, 불가능이 나뉜다.
+위의 두가지 경우 모두 순서를 따져보자면
+
+1. `func` 호이스팅 - 선언
+2. `state` 호이스팅 - 선언
+3. `setState` 호이스팅 - 선언
+4. `func` 초기화 및 값 할당
+5. `func` 함수 호출로 함수컨텍스트 생성
+6. `func` 컨텍스트 내부의 `setState` 호출
+7. 이 당시에는 `setState`가 선언은 되어있지만 초기화는 되지 않은 상태라 에러(`TDZ`)
+8. `state`, `setState` 초기화 및 값 할당
+9. `func` 함수 호출로 함수컨텍스트 생성
+10. `func` 컨텍스트 내부의 `setState` 호출
+11. 이 당시에는 `setState`가 초기화, 할당까지 모두 완료된상태라 정상진행
+
+이처럼 초기화 전의 함수 혹은 값을 사용하고 있는 함수가 어떤시기에 호출되냐에 따라 값이 초기화, 할당 되어있을수도, 그렇지 않을수도 있기 때문에 에러를 표시해주지 않는게 아닐까?
