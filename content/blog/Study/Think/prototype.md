@@ -144,3 +144,7 @@ console.dir(me)
 생성자 함수를 통해 생성되는 객체의 `[[Prototype]]`을 통해 연결되는 `prototype` 객체는 생성자 함수가 정의될 때 만들어진 `prototype object`였다.
 
 `prototype object`들도 마찬가지로 `[[Prototype]]`속성을 통한 `prototype chain`이 있었고, 해당 `chaining`을 타고 올라가며 찾고자 하는 속성을 탐색한다.
+
+## 추가참고
+
+- [js-prototype](https://evan-moon.github.io/2019/10/23/js-prototype/#%ED%94%84%EB%A1%9C%ED%86%A0%ED%83%80%EC%9E%85-%EC%B2%B4%EC%9D%B8)
