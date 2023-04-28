@@ -100,25 +100,19 @@ console.dir(me)
   <img src="/img/2021/07/25/3.PNG" alt="3">
 </div>
 
-생성자 함수를 사용하여 객체를 생성했다면, `prototype`속성을 사용하여 **프로토타입 객체**에 접근할 수 있다.
+생성자 함수는 `prototype`속성을 사용하여 **프로토타입 객체**에 접근할 수 있다.
 
 하지만, `.prototype` 을 통한 방법으로는 모든 객체가 아닌 위와 같은 생성자 함수 에서만 접근이 가능하다.
 
-생성자함수에서의 `.prototype`은 이전의 모든 객체가 갖고있는 `[[Prototype]]`라는 숨겨진 속성을 통해 접근할 수 있는 참조 객체인 `prototype`과 이름이 유사해보이지만 사실은 다르다.
+`생성자함수.prototype`을 통해 prototype 객체에 값을 추가할 수 있는듯 함.
 
-> 생성자함수의 `.prototype`으로 접근하는 객체는 이름만 `prototype`인 일반 속성이다.
-
-`생성자함수.prototype`는, 해당 생성자 함수를 통해 만들어지는 객체의 `[[Prototype]]`으로 연결되는 `prototype`객체의 값으로 사용하라는 뜻이다.
+결과적으로 해당 생성자 함수를 통해 생성된 객체는 `__proto__`를 통해 조회하였을 때, 자신을 생성한 생성자함수를 constructor로, .prototype으로 생성한 값 총 두개가 존재하는 상태
 
 <div style="margin : 0 auto; text-align : center">
   <img src="/img/2021/07/25/5.PNG" alt="5">
 </div>
 
-만약 `const obj = {}`와 같은 일반 객체에서 `prototype`속성에 접근하기 위해서는 `__proto__`를 사용해야 한다.
-
-> `setter`와 `getter` 역할을 수행
-
-이를 통해 알 수 있는점은, `__proto__`는 객체의 속성이 아닌, `prototype`에 접근하기 위한 속성일 뿐이다.
+위에서 잠시 얘기된대로, 생성자함수를 통해 생성된 객체 혹은 일반 리터럴 객체 모두 `__proto__`를 통해 자신이 상속되어있는 프로토타입 객체를 확인할 수 있음.
 
 <div style="margin : 0 auto; text-align : center">
   <img src="/img/2021/07/25/4.png" alt="4">
@@ -129,7 +123,7 @@ console.dir(me)
 1. 기본 반응인 본인 자신이 정의됨
 2. 생성자 함수는 함수이기 때문에, `prototype`이라는 속성을 기본적으로 가지고 있다.
    > 이 속성에는 기본적으로 함수 자기 자신을 지칭하는 `counstructor`속성과, 자신을 통해 생성되는 객체의 `[[Prototype]]`으로 연결되는 `prototype` 객체를 지정해줄 수 있다.
-   > 이때, `constructor`의 값을 유지하기 위해 `.prototype`을 아예 새로운 객체로 변경하기 보다는 속성을 추가해주는것이 좋다.
+   > 이때, `constructor`의 값과 기존 상속해주는 프로토타입 객체를 유지하기 위해 `.prototype`을 아예 새로운 객체로 변경하기 보다는 속성을 추가해주는것이 좋다.
 
 이렇게 정의된 생성자 함수로 생성된 객체는, 프로토타입 체인을 통해 자신을 생성한 생성자 함수의 프로토타입 객체에 접근할 수 있다.
 
@@ -137,14 +131,19 @@ console.dir(me)
 
 `Javascript`의 발전으로 `class`문법이 등장하긴 했지만, 이 또한 `prototype`기반의 문법이였다.
 
-모든 객체들의 `[[Prototype]]`라는 속성은, `prototype chain`을 의미하였고, 이 연결을 통해 참조되고있는 `prototype`객체들에 접근할 수 있었다.
+모든 객체들의 `[[Prototype]]`라는 속성은, `prototype chain`을 의미하였고, 이 연결을 통해 자신이 상속되고있는 `prototype`객체들에 접근할 수 있었다.
 
-함수의 경우 정의될 때 추가적으로 함수의 `prototpye`속성이 자동으로 생성되었고, 이 속성의 내부에는 기본적으로 함수 자기자신을 지칭하는 `consturctor`가 존재하며, 다른 속성을 추가할 수 있었다.
+생성자 함수의 경우 `prototpye`속성을 통해 프로토타입 객체를 조회할 수 있었고, 이 속성의 내부에는 기본적으로 함수 자기자신을 지칭하는 `consturctor`가 존재하며, 다른 속성을 추가할 수 있었다.
 
-생성자 함수를 통해 생성되는 객체의 `[[Prototype]]`을 통해 연결되는 `prototype` 객체는 생성자 함수가 정의될 때 만들어진 `prototype object`였다.
+생성자 함수를 통해 생성되는 객체, 다른 리터럴객체 등등은 `__proto__`을 통해 자신이 상속되어있는 프로토타입 객체를 확인할 수 있었으며 아래의 3가가 존재
 
-`prototype object`들도 마찬가지로 `[[Prototype]]`속성을 통한 `prototype chain`이 있었고, 해당 `chaining`을 타고 올라가며 찾고자 하는 속성을 탐색한다.
+- 자신을 생성한 생성자함수를 constructor로서
+- 생성자 함수의 `prototype.특정 값`을 통해 생성된 상속받는 값 (추가 하였다면?)
+- 생성자 함수가 상속받고있는 prototype 객체
+
+`prototype object`들도 마찬가지로 `[[Prototype]]`(`__proto__`를 통해 조회)속성을 통한 `prototype chain`이 있었고, 해당 `chaining`을 타고 올라가며 찾고자 하는 속성을 탐색한다.
 
 ## 추가참고
 
 - [js-prototype](https://evan-moon.github.io/2019/10/23/js-prototype/#%ED%94%84%EB%A1%9C%ED%86%A0%ED%83%80%EC%9E%85-%EC%B2%B4%EC%9D%B8)
+- [js-ko prototype](https://ko.javascript.info/function-prototype)
