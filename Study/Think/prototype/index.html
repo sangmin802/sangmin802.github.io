@@ -118,21 +118,14 @@ console<span class="token punctuation">.</span><span class="token function">dir<
 <div style="margin : 0 auto; text-align : center">
   <img src="/img/2021/07/25/3.PNG" alt="3">
 </div>
-<p>생성자 함수를 사용하여 객체를 생성했다면, <code class="language-text">prototype</code>속성을 사용하여 <strong>프로토타입 객체</strong>에 접근할 수 있다.</p>
+<p>생성자 함수는 <code class="language-text">prototype</code>속성을 사용하여 <strong>프로토타입 객체</strong>에 접근할 수 있다.</p>
 <p>하지만, <code class="language-text">.prototype</code> 을 통한 방법으로는 모든 객체가 아닌 위와 같은 생성자 함수 에서만 접근이 가능하다.</p>
-<p>생성자함수에서의 <code class="language-text">.prototype</code>은 이전의 모든 객체가 갖고있는 <code class="language-text">[[Prototype]]</code>라는 숨겨진 속성을 통해 접근할 수 있는 참조 객체인 <code class="language-text">prototype</code>과 이름이 유사해보이지만 사실은 다르다.</p>
-<blockquote>
-<p>생성자함수의 <code class="language-text">.prototype</code>으로 접근하는 객체는 이름만 <code class="language-text">prototype</code>인 일반 속성이다.</p>
-</blockquote>
-<p><code class="language-text">생성자함수.prototype</code>는, 해당 생성자 함수를 통해 만들어지는 객체의 <code class="language-text">[[Prototype]]</code>으로 연결되는 <code class="language-text">prototype</code>객체의 값으로 사용하라는 뜻이다.</p>
+<p><code class="language-text">생성자함수.prototype</code>을 통해 prototype 객체에 값을 추가할 수 있는듯 함.</p>
+<p>결과적으로 해당 생성자 함수를 통해 생성된 객체는 <code class="language-text">__proto__</code>를 통해 조회하였을 때, 자신을 생성한 생성자함수를 constructor로, .prototype으로 생성한 값 총 두개가 존재하는 상태</p>
 <div style="margin : 0 auto; text-align : center">
   <img src="/img/2021/07/25/5.PNG" alt="5">
 </div>
-<p>만약 <code class="language-text">const obj = {}</code>와 같은 일반 객체에서 <code class="language-text">prototype</code>속성에 접근하기 위해서는 <code class="language-text">__proto__</code>를 사용해야 한다.</p>
-<blockquote>
-<p><code class="language-text">setter</code>와 <code class="language-text">getter</code> 역할을 수행</p>
-</blockquote>
-<p>이를 통해 알 수 있는점은, <code class="language-text">__proto__</code>는 객체의 속성이 아닌, <code class="language-text">prototype</code>에 접근하기 위한 속성일 뿐이다.</p>
+<p>위에서 잠시 얘기된대로, 생성자함수를 통해 생성된 객체 혹은 일반 리터럴 객체 모두 <code class="language-text">__proto__</code>를 통해 자신이 상속되어있는 프로토타입 객체를 확인할 수 있음.</p>
 <div style="margin : 0 auto; text-align : center">
   <img src="/img/2021/07/25/4.png" alt="4">
 </div>
@@ -143,20 +136,26 @@ console<span class="token punctuation">.</span><span class="token function">dir<
 <p>생성자 함수는 함수이기 때문에, <code class="language-text">prototype</code>이라는 속성을 기본적으로 가지고 있다.</p>
 <blockquote>
 <p>이 속성에는 기본적으로 함수 자기 자신을 지칭하는 <code class="language-text">counstructor</code>속성과, 자신을 통해 생성되는 객체의 <code class="language-text">[[Prototype]]</code>으로 연결되는 <code class="language-text">prototype</code> 객체를 지정해줄 수 있다.
-이때, <code class="language-text">constructor</code>의 값을 유지하기 위해 <code class="language-text">.prototype</code>을 아예 새로운 객체로 변경하기 보다는 속성을 추가해주는것이 좋다.</p>
+이때, <code class="language-text">constructor</code>의 값과 기존 상속해주는 프로토타입 객체를 유지하기 위해 <code class="language-text">.prototype</code>을 아예 새로운 객체로 변경하기 보다는 속성을 추가해주는것이 좋다.</p>
 </blockquote>
 </li>
 </ol>
 <p>이렇게 정의된 생성자 함수로 생성된 객체는, 프로토타입 체인을 통해 자신을 생성한 생성자 함수의 프로토타입 객체에 접근할 수 있다.</p>
 <h2 id="결론" style="position:relative;"><a href="#%EA%B2%B0%EB%A1%A0" aria-label="결론 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>결론</h2>
 <p><code class="language-text">Javascript</code>의 발전으로 <code class="language-text">class</code>문법이 등장하긴 했지만, 이 또한 <code class="language-text">prototype</code>기반의 문법이였다.</p>
-<p>모든 객체들의 <code class="language-text">[[Prototype]]</code>라는 속성은, <code class="language-text">prototype chain</code>을 의미하였고, 이 연결을 통해 참조되고있는 <code class="language-text">prototype</code>객체들에 접근할 수 있었다.</p>
-<p>함수의 경우 정의될 때 추가적으로 함수의 <code class="language-text">prototpye</code>속성이 자동으로 생성되었고, 이 속성의 내부에는 기본적으로 함수 자기자신을 지칭하는 <code class="language-text">consturctor</code>가 존재하며, 다른 속성을 추가할 수 있었다.</p>
-<p>생성자 함수를 통해 생성되는 객체의 <code class="language-text">[[Prototype]]</code>을 통해 연결되는 <code class="language-text">prototype</code> 객체는 생성자 함수가 정의될 때 만들어진 <code class="language-text">prototype object</code>였다.</p>
-<p><code class="language-text">prototype object</code>들도 마찬가지로 <code class="language-text">[[Prototype]]</code>속성을 통한 <code class="language-text">prototype chain</code>이 있었고, 해당 <code class="language-text">chaining</code>을 타고 올라가며 찾고자 하는 속성을 탐색한다.</p>
+<p>모든 객체들의 <code class="language-text">[[Prototype]]</code>라는 속성은, <code class="language-text">prototype chain</code>을 의미하였고, 이 연결을 통해 자신이 상속되고있는 <code class="language-text">prototype</code>객체들에 접근할 수 있었다.</p>
+<p>생성자 함수의 경우 <code class="language-text">prototpye</code>속성을 통해 프로토타입 객체를 조회할 수 있었고, 이 속성의 내부에는 기본적으로 함수 자기자신을 지칭하는 <code class="language-text">consturctor</code>가 존재하며, 다른 속성을 추가할 수 있었다.</p>
+<p>생성자 함수를 통해 생성되는 객체, 다른 리터럴객체 등등은 <code class="language-text">__proto__</code>을 통해 자신이 상속되어있는 프로토타입 객체를 확인할 수 있었으며 아래의 3가가 존재</p>
+<ul>
+<li>자신을 생성한 생성자함수를 constructor로서</li>
+<li>생성자 함수의 <code class="language-text">prototype.특정 값</code>을 통해 생성된 상속받는 값 (추가 하였다면?)</li>
+<li>생성자 함수가 상속받고있는 prototype 객체</li>
+</ul>
+<p><code class="language-text">prototype object</code>들도 마찬가지로 <code class="language-text">[[Prototype]]</code>(<code class="language-text">__proto__</code>를 통해 조회)속성을 통한 <code class="language-text">prototype chain</code>이 있었고, 해당 <code class="language-text">chaining</code>을 타고 올라가며 찾고자 하는 속성을 탐색한다.</p>
 <h2 id="추가참고" style="position:relative;"><a href="#%EC%B6%94%EA%B0%80%EC%B0%B8%EA%B3%A0" aria-label="추가참고 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>추가참고</h2>
 <ul>
 <li><a href="https://evan-moon.github.io/2019/10/23/js-prototype/#%ED%94%84%EB%A1%9C%ED%86%A0%ED%83%80%EC%9E%85-%EC%B2%B4%EC%9D%B8">js-prototype</a></li>
+<li><a href="https://ko.javascript.info/function-prototype">js-ko prototype</a></li>
 </ul></div><div class="social-share"><a class="resp-sharing-button__link" href="#" target="_blank" rel="noopener" aria-label="Share on Facebook"><div class="resp-sharing-button resp-sharing-button--facebook resp-sharing-button--large"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.77 7.46H14.5v-1.9c0-.9.6-1.1 1-1.1h3V.5h-4.33C10.24.5 9.5 3.44 9.5 5.32v2.15h-3v4h3v12h5v-12h3.85l.42-4z"></path></svg></div><span class="service-label">Share on Facebook</span></div></a><a class="resp-sharing-button__link" href="#" rel="noopener" aria-label="Share on Twitter"><div class="resp-sharing-button resp-sharing-button--twitter resp-sharing-button--large"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23.44 4.83c-.8.37-1.5.38-2.22.02.93-.56.98-.96 1.32-2.02-.88.52-1.86.9-2.9 1.1-.82-.88-2-1.43-3.3-1.43-2.5 0-4.55 2.04-4.55 4.54 0 .36.03.7.1 1.04-3.77-.2-7.12-2-9.36-4.75-.4.67-.6 1.45-.6 2.3 0 1.56.8 2.95 2 3.77-.74-.03-1.44-.23-2.05-.57v.06c0 2.2 1.56 4.03 3.64 4.44-.67.2-1.37.2-2.06.08.58 1.8 2.26 3.12 4.25 3.16C5.78 18.1 3.37 18.74 1 18.46c2 1.3 4.4 2.04 6.97 2.04 8.35 0 12.92-6.92 12.92-12.93 0-.2 0-.4-.02-.6.9-.63 1.96-1.22 2.56-2.14z"></path></svg></div><span class="service-label">Share on Twitter</span></div></a></div><div class="sponsor-button"><a class="bmc-button" target="_blank" rel="noopener noreferrer" href="https://www.buymeacoffee.com/jbee"><img src="https://www.buymeacoffee.com/assets/img/BMC-btn-logo.svg" alt="Buy me a coffee"/><span>Buy me a coffee</span></a></div><hr class="custom-hr"/><div class="bio"><div class="author"><div class="author-description"><div class="author-image gatsby-image-wrapper" style="position:relative;overflow:hidden;display:inline-block;width:72px;height:72px;border-radius:100%"><img aria-hidden="true" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAIAAAAC64paAAAACXBIWXMAAC4jAAAuIwF4pT92AAADbElEQVQ4y2P4jwr+gQGQ8evnj5vXLh3at+Pp4/vI4siAAU0nkPz44d2CWZNCfJ2NdJTUFMRMDdVrKvOfPAIZ8ffvX1yaoWZXFKXLiPJIiPLLSgkrKUhKS4kI8rPHRfl/+/oJbgG6ZoipTx/d1VOVEuRikRXlkRHmFhfgEhXgkpIU4eVmyU6Px6MZJNpUU2KiJrG0Ne3w0pa9sytXtqY0xTkqS/ILCfIoyok+uHcb2fEMyNY+eXhXS1mqryz2950d7y9uen1iwcuj898cntma6iYuxCstyrN+zQqgsj9//mDRfOvGVQ05kTXdGU+PLbl3aMnDPdMe7pt9a+e0YzPyfA1kxQQ5jxzai0UzxCdfv36JC3DeMyl3fU/+wpr4KytbLi5rnl4SMbMoeFGRv6ed8efPH5G9zQAPaZCRb5/NK4k4u7xpd3vq/Dy/2xu7ry6vn5nusbYkaPeE7KnZwX8/voErRtf898OrQ+1p17dNfrBz5pVV3S9PLL23te/M/NqLi2qOzSnd21fw/8cXbJphQg/3Lbq3bfKHizuf759zY2XLpXlV97dMeLJ/3vkFlbf3LAKr+ostkYA1f//w8t6eOU8PLHi4a8apOVWHJ+ReW9V6a13XpdVdX9+/RLYWM3mC08mVQzc3dV9Z1XxuUumRlvTj0/PPL6q8c3wT/uQJlAPFwed3z08trrmzY9LDnTNvres+v7jq0PTCDy8fgSPpNxbNQCMhEfD5y5djRw6cW9G0e2Lu4Tk1B6aVbutMPjK75NrF0+AUiFAJ0gyMcbhj5i+Yr29kVFFZ8/7G/oNTMpdXhC0pCTowKfP5uc25ebkubi67d++CqPwDBgwQ1v4DhyJi4/mFhKTlleOSUn99/Xjn8KrjMwuPTcu7snPup7cvIqKi2bm5Obk54xITr12/DkkqDBu3bI1LTlfRNhCXkVNU1dDSNzGxsH304C5Q+vyOxYdWTPr97dODezcNjE2l5ZUkZWR4BQQU1TRyC4t27t7DoKihL6+iraKhLy2nLCWnrKyuK6WgfvDA/rOnTtq5h+maOK5evuTQwX3C4tISMvKCImJiwAwupyAMNEZJlUFd21hNy1BGXlVcSkFBRUdJXU9IXL6vf+Lc6ZOFpA3kNaw2rF7a2dHBIyAmIaMgJCIhLCopKaOooKopr6IOAErYSU0rZVbsAAAAAElFTkSuQmCC" alt="SangMin" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:1;transition-delay:500ms"/><noscript><picture><source srcset="/static/c23fcc69c048669ae60bbbd81ce18c06/e5b88/profile.png 1x,
 /static/c23fcc69c048669ae60bbbd81ce18c06/e7bd6/profile.png 1.5x,
 /static/c23fcc69c048669ae60bbbd81ce18c06/a12fc/profile.png 2x" /><img loading="lazy" width="72" height="72" srcset="/static/c23fcc69c048669ae60bbbd81ce18c06/e5b88/profile.png 1x,
