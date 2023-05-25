@@ -61,8 +61,8 @@ tag: 'Think'
 `script` 요소에 `async` 혹은 `defer`속성을 할당해주는 것이다.
 
 - 아무속성x : `DOM` 파싱 중 `script`를 만나면 `DOM` 파싱 중단 > `script` 파일 다운로드 > `script` 실행 > 나머지 `DOM` 파싱
-- async : `DOM`파싱과 `script`파일 다운로드 동시 진행 > `script`다운로드 완료 시 `DOM`파싱 중단 후 `script` 실행 > 나머지 `DOM` 파싱
-- defer : `DOM`파싱과 `script`파일 다운로드 동시 진행 > `script`다운로드 완료되어도 `DOM`파싱 진행 > `DOM`파싱 종료 후 스크립트 실행
+- async : `DOM`파싱과 `script`파일 다운로드, 실행 병렬 진행(따라서 순서가 명확하지 않음 `DCL` 이전, 이후 모두 가능)
+- defer : `DOM`파싱과 `script`파일 다운로드 동시 진행 > `script`다운로드 완료되어도 `DOM`파싱 진행 > `DOM`파싱 종료 후 스크립트 실행. 단, `DCL` 이전
 
 내 브라우저에서 임의로 테스트해보려 했지만, 어지간한 양이 아니라면, 네트워크 속도 때문에 확인하기가 어려웠다..
 
