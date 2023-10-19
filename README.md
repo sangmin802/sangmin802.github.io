@@ -103,17 +103,15 @@ return (
 
 Suspense는 React에서 사용되고있는 컴포넌트가 사용하고있는 데이터가 아직 준비되지 않았다는것을 React에 알려줄 수 있는 방법.
 
-React에서는 getDerivedStateFromError는 렌더 단계에서 호출되는 생명주기로, 렌더 과정에서 하위에서 발생한 에러를 포착할 수 있음 또한, 상태를 업데이트할 수 있음
-
 React-query와 같이 비동기과정에서 loading과같은 상태를 잡을수 있는데, 이 때의 비동기작업들은 일반 Promise를 반환하는것이 아니라 상태, 결과, 실제 promise나 해당 promise의 상태를 변수로서 클로저로 기억하여 값을 반환하는 함수를 반환하는것 같음
 
 > promise의 resolve, reject 상태에 따라 클로저로서 참조중인 상태변수도 업데이트시킴
 
-이 때, 만약 상태가 처음의 pending이라면 throw를 통해 중단시키고 해당 promise를 에러의 값으로 전달하여 Suspense가 getDerivedStateFromError를 호출하여 fallback 컴포넌트를 반환하는것 같음
+이 때, 만약 상태가 처음의 pending이라면 throw를 통해 중단시키고 해당 promise를 에러의 값으로 전달하여 Suspense가 포착하여 fallback 컴포넌트를 반환하는것 같음
 
 > 실제로, Suspense로 감싼 컴포넌트 내부에서 Promise자체를 throw를 통해 에러의 값으로 전달하면 error가 발생하는것이 아닌, Suspense에 지정한 fallback이 반환되는것을 확인할 수 있음
 
-데이터를 받아오는 컴포넌트 내부에서 throw를 호출하여 해당 컴포넌트를 중지시키는게 핵심인것 같음. 또한 그 throw 자체를 Suspense의 getDerivedStateFromError가 감지하여 fallback을 반환하는것도
+데이터를 받아오는 컴포넌트 내부에서 throw를 호출하여 해당 컴포넌트를 중지시키는게 핵심인것 같음. 또한 그 throw 자체를 Suspense가 감지하여 fallback을 반환하는것도
 
 > unmount가 아닌 중지임 mount 조차도 되지 않음
 
@@ -258,8 +256,6 @@ export default App
 `React Query`등의 모듈을 사용하여 비동기작업을 관리할 때, `Promise`객체를 즉시 반환하는것이 아닌 여러 상태를 클로저로서 참조하는 함수를 반환하는게 아닐까 싶음
 
 따라서, 데이터의 요청, 에러, 성공을 하나의 값으로 기억하고 업데이트될 때마다 일반 함수 내부에서 `throw`를 시키기 때문에 `ErrorBoundary`가 에러를 잡을수 있는것 아닐까?
-
-> `Suspense`가 `getDerivedStateFromError`를 통해 `Promise`객체를 감지하면 `fallback`을 렌더링하고 중단하는것처럼
 
 `throw`될 때 전달하는 값을 객체로 하면 `ErrorBoundary`의 유연함을 향상시킬 수 있음
 
