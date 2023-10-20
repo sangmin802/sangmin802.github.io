@@ -55,8 +55,6 @@ const fetchData = useCallback(async () => {
 
 `React`의 `repository`에 `Suspense`에 대한 세세한 로직을 찾을 수는 없었다.
 
-하지만, `Suspense`를 소개하는 항목에서 한가지 특징을 확인할 수 있는것이 `getDerivedStateFromError` 라는 생명주기이다.
-
 렌더단계에서 해당 생명주기는 하위에서 발생한 중단을 감지하고 상태를 업데이트하여 다시 `render`할 수 있는것 같다.
 
 그리고 여러 테스트를 해본 결과 단 한가지의 값에는 다른 결과를 보였다.
