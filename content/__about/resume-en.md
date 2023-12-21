@@ -37,71 +37,39 @@ lang: 'en'
 
 <hr>
 
+<h2>현재</h2>
+
+<p>딜리셔스 근무중: 2022.01.03 ~ </p>
+
 <h2>개인 프로젝트</h2>
 
-<h3>🥇 Loa-Hands</h3>
+<h3>sono-repo</h3>
 
-<p>로스트아크 유저 검색 웹 어플리케이션</p>
+<p>🥇 모노레포 프로젝트</p>
 
 <hr>
 
 <b>FrontEnd</b>
 
-`React` `Next.js` `TypeScript`
+`React` `Next.js` `TypeScript` `vite` `rollup` `esbuild` `turborepo` `storybook` `yarn`
 
 <hr>
 
-<b>GitHub directory</b> : https://github.com/sangmin802/loa-hands
-
-<hr>
-
-<b>Deployed Site</b> : https://sangmin802.github.io/loa-hands/
-
-<hr>
-
-<b>GitHub directory `Next.js` </b> : https://github.com/sangmin802/loa-hands-next
-
-<hr>
-
-<b>Deployed Site `Next.js` </b> : https://loa-hands-next.vercel.app/
+<b>GitHub directory</b> : https://github.com/sangmin802/sono-repo
 
 <hr>
 
 <h3>Description</h3>
 
-📌 CSR
+- loa-hands-next 배포중(vercel)
+  - pwa
+  - next14 data cache revalidate
+- packages:
+  - 하위 config package
+  - storybook 배포중(chromatic)
+  - reactTimerHook 배포중(npm)
 
-- `gh-pages`로 배포
-
-📌 SSR
-
-- `Next.js`를 사용하여 `SSR`환경으로 개발
-- `Vercel`을 사용하여 배포
-- `pre-rendering`을 위한 `getStaticProps` `getServerSideProps` 생명주기 사용
-  > 현재는 제거된 상태
-
-📌 Server
-
-- `Node.js` `Express` 기반 서버 운용
-- 서버 배포는 `heroku`
-
-📌 Front
-
-- 배포된 서버로 `RESTful API` 형식의 요청
-- 수신된 `text/html` 형식의 데이터를 가공
-- 비동기 로직을 처리하기 위한 방식으로 `react-query`를 사용
-  > 기존 `Redux`, `Redux-Saga` 에서 변경.
-- `Suspense` `ErrorBoundary`를 사용하여 로딩처리나 에러 핸들링
-- 데이터 캐싱을 통해 동일한 값에 대해 서버로 전달되지 않도록 방지
-  > 캐싱시간이 지난경우에만 다시 요청
-- `TypeScript`를 기반으로하여 기대값 외의 값에 대한 조기 에러 핸들링
-- `Storybook`을 통한 `UI` 테스트
-- `Jest` `react-testing-library`를 통한 단위테스트
-- `style`의 경우 `CSS-in-JS`방식 사용
-- 컴포넌트에 있어 최대한 조합의 방식 사용
-- 불필요한 리렌더링을 막기 위한 메모이제이션
-
-<h3>🥉 Web-Chat</h3>
+<h3>🥉 Web-Chat (2021/fin)</h3>
 
 <p>채팅 웹 어플리케이션</p>
 
@@ -135,7 +103,7 @@ lang: 'en'
 
 - `Node.js` `Express` 기반 서버 운용
 - `Socket.io`로 `Socket`서버 생성
-- 서버 배포는 `heroku`
+- 서버 배포는 `heroku` (중단됨)
 
 📌 Front
 
@@ -151,7 +119,7 @@ lang: 'en'
 
 - 상태값을 업데이트 하는데에 있어, 이전 상태값과 다른 상태값을 참조할 필요가 있어 `useReducer`를 사용하여 상태관리 진행
 
-<h3>🥉 DnF Rank</h3>
+<h3>🥉 DnF Rank (2021/fin)</h3>
 
 <p>게임사에서 제공하는 open api를 활용한 앱</p>
 
@@ -180,65 +148,3 @@ lang: 'en'
 - 회원가입을 사용하여 사용자에 대한 기록을 남길 수 있음
 - `Webpack`을 사용하여 실제 배포환경 구성
 - `Webpack`에 대한 이해 위한 프로젝트로 완성도는 매우 낮음
-
-<h2>협업 경험</h2>
-<h3>⛔ TwoFastGif</h3>
-
-<p> 움짤 제작 웹 어플리케이션 </p>
-
-> 서버비 유지 불가능으로 인한 중단
-
-<hr>
-
-<b>FrontEnd</b>
-
-`Vue.js` `Vue pre-render`
-
-<h3>Description</h3>
-
-📌 Deploy
-
-- `AWS EC2`
-
-📌 Server
-
-- 백엔드 전공인 학교 친구와 협업
-
-📌 Front
-
-- 영상 편집에 대한 옵션 제공
-- 제작된 `gif` 다운로드 기능 제공
-- 사용 방법에 대한 알림
-
-<h3>⛔ 플라이어스</h3>
-
-<p> 마트 전단 제작 웹 어플리케이션 </p>
-
-> 서버비 유지 불가능으로 인한 중단
-
-<hr>
-
-<b>FrontEnd</b>
-
-`Angular`
-
-<h3>Description</h3>
-
-📌 Deploy
-
-- `AWS EC2`
-
-📌 Server
-
-- 학원 강사였던 백엔드 개발자와 협업
-
-📌 Front
-
-- 해당 마트의 데이터를 가공하여 전단 제작
-- 제작된 전단을 모바일로 전송
-
-<h3>
-
-이 외 프로젝트들은 `GitHub`에 기록되어 있습니다.
-
-</h3>
