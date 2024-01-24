@@ -1,0 +1,35 @@
+name: 'Deploy blog'
+
+on:
+  push:
+    branches: ['master']
+
+jobs:
+  deploy-blog:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: use Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20.x
+
+      - name: install dependencies
+        run: npm install
+
+      - name: set git config
+        run: |
+          git config --global user.email $USER_EMAIL
+          git config --global user.name $USER_NAME
+          git remote set-url origin https://$USER_NAME:${{ secrets.GITHUB_TOKEN }}@github.com/$USER_NAME/$USER_NAME.github.io
+        env:
+          USER_EMAIL: ${{secrets.USER_EMAIL}}
+          USER_NAME: ${{secrets.USER_NAME}}
+
+      - name: deploy
+        run: npm run deploy
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
