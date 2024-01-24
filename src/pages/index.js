@@ -22,7 +22,7 @@ function getDistance(currentPos) {
   return Dom.getDocumentHeight() - currentPos
 }
 
-export default ({ data, location }) => {
+const Page =  ({ data, location }) => {
   const { siteMetadata } = data.site
   const { countOfInitialPost } = siteMetadata.configs
   const posts = data.allMarkdownRemark.edges
@@ -89,8 +89,8 @@ export const pageQuery = graphql`
       }
     }
     allMarkdownRemark(
-      sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter: { category: { ne: null }, draft: { eq: false } } }
+      sort: {frontmatter: {date: DESC}}
+      filter: {frontmatter: {category: {ne: null}, draft: {eq: false}}}
     ) {
       edges {
         node {
@@ -110,3 +110,5 @@ export const pageQuery = graphql`
     }
   }
 `
+
+export default Page;
