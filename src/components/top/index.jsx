@@ -1,30 +1,33 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import { Link, useStaticQuery } from 'gatsby'
 import Search from '../search'
 import styled from 'styled-components'
-import { StaticQuery, graphql } from 'gatsby'
+import { graphql } from 'gatsby'
 
 import './index.scss'
 
 const S_Top = styled.div`
   display: flex;
-  justify-content: ${({ isRoot }) => (isRoot ? 'flex-end' : 'space-between')};
+  justify-content: ${({ $isRoot }) => ($isRoot ? 'flex-end' : 'space-between')};
 `
 
 export const Top = ({ title, location, rootPath }) => {
   const isRoot = location.pathname === rootPath
+  const data = useStaticQuery(searchQuery)
+
+  const {
+    allMarkdownRemark: { edges },
+  } = data
+
   return (
     <div className="top">
-      <S_Top className="innerTop" isRoot={isRoot}>
+      <S_Top className="innerTop" $isRoot={isRoot}>
         {!isRoot && (
           <Link to={`/`} className="link">
             {title}
           </Link>
         )}
-        <StaticQuery
-          query={searchQuery}
-          render={({ allMarkdownRemark: { edges } }) => <Search data={edges} />}
-        />
+        <Search data={edges} />
       </S_Top>
     </div>
   )
@@ -32,18 +35,13 @@ export const Top = ({ title, location, rootPath }) => {
 
 export const searchQuery = graphql`
   query {
-    allMarkdownRemark(
-      sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter: { category: { ne: null }, draft: { eq: false } } }
-    ) {
+    allMarkdownRemark(sort: { frontmatter: { date: DESC } }, limit: 1000) {
       edges {
         node {
-          excerpt(pruneLength: 200, truncate: true)
           fields {
             slug
           }
           frontmatter {
-            date(formatString: "MMMM DD, YYYY")
             title
             category
             draft
