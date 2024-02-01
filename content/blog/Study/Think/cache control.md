@@ -9,7 +9,7 @@ tag: 'Think'
 ## 문제 / 발단
 
 - 오리진서버와 브라우저 사이에 cdn 캐시서버가 존재할 때, 오리진서버에서 cache-control값을 모두 설정해주지 않은 동일한 경우에도 aws cloudfront를 쓰냐, cloudflare를 쓰냐에 따라 캐시정첵이 미묘하게 다른점이 있어 의문이 생김
-- 위 과정에서 age, date, etag, if-none-match와 같은 캐시와 관련된 http header에 대해 명확히 이헤하고 있지 않은것 같아 정리해보고자 함
+- 위 과정에서 age, date, etag, if-none-match와 같은 캐시와 관련된 http header에 대해 명확히 이해하고 있지 않은것 같아 정리해보고자 함
 
 ## 원인 예상
 
