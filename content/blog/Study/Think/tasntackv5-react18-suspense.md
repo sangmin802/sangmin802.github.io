@@ -1,5 +1,5 @@
 ---
-title: ⚛ TanstackQuery5 Susepnse
+title: ⚛ TanstackQuery5 Suspense
 date: 2023-12-21 08:17:00
 category: 'Study'
 draft: false
@@ -248,7 +248,7 @@ state처럼 만들긴 했는데, rerender를 시켜주기 위한 dispatcher가 �
 ```js
 React.useSyncExternalStore(
   React.useCallback(
-    onStoreChange => {
+    (onStoreChange) => {
       const unsubscribe = isRestoring
         ? () => undefined
         : observer.subscribe(notifyManager.batchCalls(onStoreChange))
