@@ -1,8 +1,9 @@
 ---
 title: 'PWA'
 date: 2023-05-24
-category: 'Note'
+category: 'Study'
 draft: false
+tag: 'Think'
 ---
 
 토이프로젝트에 pwa를 적용해보기 전, ms에서 관련된 영상을 챕터별로 올려줬길래 보고, 정리해보았다.

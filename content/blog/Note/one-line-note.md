@@ -20,8 +20,6 @@ draft: false
 
 > 계속 추가되고, 수정될 수 있다!
 
-# 한줄 노트
-
 #### react deep dive
 
 - [React internal deep dive](https://jser.dev/series/react-source-code-walkthrough/)
@@ -294,7 +292,7 @@ promise를 생성하고, resolve를 별도로 빼서 원하는 위치에서 해�
 
 - [참고](https://daveteu.medium.com/react-custom-confirmation-box-458cceba3f7b)
 
-### react 초기 state 재설정해주기
+#### react 초기 state 재설정해주기
 
 The key attribute on a React component is a special thing. Keys are mostly used for lists to signalize stability to React, so that the reconciler knows which elements can be re-used, and thus re-rendered.
 However, you can also just put a key attribute on any component to tell React: "Please mount this whenever the key changes. As long as the key is the same, please re-render".
@@ -306,7 +304,7 @@ This can be seen a little bit like the dependency array in effects. If it change
 
 - [블로그](https://tkdodo.eu/blog/putting-props-to-use-state)
 
-### tanstackQuery clientData, serverData 구분 관리
+#### tanstackQuery clientData, serverData 구분 관리
 
 - [v5 useQuery에서 onSuccess 등등.. 제거](https://github.com/TanStack/query/discussions/5279#discussioncomment-6257901)
 - [떡도도 client, server 데이터 분리 관리](https://tkdodo.eu/blog/practical-react-query#keep-server-and-client-state-separate)
@@ -338,7 +336,7 @@ suspense 기능이 활성화 되었을 경우에는 api 호출이 되며 중단�
 이렇게 하면 query로 받아오는 서버데이터를 항상 최신화시켜줄 수 있음 (pulling 걸려있는 경우에도)
 물론, useEffect로도 가능은 하지만, 선호될만한 방법은 아닐듯..? 위 방법을 먼저 고려해보는게 좋을 것 같음
 
-## 브라우저 호환이슈
+#### 브라우저 호환이슈
 
 - 안드로이드 낮은 브라우저에서는 아직 e.code가 지원되지 않으니 e.keycode에 대한 로직도 함께하기
 - 안드로이드 낮은 브라우저에서는 input에 userSelect none이 되어있으면 인풋 자체가 입력이 안되니, userSelect text 해주기
