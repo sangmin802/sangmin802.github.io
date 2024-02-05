@@ -288,6 +288,56 @@ const customLazy = (
 };
 ```
 
+#### promise resolve 유동적으로 사용하기
+
+promise를 생성하고, resolve를 별도로 빼서 원하는 위치에서 해당 resolve를 실행시켜 promise를 await하고있는 함수에서 resolve가 호출될때까지 대기하도록 하는 방법. 매력있음
+
+- [참고](https://daveteu.medium.com/react-custom-confirmation-box-458cceba3f7b)
+
+### react 초기 state 재설정해주기
+
+The key attribute on a React component is a special thing. Keys are mostly used for lists to signalize stability to React, so that the reconciler knows which elements can be re-used, and thus re-rendered.
+However, you can also just put a key attribute on any component to tell React: "Please mount this whenever the key changes. As long as the key is the same, please re-render".
+This can be seen a little bit like the dependency array in effects. If it changes, compared to the previous render, React will re-run the "mounting" of the component.
+
+블라블라
+
+요약: 컴포넌트에 변경의 주체가 될 값 key로 주기
+
+- [블로그](https://tkdodo.eu/blog/putting-props-to-use-state)
+
+### tanstackQuery clientData, serverData 구분 관리
+
+- [v5 useQuery에서 onSuccess 등등.. 제거](https://github.com/TanStack/query/discussions/5279#discussioncomment-6257901)
+- [떡도도 client, server 데이터 분리 관리](https://tkdodo.eu/blog/practical-react-query#keep-server-and-client-state-separate)
+
+v5에서 onSuccess가 사라짐. 그러면서 사람들이 가장 많이 다는 이슈가 이런 내용임
+
+> 우리 그러면 서버에서 받아온 데이터를 onSuccess를 통해 클라이언트상태로 변경하여 관리하는것은 어떻게 처리함?
+
+개발자가 제거하는 이유 등을 적어둔 링크가 있음
+
+- [remove useQuery callback](https://tkdodo.eu/blog/breaking-react-querys-api-on-purpose)
+
+suspense 기능이 활성화 되었을 경우에는 api 호출이 되며 중단되는 컴포넌트 내부의 onSuccess에 달린 setState는 의미가 없어질 것이기 때문에 onSuccess 내부에서 setState를 사용하는것은 의미가 없긴 함
+
+- [use setState in onSuccess](https://github.com/TanStack/query/issues/3784)
+
+이슈에 위와같은 질문이 달리면 늘 답변하던 방법, 심지어 블로그에도 작성해둔 방법이 있음
+
+<div style="margin : 0 auto; text-align : center">
+  <img src="/img/2024/02/05/tkdodo-client-server-data-seperate.PNG?raw=true" alt="tkdodo-client-server-data-seperate">
+</div>
+
+1. 하나의 커스텀 훅 안에, 초기값이 될 데이터(이하 A라 함)와, 변경될 데이터를 담을 상태(이하 B라 함)를 만듬
+2. B가 존재하면 B를 반환하고 없으면 A를 반환함
+3. 해당 데이터를 사용하는(변조도 하는 form 같은) 곳에서 초기값은 B가 없기때문에 받아온 A를 사용함.
+4. 만약 변조가 생겨서 setDraft를 하면, B를 기준으로 ui를 그림
+5. A객체 내부의 특정 객체를 수정하고자 하는것도 문제 없어보임. A내부, a,b,c가 있다면 a,b,c, 각각 따로 return 시키고, 변경되는것이 b라면, b를 반환할 때에만 B가 있다면 B, B가 없다면 A-b를 반환
+
+이렇게 하면 query로 받아오는 서버데이터를 항상 최신화시켜줄 수 있음 (pulling 걸려있는 경우에도)
+물론, useEffect로도 가능은 하지만, 선호될만한 방법은 아닐듯..? 위 방법을 먼저 고려해보는게 좋을 것 같음
+
 ## 브라우저 호환이슈
 
 - 안드로이드 낮은 브라우저에서는 아직 e.code가 지원되지 않으니 e.keycode에 대한 로직도 함께하기
