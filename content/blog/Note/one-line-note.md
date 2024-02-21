@@ -324,7 +324,7 @@ suspense 기능이 활성화 되었을 경우에는 api 호출이 되며 중단�
 이슈에 위와같은 질문이 달리면 늘 답변하던 방법, 심지어 블로그에도 작성해둔 방법이 있음
 
 <div style="margin : 0 auto; text-align : center">
-  <img src="/img/2024/02/05/tkdodo-client-server-data-seperate.PNG?raw=true" alt="tkdodo-client-server-data-seperate">
+  <img src="/img/2024/02/05/tkdodo-client-server-data-seperate.png?raw=true" alt="tkdodo-client-server-data-seperate">
 </div>
 
 1. 하나의 커스텀 훅 안에, 초기값이 될 데이터(이하 A라 함)와, 변경될 데이터를 담을 상태(이하 B라 함)를 만듬
