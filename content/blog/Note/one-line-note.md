@@ -336,7 +336,32 @@ suspense 기능이 활성화 되었을 경우에는 api 호출이 되며 중단�
 이렇게 하면 query로 받아오는 서버데이터를 항상 최신화시켜줄 수 있음 (pulling 걸려있는 경우에도)
 물론, useEffect로도 가능은 하지만, 선호될만한 방법은 아닐듯..? 위 방법을 먼저 고려해보는게 좋을 것 같음
 
-#### 브라우저 호환이슈
+### TanstackQuery 캐시타임 개별적용 특이점
+
+- 테스트중 확인한점 cachetime이 0이였던 곳 갔다가, 0이 아닌곳을 갔다면, 해당 쿼리는 계속 0이 아닌 cache time이 할당되어있는것같음. (요약. 동일 key, cache time 변경 시, 큰값이 유지됨)
+<div style="margin : 0 auto; text-align : center">
+  <img src="/img/2024/02/05/gctime.png?raw=true" alt="gctime">
+</div>
+
+### 이모지는 문자열이기 때문에 replace 같은 String Api 사용 가능
+
+- [이모지](https://www.padosum.dev/wiki/Various-Aspects-of-Emoji/)
+
+  - 🐻‍❄️ 요 이모지를 배열에서 스프레드로 풀어보면 곰, 눈 이모지가 나옴
+  - 🐻‍❄️ 요 이모지를 js에서 사용하는 utf-16 방식으로 풀어보면 4개의 유니코드가 나오는데, 이중 첫번째, 세번째가 곰과 눈임
+    > 호오..
+  - 이모지도 유니코드 기반의 문자열이기 때문에 조합하여 생성될 수 있는것 같음
+
+- [유니코드](https://goodgid.github.io/Unicode-And-UTF-Encoding/)
+  - 1bit = 0.125byte / 8bit = 1byte
+  - Utf-8은 문자 하나를 표현할 때, 8bit를 사용함. byte로 치면 1byte를 사용.
+  - Utf-8이면 1byte 부터 Utf-32인 4byte 까지 쓸 수 있다는것 같음
+  - Utf-16이면, 2byte~4byte까지
+  - 비트연산자 비교방식은 각 순자를 이진법으로 표현한 다음, 두개의 숫자 중 겹쳐지는 1을 찾은 다음에 그걸 십진법으로 교체했을 때의 값을 반환함
+    - 6: 110, 7: 111 —> 110 (2^0*0 + 2^1*1 + 2^2\*1)
+    - 🚀 해당 이모지의 length를 조회하면 2가나오는데, 문자열을 utf-16으로 다루는 Script 에서 저 유니코드를 utf-16으로 변환했을 때, 두개의 값이 나옴. 즉, 두개를 조합해서 만든 유니코드로 2가 찍힌다는것 같음
+
+## 브라우저 호환이슈
 
 - 안드로이드 낮은 브라우저에서는 아직 e.code가 지원되지 않으니 e.keycode에 대한 로직도 함께하기
 - 안드로이드 낮은 브라우저에서는 input에 userSelect none이 되어있으면 인풋 자체가 입력이 안되니, userSelect text 해주기
