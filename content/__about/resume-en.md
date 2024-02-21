@@ -6,25 +6,6 @@ lang: 'en'
 
 <h1>박상민</h1>
 
-<p>저는 <b class="motto">____</b> 하고자 합니다.</p>
-
-<ol>
-  <li>모두가 이해할 수 있는 코드를 개발</li>
-  <li>보다 효율적인 개발 방식을 찾고자</li>
-  <li>경험 및 문제에 대한 해결과정을 기록하고 기억</li>
-  <li>문제에 대한 단순 해결이 아닌 이해를</li>
-</ol>
-
-<p>저는 <b class="motto">____</b> 문화를 선호합니다.</p>
-
-<ol>
-  <li>개발한 코드를 리뷰하여 더 나은 방식에대한 고민을 제안해주는</li>
-  <li>문제를 공유하고 함께 고민하는것을 장려하는</li>
-  <li>동일한 과제에 대해 다른 업무여도 함께 상황을 공유하는</li>
-</ol>
-
-<hr>
-
 <b>GitHub</b> : https://github.com/sangmin802
 
 <hr>
@@ -51,7 +32,7 @@ lang: 'en'
 
 <b>FrontEnd</b>
 
-`React` `Next.js` `TypeScript` `vite` `rollup` `esbuild` `turborepo` `storybook` `yarn`
+`React` `Next.js` `TypeScript` `vite` `rollup` `esbuild` `turborepo` `storybook` `pnpm` `yarn`
 
 <hr>
 
