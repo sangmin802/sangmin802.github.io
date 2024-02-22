@@ -1,5 +1,5 @@
 ---
-title: '포스트가 밀렸다'
+title: '기록이 밀렸다'
 date: 2024-01-01
 category: 'Diary'
 draft: false
