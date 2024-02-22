@@ -13,7 +13,11 @@ export const Layout = ({ location, children }) => {
 
   return (
     <React.Fragment>
-      <Top title={"SangMin.com"} location={location} rootPath={rootPath} />
+      <Top
+        title={"SangMin's MemoryCard"}
+        location={location}
+        rootPath={rootPath}
+      />
       <div
         style={{
           marginLeft: `auto`,
@@ -23,7 +27,11 @@ export const Layout = ({ location, children }) => {
         }}
       >
         <ThemeSwitch />
-        <Header title={"SangMin.com"} location={location} rootPath={rootPath} />
+        <Header
+          title={"SangMin's MemoryCard"}
+          location={location}
+          rootPath={rootPath}
+        />
         {children}
         <Footer />
       </div>
