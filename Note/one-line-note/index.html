@@ -442,6 +442,48 @@ This can be seen a little bit like the dependency array in effects. If it change
 </ul>
 </li>
 </ul>
+<h3 id="isr-streaming-ppr" style="position:relative;"><a href="#isr-streaming-ppr" aria-label="isr streaming ppr permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ISR, streaming, PPR</h3>
+<p>모노레포를 구성하던 중 기존에 알고있던 렌더링방식이 아닌 새로운것들이라 간단하게 정리해봄</p>
+<h4 id="incremental-static-regeneration" style="position:relative;"><a href="#incremental-static-regeneration" aria-label="incremental static regeneration permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Incremental Static Regeneration</h4>
+<p>간단하게, Ssg처럼 빌드시간에 한번 만드는데, 지정한 시간에 주기적으로 새롭게 다시빌드시킬 수 있다는것 같음</p>
+<blockquote>
+<p>주기적으로 새롭게 패칭된 데이터로 새롭게 빌드</p>
+</blockquote>
+<h4 id="streaming" style="position:relative;"><a href="#streaming" aria-label="streaming permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Streaming</h4>
+<p>완성된 페이지정보를 받아오고, 상호작용가능하게 hydrate하는시간이 길게느껴질 때 (기존의 깡 SSR 방식) 각각 컴포넌트별로 작게 청크를 나누어 모든 데이터로드가 아닌 페이지의 일부를 더 빨리 표시할 수 있다고 함.</p>
+<p>이게 특별하게 뭘 해주는게 아니라, fallback이 부여된 suspense boundary로 감싸주기만 하면 된다네..</p>
+<ul>
+<li><a href="https://nextjs.org/docs/app/building-your-application/routing/loading-ui-and-streaming">next 공식문서</a></li>
+<li><a href="https://shopify.github.io/hydrogen-v1/tutorials/streaming-ssr">예시, 이점 안내</a></li>
+</ul>
+<p>요약하면, <code class="language-text">기존 ssr 처럼 모든 html 그리기 대기 -> 모두 hydrate 대기</code>가 아니라 Suspense로 감싸진분들은 따로따로 html 그리고 따로 hydrate하도록 분리시킬 수 있다는것 같음.</p>
+<p>각각 컴포넌트들이 서로간 동기적으로 기다리고 최종 hydrate되는것이 아니라 각자 html 받고완료되면 hydrate를 진행하고 아직 hydrate중인 컴포넌트가 있더라도, 모두 완료된 컴포넌트는 클릭과 같이 사용자와 즉시 상호작용이 가능하다는것 같음.</p>
+<p>선택적 hydrate를 통해 아직 hydrate 이전의 컴포넌트에 사용자의 상호작용이 발생하였다면, 그 컴포넌트의 hydrate 우선순위를 높여줄 수 있다는것 같은데.. 얘는 아직 미확인..</p>
+<h4 id="next14-ppr-partial-prerendering" style="position:relative;"><a href="#next14-ppr-partial-prerendering" aria-label="next14 ppr partial prerendering permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>next14++ PPR (Partial Prerendering)</h4>
+<p>Next.config pprmode 설정 아직은 실험모드로 보임</p>
+<blockquote>
+<p>얘도 그냥 별다른거 없이 위 설정이랑 suspense 경계로 구분하는듯..?</p>
+</blockquote>
+<p><code class="language-text">PPR combines ultra-quick static edge delivery with fully dynamic capabilities and we believe it has the potential to become the default rendering model for web applications, bringing together the best of static site generation and dynamic delivery.</code></p>
+<p>정적 콘텐츠의 매우 빠른 전달 및, 동적 기능 결합?</p>
+<ul>
+<li><a href="https://vercel.com/blog/partial-prerendering-with-next-js-creating-a-new-default-rendering-model">next 공식문서</a></li>
+</ul>
+<p>Suspense를 경계로, 중단되지 않은 부분들은 정적으로 생성하여 엣지거점(cdn같은?)에서 콘텐츠를 바로 제공하고, Suspense 하위의 영역은 동적인 컨텐츠로 관리하여 정적콘텐츠가 빠르게 전달되고 해석될 때 병렬로 받아온다(?)</p>
+<p>isr+ssr이기 때문에, 정적 콘텐츠에 있어서도 주기적으로 다시 빌드시키도록 해줄 수 있다는것 같음(사용자 진입 후, 해당 시간 + 해당 시간 종료 후, 재빌드하는데의 시간동안 이전꺼 보여줌. 재빌드 후에는 갱신)</p>
+<h4 id="streaming이랑-ppr이랑-비교" style="position:relative;"><a href="#streaming%EC%9D%B4%EB%9E%91-ppr%EC%9D%B4%EB%9E%91-%EB%B9%84%EA%B5%90" aria-label="streaming이랑 ppr이랑 비교 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>streaming이랑 ppr이랑 비교</h4>
+<p>두개 모두 Suspense로 나중에 보여질 부분을 구분한다는 특징으로 조금 헷갈렸는데, 고맙게도 비슷한 질문 글이 있었음.</p>
+<ul>
+<li>
+<p><a href="https://github.com/vercel/next.js/discussions/58322#discussioncomment-7549806">streaming, ppr discussions</a></p>
+</li>
+<li>
+<p>ppr: Suspense로 감싼 컴포넌트를 제외한 부분만 먼저 빠르게 제공하고, 이후에 Suspense 내부의 컨텐츠들을 서버로 요청해 가져옴</p>
+</li>
+<li>
+<p>streaming: Suspense로 감싼 컴포넌트도 처음에 먼저 제공하지만, 병렬적으로 Suspense 내부의 컨텐츠들을 서버로 요청해 가져옴</p>
+</li>
+</ul>
 <h2 id="브라우저-호환이슈" style="position:relative;"><a href="#%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A0%80-%ED%98%B8%ED%99%98%EC%9D%B4%EC%8A%88" aria-label="브라우저 호환이슈 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>브라우저 호환이슈</h2>
 <ul>
 <li>안드로이드 낮은 브라우저에서는 아직 e.code가 지원되지 않으니 e.keycode에 대한 로직도 함께하기</li>
