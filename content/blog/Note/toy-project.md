@@ -74,7 +74,10 @@ typescript moduleResolution을 nodeNext++ 로 변경하면서 package.json의 �
 ￼
 실제로 서버컴포넌트 내부에서 날짜객체값을 조회할 때, 에러가 발생했었음. (현재는 클라이언트 환경 안에서만 날짜객체 조회하도록 변경)
 
+서버컴포넌트는 web api를 사용할 수 없으니 당연한 결과일 것 같음
+
 - [관련이슈](https://github.com/vercel/next.js/issues/50245)
+- [서버컴포넌트](https://www.freecodecamp.org/korean/news/how-to-use-react-server-components/)
 
 <div style="margin : 0 auto; text-align : center">
   <img src="/img/2023/01/01/vercel-react-minify.png?raw=true" alt="vercel-react-minify">
