@@ -505,6 +505,7 @@ This can be seen a little bit like the dependency array in effects. If it change
 </ul>
 <h3 id="react-compound-pattern" style="position:relative;"><a href="#react-compound-pattern" aria-label="react compound pattern permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>React Compound pattern</h3>
 <p>상태와 비즈니스로직의 재사용성은 컴포넌트로 유지하며, 자식요소들은 유연하게 교체할 수 있도록 개발하는 컴파운드 패턴</p>
+<h4 id="그냥-영어-해석만" style="position:relative;"><a href="#%EA%B7%B8%EB%83%A5-%EC%98%81%EC%96%B4-%ED%95%B4%EC%84%9D%EB%A7%8C" aria-label="그냥 영어 해석만 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>그냥 영어 해석만..</h4>
 <ol>
 <li>컴파운드 패턴에서 상태와 논리를 관리할 상위 구성 요소를 정의합니다 .</li>
 <li>상위 구성 요소에 의해 렌더링될 하위 구성 요소를 만들고 함께 작동하여 응집력 있는 사용자 인터페이스를 형성합니다.</li>
@@ -512,7 +513,11 @@ This can be seen a little bit like the dependency array in effects. If it change
 <li>상위 구성 요소에서 하위 구성 요소를 렌더링하여 공통 목표를 달성하기 위해 함께 작동하는지 확인합니다.</li>
 </ol>
 <p>React.Children.map으로 주입을 해주거나, context api를 사용해 A라는 Context Provider를 반환하는 컴포넌트를 export default 할 때, useContext로 값을 조회하여 사용하는 AListComponent 컴포넌트를 A.List = AListComponent 형식으로 같이 빼주고 사용하는곳에서 아래와 같이 사용</p>
-<p>비즈니스로직을 한곳에 응집시켜두고 주입해주며, 내부 ui를 자유롭게 구성, 가져갈 수 있을것 같음.</p>
+<ul>
+<li>ui와 관련된 비즈니스로직을 한곳에 응집시켜 외부에서 신경쓸 필요 없도록 숨겨두고, 같이 제공하는 컴포넌트들에는 상태를 주입해서 제공</li>
+<li>ui구성을 자유롭게 가져갈 수 있고</li>
+</ul>
+<p>요 패턴은 손에 익고, 구현하기 전에 구조가 생각나고 눈에 보일때까지 자주 경험을 가져봐야할 것 같음</p>
 <blockquote>
 <p>여러 디자인시스템에서 종종 보이긴 함. OptionGroup > Option</p>
 </blockquote>
