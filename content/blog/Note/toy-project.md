@@ -13,7 +13,7 @@ draft: false
 
 turboRepo를 선택하였음.
 
-### yarn pnpm모드 미지원
+### yarn pnp모드 미지원
 
 Yarn berry / pnp는 아직 정식지원 x node-modules만 가능 (blog post 11이였나 12에서 yarn berry 지원까지는 하는데 pnp는 아직이라고 함.. 진행중이라고는 하는데 마지막 포스트까지도 언급 없음..)
 
