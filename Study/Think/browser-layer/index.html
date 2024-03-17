@@ -171,11 +171,23 @@ data-styled.g1[id="top__S_Top-sc-zcpr2v-0"]{content:"cfyrrY,"}/*!sc*/
 <div style="margin : 0 auto; text-align : center">
   <img src="/img/2024/02/22/painttext.png?raw=true" alt="painttext">
 </div>
-<p>색상만 있는 요소들은 해당 영역을 함께 잡아 한번의 페인트가 존재하고.</p>
-<p>border-radius나 text같이 화면에 보여지는 부분에 변경이 있는 부분들은 각각의 요소들에 한번의 페인트가 더 발생했다.</p>
-<p>이 차이로만 보면, 각 요소에 발생한 페인트 횟수마다 레이어에도 메모리가 늘어나는것 같기도 하다..</p>
+<p>레이어로 분리한 요소들에 대해 페인트가 한번 더 발생하는 경우가 있는것 같다.</p>
+<p>색상만 있는 요소들은 해당 영역을 함께 잡아 한번의 페인트가 존재하고, border-radius나 text같이 화면에 보여지는 부분에 변경이 있는 부분들은 각각의 요소들에 한번의 페인트가 더 발생했다.</p>
+<blockquote>
+<p>레이어로 생성하는 속성을 주지 않으면, 위와같은 추가적인 페인트가 없다</p>
+</blockquote>
+<div style="margin : 0 auto; text-align : center">
+  <img src="/img/2024/02/22/more-paint-layer.png?raw=true" alt="more-paint-layer">
+</div>
+<blockquote>
+<p>텍스트, border-radius 속성이 있는 레이어만 실제로 색상만 있는 다른 레이어와 다르게 페인트 횟수가 1 있는 모습. 레이어를 구성하면서 1회의 페인트가 발생했다.</p>
+</blockquote>
+<p>추가적인 페인트가 발생한 레이어들만 메모리가 있는것 같다</p>
 <blockquote>
 <p>크기, 위치와 같은 기하학적 요소는 layout에서 구성이 되기 때문에 paint에서는 제외되는게 아닐까 싶기도..?</p>
+</blockquote>
+<blockquote>
+<p>단순 색상은 레이어 구성 전 첫 페인트에서 처리되고 나머지는 그렇지 않은건가..?</p>
 </blockquote>
 <h2 id="메모리가-없는-레이어를-구성하자" style="position:relative;"><a href="#%EB%A9%94%EB%AA%A8%EB%A6%AC%EA%B0%80-%EC%97%86%EB%8A%94-%EB%A0%88%EC%9D%B4%EC%96%B4%EB%A5%BC-%EA%B5%AC%EC%84%B1%ED%95%98%EC%9E%90" aria-label="메모리가 없는 레이어를 구성하자 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>메모리가 없는 레이어를 구성하자</h2>
 <p>결과적으로 메모리가 존재하지 않는 레이어를 구성하는것이 이 문제를 해결하는 핵심이라고 생각이 들었다.</p>
