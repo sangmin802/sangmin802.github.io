@@ -83,4 +83,74 @@ safari 브라우저도 별도의 레이어로 구분해줄 수 있는 기준이 
 
 배포된 ios safari 웹뷰 환경에서도, 이전과 같이 빠르게 스크롤할 때에도 흰 화면에 아닌 별도로 관리되고있는 레이어들인 skeleton ui 와 유사하게 opacity가 조절되는 ui가 남아있었다.
 
-결괄물과 소스코드를 같이 올리고 싶지만.. 회사에서 관리하고 제공하는 코드, 화면을 함부로 보여주기가 ㅎㅎ..
+## 특이점.
+
+한가지 특이한점이 있었는데, 기존 디자인과 동일하게 하기 위해 레이어로 띄워진 요소에 border-radius 속성을 부여하면 다시 문제가 발생하는점이 있었다.
+
+> 왜..?
+
+아래와 같은 ui를 구성하고 safari의 레이어페널을 확인해보았다.
+
+<div style="margin : 0 auto; text-align : center">
+  <img src="/img/2024/02/22/testui.png?raw=true" alt="testui">
+</div>
+
+위 사진속 각각의 요소들은 모두 별도의 레이어를 들고있도록 되어있다.
+
+> 위 해결처럼 animation을 준 것은 아니고, `transform: translate3d(0, 0, 0)` 해당 속성을 부여하여 레이어가 생성되도록 브라우저에게 전달해둔 상태
+
+요기서 둥글기가 적용된 파란요소와, word라는 텍스트가 포함된 요소의 레이어들만 다른 레이어들과의 차이가 있는데
+
+<div style="margin : 0 auto; text-align : center">
+  <img src="/img/2024/02/22/memory.png?raw=true" alt="memory">
+</div>
+
+<div style="margin : 0 auto; text-align : center">
+  <img src="/img/2024/02/22/no-memory.png?raw=true" alt="no-memory">
+</div>
+
+문제가 발생하는 레이어들은 모두 메모리가 존재했고, 문제가 없는 레이어들은 메모리가 0이였다.
+
+요 메모리에 영향을 주는 부분으로 의심이되는 경우가 있었는데, 사실 지금까지 찾은것들 중에서는 유일한 차이이긴 하다.
+
+타임라인패널에서 일반 색상만 부여된 요소, border-radius나 텍스트가 함께 있는 요소들을 집중적으로 보았다.
+
+### 색상만 있는 경우
+
+<div style="margin : 0 auto; text-align : center">
+  <img src="/img/2024/02/22/paintall.png?raw=true" alt="paintall">
+</div>
+
+### + border-radius
+
+<div style="margin : 0 auto; text-align : center">
+  <img src="/img/2024/02/22/paintround.png?raw=true" alt="paintround">
+</div>
+
+### + text
+
+<div style="margin : 0 auto; text-align : center">
+  <img src="/img/2024/02/22/painttext.png?raw=true" alt="painttext">
+</div>
+
+색상만 있는 요소들은 해당 영역을 함께 잡아 한번의 페인트가 존재하고.
+
+border-radius나 text같이 화면에 보여지는 부분에 변경이 있는 부분들은 각각의 요소들에 한번의 페인트가 더 발생했다.
+
+이 차이로만 보면, 각 요소에 발생한 페인트 횟수마다 레이어에도 메모리가 늘어나는것 같기도 하다..
+
+> 크기, 위치와 같은 기하학적 요소는 layout에서 구성이 되기 때문에 paint에서는 제외되는게 아닐까 싶기도..?
+
+## 메모리가 없는 레이어를 구성하자
+
+결과적으로 메모리가 존재하지 않는 레이어를 구성하는것이 이 문제를 해결하는 핵심이라고 생각이 들었다.
+
+1. 이미지들을 감싼 상위요소를 레이어로 띄울것인데 (이미지태그는 무조건 메모리가 있음), 이미지가 보이지 않을 경우에만 opacity animation 속성을 주어 브라우저가 레이어로 구성하도록 해보자
+2. 상위요소의 레이어가 자식으로 갖고있는 이미지태그에 대한 메모리를 가지지 않도록 이미지가 보이지 않다가 보일 때, opacity 조절을 통해 보이게 될 때 자연스럽게 보여지도록 해주자
+3. 기존 디자인대로 opacity animation이 있는 레이어가 Rounded 속성을 가져야 하는데, 위의 이유로 메모리가 늘어나면 안되니 rounded가 필요한 경우 상위요소에서 isolate, rounded, overflow-hidden으로 상위요소에서 하위요소의 레이어에 영향을 줄 수 있도록 함.
+   > isolate 속성만으로 요소가 레이어로 생성되지는 않고, 부모가 해당속성을 갖고있고 하위의 레이어 요소를 overflow-hidden 같이 보여지는 부분을 자르는 영향을 줄 때 레이어로 구성되는듯 함.
+
+3번의 이슈는 webkit 버그로 꽤 유명한것 같았다..
+
+- [stackoverflow](https://stackoverflow.com/questions/49066011/overflow-hidden-with-border-radius-not-working-on-safari)
+- [webkit issue](https://bugs.webkit.org/show_bug.cgi?id=68196)
