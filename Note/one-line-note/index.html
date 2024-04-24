@@ -124,9 +124,22 @@ data-styled.g1[id="top__S_Top-sc-zcpr2v-0"]{content:"cfyrrY,"}/*!sc*/
 </ul>
 <h3 id="기본적으로-a-패키지를-받을-때-a-패키지의-packagejson의-의존성-필드에-따라-라이브러리의-설치방식이-다름" style="position:relative;"><a href="#%EA%B8%B0%EB%B3%B8%EC%A0%81%EC%9C%BC%EB%A1%9C-a-%ED%8C%A8%ED%82%A4%EC%A7%80%EB%A5%BC-%EB%B0%9B%EC%9D%84-%EB%95%8C-a-%ED%8C%A8%ED%82%A4%EC%A7%80%EC%9D%98-packagejson%EC%9D%98-%EC%9D%98%EC%A1%B4%EC%84%B1-%ED%95%84%EB%93%9C%EC%97%90-%EB%94%B0%EB%9D%BC-%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC%EC%9D%98-%EC%84%A4%EC%B9%98%EB%B0%A9%EC%8B%9D%EC%9D%B4-%EB%8B%A4%EB%A6%84" aria-label="기본적으로 a 패키지를 받을 때 a 패키지의 packagejson의 의존성 필드에 따라 라이브러리의 설치방식이 다름 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>기본적으로 A 패키지를 받을 때, A 패키지의 package.json의 의존성 필드에 따라 라이브러리의 설치방식이 다름</h3>
 <ul>
-<li>deps: 같이 깔림. npm이라면, 호이스팅되어 node_modules에 같이관리, yarn도 pnp모드가 아닌 node_modules모드라면 동일할듯. pnpm은 node_modules/.npm/a에 위치, 링크되어있음</li>
-<li>devDeps: 안깔림.</li>
-<li>peerDeps: 원래는 안깔리는데, 요즘 pkm 추세가 같이 깔아주는듯 함. 안깔아줄 때, 만약 peer가 안깔려있으면 설치도 안됨</li>
+<li>
+<p>deps: 같이 깔림. npm이라면, 호이스팅되어 node_modules에 같이관리, yarn도 pnp모드가 아닌 node_modules모드라면 동일할듯. pnpm은 node_modules/.npm/a에 위치, 링크되어있음</p>
+</li>
+<li>
+<p>devDeps: 안깔림.</p>
+</li>
+<li>
+<p>peerDeps: 원래는 안깔리는데, 요즘 pkm 추세가 같이 깔아주는듯 함. 안깔아줄 때, 만약 peer가 안깔려있으면 설치도 안됨</p>
+</li>
+<li>
+<p>만약 vite 혹은 rollup에서 external로 번들링파일에 제외를 시킨다면</p>
+<ul>
+<li>번들링하는 작업을 제외하는거라 위 특징은 유지됨. deps는 해당 패키지가 깔리며 함께 설치되고, peerDeps는 root에 깔린것을 보도록 되어있지만 pkm 버전이 올라오면서 자동 깔리긴 할듯</li>
+<li>deps는 깔리는 과정에 일반 nodeModules 방식이라면 해당 라이브러리가 호이스팅되면서 package.json에 명시되어있지 않아도 쓸 수 있는 유령의존성문제가 생기고, pnpm이나 yarnberry는 설치한 패키지에서만 접근 가능한 deps로 구분되어 해당 문제 없음</li>
+</ul>
+</li>
 </ul>
 <h3 id="hook-개발-이후-cp가-절대적인-구조-방식이-아니라고-글을-남긴-초기-cp-글-작성자" style="position:relative;"><a href="#hook-%EA%B0%9C%EB%B0%9C-%EC%9D%B4%ED%9B%84-cp%EA%B0%80-%EC%A0%88%EB%8C%80%EC%A0%81%EC%9D%B8-%EA%B5%AC%EC%A1%B0-%EB%B0%A9%EC%8B%9D%EC%9D%B4-%EC%95%84%EB%8B%88%EB%9D%BC%EA%B3%A0-%EA%B8%80%EC%9D%84-%EB%82%A8%EA%B8%B4-%EC%B4%88%EA%B8%B0-cp-%EA%B8%80-%EC%9E%91%EC%84%B1%EC%9E%90" aria-label="hook 개발 이후 cp가 절대적인 구조 방식이 아니라고 글을 남긴 초기 cp 글 작성자 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Hook 개발 이후, CP가 절대적인 구조 방식이 아니라고 글을 남긴 초기 CP 글 작성자</h3>
 <ul>
