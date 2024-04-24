@@ -69,6 +69,10 @@ a({ id: 1 });
 - devDeps: 안깔림.
 - peerDeps: 원래는 안깔리는데, 요즘 pkm 추세가 같이 깔아주는듯 함. 안깔아줄 때, 만약 peer가 안깔려있으면 설치도 안됨
 
+- 만약 vite 혹은 rollup에서 external로 번들링파일에 제외를 시킨다면
+  - 번들링하는 작업을 제외하는거라 위 특징은 유지됨. deps는 해당 패키지가 깔리며 함께 설치되고, peerDeps는 root에 깔린것을 보도록 되어있지만 pkm 버전이 올라오면서 자동 깔리긴 할듯
+  - deps는 깔리는 과정에 일반 nodeModules 방식이라면 해당 라이브러리가 호이스팅되면서 package.json에 명시되어있지 않아도 쓸 수 있는 유령의존성문제가 생기고, pnpm이나 yarnberry는 설치한 패키지에서만 접근 가능한 deps로 구분되어 해당 문제 없음
+
 ### Hook 개발 이후, CP가 절대적인 구조 방식이 아니라고 글을 남긴 초기 CP 글 작성자
 
 - [Presentational and Container Components](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0)
