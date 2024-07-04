@@ -82,20 +82,22 @@ data-styled.g1[id="top__S_Top-sc-zcpr2v-0"]{content:"cfyrrY,"}/*!sc*/
 <h3 id="node-server로-테스트" style="position:relative;"><a href="#node-server%EB%A1%9C-%ED%85%8C%EC%8A%A4%ED%8A%B8" aria-label="node server로 테스트 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>node server로 테스트</h3>
 <p>cdn 서버는 없지만.. 별다른 설정이 없는 경우 오리진서버에서 명시해주는 캐시정책을 따라간다는것은 cloudflare, aws cloudfront 모두 동일한 것 같아서 헤더적용여부는 비슷할것 같긴 하다.</p>
 <ol>
-<li>cache-control 헤더가 응답에 포함되지 않은 경우</li>
-</ol>
+<li>
+<p>cache-control 헤더가 응답에 포함되지 않은 경우</p>
 <div style="margin : 0 auto; text-align : center">
   <img src="/img/2024/01/31/no-cache-control-header.png?raw=true" alt="no-cache-control-header">
 </div>
 위의 링크글에 대한 이유로 브라우저에서 계산된 임의의 캐시시간을 갖게되어 서버에 요청을 보내지 않고 메모리캐시를 반환하는것 같음
-<ol start="2">
-<li>max-age=초</li>
-</ol>
-<p>빠른 확인을 위해 해당 응답이 캐시될 수 있는 시간을 10초로 부여해볼 경우</p>
+</li>
+<li>
+<p>max-age=초
+빠른 확인을 위해 해당 응답이 캐시될 수 있는 시간을 10초로 부여해볼 경우</p>
 <div style="margin : 0 auto; text-align : center">
   <img src="/img/2024/01/31/max-age-10-cache.png?raw=true" alt="max-age-10-cache">
 </div>
 서버로부터 첫 응답이 생성된 이후, 새로고침하였을 경우, 서버로 다시 요청을보내는것이 아닌 메모리캐시에서 반환되는것을 볼 수 있다.
+</li>
+</ol>
 <p>만약, 가능한 시간이 지난다면</p>
 <div style="margin : 0 auto; text-align : center">
   <img src="/img/2024/01/31/etag-match.png?raw=true" alt="etag-match">
@@ -160,7 +162,7 @@ data-styled.g1[id="top__S_Top-sc-zcpr2v-0"]{content:"cfyrrY,"}/*!sc*/
 <li>요청을 한 청크가 오리진에 아예 존재하지 않는 경로 즉, 해시가 변경되어 갈아껴졌으면 당연히 청크못불러오는 에러 반환</li>
 </ol>
 <h4 id="cloudfront-기본-캐시유지시간24시간--그보다-작은-max-age-시간" style="position:relative;"><a href="#cloudfront-%EA%B8%B0%EB%B3%B8-%EC%BA%90%EC%8B%9C%EC%9C%A0%EC%A7%80%EC%8B%9C%EA%B0%8424%EC%8B%9C%EA%B0%84--%EA%B7%B8%EB%B3%B4%EB%8B%A4-%EC%9E%91%EC%9D%80-max-age-%EC%8B%9C%EA%B0%84" aria-label="cloudfront 기본 캐시유지시간24시간  그보다 작은 max age 시간 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>cloudfront 기본 캐시유지시간(24시간) + 그보다 작은 max-age 시간</h4>
-<p>간혹 max-age=1200 이런데, cf에서 기본값으로 24시간동안 유지된다고 하면 age가 1200 보다 클 때, 브라우저에서 유지할 시간이(캐시되고있던 시간인 age - 1200) 0보다 작은경우 항상 cf한테 새로 달라고 요청하는것 같음.</p>
+<p>간혹 max-age=1200 이런데, cf에서 기본값으로 24시간동안 유지된다고 하면 age가 1200 보다 클 때, 브라우저에서 유지할 시간이(브라우저에서 유효하다고 생각할 캐시시간 1200 - 응답 생성 이후 캐시되고있던 시간인 age) 0보다 작은경우 항상 cf한테 새로 달라고 요청하는것 같음.</p>
 <p>하지만, cf는 24시간이 지나지 않아 아직 신선한 캐시로 판단하여 오리진에게 다시 판단요청하지 않고 그냥 브라우저에게 다시 전달.</p>
 <p>다시 브라우저는 위의 이유로 신선하지 않다고 판단해 매 요청마다 cf에 새로달라고 함. 이게 반복되는경우도 있는듯</p>
 <h2 id="이렇게-해결한다면" style="position:relative;"><a href="#%EC%9D%B4%EB%A0%87%EA%B2%8C-%ED%95%B4%EA%B2%B0%ED%95%9C%EB%8B%A4%EB%A9%B4" aria-label="이렇게 해결한다면 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>이렇게 해결한다면</h2>
