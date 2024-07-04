@@ -27,17 +27,18 @@ cache-control이 응답에 빠져있다면 각 os별 위의 링크와 같은 방
 cdn 서버는 없지만.. 별다른 설정이 없는 경우 오리진서버에서 명시해주는 캐시정책을 따라간다는것은 cloudflare, aws cloudfront 모두 동일한 것 같아서 헤더적용여부는 비슷할것 같긴 하다.
 
 1. cache-control 헤더가 응답에 포함되지 않은 경우
-<div style="margin : 0 auto; text-align : center">
-  <img src="/img/2024/01/31/no-cache-control-header.png?raw=true" alt="no-cache-control-header">
-</div>
-위의 링크글에 대한 이유로 브라우저에서 계산된 임의의 캐시시간을 갖게되어 서버에 요청을 보내지 않고 메모리캐시를 반환하는것 같음
+
+   <div style="margin : 0 auto; text-align : center">
+     <img src="/img/2024/01/31/no-cache-control-header.png?raw=true" alt="no-cache-control-header">
+   </div>
+   위의 링크글에 대한 이유로 브라우저에서 계산된 임의의 캐시시간을 갖게되어 서버에 요청을 보내지 않고 메모리캐시를 반환하는것 같음
 
 2. max-age=초
-빠른 확인을 위해 해당 응답이 캐시될 수 있는 시간을 10초로 부여해볼 경우
-<div style="margin : 0 auto; text-align : center">
-  <img src="/img/2024/01/31/max-age-10-cache.png?raw=true" alt="max-age-10-cache">
-</div>
-서버로부터 첫 응답이 생성된 이후, 새로고침하였을 경우, 서버로 다시 요청을보내는것이 아닌 메모리캐시에서 반환되는것을 볼 수 있다.
+   빠른 확인을 위해 해당 응답이 캐시될 수 있는 시간을 10초로 부여해볼 경우
+   <div style="margin : 0 auto; text-align : center">
+     <img src="/img/2024/01/31/max-age-10-cache.png?raw=true" alt="max-age-10-cache">
+   </div>
+   서버로부터 첫 응답이 생성된 이후, 새로고침하였을 경우, 서버로 다시 요청을보내는것이 아닌 메모리캐시에서 반환되는것을 볼 수 있다.
 
 만약, 가능한 시간이 지난다면
 
@@ -95,7 +96,7 @@ cf에서 따로 캐시전략을 설정해줄 수 는 없는듯 함. 오리진서
 
 #### cloudfront 기본 캐시유지시간(24시간) + 그보다 작은 max-age 시간
 
-간혹 max-age=1200 이런데, cf에서 기본값으로 24시간동안 유지된다고 하면 age가 1200 보다 클 때, 브라우저에서 유지할 시간이(캐시되고있던 시간인 age - 1200) 0보다 작은경우 항상 cf한테 새로 달라고 요청하는것 같음.
+간혹 max-age=1200 이런데, cf에서 기본값으로 24시간동안 유지된다고 하면 age가 1200 보다 클 때, 브라우저에서 유지할 시간이(브라우저에서 유효하다고 생각할 캐시시간 1200 - 응답 생성 이후 캐시되고있던 시간인 age) 0보다 작은경우 항상 cf한테 새로 달라고 요청하는것 같음.
 
 하지만, cf는 24시간이 지나지 않아 아직 신선한 캐시로 판단하여 오리진에게 다시 판단요청하지 않고 그냥 브라우저에게 다시 전달.
 
