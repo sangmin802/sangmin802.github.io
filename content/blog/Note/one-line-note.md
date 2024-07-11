@@ -21,6 +21,30 @@ draft: false
 
 > 주관이 많이 담겨져있음..!
 
+### Mac Chrome 그래픽 가속모드 + 비디오 흰 화면
+
+- https://github.com/video-dev/hls.js/issues/1003
+  - Firefox와 Safari는 macOS의 H.264 시스템 디코더를 사용하지만 Chrome은 자체 H.264 디코더를 번들로 제공한다 함
+- https://www.reddit.com/r/chrome/comments/lbomvc/every_chrome_video_has_a_white_screen_and_i_cant/
+  - 크롬 그래픽 가속 모드를 비활성화면 정상적으로 영상이 노출됨
+- https://support.google.com/chrome/thread/34584059/hardware-acceleration-causes-problems-when-watching-videos?hl=en
+- https://www.reddit.com/r/chrome/comments/lbomvc/every_chrome_video_has_a_white_screen_and_i_cant/
+- https://www.quora.com/Playing-videos-on-Edge-and-on-Chrome-makes-everything-else-but-the-video-blurry-Why
+  - 그래픽 가속 모드로 인해 영상이 흰화면만 나온다는 이슈가 꽤 등록됨
+- 실시간 스트리밍 영상을 HLS 라이브러리로 변환하는 과정에서만 그런 줄 알았더니, MP4도 동일하게 발생함
+
+  - 라이브러리 문제는 아닌 것 같음.
+
+- https://issues.chromium.org/issues/332234167
+  - Chromium에 유사한 이슈가 등록됨
+
+크롬에서 하드웨어 가속 모드(그래픽 가속 모드)를 활성화 시켰을 때, 동영상을 디코딩하면서 문제가 발생하는 것 같음.
+
+#### 조금 특이한 해결
+
+- rounded, overflow-hidden으로 영상을 자르지 않거나, backdrop filter를 사용하지 않으면 문제 없음
+- 혹은, 위 기능을 모두 사용하더라도 상위요소에 rounded, overflow-hidden가 있고, videoTag 자체에 rounded를 주거나 더 상위요소에 rounded, overflow-hidden를 한번 더 해주면 됨. 다만 좀 밝아짐.. 이해가 잘 안됨...
+
 ### react deep dive
 
 - [React internal deep dive](https://jser.dev/series/react-source-code-walkthrough/)
@@ -344,9 +368,9 @@ suspense 기능이 활성화 되었을 경우에는 api 호출이 되며 중단�
 ### TanstackQuery 캐시타임 개별적용 특이점
 
 - 테스트중 확인한점 cachetime이 0이였던 곳 갔다가, 0이 아닌곳을 갔다면, 해당 쿼리는 계속 0이 아닌 cache time이 할당되어있는것같음. (요약. 동일 key, cache time 변경 시, 큰값이 유지됨)
-<div style="margin : 0 auto; text-align : center">
-  <img src="/img/2024/02/05/gctime.png?raw=true" alt="gctime">
-</div>
+  <div style="margin : 0 auto; text-align : center">
+    <img src="/img/2024/02/05/gctime.png?raw=true" alt="gctime">
+  </div>
 
 ### 이모지는 문자열이기 때문에 replace 같은 String Api 사용 가능
 
