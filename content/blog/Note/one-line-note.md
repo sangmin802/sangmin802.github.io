@@ -122,6 +122,7 @@ a({ id: 1 });
   - [링크1](https://chanind.github.io/javascript/2019/09/28/avoid-100vh-on-mobile-web.html)
 - Css 2022에 제시된 svh(url바를 제외한 최소의 vh) 궁금한점은, 이것또한 동적으로 계산을 하는지에 대한 의문, 아직 모든 os의 버전에 호환되지 않는 문제
 - 모바일웹에서 모달같은것들 absolute inset-0 하위 h-100%로 주면 알잘딱이긴 함
+- `window.innerHight*0.01` 로 실질적 1vh 를 px로 가져온 다음, 주소바를 제외한 svh를 커스텀하게 계산하기. ResizeObserver를 달아두고 변경될 때 마다 감지. 혹은 window.visualViewport.addEventListener/resize로 ios 환경에서 아래 키패드가 열려서 실질적으로 보여지는 요소가 변경될 때에 감지되게??
 
 ### 네이티브에서의 딥링크, 다이나믹링크
 
