@@ -21,24 +21,61 @@ draft: false
 
 > 주관이 많이 담겨져있음..!
 
-### Mac Chrome 그래픽 가속모드 + 비디오 흰 화면
+### Mac Chrome 비디오 흰 화면
 
-- https://github.com/video-dev/hls.js/issues/1003
-  - Firefox와 Safari는 macOS의 H.264 시스템 디코더를 사용하지만 Chrome은 자체 H.264 디코더를 번들로 제공한다 함
-- https://www.reddit.com/r/chrome/comments/lbomvc/every_chrome_video_has_a_white_screen_and_i_cant/
-  - 크롬 그래픽 가속 모드를 비활성화면 정상적으로 영상이 노출됨
-- https://support.google.com/chrome/thread/34584059/hardware-acceleration-causes-problems-when-watching-videos?hl=en
-- https://www.reddit.com/r/chrome/comments/lbomvc/every_chrome_video_has_a_white_screen_and_i_cant/
-- https://www.quora.com/Playing-videos-on-Edge-and-on-Chrome-makes-everything-else-but-the-video-blurry-Why
-  - 그래픽 가속 모드로 인해 영상이 흰화면만 나온다는 이슈가 꽤 등록됨
-- 실시간 스트리밍 영상을 HLS 라이브러리로 변환하는 과정에서만 그런 줄 알았더니, MP4도 동일하게 발생함
+최초에 발견해서 그래픽 가속모드에 문제가 있다 자체는 크롬 버전을 올리면서 해결된 것 같음. 그래픽 가속모드일 때, 안보이던 영상도 보이고, blur도 어느정도 수준까지는 먹음
 
-  - 라이브러리 문제는 아닌 것 같음.
+두개의 mp4 영상을 가지고 비교해볼꺼임
 
-- https://issues.chromium.org/issues/332234167
-  - Chromium에 유사한 이슈가 등록됨
+- 어항: 4.7mb
+- 산책: 9.1mb
 
-크롬에서 하드웨어 가속 모드(그래픽 가속 모드)를 활성화 시켰을 때, 동영상을 디코딩하면서 문제가 발생하는 것 같음.
+#### 그래픽 가속모드 off
+
+- 어항은 영상이 안나오고, 산책은 나옴
+  - Blur랑 관련없음 그냥 안나옴 어항은
+- Blur 잘 안됨(그냥 거의 안되는 수준)
+  변수1 blur 수치 높임 (32 -> 500)
+- Blur 수치 높일수록 blur와 영상이 겹칠 때 화면 프레임드랍 엄청남.
+
+변수2 video에 rounded 속성 부여
+
+- 어항은 rounded 있든 없든 안보임
+
+#### 그래픽 가속모드 on
+
+- 영상은 둘 다 잘 나옴
+- blur는 어항은 거의 안먹는 수준인데, 산책은 나름 잘 먹음
+
+변수1 blur 수치 높임 (32 -> 500)
+
+- Blur 수치 높일수록 blur와 영상이 겹칠 때 프레임드랍 엄청남. 산책도 blur 거의 안먹는 수준
+
+변수2 video에 rounded 속성 부여
+
+- rounded가 들어간 어항은 안보임
+- 근데, rounded, overflow-hidden이 있는 요소로 한번 감싸면 rounded가 비디오에 있더라도 보임. 다만 한 톤 밝아지는것 같음. 심지어 blur도 잘먹음
+
+#### video 차이점
+
+- 문제가 되는 영상들은 hevc(H.265) 코덱
+- 문제가 없는 영상들은 H.264 코덱
+
+한번 서로 교차해서 코덱을 변경해보겠음
+
+- [변환 링크](https://convertio.co/)
+
+코덱을 변환해주는 프로그램으로 서로 교차해서 변환하였으나, 코덱을 변경한다고 결과가 달라지진 않았음
+영상을 찍을 때, 코덱을 지정하는 방법도 있어서 각기 다른 방법으로 찍어서 테스트해보았으나 둘 다 문제없이 잘 나옴.
+
+#### Chromium
+
+- [이슈 티켓](https://issues.chromium.org/issues/343325182)
+
+완-전 동일한 케이스로 이슈가 등록됨. 지켜보자
+
+safari는 아~주 잘 됨
+근데 safari도 영상이 좀 밝은듯..?
 
 #### 조금 특이한 해결
 
