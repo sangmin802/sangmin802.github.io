@@ -36,6 +36,8 @@ eslint extends에서는 위의 plugin처럼 eslint-config-이름 생략 가능�
 
 eslant:recommend 백날찾아도 안보이길래, 커밋 확인해보니 js.config.recommend로 변경된듯..아직은 기존방식으로 해도 warning만 주면서 해주는듯 함
 
+plugins에 추가하는건 해당 eslint의 rule들을 가져다 쓸 수 있도록 rule들을 로드해주기만 하고, config에 넣어주는건 이 rule들의 집합체(?)를 적용까지
+
 - [커밋내용](https://github.com/eslint/eslint/commit/c8c0c715a2964cc1859b99f9d4f542675094d1d5)
 
 <div style="margin : 0 auto; text-align : center">
