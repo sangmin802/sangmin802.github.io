@@ -107,6 +107,7 @@ data-styled.g1[id="top__S_Top-sc-zcpr2v-0"]{content:"cfyrrY,"}/*!sc*/
 <li>async : <code class="language-text">DOM</code>파싱과 <code class="language-text">script</code>파일 다운로드, 실행 병렬 진행(따라서 순서가 명확하지 않음 <code class="language-text">DCL</code> 이전, 이후 모두 가능)</li>
 <li>defer : <code class="language-text">DOM</code>파싱과 <code class="language-text">script</code>파일 다운로드 동시 진행 > <code class="language-text">script</code>다운로드 완료되어도 <code class="language-text">DOM</code>파싱 진행 > <code class="language-text">DOM</code>파싱 종료 후 스크립트 실행. 단, <code class="language-text">DCL</code> 이전</li>
 </ul>
+<p>단, <code class="language-text">type="module"</code>일 경우, 위 비동기속성을 주지 않았더라도 파싱을 막지 않음. 근데, SPA 기준 파싱을 막지는 않아서 html내 콘텐츠는 그리겠지만 app 내부 컨텐츠에 요소를 그리기 전에 어마어마하게 오래걸리는 작업이 있다면 최종 화면을 그리는데에는 오래걸릴 수 있을 것 같음</p>
 <p>내 브라우저에서 임의로 테스트해보려 했지만, 어지간한 양이 아니라면, 네트워크 속도 때문에 확인하기가 어려웠다..</p>
 <p>따라서 좋은 예시를 보여주고 있는 사이트를 통해 보는것이 좋을듯 하다!</p>
 <ul>
