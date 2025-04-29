@@ -40,7 +40,7 @@ electron의 chrome 브라우저와 관련된 렌더러프로세스, 메인프로
 electron이 아닌 android, iOS 구성을 위한 native 구현 비용이 더 생기는데 안삐삼?
 사실 서비스 운영을 위한 비즈니스로직은 webview bundle안에만 있기 때문에 거의 건들 일이 없고, 비싸지도 않음
 
-Window, Mac, iOS, android 환경에 맞는 코드를 위해서 webviewbundle, native에 각각 서로를 잇는 브릿지인 toss api를 구성함 webview bundle에는 toss pos bridge, native에는 toss pos api
+Window, Mac, iOS, android 환경에 맞는 코드를 위해서 webviewbundle, native에 각각 서로를 잇는 브릿지인 toss api를 구성함webview bundle에는 toss pos bridge, native에는 toss pos api
 Webview bundle에서는 이 브릿지에서 제공해주는 동일한 api를 사용하고, 각 native 환경에 맞는 방식으로 구현, 변환해주는것 같음
 
 electron과 같이 서비스 틀이 될 프레임워크와 별개로 변경이 잦은 html, css, js를 엮은 번들을 분리하여 걔만 배포
@@ -86,8 +86,10 @@ beforeOrder, afterOrder etc..
 
 생명주기가 생기다보니 결제 플러그인을 만들 수 있도록 됨
 
-결제코드를 위와같이 플러그인 구조를 도입하여, 복잡도를 낮추고 수정이 있더라도 각 결제 기능 플러그인에 결제 시점별 코드가 분리되어있어 다른곳에 영향을 주지 않고 개발이 용이했음 
- # React Native 디버깅
+결제코드를 위와같이 플러그인 구조를 도입하여, 복잡도를 낮추고 수정이 있더라도 각 결제 기능 플러그인에 결제 시점별 코드가 분리되어있어 다른곳에 영향을 주지 않고 개발이 용이했음
+
+# React Native 디버깅
+
 Isomorphic 라이브러리를 통해 react react native 간 동일한 개발경험을 하고자 함
 
 단, 플랫폼이 다르다보니 디버깅이 다름
@@ -96,13 +98,13 @@ react를 통한 브라우저 개발은 그냥 브라우저 개발자도구를 �
 
 단, react native는 내장되어있는 개발자도구가 없어서 filpper라는 도구를 통해 디버깅을 함. 기본적인 디버깅을 제공함. 필요하다면 플러그인으로 확장 가능
 
-하지만.. flipper는 electron 서비스라 무겁고 자잘한 버그가 많음  제품의 빠른 개발과 테스트를 저하시킴.
+하지만.. flipper는 electron 서비스라 무겁고 자잘한 버그가 많음제품의 빠른 개발과 테스트를 저하시킴.
 
 오픈소스 chrome dev tools frontend 기반 실험적 기능으로 새로운 디버깅 도구가 탄생함
 크로미움 기반의 브라우저는 Chrome dev tools protocol(이후 cdp라 함)을 기반으로 동작함
 요소집기, 스타일찾기 등 디버깅이 가능했음
 
-개발자도구에서 추가적인 설정을 켜야 활성화되는데 설정 -> experimentals -> protocol monitor 메뉴 활성화
+개발자도구에서 추가적인 설정을 켜야 활성화되는데설정 -> experimentals -> protocol monitor 메뉴 활성화
 
 근데 이걸 react native에서는 어떻게?
 이미 react native core에는 이 기능을 사용하고 있었음
@@ -156,7 +158,7 @@ preview탭 진입 시, Network.getResponseBody를 요청을 하고, responseData
 
 기존과 동일한 형태로 코드를 작성하며, 디자인시스템, 로그 간 독립 배포가 가능하도록
 
-## 디자인시스템 패키지를 가로채서 로그 hoc가 적용된 컴포넌트로 바꿔줄 수 없을까? 사용하는곳에서는 디자인시스템을 import 하지만, 실제로 쓸 때에는 로그 hoc가 감싸진 패키지가 반환되도록 가로채보자
+## 디자인시스템 패키지를 가로채서 로그 hoc가 적용된 컴포넌트로 바꿔줄 수 없을까?사용하는곳에서는 디자인시스템을 import 하지만, 실제로 쓸 때에는 로그 hoc가 감싸진 패키지가 반환되도록 가로채보자
 
 Yarn plugin을 통해 중간에 바꿔줘보자
 yarn은 특이하게 기능들이 plugin 형태로 구성되어있음
@@ -232,13 +234,13 @@ Shared worker가 지원되지 않는 경우, dedicated worker를 사용했음. �
 워커 생성시., 자바스크립트 파일의 경로를 넣는데 이것은 로컬경로가 아니라 서버경로임.
 대부분 번들러를 사용할 텐데, 이렇게 번들 이후 이 파일 경로가 변경될 수 있음
 다행이도 많은 번들러들이 web worker api를 지원하는 방법을 가이드 해놓음
- 메모리 누수
+메모리 누수
 탭이 닫힐 경우, 이 탭과 연결된 워커 내 포트 리소스를 정리해주었어야 했음.
 포트에 달려있는 이벤트 리스너 등등.. 끊어줘야 하는데…
-어떤 탭이 닫혔는지 알 수 있어야 하는데, 알려주지 않음 
+어떤 탭이 닫혔는지 알 수 있어야 하는데, 알려주지 않음
 beforeunloadEvent를 통해 보내줄까? 하지만 이 이벤트는 때로 호출되지 않을 수 있음.
-—> 탭을 최소화 한 상태에서 호출 등 
+—> 탭을 최소화 한 상태에서 호출 등
 근데 탭이 닫히면 meesagePort가 gc 됨 이걸 감지하면?
-—> 여러개의 탭을 연결하기 위해 port를 배열에 담아두었기 떄문에, 브라우저에서 이 port가 계속 사용되고있다고 판단함 근데 weakRef를 사용해서 배열을 관리하면 weakRef 자체는 사용한다고 판단해도 내부의 값은 사용되지 않는것을 판단할 수 있음, deref로 상태를 조회했을 때 undefined이면 사용되지 않는 것
+—> 여러개의 탭을 연결하기 위해 port를 배열에 담아두었기 떄문에, 브라우저에서 이 port가 계속 사용되고있다고 판단함근데 weakRef를 사용해서 배열을 관리하면 weakRef 자체는 사용한다고 판단해도 내부의 값은 사용되지 않는것을 판단할 수 있음, deref로 상태를 조회했을 때 undefined이면 사용되지 않는 것
 
 주기적으로 타이머를 지정해서 deref를 통해 weakRef를 체크함
