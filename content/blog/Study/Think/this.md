@@ -152,6 +152,52 @@ obj2.introduce() // window
 
 추측해보건데, 함수 컨텍스트가 실행되면서 기본적으로 `this`가 참조하는 `window`객체에서, 함수가 호출되는 방식에 따라 다른 `this`로 변경될 수 있고, 화살표함수는 정적스코프로 참조하는 변경된 `this`를 참조하는것이 아닐까?
 
+```js
+const obj = {
+  name: '상민',
+  aa: this, // global
+  normal() {
+    // 호출될 때 결정되어 obj
+    console.log(this)
+
+    // 화살표함수는 constructor, this가 없기에 부모의 this를 따라가 obj (obj.normal때 결정)
+    const test = () => {
+      console.log(1, this)
+    }
+
+    // 호출될 때 결정되어 global
+    function test2() {
+      console.log(2, this)
+    }
+    setTimeout(() => {
+      // 화살표함수는 constructor, this가 없기에 부모의 this를 따라가 obj
+      console.log(this)
+    })
+    setTimeout(function () {
+      // setTimout 내부에서 호출될 때 결정되어 timeout 객체
+      console.log(this)
+    })
+  },
+  arrow: () => {
+    // 화살표함수는 constructor, this가 없기에 부모의 this를 따라가 global
+    console.log(this)
+    setTimeout(() => {
+      // 화살표함수는 constructor, this가 없기에 부모의 this를 따라가 global
+      console.log(this)
+    })
+    setTimeout(function () {
+      // setTimout 내부에서 호출될 때 결정되어 timeout 객체
+      console.log(this)
+    })
+  },
+}
+
+// 일반함수는 호출될 때 결정
+// 화살표함수는 본인의 부모의 this를 참조
+
+obj.arrow()
+```
+
 ## prototype chain에서의 this
 
 ```js
